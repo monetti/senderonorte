@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block excursionesnuevas %}
+    {% for exc in object_list %}
+    <div>
+    <div id="foto"></div>
+    <div id="name_exc"> {{ exc.name }} </div>
+    <div id="summary"> {{ exc.summary }} </div>
+    <div>
+    <div class="leftCol">
+    </div>
+    <div class="rightCol">
+    </div>
+    </div>
+    </div>
+    {% endfor %}
+{% endblock %}
+

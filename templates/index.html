@@ -1,0 +1,130 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+<meta charset="utf8">
+<head>
+<link rel="stylesheet" type="text/css" href="/media/css/style.css" media="screen" />
+<title>{% block title %}{% endblock %} - Sendero Norte</title>
+</head>
+<body>
+    <div id="wrapper_body">
+        <div id="header">
+
+            <div id="logo_sendero"></div> 
+
+
+            <div class="rightCol">
+                <div id="barra_superior">
+                    <div class="menu_superior">
+                        INICIO
+                    </div>
+                    <div class="menu_superior">
+                        CONTACTO
+                    </div>
+                </div>
+                <div id="logo_mountain"></div>
+            </div>
+
+
+                <div id="menu"> 
+                    <div class="menu">
+                        Nosotros
+                    </div>
+                <div class="menu_separator">
+                    |
+                </div>
+                <div class="menu">
+                    Excursiones
+                </div>
+                <div class="menu_separator">
+                    |
+                </div>
+                <div class="menu">
+                    Viajes Educativos
+                </div>
+                <div class="menu_separator">
+                    |
+                </div>
+                <div class="menu">
+                    Viajes a Medida
+                </div>
+                <div class="menu_separator">
+                    |
+                </div>
+                <div class="menu">
+                    Escalada
+                </div>
+
+        </div>
+        </div>
+
+
+    <!-- END OF HEADER SECTION -->
+        <div id="body">
+        {% block content %}
+            <section id="main">
+            <div class="leftCol">
+                <div id="zonas">
+                    <div id="logo_zonas"> </div>
+                </div>
+            </div>
+            <div class="rightCol">
+                <div id="news_exc"> 
+                {% for object in incoming_excurtions %}
+                <img src="{{object.photo.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" width="530" height="330" />
+                {% endfor %}
+                <h1> Proximas Excursiones </h1>
+                {% for object in incoming_excurtions %}
+
+                    <article id="{{object.name|slugify}}">
+                        
+                        <h2>{{object.name}}</h2>
+                        <p>{{object.summary}}</p>
+                        <p> <span class="field_title">Fecha de salida: </span>
+                            {{object.next_date }} -
+                        <span class="field_title">Lugar: </span>
+                        {{ object.place }} -
+                        <span class="field_title">Horario: </span>
+                        {{ object.time }}
+                        </p>
+                    </article>
+                {% endfor %}
+                </div> 
+            </div>
+            <div class="clear"></div>
+            </section>
+            <section id="secondary">
+            <div class="leftCol">
+                <div id="last_exc">
+                    <h1 id="logo_lastexc">{% trans 'Últimas Excursiones' %}</h1>
+                    <article class="excurtion">
+                    {% for object in recent_excurtions %}
+                        <h2>{{object.name}}</h2>
+                        <p>{{object.summary}}</p>
+                    {% endfor %}
+                    </article>
+                </div>
+            </div>
+
+            <div class="rightCol">
+                <div id="news">
+                    <div id="logo_news"></div>
+                </div> 
+            </div>
+            <div class="clear"></div>
+            </section>
+        </div>
+        
+        <div id="publicity">
+            <div id="logo_publicity">
+        </div>
+        {% endblock %}
+        </div>
+        <!-- END OF BODY SECTION -->
+        <div id="footer">
+
+        </div>
+        <!-- END OF FOOTER SECTION -->
+    </div>
+</body>
+</html>	

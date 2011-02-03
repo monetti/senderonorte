@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: local("Avenir Next LT"), url(../fonts/AvenirNextLTPro-Regular.otf) format("truetype");
+}
+
+body {
+    margin:auto;
+    padding-top:5px;
+    font: 13px 'Arial', sans-serif;
+}
+
+hr {
+   color:#5D5D5D;
+   height:1px;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+header, footer, article, section{
+    display:block;
+}
+
+#wrapper_body {
+    margin:auto;
+    width:960px;
+}
+
+#header {
+    height:182px;
+    background:url(/media/img/top.jpg);
+}
+
+.leftCol {
+    padding:5px;
+    float: left;
+}
+
+.rightCol {
+    padding:5px;
+    float: right;
+    width:57%;
+    padding:5px;
+}
+
+#logo_sendero {
+    float:left;
+    width:286px;
+    background: url(/media/img/logo-cabecera.png) no-repeat ;
+    height:187px;
+    overflow:visible;
+
+}
+
+#logo_mountain {
+
+    width:100%;
+    height:130px;
+}
+
+#menu {
+
+   width:650px;
+   padding:1px;
+   float:left;
+
+}
+
+.menu {
+    float: left;
+    color: #FFFEFF;
+
+
+    font-size:17px;
+    padding:5px;
+
+}
+
+.menu_separator {
+    float: left;
+    color: #5D5D5D;
+
+
+    font-size:17px;
+    padding-top:4px;
+    padding-left:10px;
+    padding-right:10px;
+
+}
+
+#barra_superior {
+    float:right;
+    padding:10px;
+
+}
+
+.menu_superior {
+    float: left;
+    color: #AAA6A7;
+
+
+    font-size:12px;
+    padding:10px;
+    padding-top:20px;
+}
+
+#body {
+    background:#7F7F7F;
+    height:810px;
+    padding:5px;
+}
+
+#footer {
+    background:url(/media/img/footer.jpg) no-repeat;
+    height:200px;
+}
+
+#zonas {
+    background-color:#FFFFFF;
+    height:486px; 
+    width:376px;
+}
+
+#logo_zonas {
+    background: url(/media/img/zonas.jpg) no-repeat;
+    height:62px;
+}
+
+#secondary .rightCol{
+    width:298px;
+}
+#last_exc {
+    height:400px;
+    background:#39465B;
+    width:632px;
+}
+#last_exc article {
+    padding: 1em;
+    background: #444;
+}
+
+#news {
+    height:400px;
+    background:white;
+ }
+
+#logo_news {
+    background:url(/media/img/novedades.jpg) no-repeat;
+    height:62px;
+}
+
+#logo_lastexc {
+    background:url(/media/img/ultimas-excursiones.jpg) no-repeat;
+    height:62px;
+    text-indent: -9999px;
+    margin:0;
+}
+
+.clear {
+    clear:both;
+}
+
+#publicity {
+    margin:auto;
+    background:#7F7F7F;
+    padding:10px;
+}
+
+#logo_publicity {
+    height:100px;
+    background-color:#C6C6C8;
+}
+
+#news_exc {
+    color: #FFF;
+    width:540px;    
+    padding: 7px 0px 0px 8px;
+    background:#262626;
+    margin-right:100px;
+}
+#news_exc h1 {
+    font-family:'Avenir Next LT Pro', 'Arial', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding:15px 0;
+    margin:0;
+    overflow:hidden;
+    border-bottom:1px solid #999;
+    padding: 15px 0px 5px 0px;
+    
+}
+#news_exc img {
+    display: block;
+    height:300px;
+    width:530px
+    padding:5px;
+}
+#news_exc article {
+    padding: 5px;
+}
+
+#news_exc h2 {
+    font-family:'Verdana', bold, sans-serif;
+    font-weight: normal;
+    font-size:16pt;
+    text-transform: uppercase;
+}
+
+#news_exc .content {
+    padding:15px;
+}
+
+#main .rightCol {
+    width:58%;
+    float:left;
+    margin-left:1px;
+}
+
+#news_exc p {
+    font-family:'Arial', sans-serif;
+    font-weight: normal;
+    font-size:8pt;
+}
+
+#news_exc .field_title {
+    font-family:'Arial', sans-serif;
+    font-weight: bold;
+    font-size:10pt;
+
+}
+
