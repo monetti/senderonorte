@@ -38,10 +38,10 @@ header, footer, article, section{
 }
 
 .rightCol {
-    padding:5px;
+    padding:5px 0px 0px 0px;
     float: right;
-    width:57%;
-    padding:5px;
+
+
 }
 
 #logo_sendero {
@@ -70,8 +70,6 @@ header, footer, article, section{
 .menu {
     float: left;
     color: #FFFEFF;
-
-
     font-size:17px;
     padding:5px;
 
@@ -174,10 +172,8 @@ header, footer, article, section{
 
 #news_exc {
     color: #FFF;
-    width:540px;    
-    padding: 7px 0px 0px 8px;
     background:#262626;
-    margin-right:100px;
+    
 }
 #news_exc h1 {
     font-family:'Avenir Next LT Pro', 'Arial', sans-serif;
@@ -193,11 +189,11 @@ header, footer, article, section{
 #news_exc img {
     display: block;
     height:300px;
-    width:530px
+    width:530px;
     padding:5px;
 }
 #news_exc article {
-    padding: 5px;
+    height:auto;
 }
 
 #news_exc h2 {
@@ -208,13 +204,18 @@ header, footer, article, section{
 }
 
 #news_exc .content {
-    padding:15px;
+
+}
+
+#main {
+    margin:auto;
+    margin-bottom:0px:
+    width:540px;
+    height:486px;
 }
 
 #main .rightCol {
-    width:58%;
-    float:left;
-    margin-left:1px;
+
 }
 
 #news_exc p {
