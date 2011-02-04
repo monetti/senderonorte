@@ -7,6 +7,7 @@ body {
     margin:auto;
     padding-top:5px;
     font: 13px 'Arial', sans-serif;
+    width:80%, -moz-fit-content;
 }
 
 hr {
@@ -24,7 +25,7 @@ header, footer, article, section{
 
 #wrapper_body {
     margin:auto;
-    width:960px;
+    
 }
 
 #header {
@@ -105,7 +106,7 @@ header, footer, article, section{
 
 #body {
     background:#7F7F7F;
-    height:810px;
+    
     padding:5px;
 }
 
@@ -127,6 +128,7 @@ header, footer, article, section{
 
 #secondary .rightCol{
     width:298px;
+    float:left;
 }
 #last_exc {
     height:400px;
@@ -210,8 +212,8 @@ header, footer, article, section{
 #main {
     margin:auto;
     margin-bottom:0px:
-    width:540px;
-    height:486px;
+    
+    
 }
 
 #main .rightCol {
