@@ -7,7 +7,8 @@ body {
     margin:auto;
     padding-top:5px;
     font: 13px 'Arial', sans-serif;
-    width:80%, -moz-fit-content;
+    width:964px;
+   
 }
 
 hr {
@@ -61,10 +62,10 @@ header, footer, article, section{
 }
 
 #menu {
-
-   width:650px;
-   padding:1px;
-   float:left;
+    position:absolute;
+    left:455px;
+    top:146px; 
+    float:left;
 
 }
 
@@ -111,14 +112,23 @@ header, footer, article, section{
 }
 
 #footer {
+    margin:auto;
+    width:964px;
+    background-color:#7F7F7F;
+}
+
+#logo_footer {
     background:url(/media/img/footer.jpg) no-repeat;
-    height:200px;
+    height:168px;
+    margin-left:2px;
+
 }
 
 #zonas {
     background-color:#FFFFFF;
     height:486px; 
     width:376px;
+    margin-left:4px;
 }
 
 #logo_zonas {
@@ -143,11 +153,13 @@ header, footer, article, section{
 #news {
     height:400px;
     background:white;
+    width:300px;
  }
 
 #logo_news {
     background:url(/media/img/novedades.jpg) no-repeat;
     height:62px;
+    width:300px;
 }
 
 #logo_lastexc {
@@ -164,17 +176,25 @@ header, footer, article, section{
 #publicity {
     margin:auto;
     background:#7F7F7F;
-    padding:10px;
+    width:964px;
 }
 
 #logo_publicity {
-    height:100px;
+    height:50px;
     background-color:#C6C6C8;
+    margin-left:12px;
+    
+    width:952px;
+    
 }
 
 #news_exc {
     color: #FFF;
     background:#262626;
+    margin-right:4px;
+    height:486px;
+
+    
     
 }
 #news_exc h1 {
@@ -216,10 +236,6 @@ header, footer, article, section{
     
 }
 
-#main .rightCol {
-
-}
-
 #news_exc p {
     font-family:'Arial', sans-serif;
     font-weight: normal;
@@ -231,5 +247,21 @@ header, footer, article, section{
     font-weight: bold;
     font-size:10pt;
 
+}
+
+#main .leftCol {
+
+}
+
+#secondary .rightCol {
+    margin-left:5px;
+}
+
+#main .rightCol {
+    width:559px;
+}
+
+#secondary .leftCol {
+    margin-left:3px;
 }
 
