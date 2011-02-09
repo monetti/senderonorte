@@ -73,36 +73,44 @@
                 {% for object in incoming_excurtions %}
                 <img src="{{object.photo.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" width="530" height="330" />
                 {% endfor %}
+                <div class="content">
                 <h1> Proximas Excursiones </h1>
                 {% for object in incoming_excurtions %}
 
                     <article id="{{object.name|slugify}}">
                         
-                        <h2>{{object.name}}</h2>
+                        <h3>{{object.name}}</h3>
                         <p>{{object.summary}}</p>
-                        <p> <span class="field_title">Fecha de salida: </span>
+                        <span class="field_title">Fecha de salida: </span>
                             {{object.next_date }} -
                         <span class="field_title">Lugar: </span>
                         {{ object.place }} -
                         <span class="field_title">Horario: </span>
                         {{ object.time }}
-                        </p>
+                        
                     </article>
                 {% endfor %}
+                </div>
                 </div> 
             </div>
             <div class="clear"></div>
             </section>
             <section id="secondary">
             <div class="leftCol">
+                <div id="ref_gig">
+                </div>
                 <div id="last_exc">
                     <h1 id="logo_lastexc">{% trans 'Últimas Excursiones' %}</h1>
-                    <article class="excurtion">
                     {% for object in recent_excurtions %}
-                        <h2>{{object.name}}</h2>
-                        <p>{{object.summary}}</p>
+                    <div class="last_exc_thumb">
+                        <article class="excurtion">
+                            <img src="{{object.photo_2.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" width="280" height="80" />
+                            <h3>{{object.name}}</h3>
+                            <p>{{object.intro_last_exc}}</p>
+                        </article>
+                    </div>
                     {% endfor %}
-                    </article>
+                    <div class="clear"></div>
                 </div>
             </div>
 

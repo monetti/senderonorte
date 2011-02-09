@@ -7,17 +7,16 @@ import datetime
 # Create your models here.
 class New(models.Model):
     title = models.CharField(_("Titulo"),max_length="200")
-    summary = models.CharField(_("Resumen"),max_length="200")
-    description = models.CharField(_("Descripcion"),max_length="200")
-    create_date = models.DateTimeField(_("Fecha de Creacion"),)
-    create_date.input_formats=['%d-%m-%Y']
+    summary = models.TextField(_("Resumen"),max_length="")
+    description = models.TextField(_("Descripcion"),max_length="200")
+    created_date = models.DateTimeField(_("Fecha de Creacion"),)
     image = models.ImageField(_("Foto"),upload_to="media/")
     
     class Meta:
-        ordering = ('create_date',)
+        ordering = ('created_date',)
         verbose_name = _('Novedad')
         verbose_name_plural = _('Lista de Novedades')
-        get_latest_by = 'create_date'
+        get_latest_by = 'created_date'
         
     def __unicode__(self):
         return self.title

@@ -140,14 +140,19 @@ header, footer, article, section{
     width:298px;
     float:left;
 }
+
 #last_exc {
-    height:400px;
+    height:241px;
     background:#39465B;
     width:632px;
 }
+
 #last_exc article {
-    padding: 1em;
-    background: #444;
+    background: #262626;
+    height: 150px;
+    width: 290px;
+    color:#F0F0F0;
+    padding:5px;
 }
 
 #news {
@@ -177,14 +182,14 @@ header, footer, article, section{
     margin:auto;
     background:#7F7F7F;
     width:964px;
+    padding-bottom:6px;
 }
 
 #logo_publicity {
     height:50px;
     background-color:#C6C6C8;
     margin-left:12px;
-    
-    width:952px;
+    width:943px;
     
 }
 
@@ -197,36 +202,32 @@ header, footer, article, section{
     
     
 }
+
 #news_exc h1 {
     font-family:'Avenir Next LT Pro', 'Arial', sans-serif;
     font-weight: normal;
     text-transform: uppercase;
-    padding:15px 0;
-    margin:0;
-    overflow:hidden;
+    margin:0px;
     border-bottom:1px solid #999;
-    padding: 15px 0px 5px 0px;
-    
 }
+
 #news_exc img {
     display: block;
     height:300px;
     width:530px;
-    padding:5px;
+    padding:12px;
 }
+
 #news_exc article {
     height:auto;
 }
 
-#news_exc h2 {
+#news_exc h3 {
     font-family:'Verdana', bold, sans-serif;
     font-weight: normal;
-    font-size:16pt;
+    font-size:13pt;
     text-transform: uppercase;
-}
-
-#news_exc .content {
-
+    margin-top:9px;
 }
 
 #main {
@@ -237,6 +238,7 @@ header, footer, article, section{
 }
 
 #news_exc p {
+    width:100px;
     font-family:'Arial', sans-serif;
     font-weight: normal;
     font-size:8pt;
@@ -247,6 +249,11 @@ header, footer, article, section{
     font-weight: bold;
     font-size:10pt;
 
+}
+
+#news_exc .content {
+    padding-left:12px;
+    padding-right:12px;
 }
 
 #main .leftCol {
@@ -263,5 +270,42 @@ header, footer, article, section{
 
 #secondary .leftCol {
     margin-left:3px;
+}
+
+#ref_gig {
+    height:150px;
+    background-color:#344E5F;
+    margin-bottom:9px;
+}
+
+.last_exc_thumb {
+    width:47%;
+    float:left;
+    height:176px;
+    text-align:left;
+    padding:8px;
+}
+
+#last_exc img {
+    display: block;
+    height:100px;
+    width:280px;
+    padding:5px;
+}
+
+#last_exc h3 {
+    font-family:'Arial', sans-serif;
+    font-weight: bolder;
+    font-size:12px;
+    text-transform: uppercase;
+    margin-top:7px;
+    margin-left:5px;
+}
+
+#last_exc p {
+    font-family:'Arial', sans-serif;
+    font-weight: normal;
+    font-size:10px;
+    margin-left:5px;
 }
 
