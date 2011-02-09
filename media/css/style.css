@@ -288,24 +288,24 @@ header, footer, article, section{
 
 #last_exc img {
     display: block;
-    height:100px;
+    height:80px;
     width:280px;
     padding:5px;
 }
 
 #last_exc h3 {
-    font-family:'Arial', sans-serif;
+    font-family: 'Avenir Next LT Pro', 'Arial',serif;
     font-weight: bolder;
     font-size:12px;
     text-transform: uppercase;
-    margin-top:7px;
+    margin-top:13px;
     margin-left:5px;
+    
 }
 
 #last_exc p {
-    font-family:'Arial', sans-serif;
-    font-weight: normal;
-    font-size:10px;
+    font-family: 'Avenir Next LT Pro', 'Arial',serif;
+    margin-top:-11px;
     margin-left:5px;
 }
 
