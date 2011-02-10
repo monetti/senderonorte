@@ -8,7 +8,6 @@ body {
     padding-top:5px;
     font: 13px 'Arial', sans-serif;
     width:964px;
-   
 }
 
 hr {
@@ -118,8 +117,8 @@ header, footer, article, section{
 }
 
 #logo_footer {
-    background:url(/media/img/footer.jpg) no-repeat;
-    height:168px;
+    background:url(/media/img/footerycaminante.png) no-repeat;
+    height:215px;
     margin-left:2px;
 
 }
@@ -285,13 +284,14 @@ header, footer, article, section{
     text-align:left;
     padding:8px;
 }
-
+s
 #last_exc img {
     display: block;
     height:80px;
     width:280px;
-    padding:5px;
+    padding:10px;
 }
+
 
 #last_exc h3 {
     font-family: 'Avenir Next LT Pro', 'Arial',serif;
@@ -300,12 +300,52 @@ header, footer, article, section{
     text-transform: uppercase;
     margin-top:13px;
     margin-left:5px;
-    
 }
 
 #last_exc p {
     font-family: 'Avenir Next LT Pro', 'Arial',serif;
     margin-top:-11px;
     margin-left:5px;
+}
+
+#news img {
+    display:block;
+    height:73px;
+    width:70px;
+    padding:5px;
+}
+
+#news h3 {
+    font-family: 'Avenir Next LT Pro','Arial',serif;
+    font-weight: normal;
+    font-size:12px;
+    margin-top:7px;
+    margin-bottom:0px;
+}
+
+#news .rightCol {
+    width:65%;
+}
+
+#news .leftCol {
+    width:26%;
+}
+
+#news p {
+    font-family: 'Arial',serif;
+    font-weight: normal;
+    font-size:11px;
+    margin-top:3px;
+    padding:0px;
+    overflow:hidden;
+}
+
+#news a {
+    font-family: 'Arial',serif;
+    font-weight: normal;
+    font-size:9px;
+
+    padding:0px;
+    height:5px;
 }
 

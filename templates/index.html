@@ -116,7 +116,22 @@
 
             <div class="rightCol">
                 <div id="news">
-                    <div id="logo_news"></div>
+                    <div id="logo_news">
+                    </div>
+                    {% for object in news %}
+                        <article>
+                            <div class="leftCol">
+                                <img src="{{object.image.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
+                            </div>
+                            <div class="rightCol">
+                                <h3>{{object.title}}</h3>
+                                <p>{{object.summary|truncatewords:9}}</p>
+                                <a href="{{object.url}}"> [Ver mas] </a>
+                            </div>
+                            <div class="clear"></div>
+                        </article>
+                        
+                    {% endfor %}
                 </div> 
             </div>
             <div class="clear"></div>
