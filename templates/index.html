@@ -118,7 +118,10 @@
                 <div id="news">
                     <div id="logo_news">
                     </div>
+                    <div>
+                    <ul>
                     {% for object in news %}
+                        <li class="{% cycle 'odd' 'even' %}">
                         <article>
                             <div class="leftCol">
                                 <img src="{{object.image.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
@@ -130,8 +133,10 @@
                             </div>
                             <div class="clear"></div>
                         </article>
-                        
+                        </li>                        
                     {% endfor %}
+                    </ul>
+                    </div>
                 </div> 
             </div>
             <div class="clear"></div>

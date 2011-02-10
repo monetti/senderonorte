@@ -311,20 +311,22 @@ s
 #news img {
     display:block;
     height:73px;
-    width:70px;
+    width:73px;
     padding:5px;
+    border:none;
 }
 
 #news h3 {
-    font-family: 'Avenir Next LT Pro','Arial',serif;
+    font-family: 'Arial',serif;
     font-weight: normal;
-    font-size:12px;
-    margin-top:7px;
+    font-size:15px;
+    margin-top:3px;
     margin-bottom:0px;
 }
 
 #news .rightCol {
     width:65%;
+    color:#5F5F5F;
 }
 
 #news .leftCol {
@@ -336,16 +338,34 @@ s
     font-weight: normal;
     font-size:11px;
     margin-top:3px;
-    padding:0px;
     overflow:hidden;
 }
 
 #news a {
     font-family: 'Arial',serif;
     font-weight: normal;
-    font-size:9px;
-
-    padding:0px;
-    height:5px;
+    font-size:11px;
+    color:#FA9600;
 }
 
+.odd {
+    background-color:#FFF;
+        
+}
+
+.even {
+    background-color:#E2E2E2;
+}
+
+#news ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#news li {
+    height:112px;
+    padding: 0px;
+    
+    
+}

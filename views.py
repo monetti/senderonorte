@@ -8,7 +8,7 @@ def index(request):
     incoming = object_list.filter(next_date__gte=datetime.now())[:3]
     recent = object_list.filter(next_date__lt=datetime.now(), published_last_exc=True)[:2]
     news = New.objects.all()
-    news_news = news.filter(created_date__lte=datetime.now())[:3]
+    news_news = news.order_by('created_date')[:3]
     
     
     return simple.direct_to_template(
