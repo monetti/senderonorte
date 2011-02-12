@@ -1,12 +1,11 @@
 @font-face {
     font-family: 'Avenir Next LT Pro';
-    src: local("Avenir Next LT"), url(../fonts/AvenirNextLTPro-Regular.otf) format("truetype");
+    src: local("Avenir Next LT"), url(../fonts/AvenirNextLTPro-Regular.otf), format("truetype");
 }
 
 body {
     margin:auto;
-    padding-top:5px;
-    font: 13px 'Arial', sans-serif;
+    font: 13px, 'Arial', sans-serif;
     width:964px;
 }
 
@@ -71,18 +70,11 @@ header, footer, article, section{
 .menu {
     float: left;
     color: #FFFEFF;
-    font-size:17px;
-    padding:5px;
-
 }
 
 .menu_separator {
     float: left;
     color: #5D5D5D;
-
-
-    font-size:17px;
-    padding-top:4px;
     padding-left:10px;
     padding-right:10px;
 
@@ -106,14 +98,12 @@ header, footer, article, section{
 
 #body {
     background:#7F7F7F;
-    
-    padding:5px;
 }
 
 #footer {
-    margin:auto;
+    margin:0px;
     width:964px;
-    background-color:#7F7F7F;
+
 }
 
 #logo_footer {
@@ -178,14 +168,13 @@ header, footer, article, section{
 }
 
 #publicity {
-    margin:auto;
+    margin:0px;
     background:#7F7F7F;
     width:964px;
-    padding-bottom:6px;
 }
 
 #logo_publicity {
-    height:50px;
+    height:100px;
     background-color:#C6C6C8;
     margin-left:12px;
     width:943px;
@@ -284,7 +273,7 @@ header, footer, article, section{
     text-align:left;
     padding:8px;
 }
-s
+
 #last_exc img {
     display: block;
     height:80px;
@@ -303,7 +292,7 @@ s
 }
 
 #last_exc p {
-    font-family: 'Avenir Next LT Pro', 'Arial',serif;
+   font-family: 'Avenir Next LT Pro', 'Arial',serif;
     margin-top:-11px;
     margin-left:5px;
 }
@@ -366,6 +355,98 @@ s
 #news li {
     height:112px;
     padding: 0px;
-    
+}
+
+#logo-cimbling {
+    background: url(../img/logo-cimbling.jpg) no-repeat;
+    height:199px;
+    width:964px;
+    margin-left:2px;
+}
+
+#logo-educationtravel {
+    background: url(../img/logo-educationtravel.jpg) no-repeat;
+    height:199px;
+    width:964px;
+    margin-left:2px;
+}
+
+#body-cimbling {
+    width:964px;
+    background-color:white;
+}
+
+#body-cimbling .leftCol {
+    margin-top:30px;
+    padding:0px;
     
 }
+
+#body-cimbling .rightCol {
+    width:25%;
+    text-align:left;
+    padding:0px;
+    margin-top:30px;
+    color:#5F5F5F;
+    margin-right:40px;
+}
+
+
+#body-cimbling img {
+    width:175px;
+    height:175px;
+
+}
+
+#body-cimbling article {
+    text-align:center;
+    margin-left:25px;
+    padding:0px;
+
+}   
+
+#body-cimbling .content-cimbling {
+
+
+}
+
+#body-cimbling h1 {
+    font-family: 'Avenir Next LT Pro', 'Arial',serif;
+    font-weight: normal;
+    font-size:40px;
+    text-transform: uppercase;
+    text-align:none;
+    border-bottom:1px solid #999;
+}
+
+#body-cimbling p {
+    font-family: 'Arial',serif;
+    font-weight: normal;
+    font-size:11px;
+    text-align:none;
+}
+
+#body-cimbling span {
+    font-family: 'Arial',serif;
+    font-weight: normal;
+    text-transform:uppercase;
+    font-size:12px;
+    text-align:none;
+    color:#FF4000;
+}
+
+#desc-educationtravel {
+    margin-left:10px;
+    text-align:left;
+    font-family: 'Arial',serif;
+    font-size: 10px;
+}
+
+#menu a link{
+    text-decoration:none;
+}
+
+#menu a hover{text-decoration:none}
+
+#menu a visited{text-decoration:none}
+

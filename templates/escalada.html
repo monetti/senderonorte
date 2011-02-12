@@ -1,0 +1,59 @@
+{% extends 'index.html' %}
+
+{% block title %} Escaladas {% endblock %}
+{% block content %}
+<div id="body-cimbling">
+    {% block logocimbling %}
+    <div id="logo-cimbling"></div>
+    {% endblock%}
+    <div class="content-cimbling">
+    <div class="leftCol">
+        <div class="leftCol">
+            <article>
+                {% block articleone %}
+                    <img src="/media/img/cimblings/ultimas-excursiones.jpg" alt="Rappel" />
+                    <h3> Rappel </h3>
+                {% endblock %}
+            </article>
+        </div>
+        <div class="leftCol">
+            <article>
+                {% block articletwo %}
+                    <img src="/media/img/cimblings/ultimas-excursiones.jpg" alt="Rappel" />
+                    <h3> Rappel </h3>
+                {% endblock %}
+            </article>
+        </div>
+        <div class="clear"></div>
+        <div class="leftCol">
+            <article>
+                {% block articlethree %}
+                    <img src="/media/img/cimblings/ultimas-excursiones.jpg" alt="Rappel" />
+                    <h3> Rappel </h3>
+                {% endblock %}
+            </article>
+        </div>
+        <div class="leftCol">
+            <article>
+                {% block articlefour %}
+                    <img src="/media/img/cimblings/ultimas-excursiones.jpg" alt="Rappel" />
+                    <h3> Rappel </h3>
+                {% endblock %}
+            </article>
+        </div>
+        <div class="clear"></div>                
+    </div>
+    <div class="rightCol">
+        {% block bodytext %}
+        <h1> Escalada </h1>
+        <p> Desarrollamos tirolesas, rapeles y lineas de escalada segun los requerimientos de cada grupo.</p>
+        <p> Nuestro staff esta altamente capacitado para desarrollar estas actividades con total seguridad. Contamos además con equipos de escalada en roca que cumplen con todas las exigencias, controles y estandares de calidad de la comun‏idad europea y EE.UU. </p>
+        {% endblock %}
+    </div>    
+    <div class="clear"></div>    
+    </div>
+</div>
+{% endblock %}
+
+
+
