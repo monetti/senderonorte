@@ -1,12 +1,11 @@
 @font-face {
     font-family: 'Avenir Next LT Pro';
-    src: local("Avenir Next LT"), url(../fonts/AvenirNextLTPro-Regular.otf), format("truetype");
+    src: local("../fonts/AvenirNextLTPro-Regular.otf");
 }
 
 body {
     margin:auto;
-    font: 13px, 'Arial', sans-serif;
-    width:964px;
+    width:-moz-max-content;
 }
 
 hr {
@@ -18,7 +17,7 @@ h1 {
     font-size: 25px;
 }
 
-header, footer, article, section{
+header, article, section{
     display:block;
 }
 
@@ -33,15 +32,14 @@ header, footer, article, section{
 }
 
 .leftCol {
-    padding:5px;
     float: left;
+    width:-moz-min-content;
+    
 }
 
 .rightCol {
-    padding:5px 0px 0px 0px;
-    float: right;
-
-
+    float: left;
+    width:-moz-min-content;
 }
 
 #logo_sendero {
@@ -50,7 +48,6 @@ header, footer, article, section{
     background: url(/media/img/logo-cabecera.png) no-repeat ;
     height:187px;
     overflow:visible;
-
 }
 
 #logo_mountain {
@@ -100,34 +97,35 @@ header, footer, article, section{
     background:#7F7F7F;
 }
 
-#footer {
-    margin:0px;
-    width:964px;
-
-}
-
 #logo_footer {
     background:url(/media/img/footerycaminante.png) no-repeat;
     height:215px;
     margin-left:2px;
+    margin-top:0px;
 
 }
 
 #zonas {
     background-color:#FFFFFF;
     height:486px; 
-    width:376px;
-    margin-left:4px;
+    width:-moz-min-content;
+    margin-left:2px;
+
+}
+
+#main {
+    padding:10px;
 }
 
 #logo_zonas {
     background: url(/media/img/zonas.jpg) no-repeat;
     height:62px;
+    width:376px;
 }
 
-#secondary .rightCol{
-    width:298px;
-    float:left;
+#secondary {
+    padding:10px;
+    padding-top:0px;
 }
 
 #last_exc {
@@ -138,16 +136,16 @@ header, footer, article, section{
 
 #last_exc article {
     background: #262626;
-    height: 150px;
-    width: 290px;
+    width: -moz-min-content;
     color:#F0F0F0;
-    padding:5px;
+
 }
 
 #news {
     height:400px;
     background:white;
-    width:300px;
+    width:-moz-min-content;
+    margin-left:11px;
  }
 
 #logo_news {
@@ -168,46 +166,42 @@ header, footer, article, section{
 }
 
 #publicity {
-    margin:0px;
     background:#7F7F7F;
-    width:964px;
+    padding:10px;
+    
 }
 
 #logo_publicity {
     height:100px;
-    background-color:#C6C6C8;
-    margin-left:12px;
-    width:943px;
-    
+    width:940px;
 }
 
 #news_exc {
     color: #FFF;
     background:#262626;
-    margin-right:4px;
     height:486px;
-
-    
-    
+    margin-left:11px;
+    width:-moz-min-content;
 }
 
 #news_exc h1 {
     font-family:'Avenir Next LT Pro', 'Arial', sans-serif;
     font-weight: normal;
     text-transform: uppercase;
-    margin:0px;
+    margin-top:10px;
+    margin-left:4px;
     border-bottom:1px solid #999;
 }
 
 #news_exc img {
     display: block;
     height:300px;
-    width:530px;
-    padding:12px;
+    width:-moz-min-content;
+    padding:5px;
 }
 
 #news_exc article {
-    height:auto;
+    padding:4px;
 }
 
 #news_exc h3 {
@@ -216,20 +210,15 @@ header, footer, article, section{
     font-size:13pt;
     text-transform: uppercase;
     margin-top:9px;
-}
-
-#main {
-    margin:auto;
-    margin-bottom:0px:
-    
-    
+    margin-left:4px;
 }
 
 #news_exc p {
-    width:100px;
+    width:auto;
     font-family:'Arial', sans-serif;
     font-weight: normal;
-    font-size:8pt;
+    font-size:9pt;
+    margin-left:4px;
 }
 
 #news_exc .field_title {
@@ -239,26 +228,6 @@ header, footer, article, section{
 
 }
 
-#news_exc .content {
-    padding-left:12px;
-    padding-right:12px;
-}
-
-#main .leftCol {
-
-}
-
-#secondary .rightCol {
-    margin-left:5px;
-}
-
-#main .rightCol {
-    width:559px;
-}
-
-#secondary .leftCol {
-    margin-left:3px;
-}
 
 #ref_gig {
     height:150px;
@@ -267,18 +236,20 @@ header, footer, article, section{
 }
 
 .last_exc_thumb {
-    width:47%;
+    width:-moz-min-content;
     float:left;
-    height:176px;
     text-align:left;
-    padding:8px;
+    padding-top:7px;
+    padding-left:7px;
+    padding-bottom:7px;
+    
 }
 
 #last_exc img {
+    padding:5px;
     display: block;
-    height:80px;
-    width:280px;
-    padding:10px;
+    height:100px;
+    width:295px;
 }
 
 
@@ -287,20 +258,24 @@ header, footer, article, section{
     font-weight: bolder;
     font-size:12px;
     text-transform: uppercase;
-    margin-top:13px;
-    margin-left:5px;
+    margin-left:6px;
+    margin-bottom:0px;
+
 }
 
 #last_exc p {
    font-family: 'Avenir Next LT Pro', 'Arial',serif;
-    margin-top:-11px;
-    margin-left:5px;
+   font-size:10pt;
+   margin-left:6px;
+   margin-top:0px;
+   padding-bottom:5px;
+
 }
 
 #news img {
     display:block;
-    height:73px;
-    width:73px;
+    height:100px;
+    width:100px;
     padding:5px;
     border:none;
 }
@@ -308,26 +283,19 @@ header, footer, article, section{
 #news h3 {
     font-family: 'Arial',serif;
     font-weight: normal;
-    font-size:15px;
-    margin-top:3px;
-    margin-bottom:0px;
+    font-size:13px;
+    margin-top:5px;
+    width:150px;
+
 }
 
-#news .rightCol {
-    width:65%;
-    color:#5F5F5F;
-}
-
-#news .leftCol {
-    width:26%;
-}
 
 #news p {
     font-family: 'Arial',serif;
     font-weight: normal;
     font-size:11px;
-    margin-top:3px;
-    overflow:hidden;
+    width:150px;
+    margin:0px;
 }
 
 #news a {
@@ -339,11 +307,14 @@ header, footer, article, section{
 
 .odd {
     background-color:#FFF;
-        
+    height:112px;
+    padding: 0px;
 }
 
 .even {
     background-color:#E2E2E2;
+    height:112px;
+    padding: 0px;
 }
 
 #news ul {
@@ -352,10 +323,6 @@ header, footer, article, section{
     margin: 0px;
 }
 
-#news li {
-    height:112px;
-    padding: 0px;
-}
 
 #logo-cimbling {
     background: url(../img/logo-cimbling.jpg) no-repeat;
@@ -415,7 +382,6 @@ header, footer, article, section{
     font-weight: normal;
     font-size:40px;
     text-transform: uppercase;
-    text-align:none;
     border-bottom:1px solid #999;
 }
 
@@ -423,7 +389,6 @@ header, footer, article, section{
     font-family: 'Arial',serif;
     font-weight: normal;
     font-size:11px;
-    text-align:none;
 }
 
 #body-cimbling span {
@@ -431,7 +396,6 @@ header, footer, article, section{
     font-weight: normal;
     text-transform:uppercase;
     font-size:12px;
-    text-align:none;
     color:#FF4000;
 }
 
@@ -443,7 +407,7 @@ header, footer, article, section{
 }
 
 #menu a link{
-    text-decoration:none;
+    list-style-type:none;
 }
 
 #menu a hover{text-decoration:none}

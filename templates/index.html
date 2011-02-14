@@ -12,8 +12,6 @@
 
             <div id="logo_sendero"></div> 
 
-
-            <div class="rightCol">
                 <div id="barra_superior">
                     <div class="menu_superior">
                         INICIO
@@ -21,10 +19,9 @@
                     <div class="menu_superior">
                         CONTACTO
                     </div>
+                    <div class="clear"></div>
                 </div>
                 <div id="logo_mountain"></div>
-            </div>
-
 
                 <div id="menu"> 
                     <div class="menu">
@@ -70,27 +67,24 @@
             </div>
             <div class="rightCol">
                 <div id="news_exc"> 
-                {% for object in incoming_excurtions %}
-                <img src="{{object.photo.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" width="530" height="330" />
-                {% endfor %}
-                <div class="content">
-                <h1> Proximas Excursiones </h1>
-                {% for object in incoming_excurtions %}
-
+                    {% for object in incoming_excurtions %}
                     <article id="{{object.name|slugify}}">
-                        
+                    
+                        <img src="{{object.photo.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" width="530" height="330" />
+                   
+                        <h1> Proximas Excursiones </h1>
+                    
                         <h3>{{object.name}}</h3>
-                        <p>{{object.summary}}</p>
-                        <span class="field_title">Fecha de salida: </span>
+                        <p>{{object.summary|truncatewords:20}}</p>
+                        <p>Fecha de salida: 
                             {{object.next_date }} -
-                        <span class="field_title">Lugar: </span>
+                        Lugar: 
                         {{ object.place }} -
-                        <span class="field_title">Horario: </span>
-                        {{ object.time }}
-                        
+                        Horario: 
+                        {{ object.time }}</p>
+    
                     </article>
-                {% endfor %}
-                </div>
+                    {% endfor %}
                 </div> 
             </div>
             <div class="clear"></div>
@@ -121,8 +115,8 @@
                     <div>
                     <ul>
                     {% for object in news %}
-                        <li class="{% cycle 'odd' 'even' %}">
-                        <article>
+                        <article class="{% cycle 'odd' 'even' %}">
+                        
                             <div class="leftCol">
                                 <img src="{{object.image.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
                             </div>
@@ -133,7 +127,7 @@
                             </div>
                             <div class="clear"></div>
                         </article>
-                        </li>                        
+                   
                     {% endfor %}
                     </ul>
                     </div>
@@ -144,7 +138,7 @@
         </div>
         
         <div id="publicity">
-            <div id="logo_publicity">
+            <img id="logo_publicity" src="/media/img/ultimas-excursiones.jpg" /> 
         </div>
         {% endblock %}
         </div>
