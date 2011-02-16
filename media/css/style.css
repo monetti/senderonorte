@@ -1,3 +1,5 @@
+
+
 @font-face {
     font-family: 'Avenir Next LT Pro';
     src: local("../fonts/AvenirNextLTPro-Regular.otf");
@@ -56,26 +58,107 @@ header, article, section{
     height:130px;
 }
 
-#menu {
-    position:absolute;
-    left:455px;
-    top:146px; 
-    float:left;
-
-}
-
 .menu {
-    float: left;
-    color: #FFFEFF;
-}
-
-.menu_separator {
-    float: left;
-    color: #5D5D5D;
-    padding-left:10px;
-    padding-right:10px;
+    height: 50px;
+    
 
 }
+
+.menu li {
+    list-style-type: none;
+    float: left;
+    font-size: 15px;
+    margin-top:-10px;
+    padding-top: 12px;
+    padding-left:14px;
+    padding-right:14px;
+    padding-bottom:10px;
+}
+
+
+.menu li:hover {
+    background:#F29400;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #FEFEFE;
+    display: block  !importnat;
+    position: relative;
+    width: 20px !importnat;
+    
+}
+
+.menu li a:hover {
+    color: #F29400;
+}
+
+.menu ul li ul span {
+/*background: url('img/flecha.png');*/
+margin: -20px 50px;
+width: 20px;
+height: 10px;
+position: absolute;
+}
+
+.menu ul li ul {
+    display: none; 
+    background: #000 ;
+    position: absolute;
+    text-transform:none;
+    font-weight:normal;
+    color:#FEFEFE;
+    width:83px;
+    text-align:left;
+    margin-top:15px;
+    margin-left:-13px;
+    
+    
+}
+
+.menu ul li:hover ul {
+    display: block;
+}
+
+.menu ul li ul li {
+    display: block;
+    position: relative;
+    color: #FEFEFE;
+    line-height:5px;
+    margin-left:-41px;
+    width:124px;
+    padding:0px;
+    
+}
+
+.menu ul li ul li a{
+    color: #FEFEFE;
+    text-transform:none;
+    font-size:13px;
+    font-weight:normal;
+    width:100px;
+}
+
+.menu ul li ul li:hover {
+    background:#646466;
+    
+}
+
+#menu_i {
+float: left;
+}
+
+
+#menu_d{
+float: right;
+}
+
+.menu li a:hover {
+    color: #FEFEFE;
+} 
+
+
+
 
 #barra_superior {
     float:right;
@@ -86,8 +169,6 @@ header, article, section{
 .menu_superior {
     float: left;
     color: #AAA6A7;
-
-
     font-size:12px;
     padding:10px;
     padding-top:20px;
@@ -97,12 +178,15 @@ header, article, section{
     background:#7F7F7F;
 }
 
+#footer {
+    background:#7F7F7F;
+
+}
+
 #logo_footer {
-    background:url(/media/img/footerycaminante.png) no-repeat;
     height:215px;
     margin-left:2px;
-    margin-top:0px;
-
+    margin-top:-50px;
 }
 
 #zonas {
@@ -168,12 +252,14 @@ header, article, section{
 #publicity {
     background:#7F7F7F;
     padding:10px;
+
     
 }
 
 #logo_publicity {
     height:100px;
     width:940px;
+            overflow:hidden;
 }
 
 #news_exc {
@@ -344,13 +430,13 @@ header, article, section{
 }
 
 #body-cimbling .leftCol {
-    margin-top:30px;
     padding:0px;
+    width: -moz-max-content;
     
 }
 
 #body-cimbling .rightCol {
-    width:25%;
+    width:-moz-min-content;
     text-align:left;
     padding:0px;
     margin-top:30px;
@@ -362,19 +448,19 @@ header, article, section{
 #body-cimbling img {
     width:175px;
     height:175px;
+    padding:10px;
+
 
 }
 
 #body-cimbling article {
     text-align:center;
-    margin-left:25px;
-    padding:0px;
 
 }   
 
 #body-cimbling .content-cimbling {
-
-
+    padding:10px;
+    background:url(../img/fondogris-viajeseduc.jpg) no-repeat ;
 }
 
 #body-cimbling h1 {
@@ -399,6 +485,16 @@ header, article, section{
     color:#FF4000;
 }
 
+#body-cimbling h3 {
+    font-family: 'Arial',serif;
+    font-weight: normal;
+    text-transform:uppercase;
+    font-size:14px;
+    color:#FF4000;
+    margin:0px;
+}
+
+
 #desc-educationtravel {
     margin-left:10px;
     text-align:left;
@@ -406,11 +502,14 @@ header, article, section{
     font-size: 10px;
 }
 
-#menu a link{
-    list-style-type:none;
+#menu a:link{
+    text-decoration:none;
+    color:#FFFEFF;
 }
 
-#menu a hover{text-decoration:none}
+#menu a:hover{text-decoration:none;}
 
-#menu a visited{text-decoration:none}
+#menu a:visited{text-decoration:none;
+                color:#FFFEFF;}
+
 
