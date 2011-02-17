@@ -190,11 +190,63 @@ float: right;
 }
 
 #zonas {
-    background-color:#FFFFFF;
+    background:url(../img/mapa/fondomapa.jpg) no-repeat;
     height:486px; 
     width:-moz-min-content;
     margin-left:2px;
+}
 
+.region {
+    
+}
+
+.region div {
+    overflow:hidden;
+    margin:0px;
+    padding:0px;
+}
+
+
+#centro {
+    background:url(../img/mapa/centro.jpg) no-repeat;
+    height:67px;
+    width:42px;
+    margin:20px 0px 0px 150px;
+}
+
+#buenosaires {
+    background:url(../img/mapa/buenosaires.jpg) no-repeat;
+    height:92px;
+    width:65px;
+    margin:-14px 0px 0px 200px;
+}
+
+#patagonia {
+    background:url(../img/mapa/patagonia.jpg) no-repeat;
+    height:237px;
+    width:123px;
+    margin:0px 0px 0px 100px;
+}
+
+#cuyo {
+    background:url(../img/mapa/cuyo.jpg) no-repeat;
+    height:117px;
+    width:59px;
+    margin:-86px 0px 0px 101px;
+}
+
+#norte {
+    background:url(../img/mapa/norte.jpg) no-repeat;
+    height:101px;
+    width:123px;
+    margin:-86px 0px 0px 101px;    
+}
+
+#litoral {
+    background:url(../img/mapa/litoral.jpg) no-repeat;
+    height:142px;
+    width:104px;
+    margin:-30px 0px 0px 202px;    
 }
 
 #main {
@@ -426,7 +478,7 @@ float: right;
 
 #body-cimbling {
     width:964px;
-    background-color:white;
+    
 }
 
 #body-cimbling .leftCol {
@@ -449,8 +501,6 @@ float: right;
     width:175px;
     height:175px;
     padding:10px;
-
-
 }
 
 #body-cimbling article {
@@ -459,8 +509,8 @@ float: right;
 }   
 
 #body-cimbling .content-cimbling {
-    padding:10px;
     background:url(../img/fondogris-viajeseduc.jpg) no-repeat ;
+    height:495px;
 }
 
 #body-cimbling h1 {
@@ -511,5 +561,55 @@ float: right;
 
 #menu a:visited{text-decoration:none;
                 color:#FFFEFF;}
+
+#logo-customizedtours {
+    background: url(../img/logo-customizedtours.jpg) no-repeat;
+    height:199px;
+    width:auto;
+    margin-left:2px;
+}
+
+#body-recomendations {
+    width:964px;
+    color:#555;
+
+}
+#body-recomendations img {
+    padding:60px 50px 50px 50px;
+    height:100px;
+}
+
+#logo-recomendations {
+    background: url(../img/logo-recomendations.jpg) no-repeat;
+    height:199px;
+    width:auto;
+    margin-left:2px;
+}
+
+#body-recomendations .content-recomendations {
+    background:url(../img/fondogris-viajeseduc.jpg) no-repeat ;
+    height:495px;
+}
+
+#body-recomendations h1 {
+    font-family: 'Avenir Next LT Pro', 'Arial',serif;
+    font-weight: normal;
+    font-size:22pt;
+    text-transform: uppercase;
+    border-bottom:1px solid;
+    width:500px;
+    
+}
+
+#body-recomendations p {
+    font-family: 'Arial',serif;
+    font-weight: normal;
+    font-size:12px;
+    width:600px;
+}
+
+#body-recomendations .leftCol {
+    padding:50px 40px 20px 20px;;
+}
 
 
