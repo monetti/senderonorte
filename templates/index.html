@@ -124,7 +124,7 @@
                         </div>
                         
                         <h3>{{incoming_two.name}}</h3>
-                        <p>{{incoming_two.summary|truncatewords:8}}</p>
+                        <p>{{incoming_two.summary|truncatewords:20}}</p>
                         <p>Fecha de salida: 
                             {{incoming_two.next_date }} -
                         Lugar: 
@@ -147,7 +147,7 @@
                         </div>
                         
                         <h3>{{incoming_three.name}}</h3>
-                        <p>{{incoming_three.summary|truncatewords:8}}</p>
+                        <p>{{incoming_three.summary|truncatewords:20}}</p>
                         <p>Fecha de salida: 
                             {{incoming_three.next_date }} -
                         Lugar: 
@@ -173,7 +173,7 @@
                         <article class="excurtion">
                             <img src="{{object.thumb_photo_post_excurtion}}" alt="{{object.name}}" id="thumb-{{object.name|slugify}}" />
                             <h3>{{object.name}}</h3>
-                            <p>{{object.intro_last_exc|truncatewords:6}}</p>
+                            <p>{{object.intro_last_exc|truncatewords:20}}</p>
                         </article>
                     </div>
                     {% endfor %}
