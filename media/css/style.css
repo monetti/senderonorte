@@ -275,6 +275,7 @@ float: right;
 
 #main {
     padding:10px;
+    padding-bottom:0px;
 }
 
 #logo_zonas {
@@ -363,7 +364,7 @@ float: right;
 #news_exc {
     color: #FFF;
     background:#262626;
-    height:486px;
+    height:541px;
     margin-left:11px;
     width:554px;
 }
