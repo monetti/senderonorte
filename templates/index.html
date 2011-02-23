@@ -5,6 +5,25 @@
 <head>
 <link rel="stylesheet" type="text/css" href="/media/css/style.css" media="screen" />
 <title>{% block title %}{% endblock %} - Sendero Norte</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.js"></script>
+  <script>
+        $(document).ready = (function () {
+        alert("hola");
+        $("#button-{{incoming_one.name|slugify}}").click(function() {
+            $(".incoming_one").hide("slide", { direction: "left" }, 1000);
+        });
+        $("#button-{{incoming_two.name|slugify}}").click = function() {
+            $("#{{incoming_one.name|slugify}}").css('display','none');
+            $("#{{incoming_two.name|slugify}}").css('display','block');
+            $("#{{incoming_three.name|slugify}}").css('display','none');                        
+        };
+        $("#button-{{incoming_three.name|slugify}}").click = function() {
+            $("#{{incoming_three.name|slugify}}").css('display','block');
+        };
+
+    });
+
+  </script>
 </head>
 <body>
     <div id="wrapper_body">
@@ -53,36 +72,92 @@
                 <div id="zonas">
                     <div id="logo_zonas"> </div>
                     <div class="region">
-
-                        <div id="norte"></div>
-                        <div id="cuyo"></div>
-                        <div id="centro"></div>
-                        <div id="litoral"></div>
-                        <div id="buenosaires"></div>
-                        <div id="patagonia"></div>                                                            
-                    </div>
-                </div>
+                            <div id="norte"></div>
+                            <div id="cuyo"></div>
+                            <div id="centro"></div>
+                            <div id="litoral"></div>
+                            <div id="buenosaires"></div>
+                            <div id="patagonia"></div>                                                            
+                     </div>
+                     <div> 
+                        <h3> Excursiones en el pais </h3> 
+                        <p> Haga click sobre las regiones para obtener informacion de las excursiones disponibles en cada una.</p>
+                     </div>
+                     
+                </div> 
             </div>
             <div class="rightCol">
                 <div id="news_exc"> 
-                    {% for object in incoming_excurtions %}
-                    <article id="{{object.name|slugify}}">
+                    <article id="{{incoming_one.name|slugify}}" class="incoming_one">
                     
-                        <img src="{{object.photo.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" width="530" height="330" />
-                   
+                        <img src="{{incoming_one.foto_carrusel_uno.url_540x340}}" alt="{{incoming_one.name}}" id="foto-{{incoming_one.name|slugify}}"  />
+                        <div>
+                        <div class="botonera">
+                            <span class="curved" id="button-{{incoming_one.name|slugify}}">1</span>
+                            <span class="curved" id="button-{{incoming_two.name|slugify}}">2</span>
+                            <span class="curved" id="button-{{incoming_three.name|slugify}}">3</span>
+                            <div class="clear"></div>
+                        </div>
                         <h1> Proximas Excursiones </h1>
-                    
-                        <h3>{{object.name}}</h3>
-                        <p>{{object.summary|truncatewords:20}}</p>
+                        </div>
+                        
+                        <h3>{{incoming_one.name}}</h3>
+                        <p>{{incoming_one.summary|truncatewords:8}}</p>
                         <p>Fecha de salida: 
-                            {{object.next_date }} -
+                            {{incoming_one.next_date }} -
                         Lugar: 
-                        {{ object.place }} -
+                        {{ incoming_one.place }} -
                         Horario: 
-                        {{ object.time }}</p>
+                        {{ incoming_one.time }}</p>
     
                     </article>
-                    {% endfor %}
+                    <article id="{{incoming_two.name|slugify}}" class="incoming_two">
+                        <img src="{{incoming_two.foto_carrusel_uno.url_540x340}}" alt="{{incoming_two.name}}" id="foto-{{incoming_two.name|slugify}}"  />
+                        <div>
+                        <div class="botonera">
+                            <span class="curved" id="button-{{incoming_one.name|slugify}}">1</span>
+                            <span class="curved" id="button-{{incoming_two.name|slugify}}">2</span>
+                            <span class="curved" id="button-{{incoming_three.name|slugify}}">3</span>
+                            <div class="clear"></div>
+                        </div>
+                        <h1> Proximas Excursiones </h1>
+                        </div>
+                        
+                        <h3>{{incoming_two.name}}</h3>
+                        <p>{{incoming_two.summary|truncatewords:8}}</p>
+                        <p>Fecha de salida: 
+                            {{incoming_two.next_date }} -
+                        Lugar: 
+                        {{ incoming_two.place }} -
+                        Horario: 
+                        {{ incoming_two.time }}</p>
+    
+                    </article>
+                    <article id="{{incoming_three.name|slugify}}" class="incoming_three">
+                    
+                        <img src="{{incoming_three.foto_carrusel_uno.url_540x340}}" alt="{{incoming_three.name}}" id="foto-{{incoming_three.name|slugify}}"  />
+                        <div>
+                        <div class="botonera">
+                            <span class="curved" id="button-{{incoming_one.name|slugify}}">1</span>
+                            <span class="curved" id="button-{{incoming_two.name|slugify}}">2</span>
+                            <span class="curved" id="button-{{incoming_three.name|slugify}}">3</span>
+                            <div class="clear"></div>
+                        </div>
+                        <h1> Proximas Excursiones </h1>
+                        </div>
+                        
+                        <h3>{{incoming_three.name}}</h3>
+                        <p>{{incoming_three.summary|truncatewords:8}}</p>
+                        <p>Fecha de salida: 
+                            {{incoming_three.next_date }} -
+                        Lugar: 
+                        {{ incoming_three.place }} -
+                        Horario: 
+                        {{ incoming_three.time }}</p>
+    
+                    </article>
+
+
                 </div> 
             </div>
             <div class="clear"></div>
@@ -96,9 +171,9 @@
                     {% for object in recent_excurtions %}
                     <div class="last_exc_thumb">
                         <article class="excurtion">
-                            <img src="{{object.photo_2.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" width="280" height="80" />
+                            <img src="{{object.thumb_photo_post_excurtion}}" alt="{{object.name}}" id="thumb-{{object.name|slugify}}" />
                             <h3>{{object.name}}</h3>
-                            <p>{{object.intro_last_exc}}</p>
+                            <p>{{object.intro_last_exc|truncatewords:6}}</p>
                         </article>
                     </div>
                     {% endfor %}
