@@ -382,6 +382,7 @@ float: right;
     height:541px;
     margin-left:11px;
     width:554px;
+    position: relative;
 }
 
 #news_exc h1 {
@@ -400,8 +401,11 @@ float: right;
     padding:5px;
 }
 
+
 #news_exc article {
     padding:4px;
+    display: none;
+
 }
 
 #news_exc h3 {
@@ -409,8 +413,7 @@ float: right;
     font-weight: normal;
     font-size:11pt;
     text-transform: uppercase;
-    margin-top:0px;
-    margin-left:4px;
+    margin:50px 4px 15px;
 }
 
 #news_exc p {
@@ -428,7 +431,10 @@ float: right;
     font-size:10pt;
 
 }
-
+#header-new-exc {
+    position: absolute;
+    top:345px;
+}
 
 #ref_gig {
     height:150px;
@@ -681,8 +687,8 @@ float: right;
   behavior:url(border-radius.htc);
 }
 
-.incoming_one {
-    display:block;
+.object {
+    float:left;
 
 }
 

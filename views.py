@@ -16,9 +16,7 @@ def index(request):
         'index.html',
         extra_context = {
             'object_list': object_list,
-            'incoming_one': incoming[0],
-            'incoming_two':incoming[1],
-            'incoming_three':incoming[2],            
+            'incoming': incoming,
             'recent_excurtions': recent,
             'news':news_news,
         }
