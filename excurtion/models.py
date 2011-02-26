@@ -40,7 +40,7 @@ class Excurtion(models.Model):
         if thumbs:  
             return thumbs[0].photo.url_280x80
         else:
-            return self.foto_carrusel_uno.url_530x330
+            return self.foto_carrusel_uno.url_280x80
         
 class PhotoPostExcurtion(models.Model):
     excurtion = models.ForeignKey(Excurtion)

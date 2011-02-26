@@ -21,5 +21,16 @@ def index(request):
             'news':news_news,
         }
     )
-
+    
+def excurtion_detail(request, tag=None):
+    excurtion = Excurtion.objects.get(int(tag))
+    
+    return simple.direct_to_template(
+        request,
+        'object_detail.html',
+        extra_context = {
+            'object':excurtion,
+        }
+    )
+    
 

@@ -10,11 +10,12 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     (r'^$', 'senderonorte.views.index' , {}, 'home'),
-    (r'^acerca_de/', direct_to_template, {'template':'about.html'}),
-    (r'^cimblings/', direct_to_template, {'template':'escalada.html'}),
-    (r'^educationtravel/', direct_to_template, {'template':'educativos.html'}),
-    (r'^customizedtours/', direct_to_template, {'template':'amedida.html'}),
-    (r'^recomendations/', direct_to_template, {'template':'recomendaciones.html'}),    
+    (r'^acerca_de/$', direct_to_template, {'template':'about.html'}),
+    (r'^cimblings/$', direct_to_template, {'template':'escalada.html'}),
+    (r'^educationtravel/$', direct_to_template, {'template':'educativos.html'}),
+    (r'^customizedtours/$', direct_to_template, {'template':'amedida.html'}),
+    (r'^recomendations/$', direct_to_template, {'template':'recomendaciones.html'}),    
+    (r'^excurtion_detail/(?P<tag>[^/]+)$', 'senderonorte.views.excurtion_detail',{},'excurtion_detail'),    
 )
 
 urlpatterns += patterns( '',

@@ -3,17 +3,36 @@
 <meta charset="utf8">
 <head>
 <link rel="stylesheet" type="text/css" href="/media/css/style.css" media="screen" />
-    <title>{% block title %}{% endblock %} - Sendero Norte</title>
-  <script type="text/javascript" src="/media/js/jquery-1.5.js"></script>
+  <title>{% block title %}{% endblock %} - Sendero Norte</title>
+
+  <link type="text/css" href="/media/js/dialog/css/ui-lightness/jquery-ui-1.8.10.custom.css" rel="Stylesheet" />	
+  <script type="text/javascript" src="/media/js/jquery-1.5.min.js"></script>
+  <script type="text/javascript" src="/media/js/dialog/js/jquery-ui-1.8.10.custom.min.js"></script>
+
   <script>
         $(document).ready(function() {
-            $('#news_exc article:first').toggle();
+            $('#news_exc article:first').show();
             $(".botonera a").click(function(){
                 target = $(this).attr('href');
                 $(target).show('slow');
                 $('#news_exc article').not(target).hide('slow');
                 return false;
             });            
+            $("#news_exc article a").click(function(){
+                target = $(this).attr('href');
+                $.ajax({
+                    url: "excurtion_detail/"+$(target),
+                    dataType:'html',
+                    context: document.body,
+                    success: function(data){
+                        $(data).dialog({
+                            'modal':true,
+                        });
+                        $(data).dialog('open');
+                  }
+                });
+            });            
+
         });
   </script>
 </head>
@@ -92,7 +111,7 @@
 
                     {% for object in incoming %}
                     <article id="{{object.name|slugify}}" class="object">
-                        <img src="{{object.foto_carrusel_uno.url_540x340}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}"  />
+                        <a href="#{{object.id}}" id="{{object.id}}"><img src="{{object.foto_carrusel_uno.url_540x340}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}"/></a>
                         <h3>{{object.name}}</h3>
                         <p>{{object.summary|truncatewords:8}}</p>
                         <p>Fecha de salida: 
@@ -114,16 +133,17 @@
                 </div>
                 <div id="last_exc">
                     <h1 id="logo_lastexc">{% trans 'Últimas Excursiones' %}</h1>
+                    <div id="thumbs_last_exc">
                     {% for object in recent_excurtions %}
-                    <div class="last_exc_thumb">
                         <article class="excurtion">
                             <img src="{{object.thumb_photo_post_excurtion}}" alt="{{object.name}}" id="thumb-{{object.name|slugify}}" />
                             <h3>{{object.name}}</h3>
-                            <p>{{object.intro_last_exc|truncatewords:20}}</p>
+                            <p>{{object.intro_last_exc|truncatewords:6}}</p>
                         </article>
-                    </div>
                     {% endfor %}
                     <div class="clear"></div>
+                    </div>
+
                 </div>
             </div>
 
@@ -134,7 +154,7 @@
                     <div>
                     <ul>
                     {% for object in news %}
-                        <article class="{% cycle 'odd' 'even' %}">
+                        <li class="{% cycle 'odd' 'even' %}">
                         
                             <div class="leftCol">
                                 <img src="{{object.image.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
@@ -145,7 +165,7 @@
                                 <a href="{{object.url}}"> [Ver mas] </a>
                             </div>
                             <div class="clear"></div>
-                        </article>
+                        </li>
                    
                     {% endfor %}
                     </ul>
