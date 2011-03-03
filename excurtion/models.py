@@ -10,6 +10,10 @@ from thumbs import ImageWithThumbsField
     
 import datetime
 
+class Region(models.Model):
+    name = models.CharField(_("Nombre"),max_length="200")
+    description = models.TextField(_("Descripcion"))
+    
 class Excurtion(models.Model):
     name = models.CharField(_("Nombre"),max_length="200")
     description = models.TextField(_("Descripcion"))
@@ -25,6 +29,8 @@ class Excurtion(models.Model):
            
     publish_last_exc = models.BooleanField(_("Publicar en Ultimas Excursiones?"), default=False,blank=True)
     intro_last_exc = models.TextField(_('Descripcion de la experiencia'),blank=True)
+    
+    region = models.ForeignKey('Region')
        
     class Meta:
         ordering = ('next_date',)
@@ -54,3 +60,6 @@ class PhotoPostExcurtion(models.Model):
         
     def __unicode__(self):
         return self.name
+        
+        
+      

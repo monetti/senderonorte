@@ -655,4 +655,85 @@ header, section{
     padding-left:50px;
 }
 
+.tab {
+    width:17%;
+    padding:10px;
+    padding-left:16px;
+    float:left;
+    text-align:center;
+    margin:auto;
+    text-decoration:none;
+    border:1px solid;
+}
 
+.tab:hover {
+    background-color:#F29400;
+}
+
+#body-excurtions {
+
+}
+
+.content-tab {
+    height:200px;
+    background:url(../img/fondogris-viajeseduc.jpg) no-repeat ;
+}
+
+#tab-norte {
+    display:block;
+}
+
+#tab-centro {
+    display:none;
+}
+
+#tab-litoral {
+    display:none;
+}
+
+#tab-cuyo {
+    display:none;
+}
+
+#tab-patagonia {
+    display:none;
+}
+
+.article {
+    padding:10px;    
+    float:left;
+    margin:0px;
+}
+
+.article a img {
+    width:150px;
+    height:150px;
+    border:0px;
+    margin:0px;
+}
+
+.content-tab h2 {
+    float:right;
+        width:20%;
+}
+
+.content-tab p {
+    float:right;
+    width:20%;
+}
+
+.title-excurtion {
+    font-family:"Avenir Next LT Pro",sans-serif;
+    font-size:11pt;
+    text-transform:uppercase;
+    margin:0px;
+}
+
+.data-excurtion {
+    margin:0px;
+}
+
+#logo-excurtions {
+    background:url(../img/logo-zonas.jpg) no-repeat ;    
+    height:200px;
+}

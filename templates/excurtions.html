@@ -1,0 +1,71 @@
+{% extends 'index.html' %}
+
+{% block title %} Excursiones {% endblock %}
+{% block javascript %} 
+    $("#tabs a").click(function(){
+        var target = $(this).attr('href');
+        $(target).show();
+        $(".content-tab").not(target).hide();
+
+        return false;
+    });            
+    
+{% endblock %}
+{% block content %}
+    {% block logocimbling %}
+    <div id="logo-excurtions"></div>
+    {% endblock%}
+    <div id="tabs">
+        <a href="#tab-norte" class="tab">Norte</a>
+        <a href="#tab-patagonia" class="tab">Patagonia</a>
+        <a href="#tab-litoral" class="tab">Litoral</a>
+        <a href="#tab-centro" class="tab">Centro</a>
+        <a href="#tab-cuyo" class="tab">Cuyo</a>
+        <div class="clear"></div>
+    </div>
+    <div>
+        <div id="tab-norte" class="content-tab">
+        {% for object in norte %}
+            <article class="article">
+                <a href="{{object.id}}"><img src="{{object.foto_carrusel_uno.url}}" clas="image-excurtion"/></a>
+                <h5 class="title-excurtion"> Nombre </h5>
+                <span class="data-excurtion"> {{object.name}}</span>
+                <h5 class="title-excurtion"> Duracion </h5>
+                <span class="data-excurtion">{{object.duration}}</span>
+                <h5 class="title-excurtion"> Proxima Fecha </h5>
+                <span class="data-excurtion">{{object.next_date}}</span>                
+            </article>
+        {% endfor %}
+        
+        <h2> NORTE </h2>
+        <p>
+        bla bla bla bla
+        </p>
+        </div>
+        <div id="tab-patagonia" class="content-tab">
+        {% for object in patagonia %}
+            <article class="article">
+                <a href="{{object.id}}"><img src="{{object.foto_carrusel_uno.url}}" clas="image-excurtion"/></a>
+                <h5 class="title-excurtion"> Nombre </h5>
+                <span class="data-excurtion"> {{object.name}}</span>
+                <h5 class="title-excurtion"> Duracion </h5>
+                <span class="data-excurtion">{{object.duration}}</span>
+                <h5 class="title-excurtion"> Proxima Fecha </h5>
+                <span class="data-excurtion">{{object.next_date}}</span>                
+            </article>
+        {% endfor %}
+        
+        <h2> PATAGONIA </h2>
+        <p>
+        bla bla bla bla
+        </p>
+        </div>
+        <div id="tab-litoral" class="content-tab">tab litoral</div>
+        <div id="tab-centro" class="content-tab">tab centro</div>
+        <div id="tab-cuyo" class="content-tab">tab cuyo</div>
+
+        
+   </div>     
+{% endblock %}   
+
+

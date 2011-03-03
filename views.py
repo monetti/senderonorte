@@ -35,7 +35,20 @@ def excurtion_detail(request, tag=None,type_object=None):
     )
     
 def excurtions(request,tag=None):
+    excurtions = Excurtion.objects.all()
+    norte = excurtions.filter(region__name="norte")[:4]
+    patagonia = excurtions.filter(region__name="patagonia")[:4]
+    centro = excurtions.filter(region__name="centro")[:4]
+    cuyo = excurtions.filter(region__name="cuyo")[:4]
+    litoral = excurtions.filter(region__name="litoral")[:4]
     return simple.direct_to_template(
         request,
         'excurtions.html',
+        extra_context = {
+            'norte':norte,
+            'patagonia':patagonia,
+            'litoral':litoral,
+            'centro':centro,
+            'cuyo':cuyo,
+        }
     )

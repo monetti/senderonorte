@@ -38,9 +38,13 @@
                 });
                 return false;
             });            
+            {% block javascript %}
+            
+            {% endblock %}            
 
         });
   </script>
+  
 </head>
 <body>
     <div id="wrapper_body">
@@ -64,7 +68,7 @@
                     <ul>
                         <li><a href="http://localhost:8000/">Nosotros</a></li>
                         <li>
-                        <a href="http://localhost:8000/excurtions">Excursiones</a>
+                        <a href="http://localhost:8000/excurtions/None">Excursiones</a>
                         <ul>
                         <li><p><a href="#">Cordoba</a></p></li>
                         <li><p><a href="#">Cuyo</a></p></li>
