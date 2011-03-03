@@ -487,6 +487,11 @@ header, section{
     padding:50px 40px 20px 20px;;
 }
 
+#dialog {
+    width:550px;
+    height:500px;
+}
+
 .curved {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -645,4 +650,9 @@ header, section{
 .clear {
     clear:both;
 }
+
+.mapa {
+    padding-left:50px;
+}
+
 

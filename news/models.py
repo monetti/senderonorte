@@ -10,7 +10,7 @@ class New(models.Model):
     summary = models.TextField(_("Resumen"))
     description = models.TextField(_("Descripcion"))
     created_date = models.DateTimeField(_("Fecha de Creacion"),)
-    image = models.ImageField(_("Foto"),upload_to="media/")
+    image = models.ImageField(_("Foto"),upload_to="./img/news")
     
     class Meta:
         ordering = ('created_date',)

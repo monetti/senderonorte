@@ -1,9 +1,27 @@
-<div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable">
-   <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
-      <span id="ui-dialog-title-dialog" class="ui-dialog-title">{{object.name}}</span>
-      
-   </div>
-   <div style="height: 200px; min-height: 109px; width: auto;" class="ui-dialog-content ui-widget-content">
-    adasjdjjaskdjjjasj
-   </div>
+<div id="dialog">
+    <article id="{{object.name|slugify}}" class="object_detail">
+    {% if type_object == "excurtion" %}
+        <img style="display:block;" src="{{object.foto_carrusel_uno.url}}" alt="{{object.name}}" id="fotouno-{{object.name|slugify}}"/></a>
+        <img style="display:none;" src="{{object.foto_carrusel_dos.url}}" alt="{{object.name}}" id="fotodos-{{object.name|slugify}}"/></a>
+        <img style="display:none;" src="{{object.foto_carrusel_tres.url}}" alt="{{object.name}}" id="fototres-{{object.name|slugify}}"/></a>
+        <div style="float:left; width:50%;">
+        <h5> Nombre: </h5>
+        <p>{{object.name}}</p>
+        <h5> Duracion: </h5>
+        <p> {{object.duration}} </p>
+        <h5> Fecha: </h5>
+        <p> {{object.next_date}} </p>    
+        <h5> Horario: </h5>
+        <p> {{object.time}}</p>
+        <h5> Lugar: </h5>
+        </p>{{object.place}}</p>
+        </div>
+        <div style="float:right; width:50%;">
+        <h5> Descripcion: </h5>
+        <p>{{object.description}}</p>
+        </div>
+        <div class="clear"></div>
+    {% endif %}
+    </article>
 </div>
+

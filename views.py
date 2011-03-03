@@ -22,15 +22,20 @@ def index(request):
         }
     )
     
-def excurtion_detail(request, tag=None):
-    excurtion = Excurtion.objects.get(int(tag))
+def excurtion_detail(request, tag=None,type_object=None):
+    excurtion = Excurtion.objects.get(pk=int(tag))
     
     return simple.direct_to_template(
         request,
         'object_detail.html',
         extra_context = {
             'object':excurtion,
+            'type_object':type_object,
         }
     )
     
-
+def excurtions(request,tag=None):
+    return simple.direct_to_template(
+        request,
+        'excurtions.html',
+    )

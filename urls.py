@@ -15,7 +15,8 @@ urlpatterns = patterns('',
     (r'^educationtravel/$', direct_to_template, {'template':'educativos.html'}),
     (r'^customizedtours/$', direct_to_template, {'template':'amedida.html'}),
     (r'^recomendations/$', direct_to_template, {'template':'recomendaciones.html'}),    
-    (r'^excurtion_detail/(?P<tag>[^/]+)$', 'senderonorte.views.excurtion_detail',{},'excurtion_detail'),    
+    (r'^excurtion_detail/(?P<tag>[^/]+)/(?P<type_object>[^/]+)$', 'senderonorte.views.excurtion_detail'),    
+    (r'^excurtions/(?P<tag>[^/]+)$', 'senderonorte.views.excurtions'),    
 )
 
 urlpatterns += patterns( '',

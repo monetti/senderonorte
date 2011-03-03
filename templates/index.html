@@ -19,18 +19,24 @@
                 return false;
             });            
             $("#news_exc article a").click(function(){
-                target = $(this).attr('href');
+                var target = $(this).attr('href');
+                var url_dir = '/excurtion_detail/';
                 $.ajax({
-                    url: "excurtion_detail/"+$(target),
+                    url: url_dir.concat(parseInt(target)).concat("/").concat('excurtion'),
                     dataType:'html',
                     context: document.body,
                     success: function(data){
                         $(data).dialog({
                             'modal':true,
+                            'resizable':false,
+                            'draggable':false,
+                            'width':'600',
+                            'height':'550',
                         });
                         $(data).dialog('open');
-                  }
+                        }
                 });
+                return false;
             });            
 
         });
@@ -82,7 +88,7 @@
             <div class="leftCol">
                 <div id="zonas">
                     <div id="logo_zonas"> </div>
-                    <div class="region">
+                    <div class="mapa">
                             <div id="norte"></div>
                             <div id="cuyo"></div>
                             <div id="centro"></div>
@@ -111,7 +117,7 @@
 
                     {% for object in incoming %}
                     <article id="{{object.name|slugify}}" class="object">
-                        <a href="#{{object.id}}" id="{{object.id}}"><img src="{{object.foto_carrusel_uno.url_540x340}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}"/></a>
+                        <a href="{{object.id}}" id="{{object.id}}"><img src="{{object.foto_carrusel_uno.url_540x340}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}"/></a>
                         <h3>{{object.name}}</h3>
                         <p>{{object.summary|truncatewords:8}}</p>
                         <p>Fecha de salida: 
