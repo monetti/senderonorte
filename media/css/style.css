@@ -5,64 +5,147 @@
 
 body {
     margin:auto;
-    width:965px;
+    font: 12px Arial, Helvetica, sans-serif;
 }
-
+header, section, article, aside, nav, footer{
+    display:block;
+}
 hr {
    color:#5D5D5D;
    height:1px;
 }
 
 h1 {
-    font-size: 25px;
+    font-size: 30px;
 }
 
 header, section{
     display:block;
 }
 
-#wrapper_body {
-    margin:auto;
-    
-}
-
-#header {
+header {
+    position: relative;
     height:182px;
     background:url(/media/img/top.jpg);
 }
 
-#logo_sendero {
+#nav{
+    clear:right;
+    float:right;
+    margin: 68px 22px 0;
+    padding:0;
+    overflow:hidden;
+    list-style:none;
+}
+#nav li {
     float:left;
+}
+
+#nav a {
+    display:block;
+    font-size: 15px;
+    padding: 1em 1.5em;
+    color:#FEFEFE;
+    text-decoration: none;
+    position: relative;
+
+}
+#nav a:hover {
+    background:#F29400;
+}
+
+
+
+#nav li:hover {
+    background:#F29400;
+}
+
+
+#nav span {
+    background: url('img/flecha.png');
+    border-right: 1px solid #FEFEFE;
+    width: 20px;
+    height: 1em;
+    right: 1px;
+    position: absolute;
+}
+
+#nav li ul {
+    display: none; 
+    background: #000 ;
+    position: absolute;
+    padding:0;
+    z-index:999;
+}
+
+#nav li:hover ul {
+    display: block;
+}
+
+#nav li ul li {
+    display: block;
+    float:none;
+    position: relative;
+    color: #FEFEFE;
+    line-height:5px;
+    margin:0;
+    padding:0px;
+    
+}
+
+#nav li ul li a{
+    color: #FEFEFE;
+    text-transform:none;
+    font-size:13px;
+    font-weight:normal;
+    width:100px;
+}
+
+
+#wrapper_body {
+    margin:auto;
+    width:950px;
+}
+
+#logo_sendero {
+    position:absolute;
+    left:0;
+    top:0;
+    margin:0;
     width:286px;
     background: url(/media/img/logo-cabecera.png) no-repeat ;
     height:187px;
-    overflow:visible;
-}
-
-#logo_mountain {
-    width:100%;
-    height:130px;
-}
-
-#menu_i {
-    float: left;
-}
-
-#menu_d{
-    float: right;
+    overflow:hidden;
+    text-indent: -9999px;
 }
 
 #barra_superior {
     float:right;
     padding:10px;
+    list-style: none;
+    margin: 0;
+}
+#barra_superior a {
+    color: #FFF;
+    text-decoration:none;
 }
 
 #body {
     background:#7F7F7F;
 }
+#body h1 {
+    font-family:'Avenir Next LT Pro', 'Arial', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin:0 -10px;
+    padding: 0.5em;
+    color: #FFF;
+    
+}
 
-#footer {
+footer {
     background:#7F7F7F;
+    width:950px;
 }
 
 #logo_footer {
@@ -72,35 +155,15 @@ header, section{
 }
 
 #zonas {
-    background-color:white;
-    background:url(../img/mapa/fondomapa.jpg) no-repeat;
-    background-position:bottom;
-    height:auto; 
-    width:-moz-min-content;
-    margin-left:2px;
+    background: #FFF url(../img/mapa/fondomapa.jpg) repeat-x;
+    background-position:center bottom;
+    padding: 0 10px;
+    width: 350px;
+}
+#zonas h1 {
+    background: #F29400;
 }
 
-#zonas h3 {
-    font-family:'Arial', sans-serif;
-    font-size:10pt;
-    margin-left:16px;
-    color:#404040;
-    margin-top:3px;
-    border-bottom:1px solid #404040;
-    padding-bottom:5px;
-    width:315px;
-}
-
-#zonas p {
-    width:330px;
-    font-family:'Verdana', sans-serif;
-    font-weight: normal;
-    font-size:8pt;
-    margin-left:16px;
-    margin-top:-8px;
-    color:#404040;
-    padding-bottom:20px;
-}
 
 #centro {
     background:url(../img/mapa/centro.png) no-repeat;
@@ -146,7 +209,6 @@ header, section{
 
 #main {
     padding:10px;
-    padding-bottom:0px;
 }
 
 #logo_zonas {
@@ -189,11 +251,12 @@ header, section{
     width:300px;
 }
 
-#logo_lastexc {
+h1#logo_lastexc {
     background:url(/media/img/ultimas-excursiones.jpg) no-repeat;
     height:62px;
     text-indent: -9999px;
     margin:0;
+    padding:0;
 }
 
 #publicity {
@@ -210,22 +273,13 @@ header, section{
 #news_exc {
     color: #FFF;
     background:#262626;
-    height:542px;
+    height:531px;
     margin-left:10px;
-    width:555px;
+    width:530px;
     overflow:hidden;
+    position: relative;
 }
 
-#news_exc h1 {
-    font-family:'Arial', sans-serif;
-    text-transform: uppercase;
-    margin-top:20px;
-    margin-left:5px;
-    border-bottom:1px solid #999;
-    width:380px;
-    font-size:19pt;
-    padding-bottom:15px;
-}
 
 #news_exc img {
     padding:5px;
@@ -237,35 +291,26 @@ header, section{
     display: none;
 
 }
-
-#news_exc h3 {
-    font-family:'Verdana', bold, sans-serif;
-    font-weight: normal;
-    font-size:11pt;
-    text-transform: uppercase;
-    margin:85px 5px 15px;
+#news_exc .description{
+    margin-top:5em;
 }
 
-#news_exc p {
-    width:auto;
-    font-family:'Arial', sans-serif;
-    font-weight: normal;
-    font-size:9pt;
-    margin-left:5px;
-    margin-top:-8px;
-}
+
 
 #header-new-exc {
     position: absolute;
     text-decoration:none;
-    top:548px;
-    width:43%;
+    top:270px;
+    width:525px;
     
 }
-
+#secondary .leftCol,
+#secondary .rightCol {
+    padding: 0;
+}
 #ref_gig {
-    height:150px;
     background-color:#344E5F;
+    height:150px;
     margin-bottom:9px;
 }
 
@@ -276,25 +321,6 @@ header, section{
     height:80px;
 }
 
-
-#last_exc h3 {
-    font-family: 'Avenir Next LT Pro', 'Arial',serif;
-    font-weight: bolder;
-    font-size:12px;
-    text-transform: uppercase;
-    margin-left:6px;
-    margin-bottom:0px;
-
-}
-
-#last_exc p {
-   font-family: 'Avenir Next LT Pro', 'Arial',serif;
-   font-size:10pt;
-   margin-left:6px;
-   margin-top:0px;
-   width:280px;
-}
-
 #news img {
     display:block;
     height:100px;
@@ -303,27 +329,12 @@ header, section{
     border:none;
 }
 
-#news h3 {
-    font-family: 'Arial',serif;
-    font-weight: normal;
-    font-size:13px;
-    margin-top:5px;
-    width:150px;
-}
 
 #thumbs_last_exc {
     padding:2px;
     padding-top:4px;
 }
 
-
-#news p {
-    font-family: 'Arial',serif;
-    font-weight: normal;
-    font-size:11px;
-    width:150px;
-    margin:0px;
-}
 
 #news a {
     font-family: 'Arial',serif;
@@ -338,46 +349,24 @@ header, section{
     margin: 0px;
 }
 
-
-#logo-cimbling {
-    background: url(../img/logo-cimbling.jpg) no-repeat;
-    height:199px;
+#banner-excurtion {
     width:950px;
-    margin-left:2px;
+    overflow:hidden;
 }
-
-#logo-educationtravel {
-    background: url(../img/logo-educationtravel.jpg) no-repeat;
-    height:199px;
-    width:950px;
-    margin-left:2px;
+.pictures article{
+    float:left;
+    margin: 10px;
 }
-
-#body-cimbling {
-    width:950px;
-    
+.pictures img {
+    float:left;
+    margin-right:10px;
 }
-
-#body-cimbling .leftCol {
-    padding:0px;
-    width: -moz-max-content;
-    
-}
-
 #body-cimbling .rightCol {
-    width:-moz-min-content;
     text-align:left;
     padding:0px;
     margin-top:30px;
     color:#5F5F5F;
     margin-right:40px;
-}
-
-
-#body-cimbling img {
-    width:175px;
-    height:175px;
-    padding:10px;
 }
 
 #body-cimbling article {
@@ -389,36 +378,6 @@ header, section{
     height:495px;
 }
 
-#body-cimbling h1 {
-    font-family: 'Avenir Next LT Pro', 'Arial',serif;
-    font-weight: normal;
-    font-size:40px;
-    text-transform: uppercase;
-    border-bottom:1px solid #999;
-}
-
-#body-cimbling p {
-    font-family: 'Arial',serif;
-    font-weight: normal;
-    font-size:11px;
-}
-
-#body-cimbling span {
-    font-family: 'Arial',serif;
-    font-weight: normal;
-    text-transform:uppercase;
-    font-size:12px;
-    color:#FF4000;
-}
-
-#body-cimbling h3 {
-    font-family: 'Arial',serif;
-    font-weight: normal;
-    text-transform:uppercase;
-    font-size:14px;
-    color:#FF4000;
-    margin:0px;
-}
 
 #desc-educationtravel {
     margin-left:10px;
@@ -432,60 +391,11 @@ header, section{
     color:#FFFEFF;
 }
 
-#menu a:hover{text-decoration:none;}
 
 #menu a:visited{text-decoration:none;
                 color:#FFFEFF;
                 }
 
-#logo-customizedtours {
-    background: url(../img/logo-customizedtours.jpg) no-repeat;
-    height:199px;
-    width:auto;
-    margin-left:2px;
-}
-
-#body-recomendations {
-    width:950px;
-    color:#555;
-}
-
-#body-recomendations img {
-    padding:60px 50px 50px 50px;
-    height:100px;
-}
-
-#logo-recomendations {
-    background: url(../img/logo-recomendations.jpg) no-repeat;
-    height:199px;
-    width:auto;
-    margin-left:2px;
-}
-
-#body-recomendations .content-recomendations {
-    background:url(../img/fondogris-viajeseduc.jpg) no-repeat ;
-    height:495px;
-}
-
-#body-recomendations h1 {
-    font-family: 'Avenir Next LT Pro', 'Arial',serif;
-    font-weight: normal;
-    font-size:22pt;
-    text-transform: uppercase;
-    border-bottom:1px solid;
-    width:500px;
-}
-
-#body-recomendations p {
-    font-family: 'Arial',serif;
-    font-weight: normal;
-    font-size:12px;
-    width:600px;
-}
-
-#body-recomendations .leftCol {
-    padding:50px 40px 20px 20px;;
-}
 
 #dialog {
     width:550px;
@@ -500,101 +410,14 @@ header, section{
 
 .leftCol {
     float: left;
-    width:-moz-min-content;
-    
+    padding: 10px;
 }
 
 .rightCol {
-    float: left;
-    width:-moz-min-content;
+    float: right;
+    padding: 10px;
 }
 
-.menu {
-    height: 50px;
-}
-
-.menu li {
-    list-style-type: none;
-    float: left;
-    font-size: 15px;
-    margin-top:-10px;
-    padding-top: 12px;
-    padding-left:14px;
-    padding-right:14px;
-    padding-bottom:10px;
-}
-
-
-.menu li:hover {
-    background:#F29400;
-}
-
-.menu li a {
-    text-decoration: none;
-
-    color: #FEFEFE;
-    display: block  !importnat;
-    position: relative;
-    width: 20px !importnat;
-    
-}
-
-.menu li a:hover {
-    color: #F29400;
-}
-
-.menu ul li ul span {
-    /*background: url('img/flecha.png');*/
-    margin: -20px 50px;
-    width: 20px;
-    height: 10px;
-    position: absolute;
-}
-
-.menu ul li ul {
-    display: none; 
-    background: #000 ;
-    position: absolute;
-    text-transform:none;
-    font-weight:normal;
-    color:#FEFEFE;
-    width:83px;
-    text-align:left;
-    margin-top:15px;
-    margin-left:-13px;
-}
-
-.menu ul li:hover ul {
-    display: block;
-}
-
-.menu ul li ul li {
-    display: block;
-    position: relative;
-    color: #FEFEFE;
-    line-height:5px;
-    margin-left:-41px;
-    width:124px;
-    padding:0px;
-    
-}
-
-.menu ul li ul li a{
-    color: #FEFEFE;
-    text-transform:none;
-    font-size:13px;
-    font-weight:normal;
-    width:100px;
-}
-
-.menu ul li ul li:hover {
-    background:#646466;
-    
-}
-
-.menu li a:hover {
-    color: #FEFEFE;
-} 
 
 .menu_superior {
     float: left;

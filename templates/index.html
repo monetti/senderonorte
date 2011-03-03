@@ -48,50 +48,39 @@
 </head>
 <body>
     <div id="wrapper_body">
-        <div id="header">
-
-            <div id="logo_sendero"></div> 
-
-                <div id="barra_superior">
-                    <div class="menu_superior">
-                        INICIO
-                    </div>
-                    <div class="menu_superior">
-                        CONTACTO
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <div id="logo_mountain"></div>
-
-                <div class="menu">
-                <div id="menu_i"></div>    <div id="menu_d"></div>
+        <header>
+            <h1 id="logo_sendero">Sendero Norte</h1> 
+            <ul id="barra_superior">
+                <li class="menu_superior">
+                   <a href="/">INICIO</a>
+                </li>
+                <li class="menu_superior">
+                    <a href="/contact">CONTACTO</a>
+                </li>
+            </ul>
+            <ul id="nav">
+                <li><a href="http://localhost:8000/">Nosotros<span></span> </a></li>
+                <li><a href="http://localhost:8000/excurtions/None">Excursiones<span></span> </a>
                     <ul>
-                        <li><a href="http://localhost:8000/">Nosotros</a></li>
-                        <li>
-                        <a href="http://localhost:8000/excurtions/None">Excursiones</a>
-                        <ul>
-                        <li><p><a href="#">Cordoba</a></p></li>
-                        <li><p><a href="#">Cuyo</a></p></li>
-                        <li><p><a href="#">Patagonia</a></p></li>
-                        <li><p><a href="http://localhost:8000/recomendations">Recomendaciones</a></p></li>
-                        <li><p><a href="#">Calendario</a></p></li>                     
-                        </ul>
-                        
-                        </li>
-                        <li><a href="http://localhost:8000/educationtravel">Viajes Educativos</a></li>
-                        <li><a href="http://localhost:8000/customizedtours">Viajes a Medida</a></li>
-                        <li><a href="http://localhost:8000/cimblings">Escalada</a></li>
+                        <li><a href="#">Cordoba</a></li>
+                        <li><a href="#">Cuyo</a></li>
+                        <li><a href="#">Patagonia</a></li>
+                        <li><a href="http://localhost:8000/recomendations">Recomendaciones</a></li>
+                        <li><a href="#">Calendario</a></li>
                     </ul>
-                </div><!-- fin Menu -->
-        </div>
+                </li>
+                <li><a href="http://localhost:8000/educationtravel">Viajes Educativos<span></span> </a></li>
+                <li><a href="http://localhost:8000/customizedtours">Viajes a Medida<span></span> </a></li>
+                <li class="last"><a href="http://localhost:8000/cimblings">Escalada</a></li>
+            </ul>
+        </header>
 
     <!-- END OF HEADER SECTION -->
         <div id="body">
         {% block content %}
             <section id="main">
-            <div class="leftCol">
-                <div id="zonas">
-                    <div id="logo_zonas"> </div>
+            <div id="zonas" class="leftCol">
+                    <h1>Zonas</h1>
                     <div class="mapa">
                             <div id="norte"></div>
                             <div id="cuyo"></div>
@@ -104,11 +93,8 @@
                         <h3> Excursiones en el pais </h3> 
                         <p> Haga click sobre las regiones para obtener informacion de las excursiones disponibles en cada una.</p>
                      </div>
-                     
-                </div> 
             </div>
-            <div class="rightCol">
-                <div id="news_exc"> 
+            <div id="news_exc" class="rightCol">
                     <div id="header-new-exc">
                         <div class="botonera">
                             {% for object in incoming %}
@@ -122,18 +108,19 @@
                     {% for object in incoming %}
                     <article id="{{object.name|slugify}}" class="object">
                         <a href="{{object.id}}" id="{{object.id}}"><img src="{{object.foto_carrusel_uno.url_540x340}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}"/></a>
-                        <h3>{{object.name}}</h3>
-                        <p>{{object.summary|truncatewords:8}}</p>
-                        <p>Fecha de salida: 
-                            {{object.next_date }} -
-                        Lugar: 
-                        {{ object.place }} -
-                        Horario: 
-                        {{ object.time }}</p>
+                        <div class="description">
+                            <h3>{{object.name}}</h3>
+                            <p>{{object.summary|truncatewords:8}}</p>
+                            <p>Fecha de salida: 
+                                {{object.next_date }} -
+                            Lugar: 
+                            {{ object.place }} -
+                            Horario: 
+                            {{ object.time }}</p>
+                        </div>
                     </article>
                     {% endfor %}
                     <div class="clear"></div>
-                </div> 
             </div>
             <div class="clear"></div>
             </section>

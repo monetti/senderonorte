@@ -13,6 +13,12 @@ import datetime
 class Region(models.Model):
     name = models.CharField(_("Nombre"),max_length="200")
     description = models.TextField(_("Descripcion"))
+    class Meta:
+        verbose_name = _('Region')
+        verbose_name_plural = _('Regiones')
+
+    def __unicode__(self):
+        return self.name
     
 class Excurtion(models.Model):
     name = models.CharField(_("Nombre"),max_length="200")
