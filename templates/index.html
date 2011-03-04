@@ -120,7 +120,9 @@
                         </div>
                     </article>
                     {% endfor %}
+                    <h4 id="calendario"><a href="">Calendario</a></h4>
                     <div class="clear"></div>
+                    
             </div>
             <div class="clear"></div>
             </section>
@@ -144,14 +146,12 @@
                 </div>
             </div>
 
-            <div class="rightCol">
-                <div id="news">
-                    <div id="logo_news">
-                    </div>
-                    <div>
-                    <ul>
+            <div id="news" class="rightCol">
+                
+                    <h1 id="logo_news"></h1>
+
                     {% for object in news %}
-                        <li class="{% cycle 'odd' 'even' %}">
+                        <article class="{% cycle 'odd' 'even' %}">
                         
                             <div class="leftCol">
                                 <img src="{{object.image.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
@@ -162,12 +162,10 @@
                                 <a href="{{object.url}}"> [Ver mas] </a>
                             </div>
                             <div class="clear"></div>
-                        </li>
+                        </article>
                    
                     {% endfor %}
-                    </ul>
-                    </div>
-                </div> 
+               
             </div>
             <div class="clear"></div>
             </section>
@@ -177,12 +175,13 @@
             <img id="logo_publicity" src="/media/img/ultimas-excursiones.jpg" /> 
         </div>
         {% endblock %}
-        </div>
         <!-- END OF BODY SECTION -->
         <div id="footer">
             <img id="logo_footer" src="/media/img/footerycaminante.png" />
         </div>
         <!-- END OF FOOTER SECTION -->
+    </div>
+        
     </div>
 </body>
 </html>	

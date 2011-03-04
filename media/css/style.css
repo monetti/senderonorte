@@ -149,9 +149,8 @@ footer {
 }
 
 #logo_footer {
-    height:215px;
-    margin-left:2px;
-    margin-top:-50px;
+    margin-top:-52px;
+    width:950px;
 }
 
 #zonas {
@@ -223,7 +222,7 @@ footer {
 }
 
 #last_exc {
-    height:240px;
+    height:242px;
     background:#39465B;
     width:630px;
 }
@@ -241,14 +240,15 @@ footer {
 #news {
     height:400px;
     background:white;
-    width:-moz-min-content;
-    margin-left:11px;
- }
+    margin:auto;
+    width:290px;
+}
 
-#logo_news {
-    background:url(/media/img/novedades.jpg) no-repeat;
-    height:62px;
-    width:300px;
+h1#logo_news {
+    background:#121212;
+    height:35px;
+    margin:auto;
+    width:260px;
 }
 
 h1#logo_lastexc {
@@ -259,21 +259,38 @@ h1#logo_lastexc {
     padding:0;
 }
 
+#news_exc h4 {
+    margin:0px 0px 10px 5px;
+}
+
+#news_exc h4 a {
+    text-decoration:none;
+    color:#F29400;
+}
+
+h3#logo_lastexc {
+    background:url(/media/img/ultimas-excursiones.jpg) no-repeat;
+    height:62px;
+    text-indent: -9999px;
+    margin:0;
+    padding:0;
+}
 #publicity {
     background:#7F7F7F;
-    padding:10px;
+    padding:5px 10px 10px 10px;
+    width:auto;
 }
 
 #logo_publicity {
-    height:100px;
-    width:940px;
-    overflow:hidden;
+    margin:0px;
+    padding:0px;
+    width:930px;
 }
 
 #news_exc {
     color: #FFF;
     background:#262626;
-    height:531px;
+    height:530px;
     margin-left:10px;
     width:530px;
     overflow:hidden;
@@ -282,8 +299,11 @@ h1#logo_lastexc {
 
 
 #news_exc img {
-    padding:5px;
+    padding:0px;
+    width:520px;
+    height:350px;
     border:0px;
+    margin:auto;
 }
 
 #news_exc article {
@@ -295,14 +315,11 @@ h1#logo_lastexc {
     margin-top:5em;
 }
 
-
-
 #header-new-exc {
     position: absolute;
     text-decoration:none;
-    top:270px;
+    margin-top:355px;
     width:525px;
-    
 }
 #secondary .leftCol,
 #secondary .rightCol {
@@ -322,11 +339,9 @@ h1#logo_lastexc {
 }
 
 #news img {
-    display:block;
     height:100px;
     width:100px;
-    padding:5px;
-    border:none;
+    background: url(../img/no-image.jpg);
 }
 
 
@@ -429,33 +444,24 @@ h1#logo_lastexc {
 
 .botonera {
     color:black;
-    margin-top:27px;
+    margin-top:25px;
     float:right;
 }
 
 .botonera a {
-    width:14px;
+    width:13px;
     height:13px;
     text-align:center;
-    font-size:6pt;
+    font-size:7pt;
     background-color: white;
     float:left;
     margin-left:5px;
-    margin-right:5px;
     text-decoration:none;
+    padding:2px;
 }
 
 .botonera a:hover {
-    width:14px;
-    height:13px;
-    text-align:center;
-    font-size:6pt;
     background-color: #F4AA00;
-    padding-top:2px;
-    float:left;
-    margin-left:5px;
-    margin-right:5px;
-    color:white;
 }
 
 .odd {
