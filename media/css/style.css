@@ -7,7 +7,7 @@ body {
     margin:auto;
     font: 12px Arial, Helvetica, sans-serif;
 }
-header, section, article, aside, nav, footer{
+header, section, article, aside, nav, {
     display:block;
 }
 hr {
@@ -133,6 +133,7 @@ header {
 #body {
     background:#7F7F7F;
 }
+
 #body h1 {
     font-family:'Avenir Next LT Pro', 'Arial', sans-serif;
     font-weight: normal;
@@ -140,18 +141,54 @@ header {
     margin:0 -10px;
     padding: 0.5em;
     color: #FFF;
+}
+
+#footer a {
+    text-decoration:none;
+    color:black;
+    font-size:14px;
+}
+
+#footer span {
+    border-right: 1px solid black;
+    height: 5px;
+    padding:15px;
     
 }
 
-footer {
-    background:#7F7F7F;
-    width:950px;
+#footer p {
+    width:500px;
+    font-size:10px;
+    text-align:center;
+    margin-left:90px;
+    padding-left:90px;
+    margin-top:60px;
+    padding-top:20px;
 }
 
-#logo_footer {
+#footer {
+    overflow:hidden;
     margin-top:-52px;
     width:950px;
+    height:200px;
+    background:url("/media/img/footerycaminante.png");
+    padding:0px;
+    text-align:center
 }
+
+#footer ul {
+    list-style:none;
+    padding-top:45px;
+    margin-top:46px;
+    padding-left:70px;
+    margin-left:80px;
+}
+
+#footer ul li {
+    float:left;
+    padding:15px;
+}
+
 
 #zonas {
     background: #FFF url(../img/mapa/fondomapa.jpg) repeat-x;
@@ -159,6 +196,7 @@ footer {
     padding: 0 10px;
     width: 350px;
 }
+
 #zonas h1 {
     background: #F29400;
 }
@@ -275,16 +313,13 @@ h3#logo_lastexc {
     margin:0;
     padding:0;
 }
-#publicity {
-    background:#7F7F7F;
-    padding:5px 10px 10px 10px;
-    width:auto;
-}
 
-#logo_publicity {
-    margin:0px;
-    padding:0px;
+#publicity {
+    margin-left:10px;
     width:930px;
+    background:url("/media/img/ultimas-excursiones.jpg") no-repeat; 
+    height:65px;
+    padding-bottom:10px;
 }
 
 #news_exc {
@@ -332,10 +367,10 @@ h3#logo_lastexc {
 }
 
 #last_exc img {
-    padding:6px;
+    padding:5px;
     display: block;
-    width:288px;
-    height:80px;
+    width:290px;
+    height:100px;
 }
 
 #news img {
@@ -344,6 +379,20 @@ h3#logo_lastexc {
     background: url(../img/no-image.jpg);
 }
 
+h3 {
+    font-size:18px;
+    
+}
+
+
+#thumbs_last_exc p,h3{
+    margin:5px 0px 0px 4px;
+}
+
+#thumbs_last_exc {
+    padding:2px;
+    padding-top:4px;
+}
 
 #thumbs_last_exc {
     padding:2px;
@@ -530,6 +579,7 @@ h3#logo_lastexc {
 
 .article {
     padding:10px;    
+
     float:left;
     margin:0px;
 }
@@ -566,3 +616,5 @@ h3#logo_lastexc {
     background:url(../img/logo-zonas.jpg) no-repeat ;    
     height:200px;
 }
+
+
