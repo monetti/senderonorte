@@ -99,5 +99,8 @@ INSTALLED_APPS = (
     'senderonorte',
     'excurtion',
     'news',
+    'cimblings',
+    'customizedtravels',
+    'educationtravels',
     'PIL',
  )

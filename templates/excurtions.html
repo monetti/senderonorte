@@ -16,56 +16,229 @@
     <div id="logo-excurtions"></div>
     {% endblock%}
     <div id="tabs">
-        <a href="#tab-norte" class="tab">Norte</a>
-        <a href="#tab-patagonia" class="tab">Patagonia</a>
-        <a href="#tab-litoral" class="tab">Litoral</a>
-        <a href="#tab-centro" class="tab">Centro</a>
-        <a href="#tab-cuyo" class="tab">Cuyo</a>
+        <a href="#tab-norte" class="tab" id="button-tab-norte">Norte</a>
+        <a href="#tab-patagonia" class="tab" id="button-tab-patagonia">Patagonia</a>
+        
+        <a href="#tab-centro" class="tab" id="button-tab-centro">Centro</a>
+        <a href="#tab-cuyo" class="tab" id="button-tab-cuyo">Cuyo</a>
         <div class="clear"></div>
     </div>
-    <div>
-        <div id="tab-norte" class="content-tab">
-        {% for object in norte %}
-            <article class="article">
-                <a href="{{object.id}}"><img src="{{object.foto_carrusel_uno.url}}" clas="image-excurtion"/></a>
-                <h5 class="title-excurtion"> Nombre </h5>
-                <span class="data-excurtion"> {{object.name}}</span>
-                <h5 class="title-excurtion"> Duracion </h5>
-                <span class="data-excurtion">{{object.duration}}</span>
-                <h5 class="title-excurtion"> Proxima Fecha </h5>
-                <span class="data-excurtion">{{object.next_date}}</span>                
-            </article>
-        {% endfor %}
-        
-        <h2> NORTE </h2>
-        <p>
-        bla bla bla bla
-        </p>
-        </div>
-        <div id="tab-patagonia" class="content-tab">
-        {% for object in patagonia %}
-            <article class="article">
-                <a href="{{object.id}}"><img src="{{object.foto_carrusel_uno.url}}" clas="image-excurtion"/></a>
-                <h5 class="title-excurtion"> Nombre </h5>
-                <span class="data-excurtion"> {{object.name}}</span>
-                <h5 class="title-excurtion"> Duracion </h5>
-                <span class="data-excurtion">{{object.duration}}</span>
-                <h5 class="title-excurtion"> Proxima Fecha </h5>
-                <span class="data-excurtion">{{object.next_date}}</span>                
-            </article>
-        {% endfor %}
-        
-        <h2> PATAGONIA </h2>
-        <p>
-        bla bla bla bla
-        </p>
-        </div>
-        <div id="tab-litoral" class="content-tab">tab litoral</div>
-        <div id="tab-centro" class="content-tab">tab centro</div>
-        <div id="tab-cuyo" class="content-tab">tab cuyo</div>
 
+    <div id="tab-norte" class="content-tab">
+            <div class="thumbs-exc">
+            {% for object in norte %}
+                <div class="article">
+                    <div style="float:left;">
+                        <a href="{{object.id}}"><img src="{{object.foto_carrusel_uno.url}}" class="image-excurtion"/></a>
+                    </div>
+                    <div style="float:left;">
+                        <h5> Nombre </h5>
+                        <span> {{object.name}}</span>
+                        <h5> Duracion </h5>
+                        <span>{{object.duration}}</span>
+                        <h5> Proxima Fecha </h5>
+                        <span>{{object.next_date}}</span>                
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                {% if forloop.counter == 2 %}
+                    <div class="clear"></div>
+                {% endif %}
+                {% if forloop.counter == 4 %}
+                    <div class="clear"></div>
+                {% endif %}
+
+                
+            {% endfor %}
+            </div>
+            <div class="desc-region">
+                <h2> Norte </h2>
+                <p>
+                Viajes que son una vuelta al pasado para sumergirnos en culturas ancestrales. Tradiciones que se han pasado de generacion en generacion, sabores, colores, y olores inconfundibles de la madre tierra
+                </p>
+                <p>
+                Una paleta interminable de rojos, marrones cobrizos, naranjas y verdes nos regalan sus cerros, que se confunden con la blancura de las salinas o de las nevadas cumbres que sirvieron muchas veces como enterratorios incaicos.
+                </p>
+                <p>
+                De repente una manada de guanacos nos observa desde las laderas montañosas y un condor, ave sagrada, surca el cielo sobre nuestras cabezas.
+                </p>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div id="tab-patagonia" class="content-tab">
+<div class="thumbs-exc">
+            {% for object in patagonia %}
+                <div class="article">
+                    <div style="float:left;">
+                        <a href="{{object.id}}"><img src="{{object.foto_carrusel_uno.url}}" class="image-excurtion"/></a>
+                    </div>
+                    <div style="float:left;">
+                        <h5> Nombre </h5>
+                        <span> {{object.name}}</span>
+                        <h5> Duracion </h5>
+                        <span>{{object.duration}}</span>
+                        <h5> Proxima Fecha </h5>
+                        <span>{{object.next_date}}</span>                
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                {% if forloop.counter == 2 %}
+                    <div class="clear"></div>
+                {% endif %}
+                {% if forloop.counter == 4 %}
+                    <div class="clear"></div>
+                {% endif %}
+
+                
+            {% endfor %}
+            </div>
+            <div class="desc-region">
+                <h2> Norte </h2>
+                <p>
+                Viajes que son una vuelta al pasado para sumergirnos en culturas ancestrales. Tradiciones que se han pasado de generacion en generacion, sabores, colores, y olores inconfundibles de la madre tierra
+                </p>
+                <p>
+                Una paleta interminable de rojos, marrones cobrizos, naranjas y verdes nos regalan sus cerros, que se confunden con la blancura de las salinas o de las nevadas cumbres que sirvieron muchas veces como enterratorios incaicos.
+                </p>
+                <p>
+                De repente una manada de guanacos nos observa desde las laderas montañosas y un condor, ave sagrada, surca el cielo sobre nuestras cabezas.
+                </p>
+
+            </div>
+            <div class="clear"></div>
+       
+        </div>
         
-   </div>     
+        <div id="tab-litoral" class="content-tab">
+        <div class="thumbs-exc">
+            {% for object in litoral %}
+                <div class="article">
+                    <div style="float:left;">
+                        <a href="{{object.id}}"><img src="{{object.foto_carrusel_uno.url}}" class="image-excurtion"/></a>
+                    </div>
+                    <div style="float:left;">
+                        <h5> Nombre </h5>
+                        <span> {{object.name}}</span>
+                        <h5> Duracion </h5>
+                        <span>{{object.duration}}</span>
+                        <h5> Proxima Fecha </h5>
+                        <span>{{object.next_date}}</span>                
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                {% if forloop.counter == 2 %}
+                    <div class="clear"></div>
+                {% endif %}
+                {% if forloop.counter == 4 %}
+                    <div class="clear"></div>
+                {% endif %}
+
+                
+            {% endfor %}
+            </div>
+            <div class="desc-region">
+                <h2> Norte </h2>
+                <p>
+                Viajes que son una vuelta al pasado para sumergirnos en culturas ancestrales. Tradiciones que se han pasado de generacion en generacion, sabores, colores, y olores inconfundibles de la madre tierra
+                </p>
+                <p>
+                Una paleta interminable de rojos, marrones cobrizos, naranjas y verdes nos regalan sus cerros, que se confunden con la blancura de las salinas o de las nevadas cumbres que sirvieron muchas veces como enterratorios incaicos.
+                </p>
+                <p>
+                De repente una manada de guanacos nos observa desde las laderas montañosas y un condor, ave sagrada, surca el cielo sobre nuestras cabezas.
+                </p>
+
+            </div>
+            <div class="clear"></div>
+
+        </div>
+        <div id="tab-centro" class="content-tab">
+        <div class="thumbs-exc">
+            {% for object in centro %}
+                <div class="article">
+                    <div style="float:left;">
+                        <a href="{{object.id}}"><img src="{{object.foto_carrusel_uno.url}}" class="image-excurtion"/></a>
+                    </div>
+                    <div style="float:left;">
+                        <h5> Nombre </h5>
+                        <span> {{object.name}}</span>
+                        <h5> Duracion </h5>
+                        <span>{{object.duration}}</span>
+                        <h5> Proxima Fecha </h5>
+                        <span>{{object.next_date}}</span>                
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                {% if forloop.counter == 2 %}
+                    <div class="clear"></div>
+                {% endif %}
+                {% if forloop.counter == 4 %}
+                    <div class="clear"></div>
+                {% endif %}
+
+                
+            {% endfor %}
+            </div>
+            <div class="desc-region">
+                <h2> Norte </h2>
+                <p>
+                Viajes que son una vuelta al pasado para sumergirnos en culturas ancestrales. Tradiciones que se han pasado de generacion en generacion, sabores, colores, y olores inconfundibles de la madre tierra
+                </p>
+                <p>
+                Una paleta interminable de rojos, marrones cobrizos, naranjas y verdes nos regalan sus cerros, que se confunden con la blancura de las salinas o de las nevadas cumbres que sirvieron muchas veces como enterratorios incaicos.
+                </p>
+                <p>
+                De repente una manada de guanacos nos observa desde las laderas montañosas y un condor, ave sagrada, surca el cielo sobre nuestras cabezas.
+                </p>
+
+            </div>
+            <div class="clear"></div>
+
+        </div>
+        <div id="tab-cuyo" class="content-tab"><div class="thumbs-exc">
+            {% for object in cuyo %}
+                <div class="article">
+                    <div style="float:left;">
+                        <a href="{{object.id}}"><img src="{{object.foto_carrusel_uno.url}}" class="image-excurtion"/></a>
+                    </div>
+                    <div style="float:left;">
+                        <h5> Nombre </h5>
+                        <span> {{object.name}}</span>
+                        <h5> Duracion </h5>
+                        <span>{{object.duration}}</span>
+                        <h5> Proxima Fecha </h5>
+                        <span>{{object.next_date}}</span>                
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                {% if forloop.counter == 2 %}
+                    <div class="clear"></div>
+                {% endif %}
+                {% if forloop.counter == 4 %}
+                    <div class="clear"></div>
+                {% endif %}
+
+                
+            {% endfor %}
+            </div>
+            <div class="desc-region">
+                <h2> Norte </h2>
+                <p>
+                Viajes que son una vuelta al pasado para sumergirnos en culturas ancestrales. Tradiciones que se han pasado de generacion en generacion, sabores, colores, y olores inconfundibles de la madre tierra
+                </p>
+                <p>
+                Una paleta interminable de rojos, marrones cobrizos, naranjas y verdes nos regalan sus cerros, que se confunden con la blancura de las salinas o de las nevadas cumbres que sirvieron muchas veces como enterratorios incaicos.
+                </p>
+                <p>
+                De repente una manada de guanacos nos observa desde las laderas montañosas y un condor, ave sagrada, surca el cielo sobre nuestras cabezas.
+                </p>
+
+            </div>
+            <div class="clear"></div>
+  </div>
+
 {% endblock %}   
 
 

@@ -1,87 +1,44 @@
-{% extends 'escalada.html' %}
-
+{% extends 'index.html' %}
 {% block title %} Viajes Educativos {% endblock %}
-{% block logocimbling %}
-<div id="logo-educationtravel"></div>
-{% endblock %}
-{% block articleone %}
-    <div class="leftCol">
-        <img src="/media/img/educationtravel/top.jpg" alt="Excursion 1" />
-    </div>
-    <div class="leftCol">
-        <div id="desc-educationtravel">
-            <span> Nombre </span> 
-            <br />
-                  Granja del Moo 
-            <br />
-            <span> Duracion </span>
-            <br />
-             2 dias 
-         </div>
-         
+{% block content %}
+    {% block logocimbling %}
+        <div id="logo-etravels" ></div> 
+    {% endblock %}
+    <div id="etravel" class="content-tab">
+            <div class="thumbs-exc">
+            {% for object in etravels %}
+                <div class="article">
+                    <div style="float:left;">
+                        <a href="{{object.id}}"><img src="{{object.photo.url}}" /></a>
+                    </div>
+                    <div style="float:left;">
+                        <h5> Nombre </h5>
+                        <span> {{object.name}}</span>
+                        <h5> Duracion </h5>
+                        <span>{{object.duration}}</span>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                {% if forloop.counter == 2 %}
+                    <div class="clear"></div>
+                {% endif %}
+                {% if forloop.counter == 4 %}
+                    <div class="clear"></div>
+                {% endif %}
 
-    </div>
-    <div class="clear"></div>
-{% endblock %}
-{% block articletwo %}
-    <div class="leftCol">
-        <img src="/media/img/educationtravel/top.jpg" alt="Excursion 1" />
-    </div>
-    <div class="leftCol">
-        <div id="desc-educationtravel">
-            <span> Nombre </span> 
-            <br />
-                  Granja del Moo 
-            <br />
-            <span> Duracion </span>
-            <br />
-             2 dias 
-         </div>
-         
-
-    </div>
-    <div class="clear"></div>
-{% endblock %}
-{% block articlethree %}
-    <div class="leftCol">
-        <img src="/media/img/educationtravel/top.jpg" alt="Excursion 1" />
-    </div>
-    <div class="leftCol">
-        <div id="desc-educationtravel">
-            <span> Nombre </span> 
-            <br />
-                  Granja del Moo 
-            <br />
-            <span> Duracion </span>
-            <br />
-             2 dias 
-         </div>
-         
-
-    </div>
-    <div class="clear"></div>
-{% endblock %}
-{% block articlefour %}
-    <div class="leftCol">
-        <img src="/media/img/educationtravel/top.jpg" alt="Excursion 1" />
-    </div>
-    <div class="leftCol">
-        <div id="desc-educationtravel">
-            <span> Nombre </span> 
-            <br />
-                  Granja del Moo 
-            <br />
-            <span> Duracion </span>
-            <br />
-             2 dias 
-         </div>
-         
-
-    </div>
-    <div class="clear"></div>
-{% endblock %}
-{% block bodytext %}
-        <h1> Viajes Educativos </h1>
+                
+            {% endfor %}
+            </div>
+            <div class="desc-region">
+      <h2> Viajes Educativos </h2>
         <p> Bajo el lema "Educando en Ambientes Naturales" ofrecemos destinos acordes a las distintas necesidades manteniendo un estricto nivel de seguridad, orden y motivación para docentes y alumnos. </p>
         <p> Proponiendo el contacto con la naturaleza mediante la observación y actividades interpretativas, y con el objecto de concientizar en temáticas concernientes a problemas ambientales, flora, fauna y otros. Desarrollamos salidas incluyendo contenidos curriculares de distintos niveles de enseñanza. </p>
+            </div>
+            <div class="clear"></div>
+        </div>
 {% endblock %}
+
+
+
+
+        

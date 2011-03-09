@@ -37,7 +37,14 @@
                         }
                 });
                 return false;
-            });            
+            });
+            $("#norte-over").focus(function(){
+                //debo mostrar la imagen 
+                
+                
+            })
+            
+                   
             {% block javascript %}
             
             {% endblock %}            
@@ -82,6 +89,7 @@
             <div id="zonas" class="leftCol">
                     <h1>Zonas</h1>
                     <div class="mapa">
+                            <div id="norte-over"></div>
                             <div id="norte"></div>
                             <div id="cuyo"></div>
                             <div id="centro"></div>

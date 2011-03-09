@@ -169,11 +169,10 @@ header {
 #footer {
     overflow:hidden;
     margin-top:-52px;
-    width:950px;
-    height:200px;
-    background:url("/media/img/footerycaminante.png");
-    padding:0px;
-    text-align:center
+    height:215px;
+    background:url("/media/img/footerycaminante.png"), no-repeat;
+    text-align:center;
+    background-position:bottom;
 }
 
 #footer ul {
@@ -236,6 +235,12 @@ header {
     width:123px;
     margin:8px 0px 0px 125px;    
 }
+
+#norte-over {
+    background:url(../img/mapa/norte-over.png) no-repeat;
+    display:none;
+}
+
 
 #litoral {
     background:url(../img/mapa/litoral.png) no-repeat;
@@ -344,7 +349,6 @@ h3#logo_lastexc {
 #news_exc article {
     padding:5px;
     display: none;
-
 }
 #news_exc .description{
     margin-top:5em;
@@ -356,10 +360,12 @@ h3#logo_lastexc {
     margin-top:355px;
     width:525px;
 }
+
 #secondary .leftCol,
 #secondary .rightCol {
     padding: 0;
 }
+
 #ref_gig {
     background-color:#344E5F;
     height:150px;
@@ -442,6 +448,10 @@ h3 {
     height:495px;
 }
 
+#logo-cimbling {
+    background:url(../img/logo-cimbling.jpg) no-repeat ;    
+    height:200px;
+}
 
 #desc-educationtravel {
     margin-left:10px;
@@ -534,28 +544,51 @@ h3 {
 }
 
 .tab {
-    width:17%;
-    padding:10px;
-    padding-left:16px;
+    width:25%;
+    height:30px;
     float:left;
-    text-align:center;
-    margin:auto;
     text-decoration:none;
-    border:1px solid;
-}
-
-.tab:hover {
-    background-color:#F29400;
-}
-
-#body-excurtions {
-
+    background-position:bottom;
 }
 
 .content-tab {
-    height:200px;
-    background:url(../img/fondogris-viajeseduc.jpg) no-repeat ;
+    height:350px;
+    background:url(../img/fondogris-viajeseduc.jpg) no-repeat;
+    background-position:bottom;
+    padding:20px;
 }
+
+#button-tab-norte {
+    background-color:#F6A800;
+    background-position:bottom;
+}
+#button-tab-norte:hover {
+    height:40px;
+    margin-top:-10px;
+
+}
+#button-tab-centro {
+    background-color:#98C10F;
+}
+#button-tab-centro:hover {
+    height:40px;
+    margin-top:-10px;
+}
+#button-tab-patagonia {
+    background-color:#006BB3;
+}
+#button-tab-patagonia:hover {
+    height:40px;
+    margin-top:-10px;
+}
+#button-tab-cuyo {
+    background-color:#0085A8;
+}
+#button-tab-cuyo:hover {
+    height:40px;
+    margin-top:-10px;
+}
+
 
 #tab-norte {
     display:block;
@@ -578,38 +611,56 @@ h3 {
 }
 
 .article {
-    padding:10px;    
-
-    float:left;
     margin:0px;
+    width:50%;
+    position:relative;
+    float:left
 }
 
 .article a img {
-    width:150px;
-    height:150px;
+    width:100px;
+    height:100px;
     border:0px;
     margin:0px;
 }
 
-.content-tab h2 {
-    float:right;
-        width:20%;
+.article a {
+    text-decoration:none;
 }
 
-.content-tab p {
-    float:right;
-    width:20%;
-}
-
-.title-excurtion {
+.article h5 {
     font-family:"Avenir Next LT Pro",sans-serif;
-    font-size:11pt;
+    font-size:11px;
     text-transform:uppercase;
     margin:0px;
 }
 
-.data-excurtion {
+.article span {
     margin:0px;
+}
+
+.content-tab h2 {
+    padding:0px;
+    color:#5F5F5F;
+}
+
+.content-tab p {
+    padding:0px;
+    color:#5F5F5F;
+}
+
+
+.desc-region {
+    float:left;
+    text-align:left;
+    width:25%;
+}
+
+.thumbs-exc {
+    float:left;   
+    text-align:left;
+    width:65%;
+    padding:50px 20px 20px 40px;
 }
 
 #logo-excurtions {
@@ -617,4 +668,13 @@ h3 {
     height:200px;
 }
 
+#tabs {
+    margin:auto;
+    text-align:center;
+}
 
+#tabs a {
+    padding:10px 0px 0px 0px;
+    margin:auto;
+    text-align:center;
+}

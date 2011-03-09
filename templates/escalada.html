@@ -1,52 +1,33 @@
 {% extends 'index.html' %}
 {% block title %} Escaladas {% endblock %}
 {% block content %}
-<div id="body-cimbling">
-    <div id="banner-excurtion">
     {% block logocimbling %}
-    <img src="/media/img/logo-cimbling.jpg" alt="description" title="description" width="" height="" /> 
-    {% endblock%}
-    </div>
-    <div class="content">
-    <div class="leftCol pictures">
-            <article>
-                {% block articleone %}
-                    <img src="/media/img/no-image.png" alt="Rappel" />
-                    <h3> Rappel </h3>
-                {% endblock %}
-            </article>
-            <article>
-                {% block articletwo %}
-                    <img src="/media/img/no-image.png" alt="Rappel" />
-                    <h3> Rappel </h3>
-                {% endblock %}
-            </article>
-        <div class="clear"></div>
-            <article>
-                {% block articlethree %}
-                    <img src="/media/img/no-image.png" alt="Rappel" />
-                    <h3> Rappel </h3>
-                {% endblock %}
-            </article>
-            <article>
-                {% block articlefour %}
-                    <img src="/media/img/no-image.png" alt="Rappel" />
-                    <h3> Rappel </h3>
-                {% endblock %}
-            </article>
-        <div class="clear"></div>                
-    </div>
-    <div class="rightCol">
-        {% block bodytext %}
-        <h1> Escalada </h1>
+        <div id="logo-cimbling" ></div> 
+    {% endblock %}
+    <div id="cimblings" class="content-tab">
+            <div class="thumbs-exc">
+            {% for object in cimblings %}
+                <div class="article">
+                    <a href="{{object.id}}"><img src="{{object.photo.url}}" /></a>
+                    <h5> {{object.cimbling_type}} </h5>
+
+                </div>
+                {% if forloop.counter == 2 %}
+                    <div class="clear"></div>
+                {% endif %}
+                {% if forloop.counter == 4 %}
+                    <div class="clear"></div>
+                {% endif %}
+
+                
+            {% endfor %}
+            </div>
+            <div class="desc-region">
+        <h2> Escalada </h2>
         <p> Desarrollamos tirolesas, rapeles y lineas de escalada segun los requerimientos de cada grupo.</p>
         <p> Nuestro staff esta altamente capacitado para desarrollar estas actividades con total seguridad. Contamos además con equipos de escalada en roca que cumplen con todas las exigencias, controles y estandares de calidad de la comun‏idad europea y EE.UU. </p>
-        {% endblock %}
-    </div>    
-    <div class="clear"></div>    
-    </div>
-</div>
+            </div>
+            <div class="clear"></div>
+        </div>
 {% endblock %}
-
-
 

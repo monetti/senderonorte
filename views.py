@@ -2,6 +2,9 @@ from django.views.generic import simple
 from excurtion.models import Excurtion
 from excurtion.models import PhotoPostExcurtion
 from news.models import New
+from cimblings.models import Cimbling
+from customizedtravels.models import CustomizedTravel
+from educationtravels.models import EducationTravel
 from datetime import datetime
 
 def index(request):
@@ -50,5 +53,35 @@ def excurtions(request,tag=None):
             'litoral':litoral,
             'centro':centro,
             'cuyo':cuyo,
+        }
+    )
+    
+def cimblings(request):
+    cimblings = Cimbling.objects.all()[:4]
+    return simple.direct_to_template(
+        request,
+        'escalada.html',
+        extra_context = {
+            'cimblings':cimblings,
+        }
+    )
+    
+def customizedtravels(request):
+    ctravels = CustomizedTravel.objects.all()[:4]
+    return simple.direct_to_template(
+        request,
+        'amedida.html',
+        extra_context = {
+            'ctravels':ctravels,
+        }
+    )
+    
+def educationtravels(request):
+    etravels = EducationTravel.objects.all()[:4]
+    return simple.direct_to_template(
+        request,
+        'educativos.html',
+        extra_context = {
+            'etravels':etravels,
         }
     )
