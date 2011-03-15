@@ -1,32 +1,31 @@
-{% extends 'escalada.html' %}
-
+{% extends 'index.html' %}
 {% block title %} Viajes a Medida {% endblock %}
-{% block logocimbling %}
-    <img src="/media/img/logo-customizedtours.jpg" />
-{% endblock %}
-{% block articleone %}
-    <div class="leftCol">
-        <img src="/media/img/educationtravel/top.jpg" alt="Excursion 1" />
-    </div>
-{% endblock %}
-{% block articletwo %}
-    <div class="leftCol">
-        <img src="/media/img/educationtravel/top.jpg" alt="Excursion 1" />
-    </div>
-{% endblock %}
-{% block articlethree %}
-    <div class="leftCol">
-        <img src="/media/img/educationtravel/top.jpg" alt="Excursion 1" />
-    </div>
-{% endblock %}
-{% block articlefour %}
-    <div class="leftCol">
-        <img src="/media/img/educationtravel/top.jpg" alt="Excursion 1" />
-    </div>
+{% block content %}
+    <div id="logo-ctravel" ></div> 
     
+    <div id="travels" class="content-tab">
+            <div class="thumbs-exc">
+            {% for object in ctravels %}
+                <div class="article">
+                    <a href="{{object.id}}"><img src="{{object.photo.url}}" /></a>
+                </div>
+                {% if forloop.counter == 2 %}
+                    <div class="clear"></div>
+                {% endif %}
+                {% if forloop.counter == 4 %}
+                    <div class="clear"></div>
+                {% endif %}
+
+                
+            {% endfor %}
+            </div>
+            <div class="desc-region">
+<h2> Viajes a Medida </h2>
+<p> Planificamos y desarrollamos viajes a medida de nuestros clientes en un proceso de interaccion y construccion conjunta de los mismos. </p>
+<p> Del mismo modo prestamos servicios de logistica a expediciones o grupos para realizar actividades dentro y fuera de nuestro pais  </p>
+            </div>
+            <div class="clear"></div>
+        </div>
 {% endblock %}
-{% block bodytext %}
-        <h1> Viajes a Medida </h1>
-        <p> Planificamos y desarrollamos viajes a medida de nuestros clientes en un proceso de interaccion y construccion conjunta de los mismos. </p>
-        <p> Del mismo modo prestamos servicios de logistica a expediciones o grupos para realizar actividades dentro y fuera de nuestro pais  </p>
-{% endblock %}
+
+

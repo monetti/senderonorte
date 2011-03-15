@@ -102,5 +102,6 @@ INSTALLED_APPS = (
     'cimblings',
     'customizedtravels',
     'educationtravels',
+    'contacts',
     'PIL',
  )

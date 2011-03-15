@@ -5,6 +5,7 @@ from news.models import New
 from cimblings.models import Cimbling
 from customizedtravels.models import CustomizedTravel
 from educationtravels.models import EducationTravel
+from contacts.forms import ContactoForm
 from datetime import datetime
 
 def index(request):
@@ -37,7 +38,7 @@ def excurtion_detail(request, tag=None,type_object=None):
         }
     )
     
-def excurtions(request,tag=None):
+def excurtions(request,tag="norte"):
     excurtions = Excurtion.objects.all()
     norte = excurtions.filter(region__name="norte")[:4]
     patagonia = excurtions.filter(region__name="patagonia")[:4]
@@ -48,6 +49,7 @@ def excurtions(request,tag=None):
         request,
         'excurtions.html',
         extra_context = {
+            'selected':tag,
             'norte':norte,
             'patagonia':patagonia,
             'litoral':litoral,
@@ -85,3 +87,21 @@ def educationtravels(request):
             'etravels':etravels,
         }
     )
+    
+
+def contact(request):
+    if request.method == 'POST':
+        # peticion POST con formulario relleno
+        form = ContactoForm(request.POST)
+        if form.is_valid():
+            return HttpResponseRedirect('/gracias/')
+    else: # formulario sin rellenar
+        form = ContactoForm()
+    return simple.direct_to_template(
+        request,
+        'contacto.html',
+        extra_context = {
+              'form': form, 
+        }
+    )
+

@@ -1,0 +1,601 @@
+* {
+    margin:20px;
+    padding:0px;
+    
+}
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: local("../fonts/AvenirNextLTPro-Regular.otf");
+}
+
+body {
+    margin:auto;
+    font: 12px Arial, Helvetica, sans-serif;
+}
+
+hr {
+   color:#5D5D5D;
+   height:1px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+header {
+    height:182px;
+    background:url("/media/img/top.jpg");
+}
+
+#nav{
+    clear:right;
+    float:right;
+    margin: 68px 22px 0;
+    padding:0;
+    overflow:hidden;
+    list-style:none;
+}
+#nav li {
+    float:left;
+}
+
+#nav a {
+    display:block;
+    font-size: 15px;
+    padding: 1em 1.5em;
+    color:#FEFEFE;
+    text-decoration: none;
+    position: relative;
+
+}
+#nav a:hover {
+    background:#F29400;
+}
+
+
+
+#nav li:hover {
+    background:#F29400;
+}
+
+
+#nav span {
+    background: url('img/flecha.png');
+    border-right: 1px solid #FEFEFE;
+    width: 20px;
+    height: 1em;
+    right: 1px;
+    position: absolute;
+}
+
+#nav li ul {
+    display: none; 
+    background: #000 ;
+    position: absolute;
+    padding:0;
+    z-index:999;
+}
+
+#nav li:hover ul {
+    display: block;
+}
+
+#nav li ul li {
+    display: block;
+    float:none;
+    position: relative;
+    color: #FEFEFE;
+    line-height:5px;
+    margin:0;
+    padding:0px;
+    
+}
+
+#nav li ul li a{
+    color: #FEFEFE;
+    text-transform:none;
+    font-size:13px;
+    font-weight:normal;
+    width:100px;
+}
+
+
+#wrapper_body {
+    width:950px;
+}
+
+#logo_sendero {
+    left:0;
+    top:0;
+    width:286px;
+    background: url(/media/img/logo-cabecera.png) no-repeat ;
+    height:187px;
+    overflow:hidden;
+    text-indent: -9999px;
+}
+
+#barra_superior {
+    float:right;
+    list-style: none;
+    margin: 0;
+}
+#barra_superior a {
+    color: #FFF;
+    text-decoration:none;
+}
+
+#body {
+    background:#7F7F7F;
+}
+
+#body h1 {
+    font-family:'Avenir Next LT Pro', 'Arial', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #FFF;
+}
+
+#footer a {
+    text-decoration:none;
+    color:black;
+    font-size:14px;
+}
+
+#footer span {
+    border-right: 1px solid black;
+    height: 5px;
+}
+
+#footer p {
+    width:500px;
+    font-size:10px;
+    text-align:center;
+}
+
+#footer {
+    overflow:hidden;
+    height:215px;
+    background:url("/media/img/footerycaminante.png") no-repeat;
+    text-align:center;
+
+}
+
+#footer ul {
+    list-style:none;
+}
+
+#footer ul li {
+    float:left;
+}
+
+
+#zonas {
+    background: #FFF url(../img/mapa/fondomapa.jpg) repeat-x;
+    background-position:center bottom;
+    width:400px;
+}
+
+#zonas h1 {
+    background: #F29400;
+}
+
+
+#centro {
+    background:url(../img/mapa/centro.png) no-repeat;
+    height:67px;
+    width:42px;
+    margin:-98px 0px 0px 161px;
+}
+
+#buenosaires {
+    background:url(../img/mapa/buenosaires.png) no-repeat;
+    height:92px;
+    width:65px;
+    margin:-14px 0px 0px 184px;
+}
+
+#patagonia {
+    background:url(../img/mapa/patagonia.png) no-repeat;
+    height:237px;
+    width:123px;
+    margin:-73px 0px 0px 104px;
+}
+
+#cuyo {
+    background:url(../img/mapa/cuyo.png) no-repeat;
+    height:117px;
+    width:59px;
+    margin:-29px 0px 0px 113px;
+}
+
+#norte {
+    background:url(../img/mapa/norte.png) no-repeat;
+    height:101px;
+    width:123px;
+    margin:8px 0px 0px 125px;    
+}
+
+#norte-over {
+    background:url(../img/mapa/norte-over.png) no-repeat;
+    display:none;
+}
+
+
+#litoral {
+    background:url(../img/mapa/litoral.png) no-repeat;
+    height:142px;
+    width:104px;
+    margin:-149px 0px 0px 186px;    
+}
+
+#main {
+    
+}
+
+#logo_zonas {
+    background: url(/media/img/zonas.jpg) no-repeat;
+    height:62px;
+    width:376px;
+}
+
+#secondary {
+    
+}
+
+#last_exc {
+    height:242px;
+    background:#39465B;
+    width:600px;
+}
+
+#last_exc article {
+    background: #262626;
+    color:#F0F0F0;
+    float:left;
+    width:48%;
+    
+    height:167px;
+    
+}
+
+#news {
+    height:400px;
+    background:white;
+    
+    width:290px;
+}
+
+h1#logo_news {
+    background:#121212;
+    height:35px;
+    
+    width:260px;
+}
+
+h1#logo_lastexc {
+    background:url(/media/img/ultimas-excursiones.jpg) no-repeat;
+    height:62px;
+    text-indent: -9999px;
+}
+
+#news_exc h4 {
+
+}
+
+#news_exc h4 a {
+    text-decoration:none;
+    color:#F29400;
+}
+
+h3#logo_lastexc {
+    background:url(/media/img/ultimas-excursiones.jpg) no-repeat;
+    height:62px;
+    text-indent: -9999px;
+}
+
+#publicity {
+    width:930px;
+    background:url("/media/img/ultimas-excursiones.jpg") no-repeat; 
+    height:65px;
+}
+
+#news_exc {
+    color: #FFF;
+    background:#262626;
+    height:530px;
+    width:530px;
+    overflow:hidden;
+    position: relative;
+}
+
+
+#news_exc img {
+    width:520px;
+    height:350px;
+    border:0px;
+}
+
+#news_exc article {
+    display: none;
+}
+#news_exc .description{
+
+}
+
+#header-new-exc {
+    position: absolute;
+    text-decoration:none;
+    width:525px;
+}
+
+#secondary .leftCol,
+#secondary .rightCol {
+}
+
+#ref_gig {
+    background-color:#344E5F;
+    height:150px;
+}
+
+#last_exc img {
+    display: block;
+    width:290px;
+    height:100px;
+}
+
+#news img {
+    height:100px;
+    width:100px;
+    background: url(../img/no-image.jpg);
+}
+
+h3 {
+    font-size:18px;
+    
+}
+
+
+#thumbs_last_exc p,h3{
+}
+
+#thumbs_last_exc {
+}
+#news a {
+    font-family: 'Arial',serif;
+    font-weight: normal;
+    font-size:11px;
+    color:#FA9600;
+}
+
+#news ul {
+    list-style-type: none;
+ 
+}
+.pictures article{
+    float:left;
+
+}
+.pictures img {
+    float:left;
+}
+#logo-cimbling {
+    background:url(../img/logo-cimbling.jpg) no-repeat ;    
+    height:200px;
+}
+#logo-etravel {
+    background:url(../img/logo-educationtravel.jpg) no-repeat ;    
+    height:200px;
+}
+#logo-ctravel {
+    background:url(../img/logo-customizedtours.jpg) no-repeat ;    
+    height:200px;
+}
+
+#desc-educationtravel {
+    text-align:left;
+    font-family: 'Arial',serif;
+    font-size: 10px;
+}
+
+#menu a:link{
+    text-decoration:none;
+    color:#FFFEFF;
+}
+
+#menu a:visited{text-decoration:none;
+                color:#FFFEFF;
+                }
+
+
+#dialog {
+    width:550px;
+    height:500px;
+}
+
+.curved {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  behavior:url(border-radius.htc);
+}
+
+.leftCol {
+    float: left;
+}
+
+.rightCol {
+    float: right;
+}
+
+
+.menu_superior {
+    float: left;
+    color: #AAA6A7;
+    font-size:12px;
+}
+
+.botonera {
+    color:black;
+    float:right;
+}
+
+.botonera a {
+    width:13px;
+    height:13px;
+    text-align:center;
+    font-size:7pt;
+    background-color: white;
+    float:left;
+
+    text-decoration:none;
+
+}
+
+.botonera a:hover {
+    background-color: #F4AA00;
+}
+
+.odd {
+    background-color:#FFF;
+    height:112px;
+
+}
+
+.even {
+    background-color:#E2E2E2;
+    height:112px;
+
+}
+
+.clear {
+    clear:both;
+}
+
+.mapa {
+    padding-left:50px;
+}
+
+.tab {
+    width:25%;
+    height:30px;
+    float:left;
+    text-decoration:none;
+    background-position:bottom;
+}
+
+.content-tab {
+    height:375px;
+    background:url(../img/fondogris-viajeseduc.jpg) no-repeat;
+    background-position:bottom;
+}
+
+#button-tab-norte {
+    background-color:#F29300;
+    background-position:bottom;
+}
+#button-tab-norte:hover {
+    height:40px;
+    margin-top:-10px;
+}
+#button-tab-centro {
+    background-color:#48912A;
+}
+#button-tab-centro:hover {
+    height:40px;
+    margin-top:-10px;
+}
+#button-tab-patagonia {
+    background-color:#0069B2;
+}
+#button-tab-patagonia:hover {
+    height:40px;
+    margin-top:-10px;
+}
+#button-tab-cuyo {
+    background-color:#BC121F;
+}
+#button-tab-cuyo:hover {
+    height:40px;
+    margin-top:-10px;
+}
+#tab-norte {
+    display:block;
+}
+
+#tab-centro {
+    display:none;
+}
+
+#tab-litoral {
+    display:none;
+}
+
+#tab-cuyo {
+    display:none;
+}
+#tab-patagonia {
+    display:none;
+}
+
+.article {
+    width:50%;
+    position:relative;
+    float:left
+}
+
+.article a img {
+    width:100px;
+    height:100px;
+    border:0px;
+}
+
+.article a {
+    text-decoration:none;
+}
+
+.article h5 {
+    font-family:"Avenir Next LT Pro",sans-serif;
+    font-size:11px;
+    text-transform:uppercase;
+
+}
+
+.article span {
+
+}
+
+.content-tab h2 {
+
+    color:#5F5F5F;
+}
+
+.content-tab p {
+
+    color:#5F5F5F;
+}
+
+
+.desc-region {
+    float:left;
+    text-align:left;
+    width:25%;
+}
+
+.thumbs-exc {
+    float:left;   
+    text-align:left;
+    width:65%;
+}
+
+#logo-excurtions {
+    background:url(../img/logo-zonas.jpg) no-repeat ;    
+    height:200px;
+}
+
+#tabs {
+
+    text-align:center;
+}
+
+#tabs a {
+    text-align:center;
+}

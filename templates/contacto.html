@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+{% block title %} Contacto {% endblock %}
+{% block content %}
+   <div class="content-tab">
+         <form action="." method="POST">
+           <h1> Contacto </h1>
+           <div class="leftCol">
+                {{form.nombre.label}}
+                <div>{{ form.nombre }}</div>
+                  {{form.apellido.label}}
+               <div>{{ form.apellido }}</div>
+                   {{form.email.label}}
+               <div>{{ form.email }}</div>
+               <img src="/media/img/feed.png" />
+               <p> Recibir informacion de Sendero Norte </p>
+          </div>
+          <div class="leftCol">
+           {{ form.nombre_excursion.label }}
+           <div>{{ form.nombre_excursion }}</div>
+           {{ form.fecha.label }}
+           <div>{{ form.fecha }}</div>
+           {{ form.comentario.label }}           
+           <div>{{ form.comentario }}</div>
+           </div>
+           
+           <div class="button"><input id="button-enviar" type="submit" value="Enviar" /></div>
+         </form>
+         <div id="foto-contacto"></div>
+    </div>
+{% endblock %}
+

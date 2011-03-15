@@ -2,7 +2,18 @@
 <!DOCTYPE html>
 <meta charset="utf8">
 <head>
-<link rel="stylesheet" type="text/css" href="/media/css/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/media/css/style.css" media="screen" />
+    <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="/media/css/all-ie.css" />
+    <![endif]-->
+
+    <!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="ie-6.0.css" />
+    <![endif]-->
+
+    <!--[if lt IE 6]>
+    <link rel="stylesheet" type="text/css" href="ie-5.0+5.5.css" />
+    <![endif]-->
   <title>{% block title %}{% endblock %} - Sendero Norte</title>
 
   <link type="text/css" href="/media/js/dialog/css/ui-lightness/jquery-ui-1.8.10.custom.css" rel="Stylesheet" />	
@@ -56,7 +67,7 @@
 <body>
     <div id="wrapper_body">
         <header>
-            <h1 id="logo_sendero">Sendero Norte</h1> 
+            <a href="/"><h1 id="logo_sendero">Sendero Norte</h1></a> 
             <ul id="barra_superior">
                 <li class="menu_superior">
                    <a href="/">INICIO</a>
@@ -66,19 +77,19 @@
                 </li>
             </ul>
             <ul id="nav">
-                <li><a href="http://localhost:8000/">Nosotros<span></span> </a></li>
-                <li><a href="http://localhost:8000/excurtions/None">Excursiones<span></span> </a>
+                <li><a href="/">Nosotros<span></span> </a></li>
+                <li><a href="/excurtions/norte">Excursiones<span></span> </a>
                     <ul>
-                        <li><a href="#">Cordoba</a></li>
-                        <li><a href="#">Cuyo</a></li>
-                        <li><a href="#">Patagonia</a></li>
-                        <li><a href="http://localhost:8000/recomendations">Recomendaciones</a></li>
-                        <li><a href="#">Calendario</a></li>
+                        <li><a href="/excurtions/centro">Centro</a></li>
+                        <li><a href="/excurtions/cuyo">Cuyo</a></li>
+                        <li><a href="/excurtions/patagonia">Patagonia</a></li>
+                        <li><a href="/recomendations">Recomendaciones</a></li>
+                        <li><a href="/calendar">Calendario</a></li>
                     </ul>
                 </li>
-                <li><a href="http://localhost:8000/educationtravel">Viajes Educativos<span></span> </a></li>
-                <li><a href="http://localhost:8000/customizedtours">Viajes a Medida<span></span> </a></li>
-                <li class="last"><a href="http://localhost:8000/cimblings">Escalada</a></li>
+                <li><a href="/educationtravel">Viajes Educativos<span></span> </a></li>
+                <li><a href="/customizedtours">Viajes a Medida<span></span> </a></li>
+                <li class="last"><a href="/cimblings">Escalada</a></li>
             </ul>
         </header>
 
@@ -181,9 +192,10 @@
             
             </div>
  
-        </div>
+        
         
         {% endblock %}
+        </div>
         <!-- END OF BODY SECTION -->
         <div id="footer">
             <ul>

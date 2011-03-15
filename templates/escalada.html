@@ -1,33 +1,31 @@
 {% extends 'index.html' %}
 {% block title %} Escaladas {% endblock %}
 {% block content %}
-    {% block logocimbling %}
-        <div id="logo-cimbling" ></div> 
-    {% endblock %}
+    <div id="logo-cimbling" ></div> 
     <div id="cimblings" class="content-tab">
-            <div class="thumbs-exc">
-            {% for object in cimblings %}
-                <div class="article">
-                    <a href="{{object.id}}"><img src="{{object.photo.url}}" /></a>
-                    <h5> {{object.cimbling_type}} </h5>
+        <div class="thumbs-exc">
+        {% for object in cimblings %}
+            <div class="article">
+                <a href="{{object.id}}"><img src="{{object.photo.url}}" /></a>
+                <h5> {{object.cimbling_type}} </h5>
 
-                </div>
-                {% if forloop.counter == 2 %}
-                    <div class="clear"></div>
-                {% endif %}
-                {% if forloop.counter == 4 %}
-                    <div class="clear"></div>
-                {% endif %}
+            </div>
+            {% if forloop.counter == 2 %}
+                <div class="clear"></div>
+            {% endif %}
+            {% if forloop.counter == 4 %}
+                <div class="clear"></div>
+            {% endif %}
 
-                
-            {% endfor %}
-            </div>
-            <div class="desc-region">
-        <h2> Escalada </h2>
-        <p> Desarrollamos tirolesas, rapeles y lineas de escalada segun los requerimientos de cada grupo.</p>
-        <p> Nuestro staff esta altamente capacitado para desarrollar estas actividades con total seguridad. Contamos además con equipos de escalada en roca que cumplen con todas las exigencias, controles y estandares de calidad de la comun‏idad europea y EE.UU. </p>
-            </div>
-            <div class="clear"></div>
+            
+        {% endfor %}
         </div>
+        <div class="desc-region">
+            <h2> Escalada </h2>
+            <p> Desarrollamos tirolesas, rapeles y lineas de escalada segun los requerimientos de cada grupo.</p>
+            <p> Nuestro staff esta altamente capacitado para desarrollar estas actividades con total seguridad. Contamos además con equipos de escalada en roca que cumplen con todas las exigencias, controles y estandares de calidad de la comun‏idad europea y EE.UU. </p>
+        </div>
+        <div class="clear"></div>
+    </div>
 {% endblock %}
 

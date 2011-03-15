@@ -168,11 +168,11 @@ header {
 
 #footer {
     overflow:hidden;
-    margin-top:-52px;
     height:215px;
-    background:url("/media/img/footerycaminante.png"), no-repeat;
+    background:url("/media/img/footerycaminante.png") no-repeat;
     text-align:center;
-    background-position:bottom;
+    margin-top:-55px;
+
 }
 
 #footer ul {
@@ -419,10 +419,6 @@ h3 {
     margin: 0px;
 }
 
-#banner-excurtion {
-    width:950px;
-    overflow:hidden;
-}
 .pictures article{
     float:left;
     margin: 10px;
@@ -431,25 +427,16 @@ h3 {
     float:left;
     margin-right:10px;
 }
-#body-cimbling .rightCol {
-    text-align:left;
-    padding:0px;
-    margin-top:30px;
-    color:#5F5F5F;
-    margin-right:40px;
-}
-
-#body-cimbling article {
-    text-align:center;
-}   
-
-#body-cimbling .content-cimbling {
-    background:url(../img/fondogris-viajeseduc.jpg) no-repeat ;
-    height:495px;
-}
-
 #logo-cimbling {
     background:url(../img/logo-cimbling.jpg) no-repeat ;    
+    height:200px;
+}
+#logo-etravel {
+    background:url(../img/logo-educationtravel.jpg) no-repeat ;    
+    height:200px;
+}
+#logo-ctravel {
+    background:url(../img/logo-customizedtours.jpg) no-repeat ;    
     height:200px;
 }
 
@@ -464,7 +451,6 @@ h3 {
     text-decoration:none;
     color:#FFFEFF;
 }
-
 
 #menu a:visited{text-decoration:none;
                 color:#FFFEFF;
@@ -552,14 +538,14 @@ h3 {
 }
 
 .content-tab {
-    height:350px;
+    height:400px;
     background:url(../img/fondogris-viajeseduc.jpg) no-repeat;
     background-position:bottom;
     padding:20px;
 }
 
 #button-tab-norte {
-    background-color:#F6A800;
+    background-color:#F29300;
     background-position:bottom;
 }
 #button-tab-norte:hover {
@@ -568,21 +554,21 @@ h3 {
 
 }
 #button-tab-centro {
-    background-color:#98C10F;
+    background-color:#48912A;
 }
 #button-tab-centro:hover {
     height:40px;
     margin-top:-10px;
 }
 #button-tab-patagonia {
-    background-color:#006BB3;
+    background-color:#0069B2;
 }
 #button-tab-patagonia:hover {
     height:40px;
     margin-top:-10px;
 }
 #button-tab-cuyo {
-    background-color:#0085A8;
+    background-color:#BC121F;
 }
 #button-tab-cuyo:hover {
     height:40px;
@@ -678,3 +664,49 @@ h3 {
     margin:auto;
     text-align:center;
 }
+
+form .leftCol {
+    padding:0px;
+    width:50%;
+}
+
+
+#id_nombre {
+    margin:5px 5px 5px 0px;
+}
+
+#id_apellido {
+    margin:5px 5px 5px 0px;
+}
+
+#id_email {
+    margin:5px 5px 5px 0px;
+}
+
+#id_nombre_excursion {
+    margin:5px 5px 5px 0px;
+}
+
+#id_comentario {
+    margin:5px 5px 5px 0px;
+}
+
+
+#id_fecha {
+    margin:5px 5px 5px 0px;
+}
+
+#body form h1 {
+    color:A2A2A2;
+}
+
+.button {
+    text-align:right;
+    margin-right:150px;
+}
+
+
+
+
+
+

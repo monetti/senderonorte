@@ -17,6 +17,7 @@ urlpatterns = patterns('',
     (r'^recomendations/$', direct_to_template, {'template':'recomendaciones.html'}),    
     (r'^excurtion_detail/(?P<tag>[^/]+)/(?P<type_object>[^/]+)$', 'senderonorte.views.excurtion_detail'),    
     (r'^excurtions/(?P<tag>[^/]+)$', 'senderonorte.views.excurtions'),    
+    (r'^contact/$', 'senderonorte.views.contact'),    
 )
 
 urlpatterns += patterns( '',
