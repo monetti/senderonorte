@@ -538,7 +538,7 @@ h3 {
 }
 
 .content-tab {
-    height:400px;
+    height:450px;
     background:url(../img/fondogris-viajeseduc.jpg) no-repeat;
     background-position:bottom;
     padding:20px;
@@ -665,7 +665,7 @@ h3 {
     text-align:center;
 }
 
-form .leftCol {
+form .leftCol,#recomendations .leftCol {
     padding:0px;
     width:50%;
 }
@@ -696,17 +696,50 @@ form .leftCol {
     margin:5px 5px 5px 0px;
 }
 
+#button-enviar {
+    float:right;
+    margin:15px 150px 0px 0px;
+    background-color:#F5A700;
+    border:0px;
+}
+
+#body form p {
+    margin:0px;
+    color:#43A8C6;
+}
+
 #body form h1 {
-    color:A2A2A2;
+    color:#A2A2A2;
+    text-align:left;
+    padding:8px;
+    border-bottom:2px solid #A2A2A2;
+    width:50%;
 }
 
-.button {
-    text-align:right;
-    margin-right:150px;
+#logo-recomendations {
+    background:url(../img/logo-recomendations.jpg) no-repeat ;    
+    height:200px;
+}
+
+#recomendations .leftCol img {
+    margin:40px 20px 50px 145px;
+}
+
+#recomendations h1 {
+    color:#A2A2A2;
+    font-size:26px;
+    margin:35px 0px 0px 0px;
+    width:100%;
+
+    text-align:left;
+}
+
+#recomendations p {
+    width:100%;
+    margin:0px 0px 0px 15px;
 }
 
 
-
-
-
-
+#recomendations {
+    padding:20px;
+}
