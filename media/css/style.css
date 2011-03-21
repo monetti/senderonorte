@@ -7,7 +7,7 @@ body {
     margin:auto;
     font: 12px Arial, Helvetica, sans-serif;
 }
-header, section, article, aside, nav, {
+section, article, aside, nav, {
     display:block;
 }
 hr {
@@ -19,14 +19,11 @@ h1 {
     font-size: 30px;
 }
 
-header, section{
-    display:block;
-}
-
-header {
+#header {
     position: relative;
     height:182px;
     background:url(/media/img/top.jpg);
+    display:block;
 }
 
 #nav{
@@ -194,6 +191,8 @@ header {
     background-position:center bottom;
     padding: 0 10px;
     width: 350px;
+    margin:7px;
+    height:549px;
 }
 
 #zonas h1 {
@@ -259,15 +258,11 @@ header {
     width:376px;
 }
 
-#secondary {
-    padding:10px;
-    padding-top:0px;
-}
-
 #last_exc {
     height:242px;
     background:#39465B;
     width:630px;
+    margin:7px 0px 7px 7px;
 }
 
 #last_exc article {
@@ -281,25 +276,26 @@ header {
 }
 
 #news {
-    height:400px;
+    height:399px;
     background:white;
-    margin:auto;
-    width:290px;
+    margin:0px 7px 0px 0px;
+    width:300px;
+    
 }
 
 h1#logo_news {
     background:#121212;
     height:35px;
     margin:auto;
-    width:260px;
+    width:auto;
 }
 
 h1#logo_lastexc {
     background:url(/media/img/ultimas-excursiones.jpg) no-repeat;
     height:62px;
     text-indent: -9999px;
-    margin:0;
-    padding:0;
+    margin:0px;
+    padding:0px;
 }
 
 #news_exc h4 {
@@ -331,24 +327,25 @@ h3#logo_lastexc {
     color: #FFF;
     background:#262626;
     height:530px;
-    margin-left:10px;
-    width:530px;
+    width:539px;
     overflow:hidden;
-    position: relative;
+    margin:7px 7px 0px 0px;
+    
+    
 }
 
 
 #news_exc img {
     padding:0px;
-    width:520px;
+    width:539px;
     height:350px;
     border:0px;
-    margin:auto;
+    
 }
 
 #news_exc article {
-    padding:5px;
-    display: none;
+
+
 }
 #news_exc .description{
     margin-top:5em;
@@ -361,15 +358,20 @@ h3#logo_lastexc {
     width:525px;
 }
 
+#main, #secondary {
+    margin:0px;
+    padding:0px;
+        
+}
+
 #secondary .leftCol,
 #secondary .rightCol {
     padding: 0;
 }
-
 #ref_gig {
     background-color:#344E5F;
     height:150px;
-    margin-bottom:9px;
+    margin:0px 0px 0px 7px;
 }
 
 #last_exc img {
@@ -399,12 +401,6 @@ h3 {
     padding:2px;
     padding-top:4px;
 }
-
-#thumbs_last_exc {
-    padding:2px;
-    padding-top:4px;
-}
-
 
 #news a {
     font-family: 'Arial',serif;

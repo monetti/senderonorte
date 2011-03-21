@@ -1,8 +1,3 @@
-* {
-    margin:20px;
-    padding:0px;
-    
-}
 @font-face {
     font-family: 'Avenir Next LT Pro';
     src: local("../fonts/AvenirNextLTPro-Regular.otf");
@@ -12,7 +7,9 @@ body {
     margin:auto;
     font: 12px Arial, Helvetica, sans-serif;
 }
-
+section, article, aside, nav, {
+    display:block;
+}
 hr {
    color:#5D5D5D;
    height:1px;
@@ -22,9 +19,11 @@ h1 {
     font-size: 30px;
 }
 
-header {
+#header {
+    position: relative;
     height:182px;
-    background:url("/media/img/top.jpg");
+    background:url(/media/img/top.jpg);
+    display:block;
 }
 
 #nav{
@@ -101,12 +100,15 @@ header {
 
 
 #wrapper_body {
+    margin:auto;
     width:950px;
 }
 
 #logo_sendero {
+    position:absolute;
     left:0;
     top:0;
+    margin:0;
     width:286px;
     background: url(/media/img/logo-cabecera.png) no-repeat ;
     height:187px;
@@ -116,6 +118,7 @@ header {
 
 #barra_superior {
     float:right;
+    padding:10px;
     list-style: none;
     margin: 0;
 }
@@ -132,6 +135,8 @@ header {
     font-family:'Avenir Next LT Pro', 'Arial', sans-serif;
     font-weight: normal;
     text-transform: uppercase;
+    margin:0 -10px;
+    padding: 0.5em;
     color: #FFF;
 }
 
@@ -144,12 +149,18 @@ header {
 #footer span {
     border-right: 1px solid black;
     height: 5px;
+    padding:15px;
+    
 }
 
 #footer p {
     width:500px;
     font-size:10px;
     text-align:center;
+    margin-left:90px;
+    padding-left:90px;
+    margin-top:60px;
+    padding-top:20px;
 }
 
 #footer {
@@ -157,22 +168,31 @@ header {
     height:215px;
     background:url("/media/img/footerycaminante.png") no-repeat;
     text-align:center;
+    margin-top:-55px;
 
 }
 
 #footer ul {
     list-style:none;
+    padding-top:45px;
+    margin-top:46px;
+    padding-left:70px;
+    margin-left:80px;
 }
 
 #footer ul li {
     float:left;
+    padding:15px;
 }
 
 
 #zonas {
     background: #FFF url(../img/mapa/fondomapa.jpg) repeat-x;
     background-position:center bottom;
-    width:400px;
+    padding: 0 10px;
+    width: 350px;
+    margin:7px;
+    height:549px;
 }
 
 #zonas h1 {
@@ -229,7 +249,7 @@ header {
 }
 
 #main {
-    
+    padding:10px;
 }
 
 #logo_zonas {
@@ -238,14 +258,11 @@ header {
     width:376px;
 }
 
-#secondary {
-    
-}
-
 #last_exc {
     height:242px;
     background:#39465B;
-    width:600px;
+    width:630px;
+    margin:7px 0px 7px 7px;
 }
 
 #last_exc article {
@@ -253,33 +270,36 @@ header {
     color:#F0F0F0;
     float:left;
     width:48%;
-    
+    margin-left:8px;
     height:167px;
     
 }
 
 #news {
-    height:400px;
+    height:399px;
     background:white;
+    margin:0px 7px 0px 0px;
+    width:300px;
     
-    width:290px;
 }
 
 h1#logo_news {
     background:#121212;
     height:35px;
-    
-    width:260px;
+    margin:auto;
+    width:auto;
 }
 
 h1#logo_lastexc {
     background:url(/media/img/ultimas-excursiones.jpg) no-repeat;
     height:62px;
     text-indent: -9999px;
+    margin:0px;
+    padding:0px;
 }
 
 #news_exc h4 {
-
+    margin:0px 0px 10px 5px;
 }
 
 #news_exc h4 a {
@@ -291,53 +311,70 @@ h3#logo_lastexc {
     background:url(/media/img/ultimas-excursiones.jpg) no-repeat;
     height:62px;
     text-indent: -9999px;
+    margin:0;
+    padding:0;
 }
 
 #publicity {
+    margin-left:10px;
     width:930px;
     background:url("/media/img/ultimas-excursiones.jpg") no-repeat; 
     height:65px;
+    padding-bottom:10px;
 }
 
 #news_exc {
     color: #FFF;
     background:#262626;
     height:530px;
-    width:530px;
+    width:539px;
     overflow:hidden;
-    position: relative;
+    margin:7px 7px 0px 0px;
+    
+    
 }
 
 
 #news_exc img {
-    width:520px;
+    width:539px;
     height:350px;
     border:0px;
+    margin:auto;
 }
 
 #news_exc article {
-    display: none;
+    display:none;
+
 }
 #news_exc .description{
-
+    margin-top:5em;
 }
 
 #header-new-exc {
     position: absolute;
     text-decoration:none;
+    margin-top:355px;
     width:525px;
+}
+
+#main, #secondary {
+    margin:0px;
+    padding:0px;
+        
 }
 
 #secondary .leftCol,
 #secondary .rightCol {
+    padding: 0;
 }
-
 #ref_gig {
     background-color:#344E5F;
     height:150px;
+    margin:0px 0px 0px 7px;
 }
 
 #last_exc img {
+    padding:5px;
     display: block;
     width:290px;
     height:100px;
@@ -356,10 +393,14 @@ h3 {
 
 
 #thumbs_last_exc p,h3{
+    margin:5px 0px 0px 4px;
 }
 
 #thumbs_last_exc {
+    padding:2px;
+    padding-top:4px;
 }
+
 #news a {
     font-family: 'Arial',serif;
     font-weight: normal;
@@ -369,14 +410,17 @@ h3 {
 
 #news ul {
     list-style-type: none;
- 
+    padding: 0px;
+    margin: 0px;
 }
+
 .pictures article{
     float:left;
-
+    margin: 10px;
 }
 .pictures img {
     float:left;
+    margin-right:10px;
 }
 #logo-cimbling {
     background:url(../img/logo-cimbling.jpg) no-repeat ;    
@@ -392,6 +436,7 @@ h3 {
 }
 
 #desc-educationtravel {
+    margin-left:10px;
     text-align:left;
     font-family: 'Arial',serif;
     font-size: 10px;
@@ -420,10 +465,12 @@ h3 {
 
 .leftCol {
     float: left;
+    padding: 10px;
 }
 
 .rightCol {
     float: right;
+    padding: 10px;
 }
 
 
@@ -431,10 +478,13 @@ h3 {
     float: left;
     color: #AAA6A7;
     font-size:12px;
+    padding:10px;
+    padding-top:20px;
 }
 
 .botonera {
     color:black;
+    margin-top:25px;
     float:right;
 }
 
@@ -445,9 +495,9 @@ h3 {
     font-size:7pt;
     background-color: white;
     float:left;
-
+    margin-left:5px;
     text-decoration:none;
-
+    padding:2px;
 }
 
 .botonera a:hover {
@@ -457,13 +507,13 @@ h3 {
 .odd {
     background-color:#FFF;
     height:112px;
-
+    padding: 0px;
 }
 
 .even {
     background-color:#E2E2E2;
     height:112px;
-
+    padding: 0px;
 }
 
 .clear {
@@ -483,9 +533,10 @@ h3 {
 }
 
 .content-tab {
-    height:375px;
+    height:450px;
     background:url(../img/fondogris-viajeseduc.jpg) no-repeat;
     background-position:bottom;
+    padding:20px;
 }
 
 #button-tab-norte {
@@ -495,6 +546,7 @@ h3 {
 #button-tab-norte:hover {
     height:40px;
     margin-top:-10px;
+
 }
 #button-tab-centro {
     background-color:#48912A;
@@ -517,6 +569,8 @@ h3 {
     height:40px;
     margin-top:-10px;
 }
+
+
 #tab-norte {
     display:block;
 }
@@ -532,11 +586,13 @@ h3 {
 #tab-cuyo {
     display:none;
 }
+
 #tab-patagonia {
     display:none;
 }
 
 .article {
+    margin:0px;
     width:50%;
     position:relative;
     float:left
@@ -546,6 +602,7 @@ h3 {
     width:100px;
     height:100px;
     border:0px;
+    margin:0px;
 }
 
 .article a {
@@ -556,20 +613,20 @@ h3 {
     font-family:"Avenir Next LT Pro",sans-serif;
     font-size:11px;
     text-transform:uppercase;
-
+    margin:0px;
 }
 
 .article span {
-
+    margin:0px;
 }
 
 .content-tab h2 {
-
+    padding:0px;
     color:#5F5F5F;
 }
 
 .content-tab p {
-
+    padding:0px;
     color:#5F5F5F;
 }
 
@@ -584,6 +641,7 @@ h3 {
     float:left;   
     text-align:left;
     width:65%;
+    padding:50px 20px 20px 40px;
 }
 
 #logo-excurtions {
@@ -592,10 +650,91 @@ h3 {
 }
 
 #tabs {
-
+    margin:auto;
     text-align:center;
 }
 
 #tabs a {
+    padding:10px 0px 0px 0px;
+    margin:auto;
     text-align:center;
+}
+
+form .leftCol,#recomendations .leftCol {
+    padding:0px;
+    width:50%;
+}
+
+
+#id_nombre {
+    margin:5px 5px 5px 0px;
+}
+
+#id_apellido {
+    margin:5px 5px 5px 0px;
+}
+
+#id_email {
+    margin:5px 5px 5px 0px;
+}
+
+#id_nombre_excursion {
+    margin:5px 5px 5px 0px;
+}
+
+#id_comentario {
+    margin:5px 5px 5px 0px;
+}
+
+
+#id_fecha {
+    margin:5px 5px 5px 0px;
+}
+
+#button-enviar {
+    float:right;
+    margin:15px 150px 0px 0px;
+    background-color:#F5A700;
+    border:0px;
+}
+
+#body form p {
+    margin:0px;
+    color:#43A8C6;
+}
+
+#body form h1 {
+    color:#A2A2A2;
+    text-align:left;
+    padding:8px;
+    border-bottom:2px solid #A2A2A2;
+    width:50%;
+}
+
+#logo-recomendations {
+    background:url(../img/logo-recomendations.jpg) no-repeat ;    
+    height:200px;
+}
+
+#recomendations .leftCol img {
+    margin:40px 20px 50px 145px;
+}
+
+#recomendations h1 {
+    color:#A2A2A2;
+    font-size:26px;
+    margin:35px 0px 0px 0px;
+    width:100%;
+
+    text-align:left;
+}
+
+#recomendations p {
+    width:100%;
+    margin:0px 0px 0px 15px;
+}
+
+
+#recomendations {
+    padding:20px;
 }

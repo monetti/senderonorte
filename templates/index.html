@@ -1,11 +1,11 @@
-{% load i18n %}
 <!DOCTYPE html>
 <meta charset="utf8">
 <head>
-    <link rel="stylesheet" type="text/css" href="/media/css/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/media/css/style.css" media="screen" />    
     <!--[if IE]>
     <link rel="stylesheet" type="text/css" href="/media/css/all-ie.css" />
     <![endif]-->
+
 
     <!--[if IE 6]>
     <link rel="stylesheet" type="text/css" href="ie-6.0.css" />
@@ -14,6 +14,7 @@
     <!--[if lt IE 6]>
     <link rel="stylesheet" type="text/css" href="ie-5.0+5.5.css" />
     <![endif]-->
+    
   <title>{% block title %}{% endblock %} - Sendero Norte</title>
 
   <link type="text/css" href="/media/js/dialog/css/ui-lightness/jquery-ui-1.8.10.custom.css" rel="Stylesheet" />	
@@ -21,12 +22,23 @@
   <script type="text/javascript" src="/media/js/dialog/js/jquery-ui-1.8.10.custom.min.js"></script>
 
   <script>
-        $(document).ready(function() {
-            $('#news_exc article:first').show();
+        $(window).load(function() {
+            var news_exc = document.getElementById("news_exc");
+            var excs = news_exc.getElementsByTagName('article');
+            for(var i=0;i<excs.length;i++) {
+                if(i==0) {
+                    excs[i].style.display = "block";
+                    
+                } else {
+                    excs[i].style.display = "none";
+                    
+                }
+            }
+
             $(".botonera a").click(function(){
                 target = $(this).attr('href');
                 $(target).show('slow');
-                $('#news_exc article').not(target).hide('slow');
+                $('#news_exc article').not(target).hide('fast');
                 return false;
             });            
             $("#news_exc article a").click(function(){
@@ -42,7 +54,7 @@
                             'resizable':false,
                             'draggable':false,
                             'width':'600',
-                            'height':'550',
+                            'height':'550'
                         });
                         $(data).dialog('open');
                         }
@@ -52,21 +64,19 @@
             $("#norte-over").focus(function(){
                 //debo mostrar la imagen 
                 
-                
-            })
+            });
             
-                   
             {% block javascript %}
             
             {% endblock %}            
 
-        });
+        })
   </script>
   
 </head>
 <body>
     <div id="wrapper_body">
-        <header>
+        <div id="header">
             <a href="/"><h1 id="logo_sendero">Sendero Norte</h1></a> 
             <ul id="barra_superior">
                 <li class="menu_superior">
@@ -91,29 +101,29 @@
                 <li><a href="/customizedtours">Viajes a Medida<span></span> </a></li>
                 <li class="last"><a href="/cimblings">Escalada</a></li>
             </ul>
-        </header>
+        </div>
 
-    <!-- END OF HEADER SECTION -->
+        <!-- END OF HEADER SECTION -->
         <div id="body">
         {% block content %}
-            <section id="main">
-            <div id="zonas" class="leftCol">
+            <div id="main">
+                <div id="zonas" class="leftCol">
                     <h1>Zonas</h1>
                     <div class="mapa">
-                            <div id="norte-over"></div>
-                            <div id="norte"></div>
-                            <div id="cuyo"></div>
-                            <div id="centro"></div>
-                            <div id="litoral"></div>
-                            <div id="buenosaires"></div>
-                            <div id="patagonia"></div>                                                            
+                        <div id="norte-over"></div>
+                        <div id="norte"></div>
+                        <div id="cuyo"></div>
+                        <div id="centro"></div>
+                        <div id="litoral"></div>
+                        <div id="buenosaires"></div>
+                        <div id="patagonia"></div>                                                            
                      </div>
                      <div> 
                         <h3> Excursiones en el pais </h3> 
                         <p> Haga click sobre las regiones para obtener informacion de las excursiones disponibles en cada una.</p>
                      </div>
-            </div>
-            <div id="news_exc" class="rightCol">
+                </div>
+                <div id="news_exc" class="rightCol">
                     <div id="header-new-exc">
                         <div class="botonera">
                             {% for object in incoming %}
@@ -136,87 +146,69 @@
                             {{ object.place }} -
                             Horario: 
                             {{ object.time }}</p>
+                            <h4 id="calendario"><a href="">Calendario</a></h4>
                         </div>
                     </article>
                     {% endfor %}
-                    <h4 id="calendario"><a href="">Calendario</a></h4>
-                    <div class="clear"></div>
                     
-            </div>
-            <div class="clear"></div>
-            </section>
-            <section id="secondary">
-            <div class="leftCol">
-                <div id="ref_gig">
-                </div>
-                <div id="last_exc">
-                    <h1 id="logo_lastexc">{% trans 'Últimas Excursiones' %}</h1>
-                    <div id="thumbs_last_exc">
-                    {% for object in recent_excurtions %}
-                        <article class="excurtion">
-                            <img src="{{object.thumb_photo_post_excurtion}}" alt="{{object.name}}" id="thumb-{{object.name|slugify}}" />
-                            <h3>{{object.name}}</h3>
-                            <p>{{object.intro_last_exc|truncatewords:6}}</p>
-                        </article>
-                    {% endfor %}
                     <div class="clear"></div>
-                    </div>
-
                 </div>
+                <div class="clear"></div>
             </div>
-
-            <div id="news" class="rightCol">
-                
-                    <h1 id="logo_news"></h1>
-
-                    {% for object in news %}
-                        <article class="{% cycle 'odd' 'even' %}">
-                        
-                            <div class="leftCol">
-                                <img src="{{object.image.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
-                            </div>
-                            <div class="rightCol">
-                                <h3>{{object.title}}</h3>
-                                <p>{{object.summary|truncatewords:9}}</p>
-                                <a href="{{object.url}}"> [Ver mas] </a>
-                            </div>
+            <div id="secondary">
+                <div class="leftCol">
+                    <div id="ref_gig"></div>
+                    <div id="last_exc">
+                        <h1 id="logo_lastexc"> Ultimas Excursiones </h1>
+                        <div id="thumbs_last_exc">
+                            {% for object in recent_excurtions %}
+                            <article class="excurtion">
+                                <img src="{{object.thumb_photo_post_excurtion}}" alt="{{object.name}}" id="thumb-{{object.name|slugify}}" />
+                                <h3>{{object.name}}</h3>
+                                <p>{{object.intro_last_exc|truncatewords:6}}</p>
+                            </article>
+                            {% endfor %}
                             <div class="clear"></div>
-                        </article>
-                   
+                        </div>
+                    </div>
+                </div>
+                <div id="news" class="rightCol">
+                    <h1 id="logo_news"></h1>
+                    {% for object in news %}
+                    <article class="{% cycle 'odd' 'even' %}">
+                        <div class="leftCol">
+                            <img src="{{object.image.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
+                        </div>
+                        <div class="rightCol">
+                            <h3>{{object.title}}</h3>
+                            <p>{{object.summary|truncatewords:9}}</p>
+                            <a href="{{object.url}}"> [Ver mas] </a>
+                        </div>
+                        <div class="clear"></div>
+                    </article>
                     {% endfor %}
-               
+                </div>
+                <div class="clear"></div>
             </div>
-            <div class="clear"></div>
-            </section>
-            <div id="publicity">
-            
-            </div>
- 
-        
-        
-        {% endblock %}
+            <div id="publicity"></div>
+            {% endblock %}
         </div>
         <!-- END OF BODY SECTION -->
         <div id="footer">
             <ul>
                 <li>
                     <a href=""> Excursiones <span></span></a>
-
                 </li>
                 <li>
                     <a href=""> Recomendaciones para la salida <span></span></a>
-                                        
                 </li>
                 <li>
                     <a href=""> Condiciones de Contratacion</a>
-
                 </li>
             </ul>
-            <p> "Sendero Norte" Copyright 2011 - Reservados todos los derechos - Diseño Web: Usina Creativa - Desarrollo Web: AID </p>
+            <p> "Sendero Norte" Copyright 2011 - Reservados todos los derechos - Diseño Web: Usina Creativa - Desarrollo Web: Ideas </p>
         </div>
         <!-- END OF FOOTER SECTION -->
-    </div>
-        
     </div>
 </body>
 </html>	
