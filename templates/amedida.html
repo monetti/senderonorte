@@ -1,7 +1,35 @@
 {% extends 'index.html' %}
 {% block title %} Viajes a Medida {% endblock %}
+{% block javascript %}
+   changeFoto = function () {
+        imgs[(selected+1)%3].style.display = 'block';
+        selected = selected + 1
+        imgs[(selected+1)%3].style.display = 'none';
+        imgs[(selected-1)%3].style.display = 'none';
+        setTimeout('changeFoto()',2000);
+    };
+
+   logos = document.getElementById("logo-ctravel");
+   imgs = logos.getElementsByTagName('img');
+       
+   for(var i=0;i<imgs.length;i++) {
+        if(i==0) {
+            imgs[i].style.display = "block";
+        } else {
+            imgs[i].style.display = "none";
+        }
+    }
+    selected = 0;
+    changeFoto()
+        
+{% endblock %}
+
 {% block content %}
-    <div id="logo-ctravel" ></div> 
+    <div id="logo-ctravel" >
+       <img src="/media/img/logo-customizedtours.jpg"/> 
+       <img src="/media/img/cabeceraescalada1.jpg"/>
+       <img src="/media/img/cabeceraescalada3.jpg"/>
+    </div> 
     
     <div id="travels" class="content-tab">
             <div class="thumbs-exc">

@@ -22,7 +22,7 @@
   <script type="text/javascript" src="/media/js/dialog/js/jquery-ui-1.8.10.custom.min.js"></script>
 
   <script>
-        $(window).load(function() {
+        $(window).ready(function() {
             var news_exc = document.getElementById("news_exc");
             var excs = news_exc.getElementsByTagName('article');
             for(var i=0;i<excs.length;i++) {
@@ -61,16 +61,16 @@
                 });
                 return false;
             });
-            $("#norte-over").focus(function(){
-                //debo mostrar la imagen 
-                
-            });
-            
+             
+           
+
+        })
+        $(window).load(function () {
             {% block javascript %}
             
             {% endblock %}            
-
-        })
+        })         
+        
   </script>
   
 </head>

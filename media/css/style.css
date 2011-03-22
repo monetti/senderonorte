@@ -424,15 +424,35 @@ h3 {
     margin-right:10px;
 }
 #logo-cimbling {
-    background:url(../img/logo-cimbling.jpg) no-repeat ;    
+    margin:auto
+    
+}
+
+#logo-cimbling img {
+    display:none;
+    width:950px;
     height:200px;
 }
+
 #logo-etravel {
-    background:url(../img/logo-educationtravel.jpg) no-repeat ;    
+    margin:auto;
+}
+
+#logo-etravel img {
+    height:200px;
+    display:none;
+    width:950px;
     height:200px;
 }
+
 #logo-ctravel {
-    background:url(../img/logo-customizedtours.jpg) no-repeat ;    
+    margin:auto;
+}
+
+#logo-ctravel img {
+    height:200px;
+    display:none;
+    width:950px;
     height:200px;
 }
 
@@ -547,6 +567,7 @@ h3 {
 #button-tab-norte:hover {
     height:40px;
     margin-top:-10px;
+    overflow:hidden;
 
 }
 #button-tab-centro {
@@ -646,8 +667,16 @@ h3 {
 }
 
 #logo-excurtions {
-    background:url(../img/logo-zonas.jpg) no-repeat ;    
+    margin:auto;
+    
+}
+#logo-excurtions img {
     height:200px;
+    display:none;
+    width:950px;
+    height:200px;
+    border:0px;
+
 }
 
 #tabs {

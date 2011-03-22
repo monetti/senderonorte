@@ -8,12 +8,35 @@
         $(".content-tab").not(target).hide();
 
         return false;
-    })        
-    
+    });        
+    changeFoto = function () {
+        imgs[(selected+1)%3].style.display = 'block';
+        selected = selected + 1
+        imgs[(selected+1)%3].style.display = 'none';
+        imgs[(selected-1)%3].style.display = 'none';
+        setTimeout('changeFoto()',2000);
+    };
+
+   logos = document.getElementById("logo-excurtions");
+   imgs = logos.getElementsByTagName('img');
+       
+   for(var i=0;i<imgs.length;i++) {
+        if(i==0) {
+            imgs[i].style.display = "block";
+        } else {
+            imgs[i].style.display = "none";
+        }
+    }
+    selected = 0;
+    changeFoto()
 {% endblock %}
 {% block content %}
     {% block logocimbling %}
-    <div id="logo-excurtions"></div>
+    <div id="logo-excurtions">
+       <img src="/media/img/logo-zonas.jpg"/> 
+       <img src="/media/img/cabeceraescalada1.jpg"/>
+       <img src="/media/img/cabeceraescalada3.jpg"/>
+    </div>
     {% endblock%}
     <div id="tabs">
         <a href="#tab-norte" class="tab" id="button-tab-norte">Norte</a>
