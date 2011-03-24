@@ -61,8 +61,15 @@
                 });
                 return false;
             });
-             
-           
+            
+            $("#zonas a").hover(
+                function () {
+                    document.getElementById('centro-over').style.display = 'block';
+                },
+                function () {
+                    document.getElementById('centro-over').style.display = 'none';
+                }
+                )
 
         })
         $(window).load(function () {
@@ -111,9 +118,10 @@
                     <h1>Zonas</h1>
                     <div class="mapa">
                         <div id="norte-over"></div>
+                        <div id="centro-over"></div>
                         <div id="norte"></div>
                         <div id="cuyo"></div>
-                        <div id="centro"></div>
+                        <a href=""><div id="centro"></div></a>
                         <div id="litoral"></div>
                         <div id="buenosaires"></div>
                         <div id="patagonia"></div>                                                            

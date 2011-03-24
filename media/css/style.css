@@ -240,6 +240,11 @@ h1 {
     display:none;
 }
 
+#centro-over {
+    background:url(../img/mapa/norte-over.png) no-repeat;
+    display:none;
+    height:54px;
+}
 
 #litoral {
     background:url(../img/mapa/litoral.png) no-repeat;
@@ -565,10 +570,8 @@ h3 {
     background-position:bottom;
 }
 #button-tab-norte:hover {
-    height:40px;
-    margin-top:-10px;
-    overflow:hidden;
-
+    height:50px;
+    margin-top:-20px;
 }
 #button-tab-centro {
     background-color:#48912A;
@@ -591,7 +594,6 @@ h3 {
     height:40px;
     margin-top:-10px;
 }
-
 
 #tab-norte {
     display:block;
