@@ -559,10 +559,9 @@ h3 {
 }
 
 .content-tab {
-    height:450px;
+    height:495px;
     background:url(../img/fondogris-viajeseduc.jpg) no-repeat;
-    background-position:bottom;
-    padding:20px;
+    background-position:center bottom;
 }
 
 #button-tab-norte {
@@ -692,11 +691,21 @@ h3 {
     text-align:center;
 }
 
-form .leftCol,#recomendations .leftCol {
+#recomendations .leftCol {
     padding:0px;
     width:50%;
 }
 
+form .leftCol {
+    padding:0px 0px 0px 0px;
+    width:40%;
+}
+
+#content-contact-form {
+    margin:45px 50px 50px 50px;
+    width:100%;    
+    height:auto;
+}
 
 #id_nombre {
     margin:5px 5px 5px 0px;
@@ -725,7 +734,7 @@ form .leftCol,#recomendations .leftCol {
 
 #button-enviar {
     float:right;
-    margin:15px 150px 0px 0px;
+    margin:15px 512px 0px 0px;
     background-color:#F5A700;
     border:0px;
 }
@@ -736,12 +745,23 @@ form .leftCol,#recomendations .leftCol {
 }
 
 #body form h1 {
-    color:#A2A2A2;
+    color:#605E61;
     text-align:left;
-    padding:8px;
-    border-bottom:2px solid #A2A2A2;
-    width:50%;
+    border-bottom:1px solid #ECECEC;
+    width:77%;
+    padding:0px 0px 15px 0px;
+    margin:35px 0px 0px 10px;
+    font-size:40px;
+    
 }
+
+#body form h5 {
+    font-family:"Avenir Next LT Pro";
+    color:#AEAEAE;
+    font-size:12px;
+    margin:0px;
+}
+
 
 #logo-recomendations {
     background:url(../img/logo-recomendations.jpg) no-repeat ;    
@@ -769,4 +789,18 @@ form .leftCol,#recomendations .leftCol {
 
 #recomendations {
     padding:20px;
+}
+
+#feed {
+    text-decoration:none;
+}
+
+#feed img {
+    border:0px;
+    margin:0px;
+}
+
+#feed p {
+    padding-left:2px;
+    font-size:10px;
 }

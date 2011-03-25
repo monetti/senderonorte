@@ -1,7 +1,8 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-
+from django.contrib.syndication.views import Feed
 from thumbs import ImageWithThumbsField
+from django.shortcuts import get_object_or_404
     
 import datetime
 
@@ -62,5 +63,21 @@ class PhotoPostExcurtion(models.Model):
     def __unicode__(self):
         return self.name
         
+class NextExcurtionFeed(Feed):
+    title = "Sendero Norte - Noticias"
+    description = "Noticias de Sendero Norte Expediciones"
+    link="/contact/send"
+    
+    def items(self):
+        return Excurtion.objects.all().order_by('-next_date')[:5]
+    
+    def item_title(self, item):
+        return item.name
+    
+    def item_link(self,item):
+        return "http://senderonorte.com.ar/excurtion_detail/"+str(item.id)+"/excurtion"
+
+    def item_description(self, item):
+        return item.description
         
-      
+

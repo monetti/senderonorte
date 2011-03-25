@@ -92,9 +92,15 @@ def educationtravels(request):
 def contact(request):
     if request.method == 'POST':
         # peticion POST con formulario relleno
-        form = ContactoForm(request.POST)
+        form = ContactoForm()
         if form.is_valid():
-            return HttpResponseRedirect('/gracias/')
+            return simple.direct_to_template(
+                request,
+                'contacto.html',
+                extra_context = {
+                    'form':form,
+                }
+            )
     else: # formulario sin rellenar
         form = ContactoForm()
     return simple.direct_to_template(
@@ -104,4 +110,30 @@ def contact(request):
               'form': form, 
         }
     )
+
+def contact_sendmail(request):
+    import sys
+    from smtplib import SMTP
+
+    from_addr = request.POST['email']
+    to_addrs = ['contacto@senderonorte.com.ar']
+    #msg = open('email_msg.txt','r').read()
+    msg = ""
+    msg += "Nombre: " + request.POST['nombre'] + "\n"
+    msg += "Apellido: " + request.POST['apellido'] + "\n"
+    msg += "Email: " + request.POST['email'] + "\n"
+    msg += "Excursion: " + request.POST['nombre_excursion'] + ' ' + "Fecha: " + request.POST['fecha'] + "\n"
+    msg += "Comentario: " + request.POST['comentario'] + "\n"
+    
+    s = SMTP('localhost:1025')
+
+    s.sendmail(from_addr, to_addrs, msg)
+    return contact(request)
+
+
+def feed_next_excurtion():
+    pass
+    
+
+
 

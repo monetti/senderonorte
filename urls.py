@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.views.generic import list_detail
 from django.views.generic.simple import direct_to_template
 from django.conf import settings 
-
+from excurtion.models import NextExcurtionFeed
 
 admin.autodiscover()
 
@@ -18,6 +18,8 @@ urlpatterns = patterns('',
     (r'^excurtion_detail/(?P<tag>[^/]+)/(?P<type_object>[^/]+)$', 'senderonorte.views.excurtion_detail'),    
     (r'^excurtions/(?P<tag>[^/]+)$', 'senderonorte.views.excurtions'),    
     (r'^contact/$', 'senderonorte.views.contact'),    
+    (r'^contact/send$', 'senderonorte.views.contact_sendmail'),        
+    (r'^next-excurtions/feed/$', NextExcurtionFeed()),
 )
 
 urlpatterns += patterns( '',
