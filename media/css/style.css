@@ -820,6 +820,11 @@ form .leftCol {
     font-size:10px;
 }
 
+#body.error {
+    padding: 10em 4em;
+}
+#body.error p{
+    color :#FFF; 
 .description h3 {
     font-family:"Avenir Next LT Pro", sans-serif;
     font-size:12pt;

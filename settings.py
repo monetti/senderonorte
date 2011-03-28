@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 # Django settings for senderonorte project.
 
@@ -5,7 +6,8 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+    ('Martín Onetti', 'onetti.martin@gmail.com'),
+    ('Matías Iturburu', 'maturburu@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -77,7 +79,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'urls'
+ROOT_URLCONF = 'senderonorte.urls'
 
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 MEDIA_ROOT = os.path.normpath(os.path.join(PROJECT_PATH,'media'))
@@ -105,3 +107,11 @@ INSTALLED_APPS = (
     'contacts',
     'PIL',
  )
+ 
+try :
+    from local_settings import *
+except ImportError:
+    pass
+    
+    
+    

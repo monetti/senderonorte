@@ -33,7 +33,7 @@ def staging(username="", hosts=[]):
 def production(username="cmonetti", hosts=["cmonetti.webfactional.com"]):
     env.user = username
     env.hosts = hosts
-    env.deploy_dir = '/home/cmonetti/webapps/senderonorte/src'
+    env.deploy_dir = '/home/cmonetti/webapps/senderonorte/src/senderonorte'
     env.virtual_env = '/home/cmonetti/webapps/senderonorte'
     env.apache_command = '/home/cmonetti/webapps/senderonorte/apache2/bin/restart'
     
