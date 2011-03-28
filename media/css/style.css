@@ -40,11 +40,12 @@ h1 {
 
 #nav a {
     display:block;
-    font-size: 15px;
+    font-size:10.5pt;
     padding: 1em 1.5em;
-    color:#FEFEFE;
+    color:#FFF;
     text-decoration: none;
     position: relative;
+    font-family:"Avenir Next LT Pro", sans-serif;
 
 }
 #nav a:hover {
@@ -123,7 +124,9 @@ h1 {
     margin: 0;
 }
 #barra_superior a {
-    color: #FFF;
+    font-family:"Avenir Next LT Pro", serif;
+    font-size:12pt;
+    color: #C6C7C8;
     text-decoration:none;
 }
 
@@ -196,7 +199,22 @@ h1 {
 }
 
 #zonas h1 {
-    background: #F29400;
+    color:#FFF;
+    font-family:"Avenir Next LT Pro", sans-serif;
+    font-size:25pt;
+    background:#F29400;
+}
+
+#mapa h3 {
+    color:#4B4D4D;
+    font-family:"Avenir Next LT Pro", sans-serif;
+    font-size:14pt;
+}
+
+#mapa p {
+    color:#4B4D4D;
+    font-family:"Avenir Next LT Pro", sans-serif;
+    font-size:12pt;
 }
 
 
@@ -803,4 +821,30 @@ form .leftCol {
 #feed p {
     padding-left:2px;
     font-size:10px;
+}
+
+.description h3 {
+    font-family:"Avenir Next LT Pro", sans-serif;
+    font-size:13pt;
+}
+
+.description p {
+    font-family:"Avenir Next LT Pro", sans-serif;
+    font-size:12pt;
+}
+
+.botonera h1 {
+    font-family:"Avenir Next LT Pro", sans-serif;
+    font-size:25pt;
+    
+}
+
+.excurtion h3 {
+    font-family:"Avenir Next LT Pro", sans-serif;
+    font-size:13pt;
+}
+
+.excurtion p {
+    font-family:"Avenir Next LT Pro", sans-serif;
+    font-size:12pt;
 }
