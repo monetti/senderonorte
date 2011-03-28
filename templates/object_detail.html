@@ -1,24 +1,15 @@
 <div id="dialog">
     <article id="{{object.name|slugify}}" class="object_detail">
     {% if type_object == "excurtion" %}
-        <img style="display:block;" src="{{object.foto_carrusel_uno.url}}" alt="{{object.name}}" id="fotouno-{{object.name|slugify}}"/></a>
-        <img style="display:none;" src="{{object.foto_carrusel_dos.url}}" alt="{{object.name}}" id="fotodos-{{object.name|slugify}}"/></a>
-        <img style="display:none;" src="{{object.foto_carrusel_tres.url}}" alt="{{object.name}}" id="fototres-{{object.name|slugify}}"/></a>
-        <div style="float:left; width:50%;">
-        <h5> Nombre: </h5>
-        <p>{{object.name}}</p>
-        <h5> Duracion: </h5>
-        <p> {{object.duration}} </p>
-        <h5> Fecha: </h5>
-        <p> {{object.next_date}} </p>    
-        <h5> Horario: </h5>
-        <p> {{object.time}}</p>
-        <h5> Lugar: </h5>
-        </p>{{object.place}}</p>
-        </div>
-        <div style="float:right; width:50%;">
-        <h5> Descripcion: </h5>
+        <img width="100%" style="display:block;" src="{{object.foto_carrusel_uno.url}}" alt="{{object.name}}" id="fotouno-{{object.name|slugify}}"/></a>
+        <img width="100%" style="display:none;" src="{{object.foto_carrusel_dos.url}}" alt="{{object.name}}" id="fotodos-{{object.name|slugify}}"/></a>
+        <img width="100%" style="display:none;" src="{{object.foto_carrusel_tres.url}}" alt="{{object.name}}" id="fototres-{{object.name|slugify}}"/></a>
+        <h2>{{object.name}}</h2>
         <p>{{object.description}}</p>
+        <h5><strong>Duracion:</strong> {{object.duration}} </h5>
+        <h5><strong>Fecha:</strong> {{object.next_date}} </h5>
+        <h5><strong>Horario:</strong> {{object.time}} </h5>
+        <h5><strong>Lugar:</strong> {{object.place}}</h5>
         </div>
         <div class="clear"></div>
     {% endif %}

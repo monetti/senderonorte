@@ -538,7 +538,21 @@ h3 {
     width:550px;
     height:500px;
 }
-
+.object_detail {
+    margin: 0;
+    color: #FFF !important;
+}
+.object_detail h5 {
+    float:left;
+    clear: left;
+    width: 40%;
+    font-weight: normal;
+}
+.object_detail p {
+    float: right;
+    width: 60%;
+    margin: 0
+}
 .curved {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -687,11 +701,9 @@ h3 {
     text-decoration:none;
 }
 
-.article h5 {
+h5 {
     font-family:"Avenir Next LT Pro",sans-serif;
-    font-size:11px;
-    text-transform:uppercase;
-    margin:0px;
+    margin:0.5em 0;
 }
 
 .article span {
