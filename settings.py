@@ -79,7 +79,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'urls'
+ROOT_URLCONF = 'senderonorte.urls'
 
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 MEDIA_ROOT = os.path.normpath(os.path.join(PROJECT_PATH,'media'))
