@@ -107,3 +107,11 @@ INSTALLED_APPS = (
     'contacts',
     'PIL',
  )
+ 
+try :
+    from local_settings import *
+except ImportError:
+    pass
+    
+    
+    
