@@ -804,3 +804,10 @@ form .leftCol {
     padding-left:2px;
     font-size:10px;
 }
+
+#body.error {
+    padding: 10em 4em;
+}
+#body.error p{
+    color :#FFF; 
+}
