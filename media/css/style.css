@@ -22,7 +22,7 @@ h1 {
 #header {
     position: relative;
     height:182px;
-    background:url(/media/img/top.jpg);
+    background:url(../img/top.jpg);
     display:block;
 }
 
