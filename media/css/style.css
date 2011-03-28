@@ -213,13 +213,37 @@ h1 {
 #mapa {
     list-style: none;
     position: relative;
+    padding: 0;
     height: 380px;
+    width: 200px;
+    margin: 0 auto;
 }
 #mapa li {
     position: absolute;
 }
 #mapa a{
+    display: none;
+}
+#mapa li:hover {
+    cursor: pointer;
+}
+#mapa li:hover a {
+    display:block;
+    float:left;
+    width: 120px;
+    margin: 15px -130px;
+    background: #FC0;
+    color: #FFF;
+    padding: 5px;
+    text-decoration: none;  
+    font-size:24px;
+}
+#mapa li:hover span {
     display: block;
+    border-top: 1px solid #FFF;
+    margin: 0 -5px -5px;
+    padding: 5px;
+    font-size: 12px;
 }
 #norte {
     background:url(../img/mapa/norte.png) no-repeat;
@@ -227,17 +251,21 @@ h1 {
     width:123px;
     top:0;
     left:21px;
+    z-index :100;
 }
-#norte:hover {
-    background:url(../img/mapa/norte-over.png) no-repeat;
+#norte a {
+    background: #F29300 !important;
 }
-
 #cuyo {
     background:url(../img/mapa/cuyo.png) no-repeat;
     height:117px;
     width:59px;
     top:72px;
     left: 9px;
+    z-index :102;
+}
+#cuyo a {
+    background: #BC121F !important;
 }
 #centro {
     background:url(../img/mapa/centro.png) no-repeat;
@@ -245,16 +273,21 @@ h1 {
     width:42px;
     top:91px;
     left:57px;
+    z-index :110;
 }
-#centro:hover {
-    background:url(../img/mapa/norte-over.png) no-repeat;
+#centro a {
+    background: #48912A !important;
 }
 #litoral {
     background:url(../img/mapa/litoral.png) no-repeat;
     height:142px;
     width:104px;
     top:10px;
-    left: 82px;    
+    left: 82px; 
+    z-index :103;       
+}
+#litoral a {
+    background: #93CCE5 !important;
 }
 #patagonia {
     background:url(../img/mapa/patagonia.png) no-repeat;
@@ -262,6 +295,10 @@ h1 {
     width:123px;
     top:156px;
     left:0;
+    z-index :105;
+}
+#patagonia:hover a {
+    background: #0069B2 !important;
 }
 #buenosaires {
     background:url(../img/mapa/buenosaires.png) no-repeat;
@@ -269,8 +306,12 @@ h1 {
     width:65px;
     top:138px;
     left: 80px;
+    z-index :106;
 }
 
+#buenosaires:hover a {
+    background: #99999A !important;
+}
 #main {
     padding:10px;
 }
