@@ -125,8 +125,9 @@ def contact_sendmail(request):
     msg += "Excursion: " + request.POST['nombre_excursion'] + ' ' + "Fecha: " + request.POST['fecha'] + "\n"
     msg += "Comentario: " + request.POST['comentario'] + "\n"
     
-    s = SMTP('localhost:1025')
-
+    
+    s = SMTP('smtp.webfaction.com')
+    s.login('senderonorte','10a1d322')
     s.sendmail(from_addr, to_addrs, msg)
     return contact(request)
 
