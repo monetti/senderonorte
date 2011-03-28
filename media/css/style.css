@@ -41,7 +41,7 @@ h1 {
 #nav a {
     display:block;
     font-size:10.5pt;
-    padding: 1em 1.5em;
+    padding: 0.9em 1.5em;
     color:#FFF;
     text-decoration: none;
     position: relative;
@@ -125,7 +125,7 @@ h1 {
 }
 #barra_superior a {
     font-family:"Avenir Next LT Pro", serif;
-    font-size:12pt;
+    font-size:10pt;
     color: #C6C7C8;
     text-decoration:none;
 }
@@ -205,18 +205,19 @@ h1 {
     background:#F29400;
 }
 
-#mapa h3 {
-    color:#4B4D4D;
-    font-family:"Avenir Next LT Pro", sans-serif;
-    font-size:14pt;
-}
-
-#mapa p {
+#zonas h3 {
     color:#4B4D4D;
     font-family:"Avenir Next LT Pro", sans-serif;
     font-size:12pt;
+    margin:15px 0px 0px 0px;
 }
 
+#zonas p {
+    color:#4B4D4D;
+    font-family:"Avenir Next LT Pro", sans-serif;
+    font-size:8pt;
+    margin:0px;
+}
 
 #centro {
     background:url(../img/mapa/centro.png) no-repeat;
@@ -282,7 +283,7 @@ h1 {
 }
 
 #last_exc {
-    height:242px;
+    height:250px;
     background:#39465B;
     width:630px;
     margin:7px 0px 7px 7px;
@@ -293,8 +294,7 @@ h1 {
     color:#F0F0F0;
     float:left;
     width:48%;
-    margin-left:8px;
-    height:167px;
+    height:177px;
     
 }
 
@@ -319,10 +319,6 @@ h1#logo_lastexc {
     text-indent: -9999px;
     margin:0px;
     padding:0px;
-}
-
-#news_exc h4 {
-    margin:0px 0px 10px 5px;
 }
 
 #news_exc h4 a {
@@ -371,14 +367,22 @@ h3#logo_lastexc {
 
 }
 #news_exc .description{
-    margin-top:5em;
+    margin-top:5.7em;
 }
 
 #header-new-exc {
     position: absolute;
     text-decoration:none;
     margin-top:355px;
-    width:525px;
+    width:537px;
+}
+
+#header-new-exc h1 {
+    font-size:23pt;
+    margin:15px 8px 0px 0px;
+    padding:0px 0px 5px 0px;
+    width:80%;
+    border-bottom:1px solid #FFF;
 }
 
 #main, #secondary {
@@ -401,7 +405,7 @@ h3#logo_lastexc {
     padding:5px;
     display: block;
     width:290px;
-    height:100px;
+    height:110px;
 }
 
 #news img {
@@ -415,14 +419,8 @@ h3 {
     
 }
 
-
-#thumbs_last_exc p,h3{
-    margin:5px 0px 0px 4px;
-}
-
 #thumbs_last_exc {
-    padding:2px;
-    padding-top:4px;
+    margin:5px 0px 0px 4px;
 }
 
 #news a {
@@ -528,20 +526,19 @@ h3 {
 
 .botonera {
     color:black;
-    margin-top:25px;
+    margin-top:23px;
     float:right;
 }
 
 .botonera a {
     width:13px;
-    height:13px;
+    height:12px;
     text-align:center;
     font-size:7pt;
     background-color: white;
-    float:left;
-    margin-left:5px;
+    padding:3px;
     text-decoration:none;
-    padding:2px;
+
 }
 
 .botonera a:hover {
@@ -830,12 +827,14 @@ form .leftCol {
     color :#FFF; 
 .description h3 {
     font-family:"Avenir Next LT Pro", sans-serif;
-    font-size:13pt;
+    font-size:12pt;
+    padding:0px;
+    margin:10px 0px 0px 0px;
 }
 
 .description p {
     font-family:"Avenir Next LT Pro", sans-serif;
-    font-size:12pt;
+    font-size:10pt;
 }
 
 .botonera h1 {
@@ -846,10 +845,12 @@ form .leftCol {
 
 .excurtion h3 {
     font-family:"Avenir Next LT Pro", sans-serif;
-    font-size:13pt;
+    font-size:12pt;
+    margin:5px 0px 0px 5px;
 }
 
 .excurtion p {
     font-family:"Avenir Next LT Pro", sans-serif;
-    font-size:12pt;
+    font-size:11pt;
+    margin:5px;
 }
