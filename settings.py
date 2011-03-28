@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 # Django settings for senderonorte project.
 
@@ -5,7 +6,8 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+    ('Martín Onetti', 'onetti.martin@gmail.com'),
+    ('Matías Iturburu', 'maturburu@gmail.com'),
 )
 
 MANAGERS = ADMINS
