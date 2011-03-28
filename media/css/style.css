@@ -124,8 +124,6 @@ h1 {
     margin: 0;
 }
 #barra_superior a {
-    font-family:"Avenir Next LT Pro", serif;
-    font-size:10pt;
     color: #C6C7C8;
     text-decoration:none;
 }
@@ -197,7 +195,6 @@ h1 {
     margin:7px;
     height:549px;
 }
-
 #zonas h1 {
     color:#FFF;
     font-family:"Avenir Next LT Pro", sans-serif;
@@ -207,69 +204,71 @@ h1 {
 
 #zonas h3 {
     color:#4B4D4D;
-    font-family:"Avenir Next LT Pro", sans-serif;
     font-size:12pt;
-    margin:15px 0px 0px 0px;
 }
 
 #zonas p {
     color:#4B4D4D;
-    font-family:"Avenir Next LT Pro", sans-serif;
-    font-size:8pt;
-    margin:0px;
 }
-
-#centro {
-    background:url(../img/mapa/centro.png) no-repeat;
-    height:67px;
-    width:42px;
-    margin:-98px 0px 0px 161px;
+#mapa {
+    list-style: none;
+    position: relative;
+    height: 380px;
 }
-
-#buenosaires {
-    background:url(../img/mapa/buenosaires.png) no-repeat;
-    height:92px;
-    width:65px;
-    margin:-14px 0px 0px 184px;
+#mapa li {
+    position: absolute;
 }
-
-#patagonia {
-    background:url(../img/mapa/patagonia.png) no-repeat;
-    height:237px;
+#mapa a{
+    display: block;
+}
+#norte {
+    background:url(../img/mapa/norte.png) no-repeat;
+    height:101px;
     width:123px;
-    margin:-73px 0px 0px 104px;
+    top:0;
+    left:21px;
+}
+#norte:hover {
+    background:url(../img/mapa/norte-over.png) no-repeat;
 }
 
 #cuyo {
     background:url(../img/mapa/cuyo.png) no-repeat;
     height:117px;
     width:59px;
-    margin:-29px 0px 0px 113px;
+    top:72px;
+    left: 9px;
 }
-
-#norte {
-    background:url(../img/mapa/norte.png) no-repeat;
-    height:101px;
-    width:123px;
-    margin:8px 0px 0px 125px;    
+#centro {
+    background:url(../img/mapa/centro.png) no-repeat;
+    height:67px;
+    width:42px;
+    top:91px;
+    left:57px;
 }
-
-#norte-over {
+#centro:hover {
     background:url(../img/mapa/norte-over.png) no-repeat;
-    display:none;
 }
-
-#centro-over {
-    background:url(../img/mapa/norte-over.png) no-repeat;
-    display:none;
-    height:54px;
-}
-
 #litoral {
     background:url(../img/mapa/litoral.png) no-repeat;
     height:142px;
     width:104px;
-    margin:-149px 0px 0px 186px;    
+    top:10px;
+    left: 82px;    
+}
+#patagonia {
+    background:url(../img/mapa/patagonia.png) no-repeat;
+    height:237px;
+    width:123px;
+    top:156px;
+    left:0;
+}
+#buenosaires {
+    background:url(../img/mapa/buenosaires.png) no-repeat;
+    height:92px;
+    width:65px;
+    top:138px;
+    left: 80px;
 }
 
 #main {
