@@ -106,6 +106,7 @@ INSTALLED_APPS = (
     'educationtravels',
     'contacts',
     'PIL',
+    'gencal',
  )
  
 try :

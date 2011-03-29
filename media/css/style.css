@@ -34,6 +34,7 @@ h1 {
     overflow:hidden;
     list-style:none;
 }
+
 #nav li {
     float:left;
 }
@@ -41,7 +42,7 @@ h1 {
 #nav a {
     display:block;
     font-size:10.5pt;
-    padding: 0.9em 1.5em;
+    padding: 1.2em 1.5em;
     color:#FFF;
     text-decoration: none;
     position: relative;
@@ -56,6 +57,8 @@ h1 {
 
 #nav li:hover {
     background:#F29400;
+
+    
 }
 
 
@@ -92,7 +95,7 @@ h1 {
     
 }
 
-#nav li ul li a{
+# li ul li a{
     color: #FEFEFE;
     text-transform:none;
     font-size:13px;
@@ -152,7 +155,6 @@ h1 {
     width:500px;
     font-size:10px;
     text-align:center;
-    padding:10px 0px 0px 0px;
     margin:0px 0px 0px 210px;
 }
 
@@ -168,7 +170,7 @@ h1 {
 #footer ul {
     list-style:none;
     width:80%;
-    margin:70px 0px 0px 135px;
+    margin:80px 0px 0px 135px;
    
 }
 
@@ -195,10 +197,12 @@ h1 {
 #zonas h3 {
     color:#4B4D4D;
     font-size:12pt;
+    margin:23px 0px 0px 0px;
 }
 
 #zonas p {
     color:#4B4D4D;
+    margin:0px;
 }
 #mapa {
     list-style: none;
@@ -206,7 +210,7 @@ h1 {
     padding: 0;
     height: 380px;
     width: 200px;
-    margin: 0 auto;
+    margin: 15px 0px 0px 135px;
 }
 #mapa li {
     position: absolute;
@@ -329,7 +333,7 @@ h1 {
 }
 
 #news {
-    height:399px;
+    height:407px;
     background:white;
     margin:0px 7px 0px 0px;
     width:300px;
@@ -337,8 +341,8 @@ h1 {
 }
 
 h1#logo_news {
-    background:#121212;
-    height:35px;
+    background:url(../img/novedades.jpg);
+    height:32px;
     margin:auto;
     width:auto;
 }
@@ -618,7 +622,7 @@ h3 {
 }
 
 .content-tab {
-    height:495px;
+    height:450px;
     background:url(../img/fondogris-viajeseduc.jpg) no-repeat;
     background-position:center bottom;
 }
@@ -680,8 +684,8 @@ h3 {
 }
 
 .article a img {
-    width:100px;
-    height:100px;
+    width:115px;
+    height:115px;
     border:0px;
     margin:0px;
 }
@@ -692,18 +696,24 @@ h3 {
 
 h5 {
     font-family:"Avenir Next LT Pro",sans-serif;
-    margin:0.5em 0;
+    margin:0px;
+    font-size:10pt;
+    color:#EEA200;
+    text-transform:uppercase;
 }
 
 .article span {
     margin:0px;
+    font-family:"Avenir Next LT Pro";
+    font-size:8pt;
 }
 
 .content-tab h2 {
-    padding:0px;
+    padding:0px 0px 10px 0px;
     color:#5F5F5F;
     font-family:"Avenir Next LT Pro";
-    font-size:28pt;
+    font-size:25pt;
+    border-bottom:1px solid #5F5F5F;
 }
 
 .content-tab p {
@@ -715,17 +725,21 @@ h5 {
 .desc-region {
     float:left;
     text-align:left;
-    width:35%;
+    width:30%;
     margin:15px 0px 0px 0px;
     font-family:"Avenir Next LT Pro";
-    font-size:11pt;
+    font-size:10pt;
 }
 
 .thumbs-exc {
     float:left;   
     text-align:left;
-    width:59%;
-    padding:140px 20px 0px 15px;
+    width:65%;
+    margin:65px 20px 0px 15px;
+}
+
+.thumbs-exc .article {
+    margin:10px 0px 80px 0px;
 }
 
 #logo-excurtions {
@@ -750,6 +764,11 @@ h5 {
     padding:10px 0px 0px 0px;
     margin:auto;
     text-align:center;
+    font-family:"Avenir Next LT Pro";
+    font-size:13pt;
+    text-transform:uppercase;
+    color:white;
+    
 }
 
 #recomendations .leftCol {

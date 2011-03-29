@@ -20,7 +20,7 @@ class Excurtion(models.Model):
     name = models.CharField(_("Nombre"),max_length="200")
     description = models.TextField(_("Descripcion"))
     summary = models.TextField(_("Resumen"))
-    next_date = models.DateTimeField(_("Proxima Fecha"))
+    date = models.DateField(_("Proxima Fecha"))
     place = models.CharField(_('Lugar'),max_length="200")
     time = models.CharField(_('Horario'),max_length="200")
     duration = models.CharField(_("Duracion"),max_length="10")
@@ -35,10 +35,10 @@ class Excurtion(models.Model):
     region = models.ForeignKey('Region')
        
     class Meta:
-        ordering = ('next_date',)
+        ordering = ('date',)
         verbose_name = _('Excursion')
-        verbose_name_plural = _('Lista de Excursiones')
-        get_latest_by = 'next_date'
+        verbose_name_plural = _('Listado de Excursiones')
+        get_latest_by = 'date'
         
     def __unicode__(self):
         return self.name

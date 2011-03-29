@@ -6,12 +6,13 @@ from cimblings.models import Cimbling
 from customizedtravels.models import CustomizedTravel
 from educationtravels.models import EducationTravel
 from contacts.forms import ContactoForm
+from gencal.templatetags.gencal import ListCalendar
 from datetime import datetime
 
 def index(request):
     object_list = Excurtion.objects.all()
-    incoming = object_list.filter(next_date__gte=datetime.now()).reverse()[:3]
-    recent = object_list.filter(next_date__lt=datetime.now(), publish_last_exc=True)[:2]
+    incoming = object_list.filter(date__gte=datetime.now()).reverse()[:3]
+    recent = object_list.filter(date__lt=datetime.now(), publish_last_exc=True)[:2]
     news = New.objects.all()
     news_news = news.order_by('created_date').reverse()[:3]
     
@@ -135,6 +136,19 @@ def contact_sendmail(request):
 def feed_next_excurtion():
     pass
     
-
-
+def calendar(request):
+    excurtions = Excurtion.objects.all()    
+    subclass = type('SubListClass', (ListCalendar,),{}) # This is equivalent to a subclass
+    subclass.get_link(self, dt) = lambda dt: "/items/%d/%d/%d" % (dt.year, dt.month, dt.day)
+    dates = [{'date':datetime.now(), 'name':'test'},{'date':datetime.now() + timedelta(days=5), 'name':'test2'}]
+    lc = subclass(excurtions)
+    
+    return simple.direct_to_template(
+        request,
+        'calendar.html',
+        extra_context = {
+              'exc': "".join(lc.formatmonth(2011, 01)),
+        }
+    )
+    
 

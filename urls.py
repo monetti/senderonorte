@@ -18,7 +18,8 @@ urlpatterns = patterns('',
     (r'^excurtion_detail/(?P<tag>[^/]+)/(?P<type_object>[^/]+)$', 'senderonorte.views.excurtion_detail'),    
     (r'^excurtions/(?P<tag>[^/]+)$', 'senderonorte.views.excurtions'),    
     (r'^contact/$', 'senderonorte.views.contact'),    
-    (r'^contact/send$', 'senderonorte.views.contact_sendmail'),        
+    (r'^contact/send$', 'senderonorte.views.contact_sendmail'),
+    (r'^calendar$', 'senderonorte.views.calendar'),                
     (r'^next-excurtions/feed/$', NextExcurtionFeed()),
 )
 
