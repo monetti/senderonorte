@@ -1,11 +1,12 @@
 {% extends 'index.html' %}
 {% load gencal %}
 {% block title %} Calendario {% endblock %}
+{% block body_class %}
+main-content
+{% endblock %}
 {% block content %}
 <div id="main">
-    <div class="main-content">
         <h1>Calendario de Excursiones</h1>
         {% gencal object_list %}
-    </div>
 </div>
 {% endblock %}

@@ -113,7 +113,7 @@
             </ul>
         </header>
 
-        <div id="body">
+        <div id="body" class="{% block body_class %}home{% endblock %}">
         {% block content %}
             <div id="main">
                 <div id="zonas" class="leftCol">
@@ -202,26 +202,23 @@
         </div>
         <!-- END OF BODY SECTION -->
         <footer>
-            <div id="caminante"></div>
+            <div id="caminante"><img src="/media/img/caminante.png"></div>
             <ul>
-                <li>
-                    <a href=""> Excursiones </a>
+                <li class="first" >
+                    <a href="#"> Excursiones </a>
                 </li>
                 <li>
-                    |
                 </li>
                 <li>
-                    <a href=""> Recomendaciones para la salida</a>
+                    <a href="#"> Recomendaciones para la salida</a>
                 </li>
                 <li >
-                    |
                 </li>
-                <li>
-                    <a href=""> Condiciones de Contratacion</a>
+                <li class="last">
+                    <a href="#"> Condiciones de Contratacion</a>
                 </li>
             </ul>
-            <p> "Sendero Norte" Copyright 2011 - Reservados todos los derechos </p> 
-            <p>Diseño Web: Usina Creativa - Desarrollo Web: Ideas </p>
+            <p><strong>Sendero Norte</strong> Copyright 2011 - Reservados todos los derechos <br /> Diseño: Usina Creativa | <a href="http://inventta.com.ar">Desarrollo: Inventta </a></p>
         </footer>
         <!-- END OF FOOTER SECTION -->
     </div>
