@@ -327,8 +327,9 @@ h1 {
     background: #262626;
     color:#F0F0F0;
     float:left;
-    width:48%;
+    width:49%;
     height:177px;
+    margin:3px;
     
 }
 
@@ -438,7 +439,7 @@ h3#logo_lastexc {
 #last_exc img {
     padding:5px;
     display: block;
-    width:290px;
+    width:295px;
     height:110px;
 }
 
@@ -454,7 +455,7 @@ h3 {
 }
 
 #thumbs_last_exc {
-    margin:5px 0px 0px 4px;
+    margin:2px;
 }
 
 #news a {
@@ -913,7 +914,7 @@ form .leftCol {
 
 .excurtion p {
     font-family:"Avenir Next LT Pro", sans-serif;
-    font-size:11pt;
+    font-size:10pt;
     margin:5px;	
 }
 
