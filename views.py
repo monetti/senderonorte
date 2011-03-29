@@ -1,4 +1,4 @@
-from django.views.generic import simple
+from django.views.generic import simple, list_detail
 from excurtion.models import Excurtion
 from excurtion.models import PhotoPostExcurtion
 from news.models import New
@@ -6,7 +6,6 @@ from cimblings.models import Cimbling
 from customizedtravels.models import CustomizedTravel
 from educationtravels.models import EducationTravel
 from contacts.forms import ContactoForm
-from gencal.templatetags import gencal
 from datetime import datetime
 
 def index(request):
@@ -137,13 +136,11 @@ def feed_next_excurtion():
     pass
     
 def calendar(request):
-    excurtions = Excurtion.objects.all()        
-    return simple.direct_to_template(
+    queryset = Excurtion.objects.all()        
+    return list_detail.object_list(
         request,
-        'calendar.html',
-        extra_context = {
-              'exc': gencal.gencal(excurtions),
-        }
+        queryset,
+        template_name='calendar.html',
     )
     
 

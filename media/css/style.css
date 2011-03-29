@@ -7,7 +7,7 @@ body {
     margin:auto;
     font: 12px Arial, Helvetica, sans-serif;
 }
-section, article, aside, nav, {
+header, footer, aside, nav, article, section {
     display:block;
 }
 hr {
@@ -19,7 +19,7 @@ h1 {
     font-size: 30px;
 }
 
-#header {
+header {
     position: relative;
     height:182px;
     background:url(../img/top.jpg);
@@ -145,20 +145,20 @@ h1 {
     color: #FFF;
 }
 
-#footer a {
+footer a {
     text-decoration:none;
     color:black;
     font-size:14px;
 }
 
-#footer p {
+footer p {
     width:500px;
     font-size:10px;
     text-align:center;
     margin:0px 0px 0px 210px;
 }
 
-#footer {
+footer {
     overflow:hidden;
     height:168px;
     background:url("/media/img/footer2.jpg") no-repeat;
@@ -167,14 +167,14 @@ h1 {
 
 
 
-#footer ul {
+footer ul {
     list-style:none;
     width:80%;
     margin:80px 0px 0px 135px;
    
 }
 
-#footer ul li {
+footer ul li {
     float:left;
     padding:10px;
 }
@@ -404,14 +404,14 @@ h3#logo_lastexc {
     margin-top:5.7em;
 }
 
-#header-new-exc {
+header-new-exc {
     position: absolute;
     text-decoration:none;
     margin-top:355px;
     width:537px;
 }
 
-#header-new-exc h1 {
+header-new-exc h1 {
     font-size:23pt;
     margin:15px 8px 0px 0px;
     padding:0px 0px 5px 0px;
@@ -883,6 +883,22 @@ form .leftCol {
 #feed p {
     padding-left:2px;
     font-size:10px;
+}
+.main-content {
+    background: #FFF url(../img/bg_body.png) repeat-x center bottom;
+    padding: 1em;
+}
+.main-content,
+.main-content h1, 
+.main-content p {
+    color: #656567 !important;
+}
+.main-content h1 {
+    border-bottom: 1px solid #EBEBEB;
+    margin:0;
+}
+.month {
+    font-size: 2em;
 }
 
 .description h3 {
