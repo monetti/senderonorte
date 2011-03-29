@@ -327,8 +327,9 @@ footer ul li {
     background: #262626;
     color:#F0F0F0;
     float:left;
-    width:48%;
+    width:49%;
     height:177px;
+    margin:3px;
     
 }
 
@@ -438,7 +439,7 @@ header-new-exc h1 {
 #last_exc img {
     padding:5px;
     display: block;
-    width:290px;
+    width:295px;
     height:110px;
 }
 
@@ -454,7 +455,7 @@ h3 {
 }
 
 #thumbs_last_exc {
-    margin:5px 0px 0px 4px;
+    margin:2px;
 }
 
 #news a {
@@ -831,14 +832,15 @@ form .leftCol {
     width:77%;
     padding:0px 0px 15px 0px;
     margin:35px 0px 0px 10px;
-    font-size:40px;
+    font-size:25pt;
+    font-family:"Avenir Next LT Pro";
     
 }
 
 #body form h5 {
     font-family:"Avenir Next LT Pro";
     color:#AEAEAE;
-    font-size:12px;
+    font-size:8pt;
     margin:0px;
 }
 
@@ -872,6 +874,7 @@ form .leftCol {
 }
 
 #feed {
+    margin:10px 0px 0px 0px;
     text-decoration:none;
 }
 
@@ -881,8 +884,8 @@ form .leftCol {
 }
 
 #feed p {
-    padding-left:2px;
-    font-size:10px;
+    font-size:8pt;
+    font-family:"Avenir Next LT Pro";
 }
 .main-content {
     background: #FFF url(../img/bg_body.png) repeat-x center bottom;
@@ -927,6 +930,24 @@ form .leftCol {
 
 .excurtion p {
     font-family:"Avenir Next LT Pro", sans-serif;
-    font-size:11pt;
+    font-size:10pt;
     margin:5px;	
+}
+
+#travels .thumbs-exc {
+    padding:0px;
+}
+
+#travels .thumbs-exc .article {
+    margin:20px 40px 0px 110px ;
+    padding:0px;
+}
+
+#cimblings .thumbs-exc {
+    padding:0px;
+}
+
+#cimblings .thumbs-exc .article {
+    margin:20px 40px 0px 110px ;
+    padding:0px;
 }

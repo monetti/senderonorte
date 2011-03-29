@@ -69,7 +69,7 @@ class NextExcurtionFeed(Feed):
     link="/contact/send"
     
     def items(self):
-        return Excurtion.objects.all().order_by('-next_date')[:5]
+        return Excurtion.objects.all().order_by('-date')[:5]
     
     def item_title(self, item):
         return item.name
