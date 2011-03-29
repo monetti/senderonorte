@@ -136,7 +136,8 @@ def feed_next_excurtion():
     pass
     
 def calendar(request):
-    queryset = Excurtion.objects.all()        
+
+    queryset = Excurtion.objects.all() 
     return list_detail.object_list(
         request,
         queryset,

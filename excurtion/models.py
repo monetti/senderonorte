@@ -49,7 +49,11 @@ class Excurtion(models.Model):
             return thumbs[0].photo.url_280x80
         else:
             return self.foto_carrusel_uno.url_280x80
-        
+            
+    def __repr__(self):
+        return {'date':self.date,'name':self.name}        
+    
+       
 class PhotoPostExcurtion(models.Model):
     excurtion = models.ForeignKey(Excurtion)
     photo = ImageWithThumbsField(name=str(excurtion),blank=True,upload_to="./img/excurtion", sizes=((280,80)))
