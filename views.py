@@ -136,11 +136,14 @@ def feed_next_excurtion():
     pass
     
 def calendar(request):
-    queryset = Excurtion.objects.all()        
+
+    queryset2 = [a.__repr__() for a in Excurtion.objects.all()]
+    queryset = Excurtion.objects.all() 
     return list_detail.object_list(
         request,
         queryset,
         template_name='calendar.html',
+        extra_context = {'dics':queryset2}
     )
     
 
