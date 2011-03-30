@@ -101,7 +101,7 @@ def contact(request):
     )
 
 def contact_sendmail(request):
-    import sys
+    
     from smtplib import SMTP
 
     from_addr = request.POST['email']
@@ -115,7 +115,8 @@ def contact_sendmail(request):
     msg += "Comentario: " + request.POST['comentario'] + "\n"
     
     
-    s = SMTP('smtp.webfaction.com')
+    s = SMTP()
+    s.connect('smtp.webfaction.com')
     s.login('senderonorte','10a1d322')
     s.sendmail(from_addr, to_addrs, msg)
     return contact(request)
@@ -140,9 +141,35 @@ def mailing(request):
         request,
         'plantilla.html',
         extra_context = {
+            'msg':"",
             'objs':objects,
         }
     )
+    
+def send_mailing(request):
+    from django.template import Context, Template
+    from django.core.mail import send_mail
+    import sys
+    from smtplib import SMTP
+
+    objects = Excurtion.objects.all()[:2]
+    t = Template("plantilla.html")
+    c = Context({"objs": objects})
+
+    s = SMTP()
+    s.connect('smtp.webfaction.com')
+    s.login('senderonorte','senderonortemails')
+    s.sendmail('contacto@senderonorte.com.ar',['onetti.martin@gmail.com'],t.render(c))
+
+    return simple.direct_to_template(
+        request,
+        'plantilla.html',
+        extra_context = {
+            'msg':"Email enviado correctamente",
+            'objs':objects,
+        }
+    )
+
     
 def feed_detail(request,tag):
     a = Excurtion.objects.get(pk=tag)

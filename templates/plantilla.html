@@ -9,9 +9,9 @@
   <![endif]-->
   <script>
   
-  a = document.getElementById('enviarmailing');
+  a = document.getElementById('mailing');
   a.onclick = function () {
-    window.location = "/enviarmailing/"  
+    window.location = "/sendmailing/"  
   }
   </script>
 </head>
@@ -22,7 +22,10 @@
         </header>
 
         <div id="body">
-            <div> <h1> Novedades </h1></div>
+            <div> <h1> Novedades </h1> <input type="button" id="mailing" /></div>
+            {% block msg %}
+                {{ msg }}
+            {% endblock %}
             {% for o in objs %}
             <div class="{% cycle 'odd' 'even' %} novedad">
                 <img class="img" src="{{o.photopostexcurtion_set.all.0.photo.url}}" /> 

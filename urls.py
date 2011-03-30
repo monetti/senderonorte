@@ -25,6 +25,7 @@ urlpatterns = patterns('',
     (r'^next-excurtions/feed/$', NextExcurtionFeed()),
     (r'^next-excurtions/feed/detail/(?P<tag>[^/]+)$', 'senderonorte.views.feed_detail'),
     
+    (r'^sendmailing/$', 'senderonorte.views.send_mailing'),
     (r'^mailinglist/$', 'senderonorte.views.mailing'),
 )
 
