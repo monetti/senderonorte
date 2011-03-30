@@ -39,23 +39,11 @@ def excurtion_detail(request, tag=None,type_object=None):
     )
     
 def excurtions(request,tag="norte"):
-    excurtions = Excurtion.objects.all()
-    norte = excurtions.filter(region__slug="norte")[:4]
-    patagonia = excurtions.filter(region__slug="patagonia")[:4]
-    centro = excurtions.filter(region__slug="centro")[:4]
-    cuyo = excurtions.filter(region__slug="cuyo")[:4]
-    litoral = excurtions.filter(region__slug="litoral")[:4]
-    return simple.direct_to_template(
+    queryset = Excurtion.objects.all()
+    return list_detail.object_list(
         request,
-        'excurtions.html',
-        extra_context = {
-            'selected':tag,
-            'norte':norte,
-            'patagonia':patagonia,
-            'litoral':litoral,
-            'centro':centro,
-            'cuyo':cuyo,
-        }
+        queryset,
+        template_name='excurtions.html',
     )
     
 def cimblings(request):
