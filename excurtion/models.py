@@ -61,16 +61,16 @@ class PhotoPostExcurtion(models.Model):
 class NextExcurtionFeed(Feed):
     title = "Sendero Norte - Noticias"
     description = "Noticias de Sendero Norte Expediciones"
-    link="/contact/send"
-    
+    link="http://www.senderonorte.com.ar/next-excurtions/feed"
+        
     def items(self):
-        return Excurtion.objects.all().order_by('-date')[:5]
+        return Excurtion.objects.all().order_by('-date')[:2]
     
     def item_title(self, item):
         return item.name
     
     def item_link(self,item):
-        return "http://senderonorte.com.ar/excurtion_detail/"+str(item.id)+"/excurtion"
+        return "http://senderonorte.com.ar/next-excurtions/feed/detail/"+str(item.id)
 
     def item_description(self, item):
         return item.description

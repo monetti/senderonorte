@@ -19,7 +19,7 @@ hr {
 
 header {
     position: relative;
-    height:182px;
+    height:179px;
     background:url(../img/top.jpg);
 }
 
@@ -41,7 +41,7 @@ header {
 }
 
 #body {
-    
+    background:#FFF;    
     
 }
 
@@ -65,13 +65,22 @@ footer p {
     left:0;
 }
 
+.nar {
+    background:#F29400;
+}
+.az {
+    background:#006BB3;
+}
+
+
 .odd {
     background:#262626;
 }
 
+
 .novedad img {
     width:910px;
-    height:470px;
+    height:300px;
     padding:20px;
 }
 
@@ -79,20 +88,67 @@ footer p {
     background:#E3E3E5;
 }
 
-.odd h1,p {
+.odd h1,.even h1 {
     color:#A9A49A;
     margin:0px 0px 0px 20px;  
     font-size:25pt;
 }
 
-.odd h1 {
-    text-transform:uppercase;
-    border-bottom:1px solid #A9A49A;
+.odd h1, .even h1 {
+    border-bottom:2px solid #A9A49A;
     width:70%;
-    
-}
-.odd p {
-    width:90%;
-    font-size:12pt;
+    padding:0px;
+    height:auto;
+    background:none;
 }
 
+.odd h1, .odd p {
+    color:white;
+}
+
+.even h1, .even p {
+    color:black;
+}
+
+
+.odd p, .even p {
+    width:95%;
+    font-size:12pt;
+    margin:20px 0px 0px 20px;
+}
+
+body h1 {
+    text-transform:uppercase;
+    width:40%;
+    background:#98C10F;
+    height:29px;
+    padding:15px 0px 15px 38px;
+    font-size:23pt;
+    color:#FFF;
+    margin:15px 0px 15px 5px;
+    
+}
+
+.sitio-link {
+    height:40px;
+    width:25%;
+    margin:0px 0px 0px 630px;
+    padding:20px 0px 0px 30px;
+}
+
+.link-sitio {
+    padding:20px;
+}
+
+a {
+    text-decoration:none;
+    text-transform:uppercase;
+    color:white;
+    font-size:14pt;
+} 
+
+footer p {
+    font-size:15pt;
+    color:#A9A4;
+    margin:65px 0px 0px 325px;
+}

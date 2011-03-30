@@ -936,3 +936,34 @@ table {
 #cimblings, #etravel, #travels {
     padding:0px 0px 40px 0px;
 }
+
+#feed_detail article {
+    margin:0px 200px 50px 200px;
+    padding:0px;
+}
+
+#feed_detail {
+    height:600px;
+    text-align:center;
+}
+
+#feed_detail h2 {
+    color:white;
+    margin:20px 0px 0px 180px;  
+    font-size:20pt;
+    width:60%;
+    padding:0px 0px 20px 0px;
+    text-align:center;
+}
+
+#feed_detail p {
+    margin:10px;  
+    font-size:10pt;
+    width:95%;
+    text-align:center;
+}
+
+#feed_detail img {
+    margin:20px
+}
+

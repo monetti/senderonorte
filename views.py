@@ -143,6 +143,17 @@ def mailing(request):
             'objs':objects,
         }
     )
+    
+def feed_detail(request,tag):
+    a = Excurtion.objects.get(pk=tag)
+
+    return simple.direct_to_template(
+        request,
+        'feed_detail.html',
+        extra_context = {
+            'obj':a,
+        }
+    )
 
 def server_error(request):
     return simple.direct_to_template(request, '500.html')

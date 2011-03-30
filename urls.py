@@ -23,6 +23,8 @@ urlpatterns = patterns('',
     (r'^contact/send$', 'senderonorte.views.contact_sendmail'),
     (r'^calendar$', 'senderonorte.views.calendar'),
     (r'^next-excurtions/feed/$', NextExcurtionFeed()),
+    (r'^next-excurtions/feed/detail/(?P<tag>[^/]+)$', 'senderonorte.views.feed_detail'),
+    
     (r'^mailinglist/$', 'senderonorte.views.mailing'),
 )
 
