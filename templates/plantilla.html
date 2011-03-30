@@ -15,25 +15,19 @@
         </header>
 
         <div id="body">
-        <div class="novedad odd even">
-        <img src="/media/img/footer.jpg" />
-        <h1 class="title">{{}}</h1>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat porttitor nisl, id consectetur nisl vehicula gravida. Praesent congue risus a risus tempor molestie. Cras convallis auctor purus, eget ornare risus porttitor id. Morbi nec purus sed sapien mollis dignissim sed a augue. Proin egestas lectus a turpis imperdiet a laoreet neque placerat. Vivamus non nibh dui, in commodo eros. Fusce et quam eros, in molestie sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eu dapibus dui. Suspendisse quam sapien, porttitor eu feugiat eu, mattis et magna. 
-        </p>
-        <div class="sitio"><p>VISITE NUESTRO SITIO</p></div>
+        {% for o in objs %}
+        <div class="{% cycle 'odd' 'even' %}">
+            <img src="{{o.photopostexcurtion_set.all.0.photo|thumbnail:'540x340'}}" /> 
+            <h1 class="title">{{ o.name }}</h1>
+            <p> {{ o.description }}
+            </p>
+        <div class="sitio"><a href="http://www.senderonorte.com.ar">VISITE NUESTRO SITIO</a></div>
         </div>
-        <div class="novedad even">
-                <img src="no-image.png" />
-        <h1 class="title"> TITULO DE PRUEBA </h1>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat porttitor nisl, id consectetur nisl vehicula gravida. Praesent congue risus a risus tempor molestie. Cras convallis auctor purus, eget ornare risus porttitor id. Morbi nec purus sed sapien mollis dignissim sed a augue. Proin egestas lectus a turpis imperdiet a laoreet neque placerat. Vivamus non nibh dui, in commodo eros. Fusce et quam eros, in molestie sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eu dapibus dui. Suspendisse quam sapien, porttitor eu feugiat eu, mattis et magna. 
-        </p>
-        <div class="sitio"><p>VISITE NUESTRO SITIO</p></div>
 
-        </div>
         </div>
         <!-- END OF BODY SECTION -->
         <footer>
-            <div id="caminante"><img src="caminante.png"></div>
+            <div id="caminante"><img src="/media/css/caminante.png"></div>
             <p>BOLETIN DE NOVEDADES</p>
         </footer>
         <!-- END OF FOOTER SECTION -->

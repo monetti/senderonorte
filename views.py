@@ -134,4 +134,12 @@ def calendar(request):
     )
     
 def mailing(request):
-    pass
+    objects = Excurtion.objects.all()[:2]
+    
+    return simple.direct_to_template(
+        request,
+        'plantilla.html',
+        extra_context = {
+            'objs':objects,
+        }
+    )
