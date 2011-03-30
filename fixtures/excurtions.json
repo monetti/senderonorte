@@ -1,0 +1,256 @@
+[
+  {
+    "pk": 1, 
+    "model": "excurtion.region", 
+    "fields": {
+      "description": "Viajes que son una vuelta al pasado para sumergirnos en culturas ancestrales. Tradiciones que se han pasado de generacion en generacion, sabores, colores, y olores inconfundibles de la madre tierra\r\n\r\nUna paleta interminable de rojos, marrones cobrizos, naranjas y verdes nos regalan sus cerros, que se confunden con la blancura de las salinas o de las nevadas cumbres que sirvieron muchas veces como enterratorios incaicos.\r\n\r\nDe repente una manada de guanacos nos observa desde las laderas monta\u00f1osas y un condor, ave sagrada, surca el cielo sobre nuestras cabezas.", 
+      "slug": "norte", 
+      "name": "Norte"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "excurtion.region", 
+    "fields": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n", 
+      "slug": "centro", 
+      "name": "Centro"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "excurtion.region", 
+    "fields": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n", 
+      "slug": "patagonia", 
+      "name": "Patagonia"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "excurtion.region", 
+    "fields": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n", 
+      "slug": "litoral", 
+      "name": "Litoral"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "excurtion.region", 
+    "fields": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n", 
+      "slug": "buenos-aires", 
+      "name": "Buenos Aires"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "excurtion.region", 
+    "fields": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n", 
+      "slug": "cuyo", 
+      "name": "Cuyo"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "excurtion.excurtion", 
+    "fields": {
+      "intro_last_exc": "", 
+      "name": "Lorem Ipsum", 
+      "region": 1, 
+      "publish_last_exc": true, 
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n", 
+      "duration": "4 horas", 
+      "place": "Sierras Chicas", 
+      "time": "14 a 21", 
+      "date": "2011-03-31", 
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "excurtion.excurtion", 
+    "fields": {
+      "intro_last_exc": "", 
+      "name": "Dolor sit Amet", 
+      "region": 2, 
+      "publish_last_exc": true, 
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n", 
+      "duration": "7 horas", 
+      "place": "Los Gigantes", 
+      "time": "14 a 21", 
+      "date": "2011-03-31", 
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "excurtion.excurtion", 
+    "fields": {
+      "intro_last_exc": "", 
+      "name": "Aenean sit amet vestibulum", 
+      "region": 4, 
+      "publish_last_exc": true, 
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n", 
+      "duration": "4 horas", 
+      "place": "Sierras Chicas", 
+      "time": "14 a 21", 
+      "date": "2011-04-29", 
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "excurtion.excurtion", 
+    "fields": {
+      "intro_last_exc": "", 
+      "name": " Morbi a justo metus, sed commodo nunc", 
+      "region": 6, 
+      "publish_last_exc": true, 
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n", 
+      "duration": "7 horas", 
+      "place": "Los Gigantes", 
+      "time": "14 a 21", 
+      "date": "2011-04-29", 
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "excurtion.excurtion", 
+    "fields": {
+      "intro_last_exc": "", 
+      "name": "consectetur adipiscing elit", 
+      "region": 3, 
+      "publish_last_exc": true, 
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n", 
+      "duration": "7 horas", 
+      "place": "Traslasierras", 
+      "time": "14 a 21", 
+      "date": "2011-04-30", 
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "excurtion.photopostexcurtion", 
+    "fields": {
+      "photo": "excurtion/01696_afterrain_1280x1024.jpg", 
+      "excurtion": 1
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "excurtion.photopostexcurtion", 
+    "fields": {
+      "photo": "excurtion/2597478489_b55a5972c8_o_3.jpg", 
+      "excurtion": 1
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "excurtion.photopostexcurtion", 
+    "fields": {
+      "photo": "excurtion/360929190_6af0c752f6_b_4.jpg", 
+      "excurtion": 1
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "excurtion.photopostexcurtion", 
+    "fields": {
+      "photo": "excurtion/Camino-boreal.png", 
+      "excurtion": 2
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "excurtion.photopostexcurtion", 
+    "fields": {
+      "photo": "excurtion/Banana_Leaf_by_OrodrethC.jpg", 
+      "excurtion": 2
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "excurtion.photopostexcurtion", 
+    "fields": {
+      "photo": "excurtion/iSwoosh_1280x1024.png", 
+      "excurtion": 2
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "excurtion.photopostexcurtion", 
+    "fields": {
+      "photo": "excurtion/Balloon_Ride_III_1600x1200_1.jpg", 
+      "excurtion": 4
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "excurtion.photopostexcurtion", 
+    "fields": {
+      "photo": "excurtion/344402358_20b85d1ab2_b.jpg", 
+      "excurtion": 4
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "excurtion.photopostexcurtion", 
+    "fields": {
+      "photo": "excurtion/360929190_6af0c752f6_b_5.jpg", 
+      "excurtion": 4
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "excurtion.photopostexcurtion", 
+    "fields": {
+      "photo": "excurtion/Banana_Leaf_by_OrodrethC_1.jpg", 
+      "excurtion": 5
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "excurtion.photopostexcurtion", 
+    "fields": {
+      "photo": "excurtion/344402358_20b85d1ab2_b_1.jpg", 
+      "excurtion": 5
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "excurtion.photopostexcurtion", 
+    "fields": {
+      "photo": "excurtion/01696_afterrain_1280x1024_1.jpg", 
+      "excurtion": 5
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "excurtion.photopostexcurtion", 
+    "fields": {
+      "photo": "excurtion/misho.jpg", 
+      "excurtion": 3
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "excurtion.photopostexcurtion", 
+    "fields": {
+      "photo": "excurtion/Where_I_End_and_You_Begin_by_vhm_alex.jpg", 
+      "excurtion": 3
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "excurtion.photopostexcurtion", 
+    "fields": {
+      "photo": "excurtion/2597478489_b55a5972c8_o_4.jpg", 
+      "excurtion": 3
+    }
+  }
+]
