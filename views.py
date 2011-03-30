@@ -6,6 +6,7 @@ from cimblings.models import Cimbling
 from customizedtravels.models import CustomizedTravel
 from educationtravels.models import EducationTravel
 from contacts.forms import ContactoForm
+from gencal.templatetags.gencal import ListCalendar
 from datetime import datetime
 
 def index(request):
@@ -124,8 +125,8 @@ def feed_next_excurtion():
     pass
     
 def calendar(request):
-
-    queryset = Excurtion.objects.all() 
+    queryset = ListCalendar(Excurtion.objects.all(),2011,03,{'date_field':'date'})
+    
     return list_detail.object_list(
         request,
         queryset,
