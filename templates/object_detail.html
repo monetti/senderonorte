@@ -4,18 +4,18 @@
     {% if type_object == "excurtion" %}
         <div class="slider">
         {% for photo in object.photopostexcurtion_set.all %}
-        <img width="100%" src="{{photo.photo|thumbnail:'700x340'}}" alt="{{object.name}}" id="foto{{forloop.index}}-{{object.name|slugify}}" />
+            <img height="320" src="{{photo.photo|thumbnail:'700x440'}}" alt="{{object.name}}" />
         {% endfor %}
         </div>
-        <h2>{{object.name}}</h2>
-        <p>{{object.description}}</p>
-        <h5><strong>Duracion:</strong> {{object.duration}} </h5>
-        <h5><strong>Fecha:</strong> {{object.date}} </h5>
-        <h5><strong>Horario:</strong> {{object.time}} </h5>
-        <h5><strong>Lugar:</strong> {{object.place}}</h5>
+        <div>
+            <h2>{{object.name}}</h2>
+            <p>{{object.description}}</p>
+            <h5><strong>Duracion:</strong> {{object.duration}} </h5>
+            <h5><strong>Fecha:</strong> {{object.date}} </h5>
+            <h5><strong>Horario:</strong> {{object.time}} </h5>
+            <h5><strong>Lugar:</strong> {{object.place}}</h5>
+            
         </div>
-        <div class="clear"></div>
     {% endif %}
     </article>
 </div>
-

@@ -30,35 +30,27 @@
         $(window).ready(function() {
             $('#news_exc article').not(':first').hide();
 
-            $(".botonera a").click(function(){
-                target = $(this).attr('href');
-                $(target).show();
-                $('#news_exc article').not(target).hide();
-                return false;
-            });
+
             $('.banners').nivoSlider({
                 effect: 'fade',
-                controlNav:false,
+                controlNav:false
             })
             $(".excurtion a").click(function(){
                 var target = $(this).attr('href');
                 $.ajax({
                     url: target,
-                    dataType:'html',
-                    context: $('body'),
                     success: function(data){
-
                         $(data).dialog({
                             'modal':true,
-                            'resizable':false,
                             'draggable':false,
                             'width':'600',
                             'height':'550'
                         });
-                        debugger;
-                        console.log(this);
-                        $(data).dialog('open');
-                        }
+                        $('#dialog').find('.slider').nivoSlider({
+                            effect:'fade',
+                            controlNav:false
+                        });
+                     },
                         
                 });
                 return false;
