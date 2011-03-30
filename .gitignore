@@ -2,4 +2,5 @@
 *.pyc
 *.db
 *.bak
+media/excurtion/*
 
