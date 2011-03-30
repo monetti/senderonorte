@@ -1,3 +1,5 @@
 django
+psycopg2
+markdown
 PIL
 -e git+http://github.com/justinlilly/django-gencal.git#egg=django_gencal
