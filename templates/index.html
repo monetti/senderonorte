@@ -29,7 +29,12 @@
   <script>
         $(window).ready(function() {
             $('#news_exc article').not(':first').hide();
-
+            $(".botonera a").click(function(){
+                target = $(this).attr('href');
+                $(target).show();
+                $('#news_exc article').not(target).hide();
+                return false;
+            });
 
             $('.banners').nivoSlider({
                 effect: 'fade',
@@ -46,7 +51,7 @@
                             'width':'600',
                             'height':'550'
                         });
-                        $('#dialog').find('.slider').nivoSlider({
+                        $(data).find('.slider').nivoSlider({
                             effect:'fade',
                             controlNav:false
                         });
