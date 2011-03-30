@@ -1,0 +1,79 @@
+body {
+    margin:auto;
+    font: 12px "Arial, Helvetica, sans-serif;
+}
+header, footer {
+    display:block;
+}
+hr {
+   color:#5D5D5D;
+   height:1px;
+}
+
+header {
+    position: relative;
+    height:182px;
+    background:url(../img/top.jpg);
+}
+
+#wrapper_body {
+    margin:auto;
+    width:950px;
+}
+
+#logo_sendero {
+    position:absolute;
+    left:0;
+    top:0;
+    margin:0;
+    width:286px;
+    background: url(../img/logo-cabecera.png) no-repeat ;
+    height:187px;
+    overflow:hidden;
+    text-indent: -9999px;
+}
+
+#body {
+    background:#7F7F7F;
+    padding-bottom: 20px;
+}
+
+footer {
+    height:164px;
+    background:url("../img/footer2.png") no-repeat;
+    margin-top: -10px;
+    position: relative;
+    padding: 10px 10px 0;
+}
+
+
+footer p {
+    margin:50px 0 0 180px;
+}
+
+
+#caminante {
+    position: absolute;
+    bottom:0;
+    left:0;
+}
+
+.odd {
+    background:#262626;
+}
+
+.novedad {
+    width:930px;
+    height:470px;
+    padding:10px;
+}
+
+.even {
+    background:#E3E3E5;
+}
+
+.novedad img {
+    width:920px;
+    height:190px;
+}
+

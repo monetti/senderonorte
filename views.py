@@ -125,7 +125,7 @@ def feed_next_excurtion():
     pass
     
 def calendar(request):
-    queryset = ListCalendar(Excurtion.objects.all(),2011,03,{'date_field':'date'})
+    queryset = Excurtion.objects.all()
     
     return list_detail.object_list(
         request,
@@ -133,4 +133,5 @@ def calendar(request):
         template_name='calendar.html',
     )
     
-
+def mailing(request):
+    pass

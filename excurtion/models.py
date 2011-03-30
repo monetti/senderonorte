@@ -40,6 +40,10 @@ class Excurtion(models.Model):
         
     def __unicode__(self):
         return self.name
+    
+    def get_absolute_url(self):
+        return u'/excurtion_detail/%s/excurtion' % self.id
+
        
 class PhotoPostExcurtion(models.Model):
     excurtion = models.ForeignKey(Excurtion)
