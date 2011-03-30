@@ -29,7 +29,12 @@
   <script>
         $(window).ready(function() {
             $('#news_exc article').not(':first').hide();
-
+            $(".botonera a").click(function(){
+                target = $(this).attr('href');
+                $(target).show();
+                $('#news_exc article').not(target).hide();
+                return false;
+            });
 
             $('.banners').nivoSlider({
                 effect: 'fade',
@@ -46,7 +51,7 @@
                             'width':'600',
                             'height':'550'
                         });
-                        $('#dialog').find('.slider').nivoSlider({
+                        $(data).find('.slider').nivoSlider({
                             effect:'fade',
                             controlNav:false
                         });
@@ -70,7 +75,7 @@
 <body>
     <div id="wrapper_body">
         <header>
-            <a href="/"><h1 id="logo_sendero">Sendero Norte</h1></a> 
+            <h1 id="logo_sendero"><a href="/">Sendero Norte</a></h1>
             <ul id="barra_superior">
                 <li class="menu_superior">
                    <a href="/">INICIO</a>

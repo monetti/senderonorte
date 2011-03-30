@@ -132,11 +132,17 @@ header {
     left:0;
     top:0;
     margin:0;
+    padding:0;
+}
+#logo_sendero a {
+    margin:0;
+    display:block;
     width:286px;
     background: url(/media/img/logo-cabecera.png) no-repeat ;
     height:187px;
     overflow:hidden;
     text-indent: -9999px;
+
 }
 
 #barra_superior {
@@ -153,6 +159,7 @@ header {
 #body {
     background:#7F7F7F;
     padding-bottom: 20px;
+    min-height: 30em;
 }
 
 
@@ -868,6 +875,7 @@ form .leftCol {
 #body.main-content {
     background: #FFF url(../img/bg_body.png) repeat-x center bottom;
 }
+
 .main-content,
 .main-content h1, 
 .main-content p {
@@ -890,7 +898,12 @@ form .leftCol {
     padding: 0.5em 0.8em;
 }
 
-
+.error{
+    margin: 3em 0 0;
+}
+.error p {
+    margin: 3em;
+}
 #travels .thumbs-exc {
     padding:0px;
 }
