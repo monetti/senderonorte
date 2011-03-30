@@ -6,13 +6,9 @@ class InlinePhotoPostExcurtionAdmin(admin.TabularInline):
     extra = 3
     max_num = 3
 
-class InlineRegionAdmin(admin.TabularInline):
-    model = Region
-    extra = 1
-    max_num = 1
 class ExcurtionAdmin(admin.ModelAdmin):
     model = Excurtion
-    inlines = [InlineRegionAdmin, InlinePhotoPostExcurtionAdmin]
+    inlines = [InlinePhotoPostExcurtionAdmin]
 
 
 admin.site.register(Excurtion, ExcurtionAdmin)

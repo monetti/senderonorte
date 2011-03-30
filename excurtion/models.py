@@ -9,8 +9,6 @@ class Region(models.Model):
     slug = models.SlugField(editable=False)
     name = models.CharField(_("Nombre"),max_length="200")
     description = models.TextField(_("Descripcion"))
-    excurtions = models.ForeignKey('Excurtion')
-    
     def save(self):
         self.slug = slugify(self.name)
         super(Region, self).save()
@@ -26,6 +24,7 @@ class Excurtion(models.Model):
     name = models.CharField(_("Nombre"),max_length="200")
     description = models.TextField(_("Descripcion"))
     summary = models.TextField(_("Resumen"))
+    region = models.ForeignKey('Region')
     date = models.DateField(_("Proxima Fecha"))
     place = models.CharField(_('Lugar'),max_length="200")
     time = models.CharField(_('Horario'),max_length="200")
