@@ -15,15 +15,16 @@
         </header>
 
         <div id="body">
+        
         {% for o in objs %}
-        <div class="{% cycle 'odd' 'even' %}">
-            <img src="{{o.photopostexcurtion_set.all.0.photo|thumbnail:'540x340'}}" /> 
+        <div class="{% cycle 'odd' 'even' %} novedad">
+            <img class="img" src="{{o.photopostexcurtion_set.all.0.photo.url}}" /> 
             <h1 class="title">{{ o.name }}</h1>
             <p> {{ o.description }}
             </p>
         <div class="sitio"><a href="http://www.senderonorte.com.ar">VISITE NUESTRO SITIO</a></div>
         </div>
-
+        {% endfor %}  
         </div>
         <!-- END OF BODY SECTION -->
         <footer>

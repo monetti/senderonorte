@@ -1,10 +1,17 @@
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url("../fonts/AvenirNextLTPro-Regular.otf");
+}
+
+
 body {
     margin:auto;
-    font: 12px "Arial, Helvetica, sans-serif;
+    font: 12px "Avenir Next LT Pro";
 }
 header, footer {
     display:block;
 }
+
 hr {
    color:#5D5D5D;
    height:1px;
@@ -34,8 +41,8 @@ header {
 }
 
 #body {
-    background:#7F7F7F;
-    padding-bottom: 20px;
+    
+    
 }
 
 footer {
@@ -62,18 +69,30 @@ footer p {
     background:#262626;
 }
 
-.novedad {
-    width:930px;
+.novedad img {
+    width:910px;
     height:470px;
-    padding:10px;
+    padding:20px;
 }
 
 .even {
     background:#E3E3E5;
 }
 
-.novedad img {
-    width:920px;
-    height:190px;
+.odd h1,p {
+    color:#A9A49A;
+    margin:0px 0px 0px 20px;  
+    font-size:25pt;
+}
+
+.odd h1 {
+    text-transform:uppercase;
+    border-bottom:1px solid #A9A49A;
+    width:70%;
+    
+}
+.odd p {
+    width:90%;
+    font-size:12pt;
 }
 

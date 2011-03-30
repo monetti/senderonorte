@@ -76,7 +76,6 @@ header {
 #nav li:hover {
     background:#F29400;
 
-    
 }
 
 
@@ -924,4 +923,16 @@ form .leftCol {
 
 table {
     margin:30px;
+}
+
+#etravel .desc-region {
+    margin:auto;
+}
+
+#cimblings .desc-region, #etravel .desc-region, #travels .desc-region {
+    margin:70px 0px;
+}
+
+#cimblings, #etravel, #travels {
+    padding:0px 0px 40px 0px;
 }
