@@ -7,6 +7,8 @@ from excurtion.models import NextExcurtionFeed
 
 admin.autodiscover()
 
+handler500 = 'senderonorte.views.server_error'
+handler404 = 'senderonorte.views.not_found'
 
 urlpatterns = patterns('',
     (r'^$', 'senderonorte.views.index' , {}, 'home'),
@@ -14,15 +16,18 @@ urlpatterns = patterns('',
     (r'^cimblings/$', 'senderonorte.views.cimblings'),
     (r'^educationtravel/$', 'senderonorte.views.educationtravels'),
     (r'^customizedtours/$', 'senderonorte.views.customizedtravels'),
-    (r'^recomendations/$', direct_to_template, {'template':'recomendaciones.html'}),    
-    (r'^excurtion_detail/(?P<tag>[^/]+)/(?P<type_object>[^/]+)$', 'senderonorte.views.excurtion_detail'),    
-    (r'^excurtions/(?P<tag>[^/]+)$', 'senderonorte.views.excurtions'),    
-    (r'^contact/$', 'senderonorte.views.contact'),    
+    (r'^recomendations/$', direct_to_template, {'template':'recomendaciones.html'}),
+    (r'^excurtion_detail/(?P<tag>[^/]+)/(?P<type_object>[^/]+)$', 'senderonorte.views.excurtion_detail'),
+    (r'^excurtions/(?P<tag>[^/]+)$', 'senderonorte.views.excurtions'),
+    (r'^contact/$', 'senderonorte.views.contact'),
     (r'^contact/send$', 'senderonorte.views.contact_sendmail'),
-    (r'^calendar$', 'senderonorte.views.calendar'),                
+    (r'^calendar$', 'senderonorte.views.calendar'),
     (r'^next-excurtions/feed/$', NextExcurtionFeed()),
 )
 
+urlpatterns += patterns('',
+    (r'^test/$', 'senderonorte.views.not_found'),
+)
 urlpatterns += patterns( '',
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),

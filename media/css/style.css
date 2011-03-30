@@ -153,6 +153,7 @@ header {
 #body {
     background:#7F7F7F;
     padding-bottom: 20px;
+    min-height: 30em;
 }
 
 
@@ -868,6 +869,7 @@ form .leftCol {
 #body.main-content {
     background: #FFF url(../img/bg_body.png) repeat-x center bottom;
 }
+
 .main-content,
 .main-content h1, 
 .main-content p {
@@ -890,7 +892,12 @@ form .leftCol {
     padding: 0.5em 0.8em;
 }
 
-
+.error{
+    margin: 3em 0 0;
+}
+.error p {
+    margin: 3em;
+}
 #travels .thumbs-exc {
     padding:0px;
 }

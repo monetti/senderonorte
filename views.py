@@ -25,7 +25,7 @@ def index(request):
             'news':news_news,
         }
     )
-    
+
 def excurtion_detail(request, tag=None,type_object=None):
     excurtion = Excurtion.objects.get(pk=int(tag))
     
@@ -132,4 +132,10 @@ def calendar(request):
         template_name='calendar.html',
     )
     
+def server_error(request):
+    return simple.direct_to_template(request, '500.html')
 
+def not_found(request):
+    return simple.direct_to_template(request, '404.html')
+def test(request):
+    return simple.direct_to_template(request, '404.html')
