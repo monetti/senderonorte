@@ -1,5 +1,8 @@
 {% extends 'index.html' %}
 {% block title %} Contacto {% endblock %}
+{% block body_class %}
+main-content
+{% endblock %}
 {% block content %}
     <div class="content-tab">
      <form action="/contact/send" method="POST">{% csrf_token %}
@@ -26,11 +29,10 @@
                <h5>{{ form.comentario.label }}</h5>           
                {{ form.comentario }}
                </div>
-               <div id="foto-contacto"></div> 
+               <div id="foto-contacto" class="clear"></div> 
                <div class="button"><input id="button-enviar" type="submit" value="Enviar" /></div> 
            </div>
            
-
      </form>
     </div>
 {% endblock %}
