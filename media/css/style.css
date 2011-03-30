@@ -967,3 +967,29 @@ table {
     margin:20px
 }
 
+#news h3 {
+    font-size:12pt;
+    margin:0px;
+    padding:0px;
+}
+
+#news p {
+    font-size:10pt;
+    margin:0px;
+    padding:0px;
+}
+
+
+#news .rightCol {
+    width:60%;
+    padding:7px 0px 0px 0px;
+}
+
+#news .leftCol {
+    width:35%;
+    padding:7px 0px 0px 10px;
+}
+
+#news article {
+    height:115px;
+}

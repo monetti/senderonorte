@@ -16,6 +16,17 @@
             <h5><strong>Lugar:</strong> {{object.place}}</h5>
             
         </div>
+    {% else %}
+    {% if type_object == "new" %}
+        
+        <div>
+            <img src="{{object.image.url}}" style="height:300px;width:550px;"/>
+            <h2>{{object.title}}</h2>
+            <h3 > Descripcion </h3> <p>{{object.description}}</p>
+        </div>
+     
+    {% else %}
+    {% endif %}        
     {% endif %}
     </article>
 </div>

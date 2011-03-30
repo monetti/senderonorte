@@ -28,13 +28,20 @@ def index(request):
     )
 
 def excurtion_detail(request, tag=None,type_object=None):
-    excurtion = Excurtion.objects.get(pk=int(tag))
+    obj = {}
+    if type_object == "excurtion":
+        obj = Excurtion.objects.get(pk=int(tag))
+    elif type_object == "new":
+         obj = New.objects.get(pk=int(tag))
+    else:
+        obj = Excurtion.objects.get(pk=int(tag))
+        
     
     return simple.direct_to_template(
         request,
         'object_detail.html',
         extra_context = {
-            'object':excurtion,
+            'object':obj,
             'type_object':type_object,
         }
     )

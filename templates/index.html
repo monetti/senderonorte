@@ -58,7 +58,27 @@
                      },
                         
                 });
+
                 return false;
+                
+            });
+            $("#news a").click(function(){
+                var target = $(this).attr('href');
+                $.ajax({
+                    url: target,
+                    success: function(data){
+                        $(data).dialog({
+                            'modal':true,
+                            'draggable':false,
+                            'width':'600',
+                            'height':'550'
+                        });
+                     },
+                        
+                });
+
+                return false;
+                
             });
             
 
@@ -177,7 +197,7 @@
                         <div class="rightCol">
                             <h3>{{object.title}}</h3>
                             <p>{{object.summary|truncatewords:9}}</p>
-                            <a href="{{object.url}}"> [Ver mas] </a>
+                            <a href="/excurtion_detail/{{object.id}}/new"> [Ver mas] </a>
                         </div>
                         <div class="clear"></div>
                     </article>
