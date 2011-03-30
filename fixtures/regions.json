@@ -1,0 +1,56 @@
+[
+  {
+    "pk": 1, 
+    "model": "excurtion.region", 
+    "fields": {
+      "description": "Viajes que son una vuelta al pasado para sumergirnos en culturas ancestrales. Tradiciones que se han pasado de generacion en generacion, sabores, colores, y olores inconfundibles de la madre tierra\r\n\r\nUna paleta interminable de rojos, marrones cobrizos, naranjas y verdes nos regalan sus cerros, que se confunden con la blancura de las salinas o de las nevadas cumbres que sirvieron muchas veces como enterratorios incaicos.\r\n\r\nDe repente una manada de guanacos nos observa desde las laderas monta\u00f1osas y un condor, ave sagrada, surca el cielo sobre nuestras cabezas.", 
+      "slug": "norte", 
+      "name": "Norte"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "excurtion.region", 
+    "fields": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n", 
+      "slug": "centro", 
+      "name": "Centro"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "excurtion.region", 
+    "fields": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n", 
+      "slug": "patagonia", 
+      "name": "Patagonia"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "excurtion.region", 
+    "fields": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n", 
+      "slug": "litoral", 
+      "name": "Litoral"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "excurtion.region", 
+    "fields": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n", 
+      "slug": "buenos-aires", 
+      "name": "Buenos Aires"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "excurtion.region", 
+    "fields": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n", 
+      "slug": "cuyo", 
+      "name": "Cuyo"
+    }
+  }
+]

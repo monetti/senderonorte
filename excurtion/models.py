@@ -2,13 +2,19 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.syndication.views import Feed
 from django.shortcuts import get_object_or_404
-    
+from django.template.defaultfilters import slugify
 import datetime
 
 class Region(models.Model):
+    slug = models.SlugField(editable=False)
     name = models.CharField(_("Nombre"),max_length="200")
     description = models.TextField(_("Descripcion"))
     excurtions = models.ForeignKey('Excurtion')
+    
+    def save(self):
+        self.slug = slugify(self.name)
+        super(Region, self).save()
+        
     class Meta:
         verbose_name = _('Region')
         verbose_name_plural = _('Regiones')
@@ -35,14 +41,6 @@ class Excurtion(models.Model):
         
     def __unicode__(self):
         return self.name
-        
-    def thumb_photo_post_excurtion(self):
-        thumbs = self.photopostexcurtion_set.all()
-        if thumbs:  
-            return thumbs[0].photo.url_280x80
-        else:
-            return self.foto_carrusel_uno.url_280x80
-            
        
 class PhotoPostExcurtion(models.Model):
     excurtion = models.ForeignKey(Excurtion)
@@ -55,7 +53,7 @@ class PhotoPostExcurtion(models.Model):
         get_latest_by = 'excurtion'
         
     def __unicode__(self):
-        return self.name
+        return self.photo.name
         
 class NextExcurtionFeed(Feed):
     title = "Sendero Norte - Noticias"
