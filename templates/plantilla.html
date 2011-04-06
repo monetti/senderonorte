@@ -22,11 +22,7 @@
         </header>
 
         <div id="body">
-            <div> <h1> Novedades </h1> <input type="button" id="mailing" /></div>
-            {% block msg %}
-                {{ msg }}
-            {% endblock %}
-            {% for o in objs %}
+            {% for o in excurtions %}
             <div class="{% cycle 'odd' 'even' %} novedad">
                 <img class="img" src="{{o.photopostexcurtion_set.all.0.photo.url}}" /> 
                 <h1 class="title">{{ o.name }}</h1>
@@ -38,6 +34,18 @@
                 </div>
             </div>
             {% endfor %}  
+            {% for o in news %}
+            <div class="{% cycle 'even' 'odd' %} novedad">
+                <img class="img" src="{{o.image.url}}" /> 
+                <h1 class="title">{{ o.title }}</h1>
+                <p> {{ o.description }} </p>
+                <div class="link-sitio"> 
+                    <div class="{% cycle 'nar' 'az' %} sitio-link">
+                        <a href="http://www.senderonorte.com.ar">VISITE NUESTRO SITIO</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
         </div>
         <!-- END OF BODY SECTION -->
         <footer>
@@ -46,6 +54,5 @@
         </footer>
         <!-- END OF FOOTER SECTION -->
     </div>
-    <input type="button" id="enviarmailing" />
 </body>
 </html>	

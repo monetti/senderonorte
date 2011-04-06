@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.views.generic import simple, list_detail
 from excurtion.models import Excurtion
 from excurtion.models import PhotoPostExcurtion
@@ -11,7 +12,7 @@ from datetime import datetime
 
 def index(request):
     object_list = Excurtion.objects.all()
-    incoming = object_list.filter(date__gte=datetime.now())[:3]
+    incoming = object_list.filter(date__gte=datetime.now())[:10]
     recent = object_list.filter(date__lt=datetime.now(), publish_last_exc=True)[:2]
     news = New.objects.all()
     news_news = news.order_by('created_date').reverse()[:3]
@@ -140,44 +141,7 @@ def calendar(request):
         queryset,
         template_name='calendar.html',
     )
-    
-def mailing(request):
-    objects = Excurtion.objects.all()[:2]
-    
-    return simple.direct_to_template(
-        request,
-        'plantilla.html',
-        extra_context = {
-            'msg':"",
-            'objs':objects,
-        }
-    )
-    
-def send_mailing(request):
-    from django.template import Context, Template
-    from django.core.mail import send_mail
-    import sys
-    from smtplib import SMTP
 
-    objects = Excurtion.objects.all()[:2]
-    t = Template("plantilla.html")
-    c = Context({"objs": objects})
-
-    s = SMTP()
-    s.connect('smtp.webfaction.com')
-    s.login('senderonorte','senderonortemails')
-    s.sendmail('contacto@senderonorte.com.ar',['onetti.martin@gmail.com'],t.render(c))
-
-    return simple.direct_to_template(
-        request,
-        'plantilla.html',
-        extra_context = {
-            'msg':"Email enviado correctamente",
-            'objs':objects,
-        }
-    )
-
-    
 def feed_detail(request,tag):
     a = Excurtion.objects.get(pk=tag)
 
@@ -197,4 +161,54 @@ def not_found(request):
 
 def test(request):
     return simple.direct_to_template(request, '404.html')
+
+
+@login_required
+def issues(request):
+    return simple.direct_to_template(
+        request,
+        'issues.html',
+    )
+    
+@login_required    
+def mailing_preview(request):
+    excurtions = Excurtion.objects.all().filter(publish_newsletter=True)
+    news = New.objects.all().filter(publish_newsletter=True)
+    
+    return simple.direct_to_template(
+        request,
+        'plantilla.html',
+        extra_context = {
+            'excurtions':excurtions,
+            'news':news,
+        }
+    )
+
+@login_required    
+def send_mailing(request):
+    from django.template import Context, Template
+    from django.template.loader import get_template
+    from contacts.models import Contact
+    import smtplib
+    
+    contacts = Contact.objects.all()
+    excurtions = Excurtion.objects.all().filter(publish_newsletter=True)
+    news = New.objects.all().filter(publish_newsletter=True)
+
+    t = get_template("boletin.html")
+    c = Context({"excurtions": excurtions,"news":news})
+    
+    server = SMTP('smtp.webfaction.com')          
+    server.login()
+    msg_mail = []
+    heading = 'From: %s\nSubject:%s\nContent-type: text/html\n' % ('contacto@senderonorte.com.ar', ':: Sendero Norte :: Boletin de Novedades')
+    for i in range(0,len(contacts)):    
+        msg_mail.append(contacts[i].email)
+        
+    send_mail('contacto@senderonorte.com.ar',msg_mail,heading+t.render(c))
+    
+    return simple.direct_to_template(
+        request,
+        'issues.html',
+    )
 

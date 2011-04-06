@@ -9,8 +9,9 @@ class New(models.Model):
     title = models.CharField(_("Titulo"),max_length="200")
     summary = models.TextField(_("Resumen"))
     description = models.TextField(_("Descripcion"))
-    created_date = models.DateTimeField(_("Fecha de Creacion"),)
+    created_date = models.DateField(_("Fecha de Creacion"),)
     image = models.ImageField(_("Foto"),upload_to="./img/news")
+    publish_newsletter = models.BooleanField(_("Publicar en NewsLetter"), default=False,blank=True)
     
     class Meta:
         ordering = ('created_date',)

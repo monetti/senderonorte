@@ -57,7 +57,8 @@
     "pk": 1, 
     "model": "excurtion.excurtion", 
     "fields": {
-      "intro_last_exc": "", 
+      "intro_last_exc": "",
+      "publish_newsletter":false, 
       "name": "Lorem Ipsum", 
       "region": 1, 
       "publish_last_exc": true, 
@@ -65,7 +66,7 @@
       "duration": "4 horas", 
       "place": "Sierras Chicas", 
       "time": "14 a 21", 
-      "date": "2011-03-31", 
+      "date": "2011-04-30", 
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n"
     }
   }, 
@@ -74,6 +75,7 @@
     "model": "excurtion.excurtion", 
     "fields": {
       "intro_last_exc": "", 
+      "publish_newsletter":false,
       "name": "Dolor sit Amet", 
       "region": 2, 
       "publish_last_exc": true, 
@@ -81,7 +83,7 @@
       "duration": "7 horas", 
       "place": "Los Gigantes", 
       "time": "14 a 21", 
-      "date": "2011-03-31", 
+      "date": "2011-04-29", 
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n"
     }
   }, 
@@ -90,6 +92,7 @@
     "model": "excurtion.excurtion", 
     "fields": {
       "intro_last_exc": "", 
+      "publish_newsletter":false,
       "name": "Aenean sit amet vestibulum", 
       "region": 4, 
       "publish_last_exc": true, 
@@ -97,7 +100,7 @@
       "duration": "4 horas", 
       "place": "Sierras Chicas", 
       "time": "14 a 21", 
-      "date": "2011-04-29", 
+      "date": "2011-07-17", 
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n"
     }
   }, 
@@ -106,6 +109,7 @@
     "model": "excurtion.excurtion", 
     "fields": {
       "intro_last_exc": "", 
+      "publish_newsletter":false,
       "name": " Morbi a justo metus, sed commodo nunc", 
       "region": 6, 
       "publish_last_exc": true, 
@@ -113,7 +117,7 @@
       "duration": "7 horas", 
       "place": "Los Gigantes", 
       "time": "14 a 21", 
-      "date": "2011-04-29", 
+      "date": "2011-08-02", 
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel risus non purus luctus vulputate. Proin nibh nulla, molestie sed aliquam vitae, ultrices in mauris. Cras rutrum porttitor nisi, et egestas nunc placerat et. Morbi sit amet vulputate odio. Morbi a justo metus, sed commodo nunc. Quisque diam nisl, venenatis vel luctus sed, convallis quis orci. Duis scelerisque erat sed erat condimentum sed semper elit consectetur. Integer id magna orci, at fringilla arcu. Duis a nulla ac sapien volutpat imperdiet. Morbi laoreet blandit malesuada. Nunc posuere vestibulum mauris. Sed aliquet interdum ultrices. Aenean sit amet vestibulum felis. Morbi lectus arcu, laoreet in lacinia vitae, facilisis non nibh. Maecenas vel nunc non leo tempor iaculis quis eu lectus. Nulla facilisi. Maecenas malesuada nisl id sem vulputate faucibus at sit amet felis.\r\n"
     }
   }, 
@@ -122,6 +126,7 @@
     "model": "excurtion.excurtion", 
     "fields": {
       "intro_last_exc": "", 
+      "publish_newsletter":false,
       "name": "consectetur adipiscing elit", 
       "region": 3, 
       "publish_last_exc": true, 

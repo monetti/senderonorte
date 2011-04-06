@@ -31,6 +31,7 @@ class Excurtion(models.Model):
     duration = models.CharField(_("Duracion"),max_length="10")
     publish_last_exc = models.BooleanField(_("Publicar en Ultimas Excursiones?"), default=False,blank=True)
     intro_last_exc = models.TextField(_('Descripcion de la experiencia'),blank=True)
+    publish_newsletter = models.BooleanField(_("Publicar en NewsLetter"), default=False,blank=True) 
 
     class Meta:
         ordering = ('date',)

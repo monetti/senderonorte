@@ -51,6 +51,18 @@ USE_L10N = True
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/"
 
+#data for connect to SMTP
+
+
+
+EMAIL_HOST = "smtp.webfaction.com"
+EMAIL_PORT = "587"
+EMAIL_HOST_USER = "senderonorte"
+EMAIL_HOST_PASSWORD = "gab1lan"
+DEFAULT_FROM_EMAIL = "contacto@senderonorte.com.ar"
+SERVER_EMAIL = "contacto@senderonorte.com.ar"
+EMAIL_USE_TLS = True
+
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -101,7 +113,6 @@ INSTALLED_APPS = (
     'django.contrib.markup',
     'django.contrib.admin',
     'django.contrib.admindocs',
-    
     'senderonorte',
     'excurtion',
     'news',
@@ -111,6 +122,7 @@ INSTALLED_APPS = (
     'contacts',
     'PIL',
     'gencal',
+    
  )
  
 try :
