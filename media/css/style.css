@@ -19,6 +19,25 @@ hr {
    color:#5D5D5D;
    height:1px;
 }
+
+.logos {
+    width:40px;
+    height:40px;
+    
+}
+
+.cajalogored {
+    float:left;
+    padding:5px;
+}
+
+#logosredes {
+    float:right;
+    list-style:none;
+    margin:-5px 38px 0px 585px;
+
+}
+
 h1, h2 {
     font-family:'Avenir Next LT Pro', 'Arial', sans-serif;
     font-weight: normal;
@@ -47,7 +66,7 @@ header {
 #nav{
     clear:right;
     float:right;
-    margin: 68px 22px 0;
+    margin: 15px 22px 0;
     padding:0;
     overflow:hidden;
     list-style:none;
