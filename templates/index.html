@@ -170,7 +170,7 @@
                         <a href="/excurtion_detail/{{object.id}}/excurtion" id="{{object.id}}" ><img src="{{object.photopostexcurtion_set.all.0.photo|thumbnail:'540x340'}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" /></a>
                         <div class="description">
                             <h3>{{object.name}}</h3>
-                            <p>{{object.summary|truncatewords:8}}</p>
+                            <p>{{object.summary|truncatewords:20}}</p>
                             <p>Fecha de salida: 
                                 {{object.date }} -
                             Lugar: 
@@ -195,9 +195,11 @@
                         <div id="thumbs_last_exc">
                             {% for object in recent_excurtions %}
                             <article class="excurtion">
-                                <img src="{{object.photopostexcurtion_set.all.0|thumbnail:'539x350'}}" alt="{{object.name}}" id="thumb-{{object.name|slugify}}" />
+                            <a href="/excurtion_detail/{{object.id}}/excurtion">                                  
+                                <img src="{{object.photopostexcurtion_set.all.0.photo|thumbnail:'539x350'}}" alt="{{object.name}}" id="thumb-{{object.name|slugify}}" />
+                            </a>
                                 <h3>{{object.name}}</h3>
-                                <p>{{object.intro_last_exc|truncatewords:6}}</p>
+                                <p>{{object.intro_last_exc|truncatewords:10}}</p>
                             </article>
                             {% endfor %}
                             <div class="clear"></div>
@@ -209,7 +211,9 @@
                     {% for object in news %}
                     <article class="{% cycle 'odd' 'even' %}">
                         <div class="leftCol">
-                            <img src="{{object.image.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
+                            <a href="/excurtion_detail/{{object.id}}/new">
+                                <img src="{{object.image.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
+                            </a>
                         </div>
                         <div class="rightCol">
                             <h3>{{object.title}}</h3>

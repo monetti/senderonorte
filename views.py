@@ -189,24 +189,34 @@ def mailing_preview(request):
 def send_mailing(request):
     from django.template import Context, Template
     from django.template.loader import get_template
+    from django.template.loader import render_to_string
     from contacts.models import Contact
+    from django.template import loader
+    from django.core.mail import send_mail
+    from django.core.mail import EmailMultiAlternatives
+
     import smtplib
     
     contacts = Contact.objects.all()
     excurtions = Excurtion.objects.all().filter(publish_newsletter=True)
     news = New.objects.all().filter(publish_newsletter=True)
 
-    t = get_template("boletin.html")
+    #t = get_template("boletin.html")
     c = Context({"excurtions": excurtions,"news":news})
-    
-    server = SMTP('smtp.webfaction.com')          
-    server.login()
+    #t = render_to_string('boletin.html',{"excurtions": excurtions,"news":news})
+    html_part = loader.get_template('%s.html' %("boletin")).render(c)
+
     msg_mail = []
-    heading = 'From: %s\nSubject:%s\nContent-type: text/html\n' % ('contacto@senderonorte.com.ar', ':: Sendero Norte :: Boletin de Novedades')
+    heading = '%s' %(':: Sendero Norte :: Boletin de Novedades')
+    
     for i in range(0,len(contacts)):    
         msg_mail.append(contacts[i].email)
         
-    send_mail('contacto@senderonorte.com.ar',msg_mail,heading+t.render(c))
+    msg = EmailMultiAlternatives(heading, "prueba de mensaje", 'contacto@senderonorte.com.ar', msg_mail)
+
+    msg.attach_alternative(html_part, "text/html")
+
+    msg.send(False)
     
     return simple.direct_to_template(
         request,
