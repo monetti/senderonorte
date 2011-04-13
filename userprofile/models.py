@@ -3,8 +3,8 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 class UserProfile(models.Model):
-    logo = models.ImageField(_("Logo"),upload_to="./media/users")
-    photo = models.ImageField(_("Foto"),upload_to="./media/users")
+    logo = models.ImageField(_("Logo"),upload_to="./users")
+    photo = models.ImageField(_("Foto"),upload_to="./users")
     user = models.ForeignKey(User, unique=True)
     
     def __unicode__(self):

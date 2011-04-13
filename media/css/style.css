@@ -764,19 +764,33 @@ h5 {
     margin:10px 0px 80px 0px;
 }
 
-#logo-excurtions {
+.logo-region {
     margin:auto;
     
 }
-#logo-excurtions img {
+.logo-region img {
     height:200px;
     display:none;
     width:950px;
     height:200px;
     border:0px;
-
 }
 
+#tab-norte-logo {
+    display:block;
+}
+
+#tab-centro-logo {
+    display:none;
+}
+
+#tab-cuyo-logo {
+    display:none;
+}
+
+#tab-patagonia-logo {
+    display:none;
+}
 
 
 #recomendations .leftCol {

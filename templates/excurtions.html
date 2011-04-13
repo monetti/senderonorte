@@ -5,7 +5,9 @@
     $("#tabs a").click(function(){
         var target = $(this).attr('href');
         $(target).show();
+        $(target+"-logo").show();
         $(".content-tab").not(target).hide();
+        $(".logo-region").not(target+"-logo").hide();
 
         return false;
     });        
@@ -17,10 +19,25 @@ main-content
 <div id="main">
     
     {% block logocimbling %}
-    <div id="logo-excurtions" class="banners">
-       <img src="/media/img/logo-zonas.jpg"/> 
-       <img src="/media/img/cabeceraescalada1.jpg"/>
-       <img src="/media/img/cabeceraescalada3.jpg"/>
+    <div id="tab-norte-logo" class="banners logo-region">
+       <img src="/media/img/regions/norte/norte01.jpg"/> 
+       <img src="/media/img/regions/norte/norte02.jpg"/>
+       <img src="/media/img/regions/norte/norte03.jpg"/>
+    </div>
+    <div id="tab-patagonia-logo" class="banners logo-region">
+       <img src="/media/img/regions/sur/sur01.jpg"/> 
+       <img src="/media/img/regions/sur/sur02.jpg"/>
+       <img src="/media/img/regions/sur/sur02.jpg"/>
+    </div>
+    <div id="tab-cuyo-logo" class="banners logo-region">
+       <img src="/media/img/regions/cuyo/cuyo01.jpg"/> 
+       <img src="/media/img/regions/cuyo/cuyo02.jpg"/>
+       <img src="/media/img/regions/cuyo/cuyo03.jpg"/>
+    </div>
+    <div id="tab-centro-logo" class="banners logo-region">
+       <img src="/media/img/regions/centro/centro01.jpg"/> 
+       <img src="/media/img/regions/centro/centro02.jpg"/>
+       <img src="/media/img/regions/centro/centro03.jpg"/>
     </div>
     {% endblock%}
     <ul id="tabs">
