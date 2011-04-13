@@ -80,11 +80,19 @@
                 
             });
             
-
         })
         $(window).load(function () {
             {% block javascript %}
-            
+                var news_exc = $("#news_exc article");
+                i = 0;
+                function carrusel_next_exc() {
+                    i = i % news_exc.length;
+                    $('#news_exc article').not(news_exc[i]).hide();
+                    $(news_exc[i]).show();
+                    i += 1;
+                    window.setTimeout(carrusel_next_exc, 3000);
+                }
+                carrusel_next_exc();
             {% endblock %}            
         })         
         
@@ -112,7 +120,7 @@
                 </li>
             </ul>
             <ul id="nav">
-                <li><a href="/">Nosotros<span></span> </a></li>
+                <li><a href="/us">Nosotros<span></span> </a></li>
                 <li><a href="/excurtions/norte">Excursiones<span></span> </a>
                     <ul>
                         <li><a href="/excurtions/centro">Centro</a></li>
@@ -157,8 +165,9 @@
                     </div>
 
                     {% for object in incoming %}
+
                     <article id="{{object.name|slugify}}" class="object excurtion">
-                        <a href="/excurtion_detail/{{object.id}}/excurtion" id="{{object.id}}"><img src="{{object.photopostexcurtion_set.all.0.photo|thumbnail:'540x340'}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}"/></a>
+                        <a href="/excurtion_detail/{{object.id}}/excurtion" id="{{object.id}}" ><img src="{{object.photopostexcurtion_set.all.0.photo|thumbnail:'540x340'}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" /></a>
                         <div class="description">
                             <h3>{{object.name}}</h3>
                             <p>{{object.summary|truncatewords:8}}</p>
@@ -171,6 +180,7 @@
                             <!-- h4 id="calendario"><a href="/calendar">Calendario</a></h4 -->
                         </div>
                     </article>
+
                     {% endfor %}
 
                     <div class="clear"></div>

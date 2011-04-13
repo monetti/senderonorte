@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.views.generic import simple, list_detail
 from excurtion.models import Excurtion
@@ -125,7 +126,7 @@ def contact_sendmail(request):
     
     s = SMTP()
     s.connect('smtp.webfaction.com')
-    s.login('senderonorte','10a1d322')
+    s.login('senderonorte','s3nd3r0n0rt3')
     s.sendmail(from_addr, to_addrs, msg)
     return contact(request)
 
@@ -163,14 +164,14 @@ def test(request):
     return simple.direct_to_template(request, '404.html')
 
 
-@login_required
+@login_required()
 def issues(request):
     return simple.direct_to_template(
         request,
         'issues.html',
     )
     
-@login_required    
+@login_required()    
 def mailing_preview(request):
     excurtions = Excurtion.objects.all().filter(publish_newsletter=True)
     news = New.objects.all().filter(publish_newsletter=True)
@@ -184,7 +185,7 @@ def mailing_preview(request):
         }
     )
 
-@login_required    
+@login_required()    
 def send_mailing(request):
     from django.template import Context, Template
     from django.template.loader import get_template
@@ -210,5 +211,15 @@ def send_mailing(request):
     return simple.direct_to_template(
         request,
         'issues.html',
+    )
+
+def us_page(request):
+    staff = User.objects.filter(is_staff=True)
+    return simple.direct_to_template(
+        request,
+        'nosotros.html',
+        extra_context = {
+            'staff':staff,
+        }
     )
 

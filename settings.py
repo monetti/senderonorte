@@ -58,7 +58,7 @@ USE_L10N = True
 EMAIL_HOST = "smtp.webfaction.com"
 EMAIL_PORT = "587"
 EMAIL_HOST_USER = "senderonorte"
-EMAIL_HOST_PASSWORD = "gab1lan"
+EMAIL_HOST_PASSWORD = "s3nd3r0n0rt3"
 DEFAULT_FROM_EMAIL = "contacto@senderonorte.com.ar"
 SERVER_EMAIL = "contacto@senderonorte.com.ar"
 EMAIL_USE_TLS = True
@@ -95,6 +95,8 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'senderonorte.urls'
 
+AUTH_PROFILE_MODULE = 'userprofile.UserProfile'
+
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 MEDIA_ROOT = os.path.normpath(os.path.join(PROJECT_PATH,'media'))
 TEMPLATE_DIRS = ('templates', )
@@ -120,6 +122,7 @@ INSTALLED_APPS = (
     'customizedtravels',
     'educationtravels',
     'contacts',
+    'userprofile',
     'PIL',
     'gencal',
     
