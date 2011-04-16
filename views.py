@@ -117,11 +117,11 @@ def contact_sendmail(request):
     to_addrs = ['info@senderonorte.com.ar']
     #msg = open('email_msg.txt','r').read()
     msg = ""
-    msg += "Nombre: " + request.POST['nombre'] + "\n"
-    msg += "Apellido: " + request.POST['apellido'] + "\n"
-    msg += "Email: " + request.POST['email'] + "\n"
-    msg += "Excursion: " + request.POST['nombre_excursion'] + ' ' + "Fecha: " + request.POST['fecha'] + "\n"
-    msg += "Comentario: " + request.POST['comentario'] + "\n"
+    msg += "Nombre: " + unicode(request.POST['nombre']) + "\n"
+    msg += "Apellido: " + unicode(request.POST['apellido']) + "\n"
+    msg += "Email: " + unicode(request.POST['email']) + "\n"
+    msg += "Excursion: " + unicode(request.POST['nombre_excursion']) + ' ' + "Fecha: " + unicode(request.POST['fecha']) + "\n"
+    msg += "Comentario: " + unicode(request.POST['comentario']) + "\n"
     
     
     s = SMTP()

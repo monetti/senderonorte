@@ -8,7 +8,7 @@ import datetime
 class Region(models.Model):
     slug = models.SlugField(editable=False)
     name = models.CharField(_("Nombre"),max_length="200")
-    description = models.TextField(_("Descripcion"))
+    description = models.TextField(_("Descripcion"),blank=True)
     def save(self):
         self.slug = slugify(self.name)
         super(Region, self).save()
