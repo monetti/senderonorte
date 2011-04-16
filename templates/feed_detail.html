@@ -3,12 +3,17 @@
     <div id="feed_detail">
         <img height="320" src="{{obj.photopostexcurtion_set.all.0.photo.url}}" alt="{{obj.name}}" />
         <div>
+            {% if obj %}
             <h2>{{obj.name}}</h2>
             <p>{{obj.description}}</p>
             <h5><strong>Duracion:</strong> {{obj.duration}} </h5>
             <h5><strong>Fecha:</strong> {{obj.date}} </h5>
             <h5><strong>Horario:</strong> {{obj.time}} </h5>
             <h5><strong>Lugar:</strong> {{obj.place}}</h5>
+            {% else %}
+            <h5> Por el momento no podemos mostrarles la información buscada. Intente mas tarde. </h5>
+            <p>Muchas Gracias.</p>
+            {% endif%}
             
         </div>
    </div>

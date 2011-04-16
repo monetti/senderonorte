@@ -144,15 +144,23 @@ def calendar(request):
     )
 
 def feed_detail(request,tag):
-    a = Excurtion.objects.get(pk=tag)
-
-    return simple.direct_to_template(
-        request,
-        'feed_detail.html',
-        extra_context = {
-            'obj':a,
-        }
-    )
+    a = Excurtion.objects.get(pk=int(tag))
+    if a:
+        return simple.direct_to_template(
+            request,
+            'feed_detail.html',
+            extra_context = {
+                'obj':a,
+            }
+        )
+    else:
+        return simple.direct_to_template(
+            request,
+            'feed_detail.html',
+            extra_context = {
+                'obj':{},
+            }
+        )
 
 def server_error(request):
     return simple.direct_to_template(request, '500.html')
