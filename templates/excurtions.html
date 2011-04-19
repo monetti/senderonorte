@@ -2,6 +2,11 @@
 {% load thumbnails markup %}
 {% block title %} Excursiones {% endblock %}
 {% block javascript %} 
+    var target2 = '{{ selected }}';
+    
+    $(".logo-region").not(target2+"-logo").hide();
+    $(target2+"-logo").show();
+    
     $("#tabs a").click(function(){
         var target = $(this).attr('href');
         $(target).show();
@@ -10,7 +15,8 @@
         $(".logo-region").not(target+"-logo").hide();
 
         return false;
-    });        
+    }); 
+    
 {% endblock %}
 {% block body_class %}
 main-content

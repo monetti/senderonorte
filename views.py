@@ -54,6 +54,9 @@ def excurtions(request,tag="norte"):
         request,
         queryset,
         template_name='excurtions.html',
+        extra_context = {
+            'selected':tag
+        }
     )
     
 def cimblings(request):

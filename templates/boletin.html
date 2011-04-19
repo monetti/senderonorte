@@ -1,198 +1,87 @@
 <html>
-<head>
-<style>
-        @font-face {
-            font-family: 'Avenir Next LT Pro';
-            src: url("../fonts/AvenirNextLTPro-Regular.otf");
-        }
-        body {
-            margin:auto;
-            font: 12px "Avenir Next LT Pro";
-        }
-        header, footer {
-            display:block;
-        }
 
-        hr {
-           color:#5D5D5D;
-           height:1px;
-        }
-
-        header {
-            position: relative;
-            height:179px;
-        }
-
-        #wrapper_body {
-            margin:auto;
-            width:950px;
-        }
-
-        #logo_sendero {
-            position:absolute;
-            left:0;
-            top:0;
-            margin:0;
-            width:286px;
-            height:187px;
-            overflow:hidden;
-            text-indent: -9999px;
-        }
-
-        #body {
-            background:#FFF;    
-            
-        }
-
-        footer {
-            height:164px;
-            background:url("../img/footer2.png") no-repeat;
-            margin-top: -10px;
-            position: relative;
-            padding: 10px 10px 0;
-        }
-
-
-        footer p {
-            margin:50px 0 0 180px;
-
-        }
-
-
-        #caminante {
-            position: absolute;
-            bottom:0;
-            left:0;
-        }
-
-        .nar {
-            background:#F29400;
-        }
-        .az {
-            background:#006BB3;
-        }
-
-
-        .odd {
-            background:#262626;
-        }
-
-
-        .novedad img {
-            width:910px;
-            height:300px;
-            padding:20px;
-        }
-
-        .even {
-            background:#E3E3E5;
-        }
-
-        .odd h1,.even h1 {
-            color:#A9A49A;
-            margin:0px 0px 0px 20px;  
-            font-size:25pt;
-        }
-
-        .odd h1, .even h1 {
-            border-bottom:2px solid #A9A49A;
-            width:70%;
-            padding:0px;
-            height:auto;
-            background:none;
-        }
-
-        .odd h1, .odd p {
-            color:white;
-        }
-
-        .even h1, .even p {
-            color:black;
-        }
-
-
-        .odd p, .even p {
-            width:95%;
-            font-size:12pt;
-            margin:20px 0px 0px 20px;
-        }
-
-        body h1 {
-            text-transform:uppercase;
-            width:40%;
-            background:#98C10F;
-            height:29px;
-            padding:15px 0px 15px 38px;
-            font-size:23pt;
-            color:#FFF;
-            margin:15px 0px 15px 5px;
-            
-        }
-
-        .sitio-link {
-            height:40px;
-            width:25%;
-            margin:0px 0px 0px 630px;
-            padding:20px 0px 0px 30px;
-        }
-
-        .link-sitio {
-            padding:20px;
-        }
-
-        a {
-            text-decoration:none;
-            text-transform:uppercase;
-            color:white;
-            font-size:14pt;
-        } 
-
-        footer p {
-            font-size:15pt;
-            color:#A9A4;
-            margin:65px 0px 0px 325px;
-        }
-    </style>
-</head>
-    <body>    
-    <div id="wrapper_body">
-        <header>
-
-            <img src="/media/img/top.jpg">
-            <a href="/"><h1 id="logo_sendero">Sendero Norte</h1></a> 
-            </img>
+    <body style="margin:auto; font: 12px 'Avenir Next LT Pro';">    
+    <div id="wrapper_body" style="margin:auto;width:950px;">
+        <header style="display:block;position: relative;height:179px;">
+            <img src="http://www.senderonorte.com.ar/media/img/topboletin.jpg" />
         </header>
 
-        <div id="body">
+        <div id="body" style="background:#FFF;">
             {% for o in excurtions %}
-            <div class="{% cycle 'odd' 'even' %} novedad">
-                <img class="img" src="http://www.senderonorte.com.ar{{ o.photopostexcurtion_set.all.0.photo.url }}" /> 
-                <h1 class="title">{{ o.name }}</h1>
-                <p> {{ o.description }} </p>
-                <div class="link-sitio"> 
-                <div class="{% cycle 'nar' 'az' %} sitio-link">
-                    <a href="http://www.senderonorte.com.ar">VISITE NUESTRO SITIO</a>
+            <div style="border:1px solid; margin:10px 0 10px 10px;">
+                <img style="width:920px;height:300px;padding:10px;" src="http://www.senderonorte.com.ar{{ o.photopostexcurtion_set.all.0.photo.url }}" /> 
+                <h1 style="text-transform:uppercase;width:92%;background:#98C10F;height:29px;padding:15px 0px 15px 15px;font-size:23pt;    color:#FFF;margin:15px 0px 15px 10px;text-align:left;">{{ o.name }}</h1>
+                <p style="margin:0px 0px 0px 10px;"> {{ o.description }} </p>
+                <div> 
+                <div style="height:38px;width:30%;margin:10px 0px 10px 606px;background:black;padding:10px 0px 0px 0px;">
+                    <a href="http://www.senderonorte.com.ar" style="text-decoration:none;text-transform:uppercase;color:white;font-size:14pt;margin:23px 23px 0px 23px;">VISITE NUESTRO SITIO</a>
                 </div>
                 </div>
             </div>
             {% endfor %}  
             {% for o in news %}
-            <div class="{% cycle 'even' 'odd' %} novedad">
-                <img class="img" src="http://www.senderonorte.com.ar{{ o.image.url }}" /> 
-                <h1 class="title">{{ o.title }}</h1>
-                <p> {{ o.description }} </p>
-                <div class="link-sitio"> 
-                    <div class="{% cycle 'nar' 'az' %} sitio-link">
-                        <a href="http://www.senderonorte.com.ar">VISITE NUESTRO SITIO</a>
+            <div style="border:1px solid; margin:10px 0 10px 10px;">
+                <img src="http://www.senderonorte.com.ar{{ o.image.url }}" style="width:920px;height:300px;padding:10px;"/> 
+                <h1 style="text-transform:uppercase;width:92%;background:#FFF;height:29px;padding:15px 0px 15px 15px;font-size:23pt;    color:white;margin:15px 0px 15px 10px;text-align:left;">{{ o.title }}</h1>
+                <p style="margin:0px 0px 0px 10px;"> {{ o.description }} </p>
+                <div> 
+                <div style="height:38px;width:30%;margin:10px 0px 10px 606px;background:black;padding:10px 0px 0px 0px;">
+                        <a href="http://www.senderonorte.com.ar" style="text-decoration:none;text-transform:uppercase;color:white;font-size:14pt;margin:23px 23px 0px 23px;">VISITE NUESTRO SITIO</a>
                     </div>
                 </div>
             </div>
             {% endfor %}
         </div>
         <!-- END OF BODY SECTION -->
-        <footer>
-            <div id="caminante"><img src="/media/img/caminante.png"></div>
-            <p>BOLETIN DE NOVEDADES</p>
+        <footer style="display:block;height:164px;margin-top:-10px;position: relative;padding: 10px 10px 0;">
+            <img src="http://www.senderonorte.com.ar/media/img/footer2.png"> 
+             <p style="margin:-75px 0 0 310px; font-size:15pt;">BOLETIN DE NOVEDADES</p>
+            <div id="caminante" style="position: absolute;bottom:0;left:0;">
+            <img src="http://www.senderonorte.com.ar/media/img/caminante.png" style="margin:-6px 0px -6px 20px;"></div>
+       
+            </img>
+        </footer>
+        <!-- END OF FOOTER SECTION -->
+    </div>
+</body>
+</html>dia/img/logo-cabecera.png" style="position:absolute;left:0;top:0;margin:0;width:286px;height:187px;overflow:hidden;text-indent:-9999px;border:none;" /></a> 
+            </img>
+        </header>
+
+        <div id="body" style="background:#FFF;">
+            {% for o in excurtions %}
+            <div style="border:1px solid; margin:10px 0 10px 10px;">
+                <img style="width:920px;height:300px;padding:10px;" src="http://www.senderonorte.com.ar{{ o.photopostexcurtion_set.all.0.photo.url }}" /> 
+                <h1 style="text-transform:uppercase;width:92%;background:#98C10F;height:29px;padding:15px 0px 15px 15px;font-size:23pt;    color:#FFF;margin:15px 0px 15px 10px;text-align:left;">{{ o.name }}</h1>
+                <p style="margin:0px 0px 0px 10px;"> {{ o.description }} </p>
+                <div> 
+                <div style="height:38px;width:30%;margin:10px 0px 10px 606px;background:black;padding:10px 0px 0px 0px;">
+                    <a href="http://www.senderonorte.com.ar" style="text-decoration:none;text-transform:uppercase;color:white;font-size:14pt;margin:23px 23px 0px 23px;">VISITE NUESTRO SITIO</a>
+                </div>
+                </div>
+            </div>
+            {% endfor %}  
+            {% for o in news %}
+            <div style="border:1px solid; margin:10px 0 10px 10px;">
+                <img src="http://www.senderonorte.com.ar{{ o.image.url }}" style="width:920px;height:300px;padding:10px;"/> 
+                <h1 style="text-transform:uppercase;width:92%;background:#FFF;height:29px;padding:15px 0px 15px 15px;font-size:23pt;    color:white;margin:15px 0px 15px 10px;text-align:left;">{{ o.title }}</h1>
+                <p style="margin:0px 0px 0px 10px;"> {{ o.description }} </p>
+                <div> 
+                <div style="height:38px;width:30%;margin:10px 0px 10px 606px;background:black;padding:10px 0px 0px 0px;">
+                        <a href="http://www.senderonorte.com.ar" style="text-decoration:none;text-transform:uppercase;color:white;font-size:14pt;margin:23px 23px 0px 23px;">VISITE NUESTRO SITIO</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- END OF BODY SECTION -->
+        <footer style="display:block;height:164px;margin-top:-10px;position: relative;padding: 10px 10px 0;">
+            <img src="http://www.senderonorte.com.ar/media/img/footer2.png"> 
+             <p style="margin:-75px 0 0 310px; font-size:15pt;">BOLETIN DE NOVEDADES</p>
+            <div id="caminante" style="position: absolute;bottom:0;left:0;">
+            <img src="http://www.senderonorte.com.ar/media/img/caminante.png" style="margin:-6px 0px -6px 20px;"></div>
+       
+            </img>
         </footer>
         <!-- END OF FOOTER SECTION -->
     </div>

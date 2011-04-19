@@ -3,18 +3,12 @@
     src: url("../fonts/AvenirNextLTPro-Regular.otf");
 }
 
-
 body {
     margin:auto;
     font: 12px "Avenir Next LT Pro";
 }
 header, footer {
     display:block;
-}
-
-hr {
-   color:#5D5D5D;
-   height:1px;
 }
 
 header {
@@ -79,7 +73,7 @@ footer p {
 
 
 .novedad img {
-    width:910px;
+    width:400px;
     height:300px;
     padding:20px;
 }
@@ -92,14 +86,12 @@ footer p {
     color:#A9A49A;
     margin:0px 0px 0px 20px;  
     font-size:25pt;
-}
-
-.odd h1, .even h1 {
     border-bottom:2px solid #A9A49A;
     width:70%;
     padding:0px;
     height:auto;
     background:none;
+
 }
 
 .odd h1, .odd p {
