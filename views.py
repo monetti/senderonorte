@@ -223,7 +223,7 @@ def send_mailing(request):
     for i in range(0,len(contacts)):    
         msg_mail.append(contacts[i].email)
         
-    msg = EmailMultiAlternatives(heading, "prueba de mensaje", 'contacto@senderonorte.com.ar', msg_mail)
+    msg = EmailMultiAlternatives(heading, ":: Sendero Norte :: Boletin de Novedades", 'contacto@senderonorte.com.ar', msg_mail)
 
     msg.attach_alternative(html_part, "text/html")
 

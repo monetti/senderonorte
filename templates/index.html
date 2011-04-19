@@ -110,6 +110,11 @@
                 <li class="menu_superior">
                     <a href="/contact">CONTACTO</a>
                 </li>
+                {% if user.is_authenticated and user.is_staff %}
+                <li class="menu_superior">
+                    <a href="/mailing/issues">MAILING</a>
+                </li>
+                {% endif %}
             </ul>
             <ul id="logosredes">
                 <li class="cajalogored">
