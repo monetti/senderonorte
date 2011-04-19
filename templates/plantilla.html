@@ -32,57 +32,11 @@
             {% endfor %}
         </div>
         <!-- END OF BODY SECTION -->
-        <footer style="display:block;height:164px;margin-top:-10px;position: relative;padding: 10px 10px 0;">
-            <img src="http://www.senderonorte.com.ar/media/img/footer2.png"> 
-             <p style="margin:-75px 0 0 310px; font-size:15pt;">BOLETIN DE NOVEDADES</p>
-            <div id="caminante" style="position: absolute;bottom:0;left:0;">
-            <img src="http://www.senderonorte.com.ar/media/img/caminante.png" style="margin:-6px 0px -6px 20px;"></div>
-       
-            </img>
+        <footer style="display:block;height:164px;margin:0px;position: relative;">
+             <p style="margin:75px 0 0 310px; font-size:15pt;overflow:hidden;position:absolute;">BOLETIN DE NOVEDADES</p>
+            <img src="http://www.senderonorte.com.ar/media/img/footerycaminante.png" style="margin:-50px 0px 0px 0px;" />
         </footer>
         <!-- END OF FOOTER SECTION -->
     </div>
 </body>
-</html>dia/img/logo-cabecera.png" style="position:absolute;left:0;top:0;margin:0;width:286px;height:187px;overflow:hidden;text-indent:-9999px;border:none;" /></a> 
-            </img>
-        </header>
 
-        <div id="body" style="background:#FFF;">
-            {% for o in excurtions %}
-            <div style="border:1px solid; margin:10px 0 10px 10px;">
-                <img style="width:920px;height:300px;padding:10px;" src="http://www.senderonorte.com.ar{{ o.photopostexcurtion_set.all.0.photo.url }}" /> 
-                <h1 style="text-transform:uppercase;width:92%;background:#98C10F;height:29px;padding:15px 0px 15px 15px;font-size:23pt;    color:#FFF;margin:15px 0px 15px 10px;text-align:left;">{{ o.name }}</h1>
-                <p style="margin:0px 0px 0px 10px;"> {{ o.description }} </p>
-                <div> 
-                <div style="height:38px;width:30%;margin:10px 0px 10px 606px;background:black;padding:10px 0px 0px 0px;">
-                    <a href="http://www.senderonorte.com.ar" style="text-decoration:none;text-transform:uppercase;color:white;font-size:14pt;margin:23px 23px 0px 23px;">VISITE NUESTRO SITIO</a>
-                </div>
-                </div>
-            </div>
-            {% endfor %}  
-            {% for o in news %}
-            <div style="border:1px solid; margin:10px 0 10px 10px;">
-                <img src="http://www.senderonorte.com.ar{{ o.image.url }}" style="width:920px;height:300px;padding:10px;"/> 
-                <h1 style="text-transform:uppercase;width:92%;background:#FFF;height:29px;padding:15px 0px 15px 15px;font-size:23pt;    color:white;margin:15px 0px 15px 10px;text-align:left;">{{ o.title }}</h1>
-                <p style="margin:0px 0px 0px 10px;"> {{ o.description }} </p>
-                <div> 
-                <div style="height:38px;width:30%;margin:10px 0px 10px 606px;background:black;padding:10px 0px 0px 0px;">
-                        <a href="http://www.senderonorte.com.ar" style="text-decoration:none;text-transform:uppercase;color:white;font-size:14pt;margin:23px 23px 0px 23px;">VISITE NUESTRO SITIO</a>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        <!-- END OF BODY SECTION -->
-        <footer style="display:block;height:164px;margin-top:-10px;position: relative;padding: 10px 10px 0;">
-            <img src="http://www.senderonorte.com.ar/media/img/footer2.png"> 
-             <p style="margin:-75px 0 0 310px; font-size:15pt;">BOLETIN DE NOVEDADES</p>
-            <div id="caminante" style="position: absolute;bottom:0;left:0;">
-            <img src="http://www.senderonorte.com.ar/media/img/caminante.png" style="margin:-6px 0px -6px 20px;"></div>
-       
-            </img>
-        </footer>
-        <!-- END OF FOOTER SECTION -->
-    </div>
-</body>
-</html>
