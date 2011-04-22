@@ -6,6 +6,14 @@
     <body>    
     <div id="wrapper_body" style="width:950px;">
         <header style="display:block;position:relative;height:179px;">
+            <ul style="list-style:none;padding: 115px 0px 0px 650px;position:absolute;">
+            <li style="float:left;padding:0px 10px 0px 10px;">
+            <p style="font-size:12pt;"><a href="/mailing/send" style="text-decoration:none;color:#EAEAEA;"> enviar mailing </a></p>
+            </li>
+            <li style="float:left;padding:0px 10px 0px 10px;">
+            <p style="font-size:12pt;"><a href="/mailing/issues" style="text-decoration:none;color:#EAEAEA;">  volver atras </a></p>
+            </li>
+            </ul>
 
             <img src="http://www.senderonorte.com.ar/media/img/topboletin.jpg" />
         </header>
@@ -15,7 +23,7 @@
             <div style="border:1px solid white;background:#262626;">
                 <img style="width:920px;height:300px;padding:9px 0px 0px 9px;" src="http://www.senderonorte.com.ar{{ o.photopostexcurtion_set.all.0.photo.url }}" /> 
                 <div style="padding:10px;">
-                <h1 style="text-transform:uppercase;width:95%;height:29px;font-size:23pt;color:#FFF;padding:0px 0px 20px 0px;text-align:left;border-bottom:1px solid;">{{ o.name }}</h1>
+                <h1 style="text-transform:uppercase;width:95%;height:29px;font-size:23pt;color:#FFF;padding:0px 0px 20px 0px;text-align:left;">{{ o.name }}</h1>
                 <p style="width:98%;color:#FFFFFF;"> {{ o.description }} </p>
                 </div>
                 <div style="padding:0px 25px 20px 625px;"> 
