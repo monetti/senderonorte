@@ -2,4 +2,5 @@ django
 psycopg2
 markdown
 PIL
+easy_thumbnails
 -e git+http://github.com/justinlilly/django-gencal.git#egg=django_gencal

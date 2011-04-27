@@ -1,10 +1,11 @@
-{% load thumbnails %}
+{% load thumbnail %}
 <div id="dialog">
     <article id="{{object.name|slugify}}" class="object_detail">
     {% if type_object == "excurtion" %}
         <div class="slider">
         {% for photo in object.photopostexcurtion_set.all %}
-            <img height="320" src="{{photo.photo|thumbnail:'700x440'}}" alt="{{object.name}}" />
+            {% thumbnail photo.photo 700x320 crop as thumb %}
+            <img src="{{thumb.url}}" alt="{{object.name}} - {{photo}}"/>
         {% endfor %}
         </div>
         <div>
@@ -18,9 +19,9 @@
         </div>
     {% else %}
     {% if type_object == "new" %}
-        
         <div>
-            <img src="{{object.image.url}}" style="height:300px;width:550px;"/>
+            {% thumbnail photo.photo 500x300 crop as thumb %}
+            <img src="{{thumb.url}}"/>
             <h2>{{object.title}}</h2>
             <h3 > Descripcion </h3> <p>{{object.description}}</p>
         </div>

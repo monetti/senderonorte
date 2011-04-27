@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load gencal thumbnails %}
+{% load gencal thumbnail %}
 <meta charset="utf-8">
 <head>
     <link rel="stylesheet" type="text/css" href="/media/css/style.css" media="screen" />
@@ -173,7 +173,10 @@
                     {% for object in incoming %}
 
                     <article id="{{object.name|slugify}}" class="object excurtion">
-                        <a href="/excurtion_detail/{{object.id}}/excurtion" id="{{object.id}}" ><img src="{{object.photopostexcurtion_set.all.0.photo|thumbnail:'540x340'}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" /></a>
+                        {% thumbnail object.photopostexcurtion_set.all.0.photo 540x340 crop as thumb %}
+                        <a href="/excurtion_detail/{{object.id}}/excurtion" id="{{object.id}}" >
+                            <img src="{{thumb.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
+                        </a>
                         <div class="description">
                             <h3>{{object.name}}</h3>
                             <p>{{object.summary|truncatewords:20}}</p>
@@ -201,8 +204,9 @@
                         <div id="thumbs_last_exc">
                             {% for object in recent_excurtions %}
                             <article class="excurtion">
+                            {% thumbnail object.photopostexcurtion_set.all.0.photo 295x110 crop as thumb %}
                             <a href="/excurtion_detail/{{object.id}}/excurtion">                                  
-                                <img src="{{object.photopostexcurtion_set.all.0.photo|thumbnail:'539x350'}}" alt="{{object.name}}" id="thumb-{{object.name|slugify}}" />
+                                <img src="{{thumb.url}}" alt="{{object.name}}" id="thumb-{{object.name|slugify}}" />
                             </a>
                                 <h3>{{object.name}}</h3>
                                 <p>{{object.intro_last_exc|truncatewords:10}}</p>
