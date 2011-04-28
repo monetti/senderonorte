@@ -499,6 +499,7 @@ h3 {
 #news a {
     font-family:"Avenir Next LT Pro", sans-serif;
     color:#FA9600;
+    font-size:8pt;
 }
 
 #news ul {
@@ -1000,13 +1001,13 @@ table {
 }
 
 #news h3 {
-    font-size:12pt;
+    font-size:10pt;
     margin:0px;
     padding:0px;
 }
 
 #news p {
-    font-size:10pt;
+    font-size:9pt;
     margin:0px;
     padding:0px;
 }
@@ -1080,10 +1081,12 @@ table {
 #thumbs_last_exc h3 {
     margin:0px 0px 0px 5px;
     padding:0px;
+    font-size:12pt;
 }
 
 #thumbs_last_exc p {
     margin:0px 0px 0px 5px;
+    font-size:10pt;
     padding:0px;
 }
 
