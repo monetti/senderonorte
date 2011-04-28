@@ -3,10 +3,17 @@
     <article id="{{object.name|slugify}}" class="object_detail">
     {% if type_object == "excurtion" %}
         <div class="slider">
+        {% if object.photopostexcurtion_set.all %}
+            
+
         {% for photo in object.photopostexcurtion_set.all %}
             {% thumbnail photo.photo 700x320 crop as thumb %}
             <img src="{{thumb.url}}" alt="{{object.name}} - {{photo}}"/>
         {% endfor %}
+        {% else %}
+            {% thumbnail object.image 700x320 crop as thumb %}
+            <img src="{{thumb.url}}" alt="{{object.name}} - {{photo}}"/>
+        {% endif %}
         </div>
         <div>
             <h2>{{object.name}}</h2>
