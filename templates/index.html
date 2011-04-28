@@ -222,7 +222,8 @@
                     <article class="{% cycle 'odd' 'even' %}">
                         <div class="leftCol">
                             <a href="/excurtion_detail/{{object.id}}/new">
-                                <img src="{{object.image.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
+                                {% thumbnail object.image 100x100 crop as thumb %}
+                                <img src="{{thumb.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
                             </a>
                         </div>
                         <div class="rightCol">
