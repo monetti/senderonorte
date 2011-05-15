@@ -192,7 +192,7 @@ footer ul {
     list-style:none;
     overflow: hidden;
     padding:0;
-    margin: 40px 0 0 180px;
+    margin: 60px 0 0 188px;
 }
 footer li {
     display:inline;
@@ -213,7 +213,7 @@ footer li a {
 }
 
 footer p {
-    margin:50px 0 0 180px;
+    margin:30px 0 0 288px;
 }
 
 
@@ -412,10 +412,17 @@ h3#logo_lastexc {
 }
 
 #publicity {
-    margin-left:10px;
+    margin:7px 0px 0px 10px;
     width:930px;
-    background:url("/media/img/ultimas-excursiones.jpg") no-repeat; 
+    background:#39465b;
     height:65px;
+}
+
+#publicity h2 {
+    border:none;
+    font-size:25pt;
+    margin:0px 0px 0px 500px;
+    color:white !important; 
 }
 
 #news_exc {
@@ -472,6 +479,7 @@ h3#logo_lastexc {
 }
 #ref_gig {
     background-color:#344E5F;
+    background:url(../img/refugios.jpg) no-repeat;
     height:150px;
     margin:0px 0px 0px 7px;
 }
@@ -499,7 +507,7 @@ h3 {
 #news a {
     font-family:"Avenir Next LT Pro", sans-serif;
     color:#FA9600;
-    font-size:8pt;
+    font-size:9pt;
 }
 
 #news ul {
@@ -1001,7 +1009,7 @@ table {
 }
 
 #news h3 {
-    font-size:10pt;
+    font-size:11pt;
     margin:0px;
     padding:0px;
 }
@@ -1086,7 +1094,7 @@ table {
 
 #thumbs_last_exc p {
     margin:0px 0px 0px 5px;
-    font-size:10pt;
+    font-size:9pt;
     padding:0px;
 }
 
