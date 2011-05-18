@@ -228,16 +228,13 @@ def send_mailing(request):
     heading = '%s' %(':: Sendero Norte :: Boletin de Novedades')
     contacts = []    
     
-    try:
-        if request.POST['Refugio']:
-            contacts = contacts + list(Contact.objects.filter(grupo=1))
-    except:
-        contacts = []
-    try:
-        if request.POST['Institucional']:
-            contacts = contacts + list(Contact.objects.filter(grupo=2))
-    except:
-        contacts = contacts
+    groups = ContactGroup.objects.all()
+    for g in groups:
+        try:
+            if request.POST[g.name]:
+                contacts = contacts + list(Contact.objects.filter(grupo=g.id))
+        except:
+            pass
     
     for i in range(0,len(contacts)):    
         msg_mail.append(contacts[i].email)
