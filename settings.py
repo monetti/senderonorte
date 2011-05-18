@@ -4,6 +4,7 @@ import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+APPEND_SLASH=False
 
 ADMINS = (
     ('Martín Onetti', 'onetti.martin@gmail.com'),
@@ -126,7 +127,6 @@ INSTALLED_APPS = (
     'userprofile',
     'PIL',
     'gencal',
-    
  )
  
 try :

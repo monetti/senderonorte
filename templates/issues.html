@@ -4,8 +4,18 @@
 main-content
 {% endblock %}
 {% block content %}
-<p><a href="/mailing/preview"> vista previa del boletin de novedades </a><p>
-<p><a href="/mailing/send"> enviar boletin de novedades </a></p>
 <p><a href="/admin/contacts/contact/add/"> agregar contacto </a></p>
+<p><a href="/mailing/preview"> vista previa del boletin de novedades </a><p>
+<fieldset>
+    <legend>Elija Grupo/s </legend>
+<form action="/mailing/send" method="POST">
+{% csrf_token %}
+{% for obj in grupos %}
+    <p> <input type="checkbox" value={{ obj.id }} name={{obj.name}} >{{obj.name}}</p>
+{% endfor %}
+<input type="submit" value="Enviar"/> 
+</form>
+</fieldset>
+
 {% endblock %}
 

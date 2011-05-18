@@ -27,7 +27,7 @@ urlpatterns = patterns('',
     (r'^us/$', 'senderonorte.views.us_page'),
     
     (r'^mailing/issues/$', 'senderonorte.views.issues'),
-    (r'^mailing/send/$', 'senderonorte.views.send_mailing'),
+    (r'^mailing/send', 'senderonorte.views.send_mailing'),
     (r'^mailing/preview$', 'senderonorte.views.mailing_preview'),
 )
 

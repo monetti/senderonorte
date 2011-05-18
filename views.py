@@ -8,6 +8,7 @@ from cimblings.models import Cimbling
 from customizedtravels.models import CustomizedTravel
 from educationtravels.models import EducationTravel
 from contacts.forms import ContactoForm
+from contacts.models import ContactGroup
 from gencal.templatetags.gencal import ListCalendar
 from datetime import datetime
 
@@ -179,9 +180,14 @@ def test(request):
 
 @login_required()
 def issues(request):
+    grupos = ContactGroup.objects.all()
+    
     return simple.direct_to_template(
         request,
         'issues.html',
+        extra_context = {
+            'grupos':grupos,
+        }
     )
     
 @login_required()    
@@ -210,7 +216,6 @@ def send_mailing(request):
 
     import smtplib
     
-    contacts = Contact.objects.all()
     excurtions = Excurtion.objects.all().filter(publish_newsletter=True)
     news = New.objects.all().filter(publish_newsletter=True)
 
@@ -221,6 +226,18 @@ def send_mailing(request):
 
     msg_mail = []
     heading = '%s' %(':: Sendero Norte :: Boletin de Novedades')
+    contacts = []    
+    
+    try:
+        if request.POST['Refugio']:
+            contacts = contacts + list(Contact.objects.filter(grupo=1))
+    except:
+        contacts = []
+    try:
+        if request.POST['Institucional']:
+            contacts = contacts + list(Contact.objects.filter(grupo=2))
+    except:
+        contacts = contacts
     
     for i in range(0,len(contacts)):    
         msg_mail.append(contacts[i].email)
@@ -231,10 +248,7 @@ def send_mailing(request):
 
     msg.send(False)
     
-    return simple.direct_to_template(
-        request,
-        'issues.html',
-    )
+    return issues(request)
 
 def us_page(request):
     staff = User.objects.filter(is_staff=True)
