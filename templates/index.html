@@ -220,7 +220,7 @@
                             <a href="/excurtion_detail/{{object.id}}/excurtion">                                  
                                 <img src="{{thumb.url}}" alt="{{object.name}}" id="thumb-{{object.name|slugify}}" />
                             </a>
-                                <h3>{{object.name}}</h3>
+                                <h3>{{object.name|truncatewords:5}}</h3>
                                 <p>{{object.intro_last_exc|truncatewords:10}}</p>
                             </article>
                             {% endfor %}
@@ -239,7 +239,7 @@
                             </a>
                         </div>
                         <div class="rightCol">
-                            <h3>{{object.title}}</h3>
+                            <h3>{{object.title|truncatewords:5}}</h3>
                             <p>{{object.summary|truncatewords:9}}</p>
                             <a href="/excurtion_detail/{{object.id}}/new"> [Ver mas] </a>
                         </div>
