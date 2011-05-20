@@ -211,8 +211,7 @@ def send_mailing(request):
     from django.template.loader import render_to_string
     from contacts.models import Contact
     from django.template import loader
-    from django.core.mail import send_mail
-    from django.core.mail import EmailMultiAlternatives
+    from django.core.mail import send_mail, EmailMultiAlternatives
 
     import smtplib
     
@@ -239,7 +238,7 @@ def send_mailing(request):
     for i in range(0,len(contacts)):    
         msg_mail.append(contacts[i].email)
         
-    msg = EmailMultiAlternatives(heading, ":: Sendero Norte :: Boletin de Novedades", 'contacto@senderonorte.com.ar', msg_mail)
+    msg = EmailMultiAlternatives(subject=heading,from_email='contacto@senderonorte.com.ar',bcc=msg_mail,to=['contacto@senderonorte.com.ar'])
 
     msg.attach_alternative(html_part, "text/html")
 
