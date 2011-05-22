@@ -4,51 +4,64 @@
 <title>:: SENDERO NORTE :: BOLETIN DE NOVEDADES</title>
 </head>
     <body>    
-    <div id="wrapper_body" style="width:950px;">
+    <div id="wrapper_body" style="width:935px;">
         <header style="display:block;position:relative;height:179px;">
-            <img src="http://www.senderonorte.com.ar/media/img/topboletin.jpg" />
+          
+
+            <img src="http://www.senderonorte.com.ar/media/img/topboletin.jpg" style="width:935px;" />
         </header>
 
-        <div id="body" style="background:#FFFFFF;margin:0px 0px 0px 10px;">
+        <div id="body" style="background:#FFFFFF;">
+        <table style="border:none;" frame="void" rules="groups" bordercolor=white>
             {% for o in excurtions %}
-            <div style="background:#262626;border-bottom:1px solid white;margin:auto;">
-                <div style="width:50%;float:left;">
-                <img style="width:450px;height:400px;padding:9px 0px 0px 9px;float:left;" src="http://www.senderonorte.com.ar{{ o.photopostexcurtion_set.all.0.photo.url }}" /> 
+            <tr style="background:#262626;">
+                <td>
+                    <img style="width:450px;" src="http://www.senderonorte.com.ar{{ o.photopostexcurtion_set.all.0.photo.url }}" /> 
                 </div>
-                <div style="margin:10px;width:45%;float:left;">
-                <h1 style="text-transform:uppercase;width:95%;height:auto;font-size:14pt;color:#FFF;margin:10px 0px 0px 0px;text-align:left;">{{ o.name|truncatewords:5}}</h1>
-                <p style="width:98%;color:#FFFFFF;font-size:11pt;margin:10px 0px 0px 0px;"> {{ o.description }} </p>
+                </td>
+                <td style="color:#FFF;padding:10px;">
+                    <h1 style="color:white;text-transform:uppercase;font-size:14pt;">{{ o.name|truncatewords:5}}</h1>
+                    <p style="font-size:11pt;text-align:left;"> {{ o.description }} </p>
                 </div>
-                <div style="clear:both;"></div>
-                <div style="padding:15px 25px 20px 600px;"> 
-                <div style="height:20px;padding:10px 10px 10px 40px;background:#F29400;">
+                </td>
+            </tr>
+            <tr style="height:50px;background:#262626;border-bottom:1px solid white;">
+            <td >
+            </td>
+            <td style="margin:auto;text-align:center;">
+            <div style="height:20px;width:60%;background:#F29400;margin:0px 0px 0px 100px;vertical-align:middle;padding:7px;">
                     <a href="http://www.senderonorte.com.ar" style="text-decoration:none;text-transform:uppercase;color:white;font-size:14pt;">VISITE NUESTRO SITIO</a>
-                </div>
-                </div>
-            </div>
+                    </div>
+            </td>
+            </tr>
             {% endfor %}  
             {% for o in news %}
-            <div style="background:#E3E3E5;border-bottom:1px solid white;margin:auto;">
-                <div style="width:50%;float:left;">
-                <img src="http://www.senderonorte.com.ar{{ o.image.url }}" style="width:450px;height:400px;padding:9px 0px 0px 9px;float:left;"/> 
-                </div>
-                <div style="margin:10px;width:45%;float:left;">
-                <h1 style="text-transform:uppercase;width:95%;height:auto;font-size:14pt;color:#AABB77;margin:10px 0px 0px 0px;text-align:left;">{{ o.title|truncatewords:5}}</h1>
-                <p style="width:98%;font-size:11pt;margin:10px 0px 0px 0px;"> {{ o.description }} </p>
-                </div>
-                <div style="clear:both;"></div>
-                <div style="padding:15px 25px 20px 600px;">  
-                <div style="height:20px;padding:10px 10px 10px 40px;background:#F29400;">
-                        <a href="http://www.senderonorte.com.ar" style="text-decoration:none;text-transform:uppercase;color:black;font-size:14pt;">VISITE NUESTRO SITIO</a>
+            <tr style="background:#E3E3E5;">
+                <td>
+                    <img src="http://www.senderonorte.com.ar{{ o.image.url }}" style="width:450px;"/> 
+                </td>
+                <td style="padding:10px;">
+                    <h1 style="text-transform:uppercase;font-size:14pt;color:#AABB77;">{{ o.title|truncatewords:5}}</h1>
+                    <p style="font-size:11pt;"> {{ o.description }} </p>
+                </td>
+            </tr>
+            <tr style="height:50px;background:#E3E3E5; border-bottom:1px solid white;">
+                <td >
+                </td>
+                <td style="margin:auto;text-align:center;">
+                    <div style="height:20px;width:60%;background:#F29400;margin:0px 0px 0px 100px;vertical-align:middle;padding:7px;">
+                    <a href="http://www.senderonorte.com.ar" style="text-decoration:none;text-transform:uppercase;color:black;font-size:14pt;">VISITE NUESTRO SITIO</a>
                     </div>
-                </div>
-            </div>
+                </td>
+                
+            </tr>
             {% endfor %}
+        </table>
         </div>
         <!-- END OF BODY SECTION -->
-        <footer style="display:block;height:164px;position: relative;">
-             <p style="margin:110px 0 0 320px; font-size:15pt;overflow:hidden;position:absolute;">BOLETIN DE NOVEDADES</p>
-            <img src="http://www.senderonorte.com.ar/media/img/footerycaminante.png" style="margin:-55px 0px 0px 0px;" />
+        <footer style="display:block;height:164px;position: relative;width:935px;">
+             <p style="padding:0px 0px 0px 325px;font-size:15pt;overflow:hidden;position:absolute;">BOLETIN DE NOVEDADES</p>
+            <img src="http://www.senderonorte.com.ar/media/img/footerycaminante.png" style="padding:-85px 0px 0px 0px;overflow:hidden;position:absolute;width:937px;" />
         </footer>
         <!-- END OF FOOTER SECTION -->
     </div>
