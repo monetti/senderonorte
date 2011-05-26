@@ -54,8 +54,6 @@ USE_L10N = True
 
 #data for connect to SMTP
 
-
-
 EMAIL_HOST = "smtp.webfaction.com"
 EMAIL_PORT = "587"
 EMAIL_HOST_USER = "senderonorte"
