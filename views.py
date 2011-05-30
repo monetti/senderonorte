@@ -11,6 +11,7 @@ from contacts.forms import ContactoForm
 from contacts.models import ContactGroup
 from gencal.templatetags.gencal import ListCalendar
 from datetime import datetime
+from activities.models import Activitie
 
 def index(request):
     object_list = Excurtion.objects.all()
@@ -36,9 +37,10 @@ def excurtion_detail(request, tag=None,type_object=None):
         obj = Excurtion.objects.get(pk=int(tag))
     elif type_object == "new":
          obj = New.objects.get(pk=int(tag))
+    elif type_object == "activitie":
+        obj = Activitie.objects.get(pk=int(tag))
     else:
-        obj = Excurtion.objects.get(pk=int(tag))
-        
+        obj = {}
     
     return simple.direct_to_template(
         request,
@@ -50,7 +52,7 @@ def excurtion_detail(request, tag=None,type_object=None):
     )
     
 def excurtions(request,tag="norte"):
-    queryset = Excurtion.objects.all()
+    queryset = Activitie.objects.all()
     return list_detail.object_list(
         request,
         queryset,

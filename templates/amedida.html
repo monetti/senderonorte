@@ -1,5 +1,7 @@
 {% extends 'index.html' %}
+{% load thumbnail markup %}
 {% block title %} Viajes a Medida {% endblock %}
+{% load thumbnail markup %}
 {% block body_class %}
 main-content
 {% endblock %}
@@ -15,7 +17,8 @@ main-content
             <div class="thumbs-exc">
             {% for object in ctravels %}
                 <div class="article">
-                    <a href="{{object.id}}"><img src="{{object.photo.url}}" /></a>
+                     {% thumbnail object.photo 104x104 crop as thumb %}
+                     <a href="{{object.get_absolute_url}}" class="thumbnail"><img src="{{thumb.url}}"/></a>
                 </div>
                 {% if forloop.counter == 2 %}
                     <div class="clear"></div>

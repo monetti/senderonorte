@@ -125,6 +125,7 @@ INSTALLED_APPS = (
     'userprofile',
     'PIL',
     'gencal',
+    'activities',
  )
  
 try :

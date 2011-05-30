@@ -1,10 +1,9 @@
 {% extends 'index.html' %}
 {% load thumbnail markup %}
-{% block title %} Excursiones {% endblock %}
+{% block title %} Actividades por Region {% endblock %}
 {% block javascript %} 
     var target2 = '{{ selected }}';
-    
-    $(".logo-region").not(target2+"-logo").hide();
+    $(target2).show();
     $(target2+"-logo").show();
     
     $("#tabs a").click(function(){
@@ -13,7 +12,6 @@
         $(target+"-logo").show();
         $(".content-tab").not(target).hide();
         $(".logo-region").not(target+"-logo").hide();
-
         return false;
     }); 
     
@@ -58,15 +56,13 @@ main-content
             <div class="thumbs-exc">
             {% for object in region.list %}
                 <div class="article">
-                        {% thumbnail object.photopostexcurtion_set.all.0.photo 104x104 crop as thumb %}
+                        {% thumbnail object.photo 104x104 crop as thumb %}
                         <a href="{{object.get_absolute_url}}" class="thumbnail"><img src="{{thumb.url}}"/></a>
                     <div class="excurtion-data">
                         <h5> Nombre </h5>
-                        <span> {{object.name}}</span>
+                        <span> {{object.name|truncatewords:5}}</span>
                         <h5> Duracion </h5>
                         <span>{{object.duration}}</span>
-                        <h5> Proxima Fecha </h5>
-                        <span>{{object.date}}</span>                
                     </div>
                     <div class="clear"></div>
                 </div>

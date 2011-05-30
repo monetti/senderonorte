@@ -512,6 +512,8 @@ h3 {
 
 #news ul {
     list-style-type: none;
+
+
     padding: 0px;
     margin: 0px;
 }
@@ -759,17 +761,18 @@ h5 {
     float:left;   
     text-align:left;
     width:65%;
-    margin:65px 20px 0px 15px;
+    margin:50px 20px 0px 15px;
 }
 
 .thumbs-exc .article {
-    margin:10px 0px 80px 0px;
+    margin:40px 0px 0px;
+    width:50%;
 }
 .thumbnail {
     float:left;
 }
 .excurtion-data {
-    float: right;
+    float: left;
     margin: 0 10px;
 }
 .logo-region {
@@ -944,22 +947,7 @@ form .leftCol {
 .error p {
     margin: 3em;
 }
-#travels .thumbs-exc {
-    padding:0px;
-}
 
-#travels .thumbs-exc .article {
-    margin:20px 40px 0px 110px ;
-    padding:0px;
-}
-
-#cimblings .thumbs-exc {
-    padding:0px;
-}
-
-#cimblings .thumbs-exc .article {
-    margin:20px 40px 0px 110px ;
-    padding:0px;
 }
 
 table {

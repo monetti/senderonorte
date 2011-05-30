@@ -71,7 +71,7 @@ class NextExcurtionFeed(Feed):
         return item.name
     
     def item_link(self,item):
-        return "http://senderonorte.com.ar/next-excurtions/feed/detail/"+str(item.id)
+        return "/next-excurtions/feed/detail/"+str(item.id)
 
     def item_description(self, item):
         return item.description
