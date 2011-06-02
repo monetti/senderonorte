@@ -44,7 +44,17 @@
         </div>
      
     {% else %}
-    
+    {% if type_object == "user" %}
+        <div>
+            {% thumbnail photo.photo 500x300 crop as thumb %}
+            <img src="{{thumb.url}}"/>
+            <h2>{{object.username}}</h2>
+            <h3> Nombre </h3> <p>{{object.name}}</p>
+            <h3> Apellido </h3> <p> {{ object.lastname }}</p>            
+        </div>
+        
+    {% else %}
+    {% endif %}
     {% endif %}        
     {% endif %}        
     {% endif %}

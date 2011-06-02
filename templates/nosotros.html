@@ -1,5 +1,24 @@
 {% extends 'index.html' %}
 {% block title %} Nosotros {% endblock %}
+{% block javascript %}
+    $(".userphoto a").click(function(){
+                var target = $(this).attr('href');
+                $.ajax({
+                    url: target,
+                    success: function(data){
+                        $(data).dialog({
+                            'modal':true,
+                            'draggable':false,
+                            'width':'600',
+                            'height':'550'
+                        });
+                     },
+                });
+
+                return false;
+                
+            });
+{% endblock %}
 {% block body_class %}
 main-content
 {% endblock %}
@@ -21,7 +40,12 @@ De manera permanente nuestro staff de guías recibe capacitación en técnicas d
         <ul class="list">
         {% for object in staff %}
         <li class="element userphoto">
-            <img src="{{object.get_profile.photo.url}}" />
+            {% if object.get_profile.photo %}
+            <a href="/excurtion_detail/{{object.id}}/user" id="{{object.id}}" >
+                <img src="{{object.get_profile.photo.url}}" />
+            </a>
+            <p> {{ object.username }} </p>
+            {% endif %}
         </li>    
         {% endfor %}    
         </ul>
