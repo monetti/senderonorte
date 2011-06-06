@@ -4,7 +4,7 @@ import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-APPEND_SLASH=False
+APPEND_SLASH=True
 
 ADMINS = (
     ('Martín Onetti', 'onetti.martin@gmail.com'),
