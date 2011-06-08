@@ -1,3 +1,4 @@
+
 {% extends 'index.html' %}
 {% block title %} Nosotros {% endblock %}
 {% block javascript %}
@@ -40,21 +41,14 @@ De manera permanente nuestro staff de guías recibe capacitación en técnicas d
         <ul class="list">
         {% for object in staff %}
         <li class="element userphoto">
-            {% if object.get_profile.photo %}
             <a href="/excurtion_detail/{{object.id}}/user" id="{{object.id}}" >
+            {% if object.get_profile.photo %}
                 <img src="{{object.get_profile.photo.url}}" />
+            {% else %}
+                <img src="../media/img/users/NoPicture.gif" />
+            {% endif %}            
             </a>
             <p> {{ object.username }} </p>
-            {% endif %}
-        </li>    
-        {% endfor %}    
-        </ul>
-        </div>
-        <div id="userlogos">
-        <ul class="list">
-        {% for object in staff %}
-        <li class="element userlogo">
-            <img src="{{object.get_profile.logo.url}}" />
         </li>    
         {% endfor %}    
         </ul>
