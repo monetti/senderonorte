@@ -45,8 +45,9 @@ De manera permanente nuestro staff de guías recibe capacitación en técnicas d
             {% if object.get_profile.photo %}
                 <img src="{{object.get_profile.photo.url}}" />
             {% else %}
-                <img src="../media/img/users/NoPicture.gif" />
-            {% endif %}            
+                <img src="/media/users/NoPicture.gif" />
+            {% endif %}          
+              
             </a>
             <p> {{ object.username }} </p>
         </li>    

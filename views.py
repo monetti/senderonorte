@@ -120,7 +120,7 @@ def contact_sendmail(request):
     from smtplib import SMTP
 
     from_addr = request.POST['email']
-    to_addrs = ['info@senderonorte.com.ar']
+    to_addrs = ['contacto@senderonorte.com.ar']
     #msg = open('email_msg.txt','r').read()
     msg = ""
     msg += "Nombre: " + unicode(request.POST['nombre']) + "\n"
