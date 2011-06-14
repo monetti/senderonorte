@@ -1,10 +1,13 @@
 {% extends 'index.html' %}
 {% load thumbnail markup %}
 {% block title %} Actividades por Region {% endblock %}
-{% block javascript %} 
-    var target2 = '{{ selected }}';
+{% block javascript2 %} 
+    var target2 = '#'+'{{ selected }}';
+
     $(target2).show();
     $(target2+"-logo").show();
+    $(".content-tab").not(target2).hide();
+    $(".logo-region").not(target2+"-logo").hide();
     
     $("#tabs a").click(function(){
         var target = $(this).attr('href');

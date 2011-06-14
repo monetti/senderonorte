@@ -51,7 +51,7 @@ def excurtion_detail(request, tag=None,type_object=None):
         }
     )
     
-def excurtions(request,tag="norte"):
+def excurtions(request,tag="tab-norte"):
     queryset = Activitie.objects.all()
     return list_detail.object_list(
         request,
