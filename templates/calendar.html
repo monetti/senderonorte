@@ -1,15 +1,58 @@
 {% extends 'index.html' %}
-{% load gencal %}
 {% block title %} Calendario {% endblock %}
+{% block javascript %}
+    $(".month ul li a").click(function(){
+                var target = $(this).attr('href');
+                $.ajax({
+                    url: target,
+                    success: function(data){
+                        $(data).dialog({
+                            'modal':true,
+                            'draggable':false,
+                            'width':'600',
+                            'height':'550'
+                        });
+                        $(data).find('.slider').nivoSlider({
+                            effect:'fade',
+                            controlNav:false
+                        });
+                     },
+                        
+                });
+
+                return false;
+                
+            });
+{% endblock %}
 {% block body_class %}
 main-content
 {% endblock %}
 {% block content %}
-<div id="main">
-        <h1>Calendario de Excursiones</h1>
 
-        {% gencal list_obj 2011 03 %}
-        
-        
-</div>
+    {% for year, months in years %}
+        <h1 class="year">{{ year }}</h1>
+        <table>
+        {% for month in months %}
+            {% if month.n == 7 %}<tr>{% endif %}
+            {% if month.current %}<td class="month current">{% endif %}
+            {% if not month.current %}<td class="month">{% endif %}
+            <div class="month_name">
+            <h3> {{ month.name }} </h3>
+            </div>
+            <div class="month_entrys">
+            {% if month.entry %}
+                <ul>
+                {% for ex in month.entries %}
+                    <li> <a href="/excurtion_detail/{{ex.id}}/excurtion">{{ ex.name|truncatewords:3 }}</a> </li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+            </div>
+            </td>
+            {% if month.n == 12 %}</tr>{% endif %}
+            
+        {% endfor %}
+        </table>
+    {% endfor %}
+
 {% endblock %}

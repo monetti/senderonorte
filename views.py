@@ -12,6 +12,9 @@ from contacts.models import ContactGroup
 from gencal.templatetags.gencal import ListCalendar
 from datetime import datetime
 from activities.models import Activitie
+import time
+from django.http import HttpResponseRedirect, HttpResponse
+from django.shortcuts import get_object_or_404, render_to_response
 
 def index(request):
     object_list = Excurtion.objects.all()
@@ -140,16 +143,16 @@ def contact_sendmail(request):
 def feed_next_excurtion():
     pass
     
-def calendar(request):
-    queryset = Excurtion.objects.all()
-    return list_detail.object_list(
-        request,
-        queryset,
-        template_name='calendar.html',
-        extra_context = {
-            'list_obj':Excurtion.objects.all(),
-        },
-    )
+#def calendar(request):
+#    queryset = Excurtion.objects.all()
+#    return list_detail.object_list(
+#        request,
+#        queryset,
+#        template_name='calendar.html',
+#        extra_context = {
+#            'list_obj':Excurtion.objects.all(),
+#        },
+#    )
 
 def feed_detail(request,tag):
     a = Excurtion.objects.get(pk=int(tag))
@@ -258,3 +261,32 @@ def us_page(request):
         }
     )
 
+
+mnames = "Enero Febrero Marzo Abril Mayo Junio Julio Agosto Septiembre Octubre Noviembre Diciembre"
+mnames = mnames.split()
+
+
+def calendar(request, year=None):
+    """Main listing, years and months; three years per page."""
+    # prev / next years
+    if year: year = int(year)
+    else:    year = time.localtime()[0]
+
+    nowy, nowm = time.localtime()[:2]
+    lst = []
+
+    # create a list of months for each year, indicating ones that contain entries and current
+    for y in [year]:
+        mlst = []
+        for n, month in enumerate(mnames):
+            entry = current = False   # are there entry(s) for this month; current month?
+            entries = Excurtion.objects.filter(date__year=y, date__month=n+1)
+
+            if entries:
+                entry = True
+            if y == nowy and n+1 == nowm:
+                current = True
+            mlst.append(dict(n=n+1, name=month, entry=entry, current=current,entries=entries))
+        lst.append((y, mlst))
+
+    return render_to_response("calendar.html", {'years':lst, 'year':year})

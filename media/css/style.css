@@ -65,7 +65,7 @@ header {
 #nav{
     clear:right;
     float:right;
-    margin: 15px 22px 0;
+    margin: 20px 22px 0;
     padding:0;
     overflow:hidden;
     list-style:none;
@@ -1098,5 +1098,64 @@ table {
     margin:0px 0px 0px 5px;
     font-size:9pt;
     padding:0px;
+}
+
+.current {
+    background:#DDD4BE;
+}
+
+.month {
+    margin:0px;
+    border:1px solid;
+    height:100px;
+    padding:0px;
+    width:200px;
+}
+
+.month li {
+    font-size:8pt;
+    margin:0px 0px 0px 5px;
+}
+
+.month ul li a {
+    text-decoration:none;
+    padding:0px;
+    margin:0px;
+}
+
+.month ul{
+    list-style:none;
+    margin:0px 0px 0px 0px;
+    padding:0px;
+}
+
+.month_name {
+    height:auto;
+    margin:0px;
+    padding:0px;
+    border-bottom:1px solid;
+    border-top:1px solid;
+    height:25px;
+    background:#48912A;
+    margin-bottom:5px;
+}
+
+.month_entrys {
+    height:60px;
+    padding:0px;
+    margin:0px;   
+}
+
+.month h3 {
+    padding:0px;
+    margin:0px; 
+    color:#FFFFFF;  
+    margin:0px 0px 0px 5px;
+}
+
+.year {
+    font-size:30pt;
+    font-weight:bold;
+    padding:40px 0px 0px 0px;
 }
 
