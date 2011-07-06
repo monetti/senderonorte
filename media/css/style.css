@@ -488,9 +488,12 @@ h3#logo_lastexc {
 }
 #ref_gig {
     background-color:#344E5F;
-    background:url(../img/refugios.jpg) no-repeat;
     height:150px;
     margin:0px 0px 0px 7px;
+}
+
+#ref_sup {
+    display:none; 
 }
 
 #last_exc img {

@@ -74,12 +74,31 @@
                             'height':'550'
                         });
                      },
-                        
                 });
-
                 return false;
-                
             });
+            $("#mapa li").click(function(){
+                var target = $(this).attr('id');
+                if (target=='buenosaires' || target=='litoral') {
+                    window.location = '/';    
+                } else {
+                    window.location = '/excurtions/tab-'+target;
+                };
+                
+                return false;
+            });
+            
+            var ref_img = $("#ref_gig a");
+            t = 0;
+            function carrusel_next_ref() {
+                t = t % ref_img.length;
+                $('#ref_gig a').not(ref_img[t]).hide();
+                $(ref_img[t]).show();
+                t += 1;
+                window.setTimeout(carrusel_next_ref, 3000);
+            }
+            carrusel_next_ref();
+
             {% block javascript2 %}
             
             {% endblock %}
@@ -97,6 +116,7 @@
                     window.setTimeout(carrusel_next_exc, 3000);
                 }
                 carrusel_next_exc();
+               
             {% endblock %}            
         })         
   </script>
@@ -137,7 +157,7 @@
                     <a href="http://es-es.facebook.com/people/Sendero-Norte-Expediciones/100000508486427"><img class="logos" src="/media/img/logos/facebook.png" /></a>
                 </li>
                 <li class="cajalogored">
-                    <a href=""><img class="logos" src ="/media/img/logos/YouTube.jpg" /></a>
+                    <a href="http://www.youtube.com/user/SenderoNorteTurismo"><img class="logos" src ="/media/img/logos/YouTube.jpg" /></a>
                 </li>
             </ul>
             <ul id="nav">
@@ -148,13 +168,13 @@
                         <li><a href="/excurtions/tab-centro">Centro</a></li>
                         <li><a href="/excurtions/tab-cuyo">Cuyo</a></li>
                         <li><a href="/excurtions/tab-patagonia">Patagonia</a></li>
-                        <li><a href="/recomendations/">Recomendaciones</a></li>
+                        <li><a href="/recomendations">Recomendaciones</a></li>
                         <li><a href="/calendar">Calendario</a></li>
                     </ul>
                 </li>
-                <li><a href="/educationtravel/">Viajes Educativos<span></span> </a></li>
-                <li><a href="/customizedtours/">Viajes a Medida<span></span> </a></li>
-                <li class="last"><a href="/cimblings/">Escalada</a></li>
+                <li><a href="/educationtravel">Viajes Educativos<span></span> </a></li>
+                <li><a href="/customizedtours">Viajes a Medida<span></span> </a></li>
+                <li class="last"><a href="/cimblings">Escalada</a></li>
             </ul>
         </header>
 
@@ -202,7 +222,7 @@
                             {{ object.place }} -
                             Horario: 
                             {{ object.time }}</p>
-                            <!-- h4 id="calendario"><a href="/calendar">Calendario</a></h4 -->
+                            <h4 id="calendario"><a href="/calendar">Calendario</a></h4>
                         </div>
                     </article>
 
@@ -214,7 +234,10 @@
             </div>
             <div id="secondary">
                 <div class="leftCol">
-                    <div id="ref_gig"></div>
+                    <div id="ref_gig">
+                        <a href="" id="ref_inf"><img src="/media/img/refugios/refugio-inf.png" /></a>    
+                        <a href="" id="ref_sup"><img src="/media/img/refugios/refugio-sup.png" /></a>
+                    </div>
                     <div id="last_exc">
                         <h1 id="logo_lastexc"> Ultimas Excursiones </h1>
                         <div id="thumbs_last_exc">
