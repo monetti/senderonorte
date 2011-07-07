@@ -1162,3 +1162,50 @@ table {
     padding:40px 0px 0px 0px;
 }
 
+#refugios {
+    height:auto;
+}
+
+#refugios .leftCol {
+    width:30%;
+    margin:1px;
+    padding:0px;
+}
+
+
+
+#refugios .rightCol {
+    padding:0px;
+}
+
+#refugios img {
+    margin:20px 5px 0px 7px;
+}
+
+#refugios p {
+    margin:2px 0px 0px 10px;
+}
+
+#refugios h3 {
+    font-size:18pt;
+    margin-left:8px;
+}
+
+.ref_x,.ref_y {
+    margin:0px;
+    padding:0px 0px 5px 0px;
+    border:1px solid;
+}
+
+.ref_y {
+    background:#DDEE44;
+}
+
+.ref_x {
+    margin:10px 0px 0px 0px;
+    background:#FFEE44;
+}
+
+#refugios h5 {
+    margin-left:8px;
+}

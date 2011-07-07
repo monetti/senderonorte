@@ -29,6 +29,8 @@ urlpatterns = patterns('',
     (r'^mailing/issues/$', 'senderonorte.views.issues'),
     (r'^mailing/send', 'senderonorte.views.send_mailing'),
     (r'^mailing/preview$', 'senderonorte.views.mailing_preview'),
+    
+    (r'^refugios/$', 'senderonorte.views.refugios'),
 )
 
 urlpatterns += patterns('',

@@ -290,3 +290,6 @@ def calendar(request, year=None):
         lst.append((y, mlst))
 
     return render_to_response("calendar.html", {'years':lst, 'year':year})
+    
+def refugios(request):
+    return render_to_response("refugios.html", {})
