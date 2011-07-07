@@ -122,15 +122,15 @@ def contact_sendmail(request):
     
     from smtplib import SMTP
 
-    from_addr = request.POST['email']
-    to_addrs = ['contacto@senderonorte.com.ar']
+    from_addr = request.POST.get('email')
+    to_addrs = ['onetti.martin@gmail.com']
     #msg = open('email_msg.txt','r').read()
     msg = ""
-    msg += "Nombre: " + unicode(request.POST['nombre']) + "\n"
-    msg += "Apellido: " + unicode(request.POST['apellido']) + "\n"
-    msg += "Email: " + unicode(request.POST['email']) + "\n"
-    msg += "Excursion: " + unicode(request.POST['nombre_excursion']) + ' ' + "Fecha: " + unicode(request.POST['fecha']) + "\n"
-    msg += "Comentario: " + unicode(request.POST['comentario']) + "\n"
+    msg += "Nombre: " + unicode(request.POST.get('nombre')) + "\n"
+    msg += "Apellido: " + unicode(request.POST.get('apellido')) + "\n"
+    msg += "Email: " + unicode(request.POST.get('email')) + "\n"
+    msg += "Excursion: " + unicode(request.POST.get('nombre_excursion')) + ' ' + "Fecha: " + unicode(request.POST.get('fecha')) + "\n"
+    msg += "Comentario: " + unicode(request.POST.get('comentario')) + "\n"
     
     
     s = SMTP()
