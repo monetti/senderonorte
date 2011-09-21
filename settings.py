@@ -124,8 +124,8 @@ INSTALLED_APPS = (
     'contacts',
     'userprofile',
     'PIL',
-    'gencal',
     'activities',
+    'south',
  )
  
 try :
