@@ -14,4 +14,10 @@ class UserProfile(models.Model):
         verbose_name = _('Perfil de Usuario')
         verbose_name_plural = _('Listado de Perfiles Usuarios del Sitio')
         
-
+class Logo(models.Model):
+    photo = models.ImageField(_("Imagen"),upload_to="logos")
+    url = models.CharField(_("URL"),max_length=100)
+    
+    class Meta:
+        verbose_name = _('Logos')
+        verbose_name_plural = _('Listado Logos')

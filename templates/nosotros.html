@@ -34,6 +34,20 @@ De manera permanente nuestro staff de guías recibe capacitación en técnicas d
             {% endfor %}    
             </ul>
         </div>
+        <div id="userlogos">
+        <ul class="logos_list">
+            {% for object in logos %}
+            <li class='logo'>
+                <a href="{{object.url}}" id="{{object.id}}" >
+                    <img src="{{object.photo.url}}" />
+                </a>
+            </li>    
+            {% endfor %}    
+            </ul>
+        </div>
+        <div class="clear"></div>
+
+
 
     </div>
 {% endblock %}       

@@ -22,7 +22,6 @@ hr {
 
 .logos {
     height:40px;
-    
 }
 
 .cajalogored {
@@ -1053,7 +1052,7 @@ table {
 
 .list {
     list-style:none;
-    margin:40px 0px 0px 120px;
+    margin:40px 0px 0px 100px;
 }
 
 .element {
@@ -1084,12 +1083,9 @@ table {
 #userphotos, #userlogos {
     text-align:center;
     float:left;
-    
+    width:100%;
 }
 
-#userlogos {
-    margin:0px 0px 0px 145px;    
-}
 
 #thumbs_last_exc h3 {
     margin:0px 0px 0px 5px;
@@ -1209,3 +1205,19 @@ table {
 #refugios h5 {
     margin-left:8px;
 }
+
+.logos_list {
+    list-style:none;    
+    margin:0px 120px 0px 120px;
+}
+
+.logo {
+    float:left;
+    text-align:center;
+}
+
+.logos_list img {
+    margin:25px ;
+    width:65px;
+}
+
