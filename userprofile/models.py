@@ -3,8 +3,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 class UserProfile(models.Model):
-    logo = models.ImageField(_("Logo"),upload_to="./users",blank=True)
-    photo = models.ImageField(_("Foto"),upload_to="./users",blank=True)
+    photo = models.ImageField(_("Foto"),upload_to="users",blank=True)
     user = models.ForeignKey(User, unique=True)
     description = models.TextField(_("Descripcion"),blank=True)
     

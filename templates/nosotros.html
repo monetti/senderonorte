@@ -1,25 +1,6 @@
 
 {% extends 'index.html' %}
 {% block title %} Nosotros {% endblock %}
-{% block javascript %}
-    $(".userphoto a").click(function(){
-                var target = $(this).attr('href');
-                $.ajax({
-                    url: target,
-                    success: function(data){
-                        $(data).dialog({
-                            'modal':true,
-                            'draggable':false,
-                            'width':'600',
-                            'height':'550'
-                        });
-                     },
-                });
-
-                return false;
-                
-            });
-{% endblock %}
 {% block body_class %}
 main-content
 {% endblock %}
@@ -38,21 +19,20 @@ De manera permanente nuestro staff de guías recibe capacitación en técnicas d
             <p>Nuestros guías están habilitados por la Administración de Parques Nacionales y se encuentran inscriptos en el Registro de Prestadores de Turismo Alternativo de la Provincia de Córdoba.</p>
         </div>
         <div id="userphotos">
-        <ul class="list">
-        {% for object in staff %}
-        <li class="element userphoto">
-            <a href="/excurtion_detail/{{object.id}}/user" id="{{object.id}}" >
-            {% if object.get_profile.photo %}
-                <img src="{{object.get_profile.photo.url}}" />
-            {% else %}
-                <img src="/media/users/NoPicture.gif" />
-            {% endif %}          
-              
-            </a>
-            <p> {{ object.username }} </p>
-        </li>    
-        {% endfor %}    
-        </ul>
+            <ul class="list">
+            {% for object in staff %}
+            <li class="element userphoto">
+                <a href="/excurtion_detail/{{object.user.id}}/user" id="{{object.user.id}}" >
+                {% if object.photo %}
+                    <img src="{{object.photo.url}}" />
+                {% else %}
+                    <img src="/media/users/NoPicture.gif" />
+                {% endif %}          
+                </a>
+                <p> {{ object.user.username }} </p>
+            </li>    
+            {% endfor %}    
+            </ul>
         </div>
 
     </div>

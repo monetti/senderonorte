@@ -12,6 +12,7 @@ from contacts.models import ContactGroup
 from gencal.templatetags.gencal import ListCalendar
 from datetime import datetime
 from activities.models import Activitie
+from userprofile.models import UserProfile
 import time
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import get_object_or_404, render_to_response
@@ -252,7 +253,7 @@ def send_mailing(request):
     return issues(request)
 
 def us_page(request):
-    staff = User.objects.filter(is_staff=True)
+    staff = UserProfile.objects.all()
     return simple.direct_to_template(
         request,
         'nosotros.html',

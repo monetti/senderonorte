@@ -3,6 +3,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.contrib.syndication.views import Feed
 from django.shortcuts import get_object_or_404
 from django.template.defaultfilters import slugify
+from activities.models import Activitie
 import datetime
 
 class Region(models.Model):
@@ -32,6 +33,7 @@ class Excurtion(models.Model):
     publish_last_exc = models.BooleanField(_("Publicar en Ultimas Excursiones?"), default=False,blank=True)
     intro_last_exc = models.TextField(_('Descripcion de la experiencia'),blank=True)
     publish_newsletter = models.BooleanField(_("Publicar en NewsLetter"), default=False,blank=True) 
+    activitie = models.ForeignKey(Activitie)
 
     class Meta:
         ordering = ('date',)
