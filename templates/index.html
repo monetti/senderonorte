@@ -28,40 +28,29 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <script>
+      
         $(window).ready(function() {
-            $('#news_exc article').not(':first').hide();
+            {% block javascript %}
+            //botonera de proximas excursiones
             $(".botonera a").click(function(){
                 target = $(this).attr('href');
                 $(target).show();
                 $('#news_exc article').not(target).hide();
                 return false;
             });
-            $('.banners').nivoSlider({
-                effect: 'fade',
-                controlNav:false
-            })
+            
+            //vista de detalle de una excursion
             $(".excurtion a").click(function(){
                 var target = $(this).attr('href');
-                $.ajax({
-                    url: target,
-                    success: function(data){
-                        $(data).dialog({
-                            'modal':true,
-                            'draggable':false,
-                            'width':'600',
-                            'height':'550'
-                        });
-                        $(data).find('.slider').nivoSlider({
-                            effect:'fade',
-                            controlNav:false
-                        });
-                     },
+                window.location = target;
                         
                 });
 
                 return false;
                 
             });
+            
+            //vista de detalle de una Novedad
             $("#news a").click(function(){
                 var target = $(this).attr('href');
                 $.ajax({
@@ -77,6 +66,8 @@
                 });
                 return false;
             });
+            
+            //funcionalidad cuando se clickea en el mapa
             $("#mapa li").click(function(){
                 var target = $(this).attr('id');
                 if (target=='buenosaires' || target=='litoral') {
@@ -88,6 +79,7 @@
                 return false;
             });
             
+            //carrusel de fotos para el bloque de refugios
             var ref_img = $("#ref_gig a");
             t = 0;
             function carrusel_next_ref() {
@@ -98,27 +90,22 @@
                 window.setTimeout(carrusel_next_ref, 3000);
             }
             carrusel_next_ref();
-
-            {% block javascript2 %}
             
-            {% endblock %}
+            //carrusel de fotos para nuevas exursiones
+            var news_exc = $("#news_exc article");
+            i = 0;
+            function carrusel_next_exc() {
+                i = i % news_exc.length;
+                $('#news_exc article').not(news_exc[i]).hide();
+                $(news_exc[i]).show();
+                i += 1;
+                window.setTimeout(carrusel_next_exc, 3000);
+            }
+            carrusel_next_exc();
             
-        })
-        $(window).load(function () {
-            {% block javascript %}
-                var news_exc = $("#news_exc article");
-                i = 0;
-                function carrusel_next_exc() {
-                    i = i % news_exc.length;
-                    $('#news_exc article').not(news_exc[i]).hide();
-                    $(news_exc[i]).show();
-                    i += 1;
-                    window.setTimeout(carrusel_next_exc, 3000);
-                }
-                carrusel_next_exc();
-               
             {% endblock %}            
-        })         
+           
+        });        
   </script>
     <script type="text/javascript">
 

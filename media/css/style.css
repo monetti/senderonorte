@@ -1221,3 +1221,26 @@ table {
     width:65px;
 }
 
+#detail .leftCol {
+    width:42%;
+    margin:5px 0px 0px 30px;
+    padding:0px;
+   }
+
+#detail h1 {
+    margin:0px 20px 10px 20px;
+    color:black; important!
+}   
+
+#detail h3,#detail h5 {
+    margin:0px;
+    padding:0px;
+}  
+
+#detail h3 {
+    color:black;
+} 
+
+.name_excurtion {
+    color:black;
+}

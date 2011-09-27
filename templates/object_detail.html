@@ -1,30 +1,42 @@
+{% extends 'index.html' %}
 {% load thumbnail %}
-<div id="dialog">
+{% block title %}Detalle{% endblock %}
+{% block javascript %}
+    $('.slider').nivoSlider({
+                effect: 'fade',
+                controlNav:false
+    });
+    
+{% endblock %}
+{% block body_class %}
+main-content
+{% endblock %}
+{% block content %}
+<div id="detail">
     <article id="{{object.name|slugify}}" class="object_detail">
     {% if type_object == "excurtion" %}
-        <div class="slider">
-        {% if object.photopostexcurtion_set.all %}
-            
-
-        {% for photo in object.photopostexcurtion_set.all %}
-            {% thumbnail photo.photo 700x320 crop as thumb %}
-            <img src="{{thumb.url}}" alt="{{object.name}} - {{photo}}"/>
-        {% endfor %}
-        {% else %}
-            {% thumbnail object.image 700x320 crop as thumb %}
-            <img src="{{thumb.url}}" alt="{{object.name}} - {{photo}}"/>
-        {% endif %}
+        <h1 class="name_excurtion">{{object.name}}</h1>
+        <div class="slider leftCol">
+            {% if object.photopostexcurtion_set.all %}
+                {% for photo in object.photopostexcurtion_set.all %}
+                    {% thumbnail photo.photo 400x220 crop as thumb %}
+                        <img src="{{thumb.url}}" alt="{{object.name}} - {{photo}}"/>
+                    {% endfor %}
+                {% else %}
+                    {% thumbnail object.image 400x220 crop as thumb %}
+                        <img src="{{thumb.url}}" alt="{{object.name}} - {{photo}}"/>
+            {% endif %}
         </div>
-        <div>
-            <h2>{{object.name}}</h2>
-            <p>{{object.description}}</p>
+        <div class="leftCol">
+            <h3>{{object.description}}</h3>
             <h5><strong>Duracion:</strong> {{object.duration}} </h5>
             <h5><strong>Fecha:</strong> {{object.date}} </h5>
             <h5><strong>Horario:</strong> {{object.time}} </h5>
             <h5><strong>Lugar:</strong> {{object.place}}</h5>
             
         </div>
-    {% else %}
+        <div class="clear"></div>
+    {% endif %}
     {% if type_object == "new" %}
         <div>
             {% thumbnail photo.photo 500x300 crop as thumb %}
@@ -33,7 +45,7 @@
             <h3 > Descripcion </h3> <p>{{object.description}}</p>
         </div>
      
-    {% else %}
+    {% endif %}
     {% if type_object == "activitie" %}
         <div>
             {% thumbnail photo.photo 500x300 crop as thumb %}
@@ -43,7 +55,7 @@
             <h3> Duracion </h3> <p> {{ object.duration }}</p>            
         </div>
      
-    {% else %}
+    {% endif %}
     {% if type_object == "user" %}
         <div>
             {% thumbnail photo.photo 500x300 crop as thumb %}
@@ -53,10 +65,7 @@
             <h3> Apellido </h3> <p> {{ object.lastname }}</p>            
         </div>
         
-    {% else %}
-    {% endif %}
-    {% endif %}        
-    {% endif %}        
     {% endif %}
     </article>
 </div>
+{% endblock %}
