@@ -91,7 +91,11 @@
             }
             carrusel_next_ref();
             
-            //carrusel de fotos para nuevas exursiones
+            
+            {% endblock %}            
+        });                        
+        $(window).load(function () {
+        //carrusel de fotos para nuevas exursiones
             var news_exc = $("#news_exc article");
             i = 0;
             function carrusel_next_exc() {
@@ -99,13 +103,11 @@
                 $('#news_exc article').not(news_exc[i]).hide();
                 $(news_exc[i]).show();
                 i += 1;
-                window.setTimeout(carrusel_next_exc, 3000);
+                window.setTimeout(carrusel_next_exc, 6000);
             }
             carrusel_next_exc();
             
-            {% endblock %}            
-           
-        });        
+        });
   </script>
     <script type="text/javascript">
 
