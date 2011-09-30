@@ -43,13 +43,11 @@
             $(".excurtion a").click(function(){
                 var target = $(this).attr('href');
                 window.location = target;
+                
+                return false;
                         
                 });
 
-                return false;
-                
-            });
-            
             //vista de detalle de una Novedad
             $("#news a").click(function(){
                 var target = $(this).attr('href');
@@ -87,15 +85,11 @@
                 $('#ref_gig a').not(ref_img[t]).hide();
                 $(ref_img[t]).show();
                 t += 1;
-                window.setTimeout(carrusel_next_ref, 3000);
+                window.setTimeout(carrusel_next_ref, 5000);
             }
             carrusel_next_ref();
-            
-            
-            {% endblock %}            
-        });                        
-        $(window).load(function () {
-        //carrusel de fotos para nuevas exursiones
+
+            //carrusel de fotos de Proximas Excursiones
             var news_exc = $("#news_exc article");
             i = 0;
             function carrusel_next_exc() {
@@ -107,7 +101,9 @@
             }
             carrusel_next_exc();
             
-        });
+            
+            {% endblock %}            
+        });                        
   </script>
     <script type="text/javascript">
 
@@ -201,16 +197,15 @@
                         <a href="/excurtion_detail/{{object.id}}/excurtion" id="{{object.id}}" >
                             <img src="{{thumb.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
                         </a>
+                        
                         <div class="description">
                             <h3>{{object.name}}</h3>
                             <p>{{object.description|truncatewords:20}}</p>
-                            <p>Fecha de salida: 
-                                {{object.date }} -
-                            Lugar: 
-                            {{ object.place }} -
-                            Horario: 
-                            {{ object.time }}</p>
-                            <h4 id="calendario"><a href="/calendar">Calendario</a></h4>
+                            <div class="secondary_data">
+                                <p><strong>Fecha de salida: </strong>{{object.date }}</p>
+                                <p><strong>Lugar: </strong>{{ object.place }} </p>
+                                <p><strong>Horario: </strong> {{ object.time }}</p>
+                            </div>
                         </div>
                     </article>
 
