@@ -227,7 +227,7 @@
                             {% for object in recent_excurtions %}
                             <article class="excurtion">
                             {% thumbnail object.photopostexcurtion_set.all.0.photo 295x110 crop as thumb %}
-                            <a href="/excurtion_detail/{{object.id}}/excurtion">                                  
+                            <a href="/lastexcurtion_detail/{{object.id}}">                                  
                                 <img src="{{thumb.url}}" alt="{{object.name}}" id="thumb-{{object.name|slugify}}" />
                             </a>
                                 <h3>{{object.name|truncatewords:5}}</h3>

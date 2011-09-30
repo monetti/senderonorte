@@ -23,9 +23,12 @@ urlpatterns = patterns('',
     (r'^contact/send$', 'senderonorte.views.contact_sendmail'),
     (r'^next-excurtions/feed/$', NextExcurtionFeed()),
     (r'^next-excurtions/feed/detail/(?P<tag>[^/]+)$', 'senderonorte.views.feed_detail'),
+
     (r'^us/$', 'senderonorte.views.us_page'),
-    (r'^activitie_detail/(?P<id>[^/]+)/$', 'senderonorte.views.activitie_detail'),
     (r'^calendar$', 'senderonorte.views.calendar'),
+
+    (r'^activitie_detail/(?P<id>[^/]+)/$', 'senderonorte.views.activitie_detail'),
+    (r'^lastexcurtion_detail/(?P<id>[^/]+)/$', 'senderonorte.views.lastexcurtion_detail'),
     
     (r'^mailing/issues/$', 'senderonorte.views.issues'),
     (r'^mailing/send', 'senderonorte.views.send_mailing'),

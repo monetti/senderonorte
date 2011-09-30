@@ -72,6 +72,17 @@ def excurtion_detail(request, tag=None,type_object=None):
         }
     )
     
+def lastexcurtion_detail(request, id):
+    obj = Excurtion.objects.get(pk=int(id))
+      
+    return simple.direct_to_template(
+        request,
+        'lastexcurtion_detail.html',
+        extra_context = {
+            'object':obj,
+        }
+    )
+
 def excurtions(request,tag="tab-norte"):
     queryset = Activitie.objects.all()
     return list_detail.object_list(

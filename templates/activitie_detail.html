@@ -9,9 +9,9 @@ main-content
     <article id="{{object.name|slugify}}" >
          <div>
             <h1 class="name_excurtion">{{object.name}}</h1>
-            {% thumbnail object.photo 500x300 crop as thumb %}
-            <img src="{{thumb.url}}" style="float:left; margin:0px 0px 0px 10px;width:30%;"/>
-            <div style="float:right;margin:10px 0px 0px 0px;width:65%;">
+            {% thumbnail object.photo 300x200 crop as thumb %}
+            <img src="{{thumb.url}}" style="float:left; margin:0px 0px 0px 10px;width:50%;"/>
+            <div style="float:right;margin:10px 0px 0px 0px;width:45%;">
             <strong>Descripcion de la Actividad:</strong><p>{{object.description}}</p>
             <strong>Duracion:</strong> <p>{{object.duration}} dias </p>
             </div>
