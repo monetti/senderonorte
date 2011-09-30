@@ -46,16 +46,6 @@ main-content
         </div>
      
     {% endif %}
-    {% if type_object == "activitie" %}
-        <div>
-            {% thumbnail photo.photo 500x300 crop as thumb %}
-            <img src="{{thumb.url}}"/>
-            <h2>{{object.name}}</h2>
-            <h3> Descripcion </h3> <p>{{object.description}}</p>
-            <h3> Duracion </h3> <p> {{ object.duration }}</p>            
-        </div>
-     
-    {% endif %}
     {% if type_object == "user" %}
         <div>
             {% thumbnail photo.photo 500x300 crop as thumb %}

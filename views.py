@@ -35,14 +35,31 @@ def index(request):
         }
     )
 
+def activitie_detail(request,id):
+    obj = Activitie.objects.get(pk=int(id))
+    
+    next_excurtion = Excurtion.objects.filter(activitie=obj.id,date__gte=datetime.now())
+    if len(next_excurtion)>0:
+        next_excurtion = next_excurtion[0]
+    else:
+        next_excurtion = None
+        
+    return simple.direct_to_template(
+        request,
+        'activitie_detail.html',
+        extra_context = {
+            'object':obj,
+            'next_excurtion':next_excurtion,
+        }
+    )
+
+
 def excurtion_detail(request, tag=None,type_object=None):
     obj = {}
     if type_object == "excurtion":
         obj = Excurtion.objects.get(pk=int(tag))
     elif type_object == "new":
          obj = New.objects.get(pk=int(tag))
-    elif type_object == "activitie":
-        obj = Activitie.objects.get(pk=int(tag))
     else:
         obj = {}
     

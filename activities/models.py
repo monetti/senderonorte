@@ -38,7 +38,7 @@ class Activitie(models.Model):
         return self.name
     
     def get_absolute_url(self):
-        return u'/excurtion_detail/%s/activitie' % self.id
+        return u'/activitie_detail/%s' % self.id
 
        
 

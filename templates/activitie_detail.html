@@ -19,8 +19,8 @@ main-content
             <div class="clear"></div>
             <div style="float:right; margin:0px 20px 0px 0px;">
             <a href="/excurtions/tab-{{object.region|lower}}">volver atras</a>
-                {% if object.excurtion_set.all.length != 0 %}
-                    <a href="/excurtions/tab-{{object.region}}">proxima excursion</a>                        
+                {% if next_excurtion %}
+                    <a href="{{next_excurtion.get_absolute_url}}">proxima excursion</a>                        
                 {% else %}
                     <a href="/calendar">ir a calendario</a>                        
                 {% endif %}

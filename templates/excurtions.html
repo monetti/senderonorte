@@ -64,8 +64,8 @@ main-content
             <div class="thumbs-exc">
             {% for object in region.list %}
                 <div class="article">
-                        {% thumbnail object.photo 104x104 crop as thumb %}
-                        <a href="{{object.get_absolute_url}}" class="thumbnail"><img src="{{thumb.url}}"/></a>
+                    {% thumbnail object.photo 104x104 crop as thumb %}
+                    <a href="{{object.get_absolute_url}}" class="thumbnail"><img src="{{thumb.url}}"/></a>
                     <div class="excurtion-data">
                         <h5> Nombre </h5>
                         <span> {{object.name|truncatewords:5}}</span>
