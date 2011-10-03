@@ -29,6 +29,7 @@ urlpatterns = patterns('',
 
     (r'^activitie_detail/(?P<id>[^/]+)/$', 'senderonorte.views.activitie_detail'),
     (r'^lastexcurtion_detail/(?P<id>[^/]+)/$', 'senderonorte.views.lastexcurtion_detail'),
+    (r'^new_detail/(?P<id>[^/]+)/$', 'senderonorte.views.new_detail'),
     
     (r'^mailing/issues/$', 'senderonorte.views.issues'),
     (r'^mailing/send', 'senderonorte.views.send_mailing'),

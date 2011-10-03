@@ -274,7 +274,7 @@
                     {% for object in news %}
                     <article class="{% cycle 'odd' 'even' %}">
                         <div class="leftCol">
-                            <a href="/excurtion_detail/{{object.id}}/new">
+                            <a href="/new_detail/{{object.id}}">
                                 {% thumbnail object.image 100x100 crop as thumb %}
                                 <img src="{{thumb.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
                             </a>
@@ -282,7 +282,7 @@
                         <div class="rightCol">
                             <h3>{{object.title|truncatewords:5}}</h3>
                             <p>{{object.summary|truncatewords:9}}</p>
-                            <a href="/excurtion_detail/{{object.id}}/new"> [Ver mas] </a>
+                            <a href="/new_detail/{{object.id}}"> [Ver mas] </a>
                         </div>
                         <div class="clear"></div>
                     </article>
