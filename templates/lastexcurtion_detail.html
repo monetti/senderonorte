@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+{% load thumbnail %}
+{% block title %}Detalle{% endblock %}
+{% block javascript %}
+    $('.slider').nivoSlider({
+                effect: 'fade',
+                controlNav:false
+    });
+    
+{% endblock %}
+{% block body_class %}
+main-content
+{% endblock %}
+{% block content %}
+<div id="detail">
+    <article id="{{object.name|slugify}}">
+
+        <h1 class="name_excurtion">{{object.name}}</h1>
+        <div class="slider" style="float:left;width:40%;margin:0px 0px 0px 20px;">
+            {% if object.photopostexcurtion_set.all %}
+                {% for photo in object.photopostexcurtion_set.all %}
+                    {% thumbnail photo.photo 400x300 crop as thumb %}
+                        <img src="{{thumb.url}}" alt="{{object.name}} - {{photo}}"/>
+                    {% endfor %}
+            {% else %}
+                {% thumbnail object.image 400x300 crop as thumb %}
+                <img src="{{thumb.url}}" alt="{{object.name}} - {{photo}}"/>
+            {% endif %}
+        </div>
+        <div style="float:left;width:50%;margin:0px 0px 0px 30px;">
+            <strong> Descripción de la experiencia </strong>
+            <p>{{object.intro_last_exc}}</p>
+            <h5><strong>Duracion:</strong> {{object.duration}} </h5>
+            <h5><strong>Fecha:</strong> {{object.date}} </h5>
+        </div>
+        <div class="clear"></div>
+
+    </article>
+</div>
+{% endblock %}

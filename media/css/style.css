@@ -357,22 +357,6 @@ footer p {
     width:376px;
 }
 
-#last_exc {
-    height:250px;
-    background:#39465B;
-    width:630px;
-    margin:7px 0px 7px 7px;
-}
-
-#last_exc article {
-    background: #262626;
-    color:#F0F0F0;
-    float:left;
-    width:49%;
-    height:177px;
-    margin:3px;
-    
-}
 
 #news {
     height:407px;
@@ -491,10 +475,7 @@ h3#logo_lastexc {
 
 #last_exc img {
     padding:5px;
-    display: block;
-    width:295px;
-    height:110px;
-}
+    }
 
 #news img {
     height:100px;
@@ -505,11 +486,8 @@ h3 {
     
 }
 
-#thumbs_last_exc {
-    margin:2px;
-}
-
 #news a {
+
     font-family:"Avenir Next LT Pro", sans-serif;
     color:#FA9600;
     font-size:9pt;
@@ -1081,18 +1059,6 @@ table {
 }
 
 
-#thumbs_last_exc h3 {
-    margin:0px 0px 0px 5px;
-    padding:0px;
-    font-size:12pt;
-}
-
-#thumbs_last_exc p {
-    margin:0px 0px 0px 5px;
-    font-size:9pt;
-    padding:0px;
-}
-
 .current {
     background:#DDD4BE;
 }
@@ -1242,3 +1208,23 @@ table {
 .secondary_data {
     margin:5px 0px 0px 0px;
 }
+
+#last_exc {
+    height:250px;
+    background:#39465B;
+    width:630px;
+    margin:7px 0px 7px 7px;
+
+}
+#last_exc div {
+    position:absolute;
+}
+#last_exc article {
+    float:left;
+}
+
+#last_exc h4 {
+    margin:0px 0px 0px 5px;
+    padding:0px;
+}
+

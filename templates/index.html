@@ -101,9 +101,26 @@
             }
             carrusel_next_exc();
             
-            
             {% endblock %}            
-        });                        
+        });       
+        
+        $(window).load(function() {
+            //carrusel de fotos de Ultimas Excursiones
+            i=0;
+            last_exc = $("#last_exc article")
+            function carrusel_last_exc() {
+                i = i % last_exc.length;
+                $('#last_exc article').not(last_exc[i]).hide();
+                $(last_exc[i]).show();
+                i += 1;
+                window.setTimeout(carrusel_last_exc, 6000);
+            }
+            carrusel_last_exc();
+
+        });
+        
+    
+
   </script>
     <script type="text/javascript">
 
@@ -223,19 +240,33 @@
                     </div>
                     <div id="last_exc">
                         <h1 id="logo_lastexc"> Ultimas Excursiones </h1>
-                        <div id="thumbs_last_exc">
+                            
                             {% for object in recent_excurtions %}
-                            <article class="excurtion">
-                            {% thumbnail object.photopostexcurtion_set.all.0.photo 295x110 crop as thumb %}
-                            <a href="/lastexcurtion_detail/{{object.id}}">                                  
-                                <img src="{{thumb.url}}" alt="{{object.name}}" id="thumb-{{object.name|slugify}}" />
+                            
+                            {% if forloop.counter0 == 0 or forloop.counter0 == 2 or forloop.counter0 == 4 %}
+                            <article>
+                            
+                            {% endif %}
+                            
+                            {% thumbnail object.photopostexcurtion_set.all.0.photo 300x170 crop as thumb %}
+                            <a href="/lastexcurtion_detail/{{object.id}}">
+                                <img src="{{thumb.url}}" alt="{{object.name}}" id="thumb-{{object.name|slugify}}"/>
                             </a>
-                                <h3>{{object.name|truncatewords:5}}</h3>
-                                <p>{{object.intro_last_exc|truncatewords:10}}</p>
+
+                            
+                            {% if forloop.counter0 == 1 or forloop.counter0 == 3 or forloop.counter0 == 5 %}
                             </article>
-                            {% endfor %}
-                            <div class="clear"></div>
-                        </div>
+                            
+                            {% endif %}
+
+                            
+                            {% empty %}
+                                 <p> Ultimas Excursiones </p>
+                            
+                            
+                            {% endfor %}   
+                            
+                            
                     </div>
                 </div>
                 <div id="news" class="rightCol">
