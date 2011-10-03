@@ -51,17 +51,8 @@
             //vista de detalle de una Novedad
             $("#news a").click(function(){
                 var target = $(this).attr('href');
-                $.ajax({
-                    url: target,
-                    success: function(data){
-                        $(data).dialog({
-                            'modal':true,
-                            'draggable':false,
-                            'width':'600',
-                            'height':'550'
-                        });
-                     },
-                });
+                window.location = target;
+                
                 return false;
             });
             

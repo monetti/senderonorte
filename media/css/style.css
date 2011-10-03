@@ -1214,11 +1214,10 @@ table {
     background:#39465B;
     width:630px;
     margin:7px 0px 7px 7px;
+    overflow:hidden;
 
 }
-#last_exc div {
-    position:absolute;
-}
+
 #last_exc article {
     float:left;
 }
