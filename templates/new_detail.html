@@ -6,7 +6,7 @@ main-content
 {% endblock %}
 {% block content %}
 <div id="detail">
-    {% thumbnail photo.photo 500x300 crop as thumb %}
+    {% thumbnail object.photo 500x300 crop as thumb %}
     <img src="{{thumb.url}}" style="margin:10px 0px 0px 5px;"/>
     <h2>{{object.title}}</h2>
     <p>{{object.description}}</p>
