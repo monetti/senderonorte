@@ -1020,11 +1020,12 @@ table {
 
 #nosotros {
     height:525px;
+    padding:0px 0px 0px 50px;
 }
 
 .list {
     list-style:none;
-    margin:40px 0px 0px 100px;
+    margin:40px 0px 0px 110px;
 }
 
 .element {
@@ -1055,7 +1056,7 @@ table {
 #userphotos, #userlogos {
     text-align:center;
     float:left;
-    width:100%;
+
 }
 
 
@@ -1168,7 +1169,7 @@ table {
 
 .logos_list {
     list-style:none;    
-    margin:0px 120px 0px 120px;
+    margin:0px 0px 0px 50px;
 }
 
 .logo {
