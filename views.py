@@ -9,7 +9,6 @@ from customizedtravels.models import CustomizedTravel
 from educationtravels.models import EducationTravel
 from contacts.forms import ContactoForm
 from contacts.models import ContactGroup
-from gencal.templatetags.gencal import ListCalendar
 from datetime import datetime
 from activities.models import Activitie
 from userprofile.models import UserProfile, Logo
