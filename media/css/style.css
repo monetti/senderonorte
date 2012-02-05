@@ -22,6 +22,7 @@ hr {
 
 .logos {
     height:40px;
+    width:40px;
 }
 
 .cajalogored {
@@ -182,7 +183,7 @@ header {
 footer {
     height:164px;
     background:url("/media/img/footer2.png") no-repeat;
-    margin-top: -10px;
+    margin-top: -25px;
     position: relative;
     padding: 10px 10px 0;
 }
