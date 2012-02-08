@@ -56,6 +56,16 @@ main-content
         </div>
         
     {% endif %}
+    {% if type_object == "ctravel" %}
+        <div>
+            {% thumbnail photo.photo 500x300 crop as thumb %}
+            <img src="{{thumb.url}}"/>
+            <h2>{{object.name}}</h2>
+            <h3> Duracion </h3> <p>{{object.duration}}</p>
+            <h3> Descripcion </h3> <p> {{ object.summary }}</p>            
+        </div>
+                
+    {% endif %}
     </article>
 </div>
 {% endblock %}

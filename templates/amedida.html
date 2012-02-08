@@ -18,7 +18,12 @@ main-content
             {% for object in ctravels %}
                 <div class="article">
                      {% thumbnail object.photo 104x104 crop as thumb %}
-                     <a href="{{object.get_absolute_url}}" class="thumbnail"><img src="{{thumb.url}}"/></a>
+                     {% if thumb %}
+                        <a href="/excurtion_detail/{{object.id}}/ctravel" class="thumbnail"><img src="{{thumb.url}}"/></a>
+                     {% else %}
+                        <a href="/excurtion_detail/{{object.id}}/ctravel" ><img src="/media/img/no-image.png"/></a>
+                     {% endif %} 
+                     <p> {{ object.name }} </p>
                 </div>
                 {% if forloop.counter == 2 %}
                     <div class="clear"></div>

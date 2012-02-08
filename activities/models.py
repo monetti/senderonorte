@@ -9,6 +9,7 @@ class ActivitieRegion(models.Model):
     slug = models.SlugField(editable=False)
     name = models.CharField(_("Nombre"),max_length="200")
     description = models.TextField(_("Descripcion"),blank=True)
+
     def save(self):
         self.slug = slugify(self.name)
         super(ActivitieRegion, self).save()
@@ -25,7 +26,7 @@ class Activitie(models.Model):
     description = models.TextField(_("Descripcion"))
     region = models.ForeignKey('ActivitieRegion')
     duration = models.IntegerField(_("Duracion"),max_length="10")
-    photo = models.ImageField(_("Foto"),upload_to="./img/cimblings")
+    photo = models.ImageField(_("Foto"),upload_to="img/activities")
     publish_newsletter = models.BooleanField(_("Publicar en NewsLetter"), default=False,blank=True) 
 
     class Meta:

@@ -68,7 +68,9 @@ def excurtion_detail(request, tag=None,type_object=None):
     if type_object == "excurtion":
         obj = Excurtion.objects.get(pk=int(tag))
     elif type_object == "new":
-         obj = New.objects.get(pk=int(tag))
+        obj = New.objects.get(pk=int(tag))
+    elif type_object =="ctravel":
+        obj = CustomizedTravel.objects.get(pk=int(tag))        
     else:
         obj = {}
     
