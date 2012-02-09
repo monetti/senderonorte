@@ -75,6 +75,8 @@ def excurtion_detail(request, tag=None,type_object=None):
         obj = Cimbling.objects.get(pk=int(tag))
     elif type_object =="etravel":
         obj = EducationTravel.objects.get(pk=int(tag))   
+    elif type_object =="user":
+        obj = UserProfile.objects.get(pk=int(tag))
     else:
         obj = {}
     

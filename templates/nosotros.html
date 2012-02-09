@@ -22,14 +22,14 @@ De manera permanente nuestro staff de guías recibe capacitación en técnicas d
             <ul class="list">
             {% for object in staff %}
             <li class="element userphoto">
-                <a href="/excurtion_detail/{{object.user.id}}/user" id="{{object.user.id}}" >
+                <a href="/excurtion_detail/{{object.id}}/user" id="{{object.id}}" >
                 {% if object.photo %}
                     <img src="{{object.photo.url}}" />
                 {% else %}
                     <img src="/media/users/NoPicture.gif" />
                 {% endif %}          
                 </a>
-                <p> {{ object.user.first_name }} {{ object.user.last_name }} </p>
+                <p> {{ object.user.get_full_name }} </p>
             </li>    
             {% endfor %}    
             </ul>
