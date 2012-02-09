@@ -51,9 +51,9 @@ main-content
             {% thumbnail photo.photo 500x300 crop as thumb %}
             <img src="{{thumb.url}}"/>
             <h2>{{object.user.username}}</h2>
-            <h3> Nombre </h3> <p>{{object.user.first_name}}</p>
-            <h3> Apellido </h3> <p> {{ object.user.last_name }}</p>            
-            <h3> Quién soy </h3> <p> {{ object.description }}
+            <p> Nombre </p> <p>{{object.user.first_name}}</p>
+            <p> Apellido </p> <p> {{ object.user.last_name }}</p>            
+            <p> Quién soy </p> <p> {{ object.description }}</p>
         </div>
         
     {% endif %}
