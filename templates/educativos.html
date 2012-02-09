@@ -15,7 +15,11 @@ main-content
         {% for object in etravels %}
             <div class="article">
                 {% thumbnail object.photo 104x104 crop as thumb %}
-                <a href="{{object.get_absolute_url}}" class="thumbnail"><img src="{{thumb.url}}"/></a>
+                     {% if thumb %}
+                        <a href="/excurtion_detail/{{object.id}}/etravel" class="thumbnail"><img src="{{thumb.url}}"/></a>
+                     {% else %}
+                        <a href="/excurtion_detail/{{object.id}}/etravel" ><img src="/media/img/no-image.png"/></a>
+                     {% endif %} 
                 <div class="excurtion-data">
                     <h5> Nombre </h5>
                     <span> {{object.name|truncatewords:3}}</span>

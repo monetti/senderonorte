@@ -14,12 +14,16 @@ main-content
         <div class="thumbs-exc">
         {% for object in cimblings %}
             <div class="article">
-                     {% thumbnail object.photo 104x104 crop as thumb %}
-                     <a href="{{object.get_absolute_url}}" class="thumbnail"><img src="{{thumb.url}}"/></a>
+                 {% thumbnail object.photo 104x104 crop as thumb %}
+                 {% if thumb %}
+                    <a href="/excurtion_detail/{{object.id}}/cimbling" class="thumbnail"><img src="{{thumb.url}}"/></a>
+                 {% else %}
+                    <a href="/excurtion_detail/{{object.id}}/cimbling" ><img src="/media/img/no-image.png"/></a>
+                 {% endif %} 
+    
                 <div class="excurtion-data">
-                <h5> {{object.cimbling_type}} </h5>
+                    <h5> {{object.cimbling_type}} </h5>
                 </div>
-
             </div>
             {% if forloop.counter == 2 %}
                 <div class="clear"></div>
