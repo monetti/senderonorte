@@ -149,7 +149,7 @@
                     <a href="http://es-es.facebook.com/people/Sendero-Norte-Expediciones/100000508486427"><img class="logos" src="/media/img/logos/facebook.png" /></a>
                 </li>
                 <li class="cajalogored">
-                    <a href="http://www.youtube.com/user/SenderoNorteTurismo"><img class="logos" src ="/media/img/logos/YouTube.jpg" /></a>
+                    <a href="http://www.youtube.com/user/SenderoNorteTurismo"><img class="logos" src ="/media/img/logos/YouTube.png" /></a>
                 </li>
                 <li class="cajalogored">
                     <a href="http://twitter.com/senderonorteta"><img class="logos" src ="/media/img/logos/twitter.png" /></a>
@@ -177,30 +177,33 @@
         <div id="body" class="{% block body_class %}home{% endblock %}">
         {% block content %}
             <div id="main">
-                <div id="zonas" class="leftCol">
-                    <h1>Zonas</h1>
-                    <ul id="mapa">
-                        <li id="norte"><a href="/excurtions/tab-norte">Norte <span>Ampliar Region</span></a></li>
-                        <li id="cuyo"><a href="/excurtions/tab-cuyo">Cuyo <span>Ampliar Region</span></a></li>
-                        <li id="centro"><a href="/excurtions/tab-centro">Centro <span>Ampliar Region</span></a></li>
-                        <li id="litoral"><a href="#">Litoral <span>Ampliar Region</span></a></li>
-                        <li id="buenosaires"><a href="#">Buenos Aires <span>Ampliar Region</span></a></li>
-                        <li id="patagonia"><a href="/excurtions/tab-patagonia">Patagonia <span>Ampliar Region</span></a><li>                                                            
-                     </ul>
-                     <h3> Excursiones en el pais </h3> 
-                     <p> Haga click sobre las regiones para obtener informacion de las excursiones disponibles en cada una.</p>
 
-                </div>
-                <div id="news_exc" class="rightCol">
-                    <div id="header-new-exc">
-                        <div class="botonera">
-                            {% for object in incoming %}
-                            <a href="#{{object.name|slugify}}" class="curved">{{forloop.counter}}</a>
-                            {% endfor %}
+                <div id="box">
+                    <div id="news">    
+                        <h1 id="logo_news"></h1>
+                        {% for object in news %}
+                        <article class="{% cycle 'odd' 'even' %}">
+                            <div class="leftCol">
+                                <a href="/new_detail/{{object.id}}">
+                                    {% thumbnail object.image 100x100 crop as thumb %}
+                                    <img src="{{thumb.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
+                                </a>
+                            </div>
+                            <div class="rightCol">
+                                <h3>{{object.title|truncatewords:5}}</h3>
+                                <p>{{object.summary|truncatewords:9}}</p>
+                                <a href="/new_detail/{{object.id}}"> [Ver mas] </a>
+                            </div>
                             <div class="clear"></div>
-                        </div>
-                        <h1> Proximas Excursiones </h1>
+                        </article>
+                        {% endfor %}
+                    </div>	    
+                    <div id="rss">
+                        <h5> Suscríbete a nuestro canal de noticias. Haz click en el ícono. </h5>
+                        <a href="/next-excurtions/feed/"><img src="media/img/feed-icon-28x28.png" /></a>
                     </div>
+                </div>
+                <div id="news_exc">
 
                     {% for object in incoming %}
 
@@ -209,6 +212,15 @@
                         <a href="/excurtion_detail/{{object.id}}/excurtion" id="{{object.id}}" >
                             <img src="{{thumb.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
                         </a>
+                        <div id="header-new-exc">
+                            <div class="botonera">
+                                {% for object in incoming %}
+                                <a href="#{{object.name|slugify}}" class="curved">{{forloop.counter}}</a>
+                                {% endfor %}
+                                <div class="clear"></div>
+                            </div>
+                            <h1> Proximas Excursiones </h1>
+                        </div>
                         
                         <div class="description">
                             <h3>{{object.name}}</h3>
@@ -223,19 +235,36 @@
 
                     {% endfor %}
 
+
                     <div class="clear"></div>
                 </div>
                 <div class="clear"></div>
             </div>
-            <div id="secondary">
-                <div class="leftCol">
-                    <div id="ref_gig">
+            <div>
+                   <div id="ref_gig">
                         <a href="/refugios" id="ref_inf"><img src="/media/img/refugios/refugio-inf.png" /></a>    
                         <a href="/refugios" id="ref_sup"><img src="/media/img/refugios/refugio-sup.png" /></a>
                     </div>
+                    <div id="zonas">
+                        <h1>Zonas</h1>
+                        <ul id="mapa">
+                            <li id="norte"><a href="/excurtions/tab-norte">Norte <span>Ampliar Region</span></a></li>
+                            <li id="cuyo"><a href="/excurtions/tab-cuyo">Cuyo <span>Ampliar Region</span></a></li>
+                            <li id="centro"><a href="/excurtions/tab-centro">Centro <span>Ampliar Region</span></a></li>
+                            <li id="litoral"><a href="#">Litoral <span>Ampliar Region</span></a></li>
+                            <li id="buenosaires"><a href="#">Buenos Aires <span>Ampliar Region</span></a></li>
+                            <li id="patagonia"><a href="/excurtions/tab-patagonia">Patagonia <span>Ampliar Region</span></a></li>                                                            
+                         </ul>
+                         <h3> Excursiones en el pais </h3> 
+                         <p> Haga click sobre las regiones para obtener informacion de las excursiones disponibles en cada una.</p>
+
+                    </div>
+                    <div id="publicity_google">
+                    
+                    </div>
+
                     <div id="last_exc">
-                        <h1 id="logo_lastexc"> Ultimas Excursiones </h1>
-                            
+                    <h1 id="logo_lastexc"> Ultimas Excursiones </h1>
                             {% for object in recent_excurtions %}
                             
                             {% if forloop.counter0 == 0 or forloop.counter0 == 2 or forloop.counter0 == 4 %}
@@ -263,26 +292,7 @@
                             
                             
                     </div>
-                </div>
-                <div id="news" class="rightCol">
-                    <h1 id="logo_news"></h1>
-                    {% for object in news %}
-                    <article class="{% cycle 'odd' 'even' %}">
-                        <div class="leftCol">
-                            <a href="/new_detail/{{object.id}}">
-                                {% thumbnail object.image 100x100 crop as thumb %}
-                                <img src="{{thumb.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
-                            </a>
-                        </div>
-                        <div class="rightCol">
-                            <h3>{{object.title|truncatewords:5}}</h3>
-                            <p>{{object.summary|truncatewords:9}}</p>
-                            <a href="/new_detail/{{object.id}}"> [Ver mas] </a>
-                        </div>
-                        <div class="clear"></div>
-                    </article>
-                    {% endfor %}
-                </div>
+
                 <div class="clear"></div>
             </div>
 

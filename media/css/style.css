@@ -41,8 +41,6 @@ h1, h2 {
     font-family:'Avenir Next LT Pro', 'Arial', sans-serif;
     font-weight: normal;
     text-transform: uppercase;
-    margin:0 -10px;
-    padding: 0.5em;
     color: #FFF;
 }
 
@@ -206,6 +204,8 @@ li.last {
   border-right: 0;
 }
 
+
+
 footer li a {
     text-decoration:none;
     color:black;
@@ -223,36 +223,37 @@ footer p {
     left:0;
     
 }
+
+/* CAJA CON MAPA */
+
 #zonas {
     background: #FFF url(../img/mapa/fondomapa.jpg) repeat-x;
     background-position:center bottom;
-    padding: 0 10px;
-    width: 350px;
-    margin:7px;
-    height:549px;
+    width: 200px;
+    float:left;
 }
 #zonas h1 {
     color:#FFF;
     background:#F29400;
+    margin:0px;
 }
 
 #zonas h3 {
     color:#4B4D4D;
     font-size:12pt;
-    margin:23px 0px 0px 0px;
 }
 
 #zonas p {
     color:#4B4D4D;
-    margin:0px;
 }
+
 #mapa {
     list-style: none;
     position: relative;
     padding: 0;
-    height: 380px;
+    height: 370px;
     width: 200px;
-    margin: 15px 0px 0px 135px;
+    margin: 15px 0px 0px 9px;
 }
 #mapa li {
     position: absolute;
@@ -272,7 +273,7 @@ footer p {
     color: #FFF;
     padding: 5px;
     text-decoration: none;  
-    font-size:24px;
+    font-size:20px;
 }
 #mapa li:hover span {
     display: block;
@@ -281,6 +282,9 @@ footer p {
     padding: 5px;
     font-size: 12px;
 }
+
+/* estilos de regiones */
+
 #norte {
     background:url(../img/mapa/norte.png) no-repeat;
     height:101px;
@@ -348,74 +352,44 @@ footer p {
 #buenosaires:hover a {
     background: #99999A !important;
 }
-#main {
-    padding:10px;
-}
 
-#logo_zonas {
-    background: url(/media/img/zonas.jpg) no-repeat;
-    height:62px;
-    width:376px;
+#box {
+    float:left;
 }
-
 
 #news {
-    height:407px;
     background:white;
-    margin:0px 7px 0px 0px;
     width:300px;
-    
 }
 
 h1#logo_news {
     background:url(../img/novedades.jpg);
-    height:32px;
+    height:64px;
     margin:auto;
     width:auto;
 }
 
 h1#logo_lastexc {
     background:url(/media/img/ultimas-excursiones.jpg) no-repeat;
-    height:62px;
     text-indent: -9999px;
+    float:right;
+    height:62px;
+    width:633px;
     margin:0px;
-    padding:0px;
-
+    padding:1px 0px 1px 0px;
 }
+
 #news_exc h4 a {
     text-decoration:none;
     color:#F29400;
 }
 
-h3#logo_lastexc {
-    background:url(/media/img/ultimas-excursiones.jpg) no-repeat;
-    height:62px;
-    text-indent: -9999px;
-    margin:0;
-    padding:0;
-}
-
-#publicity {
-    margin:7px 0px 0px 10px;
-    width:930px;
-    background:#39465b;
-    height:65px;
-}
-
-#publicity h2 {
-    border:none;
-    font-size:25pt;
-    margin:0px 0px 0px 500px;
-    color:white !important; 
-}
-
 #news_exc {
     color: #FFF;
     background:#262626;
-    height:530px;
-    width:539px;
-    overflow:hidden;
-    margin:7px 7px 0px 0px;
+    width:633px;
+    padding:2px;
+    float:right;
 }
 
 #news_exc p {
@@ -428,9 +402,7 @@ h3#logo_lastexc {
     font-size:14pt;
 }
 #news_exc img {
-    padding:0px;
-    width:539px;
-    height:350px;
+    width:610px;
     border:0px;
     
 }
@@ -441,42 +413,28 @@ h3#logo_lastexc {
 }
 
 #header-new-exc {
-    position: absolute;
     text-decoration:none;
-    margin-top:350px;
-    width:537px;
+    width:620px;
 }
 
 #header-new-exc h1 {
-    margin:15px 8px 0px 0px;
-    padding:0px 0px 5px 0px;
     width:80%;
     border-bottom:1px solid #FFF;
 }
 
-#main, #secondary {
-    margin:0px;
-    padding:0px;
-        
-}
 
-#secondary .leftCol,
-#secondary .rightCol {
-    padding: 0;
-}
 #ref_gig {
     background-color:#344E5F;
-    height:150px;
-    margin:0px 0px 0px 7px;
+    height:auto;
+    width:633px;
+    padding:2px;
+    float:right;
 }
 
 #ref_sup {
     display:none; 
 }
 
-#last_exc img {
-    padding:5px;
-    }
 
 #news img {
     height:100px;
@@ -1212,20 +1170,22 @@ table {
 }
 
 #last_exc {
-    height:250px;
     background:#39465B;
-    width:630px;
-    margin:7px 0px 7px 7px;
-    overflow:hidden;
-
+    width:633px;
+    float:right;
+    margin:0px;
+    padding:2px;
 }
 
-#last_exc article {
+#rss {
     float:left;
+    width:300px;
 }
 
-#last_exc h4 {
-    margin:0px 0px 0px 5px;
-    padding:0px;
+#publicity_google {
+    width:107px;
+    float:left;
+    background:white;
+    height:240px;
+    margin:3px;
 }
-
