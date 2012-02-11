@@ -40,9 +40,9 @@ main-content
     {% if type_object == "new" %}
         <div>
             {% thumbnail photo.photo 500x300 crop as thumb %}
-            <img src="{{thumb.url}}"/>
+            <img src="{{thumb.url}}" />
             <h2>{{object.title}}</h2>
-            <h3 > Descripcion </h3> <p>{{object.description}}</p>
+            <p>{{object.description}}</p>
         </div>
      
     {% endif %}
@@ -72,7 +72,7 @@ main-content
             {% thumbnail photo.photo 500x300 crop as thumb %}
             <img src="{{thumb.url}}"/>
             <h2>{{object.cimbling_type}}</h2>
-            <h3> Descripcion </h3> <p>{{object.summary}}</p>
+            <p>{{object.summary}}</p>
         </div>
     {% endif %}
 

@@ -63,7 +63,7 @@ header {
 #nav{
     clear:right;
     float:right;
-    margin: 20px 22px 0;
+    margin: 4px 22px 0;
     padding:0;
     overflow:hidden;
     list-style:none;
@@ -229,13 +229,17 @@ footer p {
 #zonas {
     background: #FFF url(../img/mapa/fondomapa.jpg) repeat-x;
     background-position:center bottom;
-    width: 200px;
+    width: 290px;
     float:left;
+    margin:5px;
 }
-#zonas h1 {
+#zonas h2 {
     color:#FFF;
     background:#F29400;
     margin:0px;
+    padding:10px;   
+    font-size:18px;
+  
 }
 
 #zonas h3 {
@@ -360,6 +364,7 @@ footer p {
 #news {
     background:white;
     width:300px;
+    margin:5px;
 }
 
 h1#logo_news {
@@ -387,9 +392,9 @@ h1#logo_lastexc {
 #news_exc {
     color: #FFF;
     background:#262626;
-    width:633px;
-    padding:2px;
+    width:630px;
     float:right;
+    margin:5px;
 }
 
 #news_exc p {
@@ -404,22 +409,25 @@ h1#logo_lastexc {
 #news_exc img {
     width:610px;
     border:0px;
+    margin:10px 10px 0px 10px;
+    padding:0px;
     
 }
 
 #news_exc .description{
-    margin-top:5em;
-    padding:0px;
+    padding:0px 10px 10px 10px;
 }
 
 #header-new-exc {
     text-decoration:none;
     width:620px;
+    padding:0px 10px 0px 10px;
 }
 
 #header-new-exc h1 {
     width:80%;
     border-bottom:1px solid #FFF;
+    padding-bottom:10px;
 }
 
 
@@ -429,6 +437,7 @@ h1#logo_lastexc {
     width:633px;
     padding:2px;
     float:right;
+    margin:5px;
 }
 
 #ref_sup {
@@ -571,7 +580,7 @@ h3 {
 
 .botonera {
     color:black;
-    margin-top:23px;
+    margin:10px 15px 0px 10px;
     float:right;
 }
 
@@ -593,14 +602,23 @@ h3 {
 .odd {
     background-color:#FFF;
     height:112px;
-    padding: 0px;
+           
 }
 
 .even {
     background-color:#E2E2E2;
     height:112px;
-    padding: 0px;
+    
 }
+
+.odd1 {
+    background-color:white;
+}
+
+.even1 {
+    background-color:blue;
+}
+
 
 .clear {
     clear:both;
@@ -685,7 +703,7 @@ h3 {
     text-decoration:none;
 }
 
-h5 {
+h5, #twitter a {
     font-family:"Avenir Next LT Pro",sans-serif;
     margin:0px;
     font-size:10pt;
@@ -1173,19 +1191,54 @@ table {
     background:#39465B;
     width:633px;
     float:right;
-    margin:0px;
+    margin:5px;
     padding:2px;
 }
 
 #rss {
-    float:left;
-    width:300px;
+    float:right;
+    width:153px;
+    color:#C6C7C8;
+    font-size:12px;
 }
 
+
 #publicity_google {
-    width:107px;
+    width:93px;
     float:left;
     background:white;
     height:240px;
-    margin:3px;
+    margin:5px 0px 0px 0px;
+}
+
+#twitter {
+    width:300px;
+    margin:5px;
+
+}
+
+#twitter li {
+    border:0px solid;
+    list-style:none;
+    margin:0px;
+}
+
+#twitter a {
+    margin:10px 5px 0px;
+    font-size:20px;
+    text-decoration:none;
+    float:left;
+    width: 250px;
+    margin:16px 5px 0px;
+}
+
+#twitter img {
+    float:left;
+    margin:10px 0px 0px 0px;
+}
+
+
+.tweets {
+    float:left; 
+    margin:10px;
 }

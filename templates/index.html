@@ -154,8 +154,10 @@
                 <li class="cajalogored">
                     <a href="http://twitter.com/senderonorteta"><img class="logos" src ="/media/img/logos/twitter.png" /></a>
                 </li>
-
             </ul>
+            <div id="rss">
+                canal de noticias <a href="/next-excurtions/feed/" > <img src="/media/img/feed-icon-14x14.png" /> </a>
+           </div>
             <ul id="nav">
                 <li><a href="/us/">Nosotros<span></span> </a></li>
                 <li><a href="/excurtions/tab-norte">Actividades<span></span> </a>
@@ -184,7 +186,7 @@
                         {% for object in news %}
                         <article class="{% cycle 'odd' 'even' %}">
                             <div class="leftCol">
-                                <a href="/new_detail/{{object.id}}">
+                                <a href="/excurtion_detail/{{object.id}}/new">
                                     {% thumbnail object.image 100x100 crop as thumb %}
                                     <img src="{{thumb.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
                                 </a>
@@ -192,15 +194,24 @@
                             <div class="rightCol">
                                 <h3>{{object.title|truncatewords:5}}</h3>
                                 <p>{{object.summary|truncatewords:9}}</p>
-                                <a href="/new_detail/{{object.id}}"> [Ver mas] </a>
+                                <a href="/excurtion_detail/{{object.id}}/new"> [Ver mas] </a>
                             </div>
                             <div class="clear"></div>
                         </article>
                         {% endfor %}
                     </div>	    
-                    <div id="rss">
-                        <h5> Suscríbete a nuestro canal de noticias. Haz click en el ícono. </h5>
-                        <a href="/next-excurtions/feed/"><img src="media/img/feed-icon-28x28.png" /></a>
+                    <div id="twitter">
+                        <img class="logos" src ="/media/img/logos/twitter.png" />
+                        <a href="http://twitter.com/senderonorteta"> @senderonorteta</a>
+                        <ul class="tweets">
+                        {% for tweet in tweets %}
+                            <li class="cycle 'odd1' 'even1'">
+                                <h5> {{tweet.created_at}}</h5>
+                                <p>{{ tweet.text }}</p>
+
+                            </li>
+                        {% endfor %}
+                        </ul>    
                     </div>
                 </div>
                 <div id="news_exc">
@@ -246,7 +257,7 @@
                         <a href="/refugios" id="ref_sup"><img src="/media/img/refugios/refugio-sup.png" /></a>
                     </div>
                     <div id="zonas">
-                        <h1>Zonas</h1>
+                        <h2>zonas</h2>
                         <ul id="mapa">
                             <li id="norte"><a href="/excurtions/tab-norte">Norte <span>Ampliar Region</span></a></li>
                             <li id="cuyo"><a href="/excurtions/tab-cuyo">Cuyo <span>Ampliar Region</span></a></li>
@@ -258,9 +269,6 @@
                          <h3> Excursiones en el pais </h3> 
                          <p> Haga click sobre las regiones para obtener informacion de las excursiones disponibles en cada una.</p>
 
-                    </div>
-                    <div id="publicity_google">
-                    
                     </div>
 
                     <div id="last_exc">

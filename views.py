@@ -52,16 +52,16 @@ def activitie_detail(request,id):
         }
     )
 
-def new_detail(request,id):
-    obj = New.objects.get(pk=int(id))
-    
-    return simple.direct_to_template(
-        request,
-        'new_detail.html',
-        extra_context = {
-            'object':obj,
-        }
-    )
+#def new_detail(request,id):
+#    obj = New.objects.get(pk=int(id))
+#    
+#    return simple.direct_to_template(
+#        request,
+#        'new_detail.html',
+#        extra_context = {
+#            'object':obj,
+#        }
+#    )
 
 def excurtion_detail(request, tag=None,type_object=None):
     obj = {}

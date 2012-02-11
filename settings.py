@@ -103,7 +103,11 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.i18n',
     'django.core.context_processors.request',
+    'senderonorte.context_processors.latest_tweets',
 )
+
+TWITTER_USER = "@senderonorteta"
+TWITTER_TIMEOUT = 600
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -132,6 +136,4 @@ try :
     from local_settings import *
 except ImportError:
     pass
-    
-    
     

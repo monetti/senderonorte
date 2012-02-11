@@ -4,3 +4,4 @@ markdown
 PIL
 easy_thumbnails
 south
+twitter
