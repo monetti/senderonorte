@@ -173,7 +173,6 @@ header {
 
 #body {
     background:#7F7F7F;
-    padding-bottom: 20px;
     min-height: 30em;
 }
 
@@ -415,6 +414,7 @@ h1#logo_lastexc {
 }
 
 #news_exc .description{
+    display:none;
     padding:0px 10px 10px 10px;
 }
 
@@ -703,7 +703,7 @@ h3 {
     text-decoration:none;
 }
 
-h5, #twitter a {
+h5 {
     font-family:"Avenir Next LT Pro",sans-serif;
     margin:0px;
     font-size:10pt;
@@ -1211,34 +1211,17 @@ table {
     margin:5px 0px 0px 0px;
 }
 
-#twitter {
+#videos  {
     width:300px;
+    float:left;
     margin:5px;
+    position:absolute;
 
 }
 
-#twitter li {
-    border:0px solid;
-    list-style:none;
-    margin:0px;
-}
+#videos iframe {
+    width:300px;
 
-#twitter a {
-    margin:10px 5px 0px;
-    font-size:20px;
-    text-decoration:none;
-    float:left;
-    width: 250px;
-    margin:16px 5px 0px;
-}
-
-#twitter img {
-    float:left;
-    margin:10px 0px 0px 0px;
 }
 
 
-.tweets {
-    float:left; 
-    margin:10px;
-}

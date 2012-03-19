@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="/media/css/all-ie.css" />
     <![endif]-->
 
-
     <!--[if IE 6]>
     <link rel="stylesheet" type="text/css" href="ie-6.0.css" />
     <![endif]-->
@@ -88,7 +87,7 @@
                 $('#news_exc article').not(news_exc[i]).hide();
                 $(news_exc[i]).show();
                 i += 1;
-                window.setTimeout(carrusel_next_exc, 6000);
+                window.setTimeout(carrusel_next_exc, 4000);
             }
             carrusel_next_exc();
             
@@ -180,8 +179,43 @@
         {% block content %}
             <div id="main">
 
-                <div id="box">
-                    <div id="news">    
+                <div id="videos">
+                {% if list_videos %}
+                    {% for l in list_videos %}
+                        <!-- link passed to embed code, this shows up as blank -->
+                        <iframe src="{{ l.link }}?rel=0" frameborder="0" allowfullscreen></iframe>
+                    {% endfor %}
+                {% else %}
+                    <p> No hay videos disponibles </p>
+                {% endif %}
+                </div>
+                <div id="news_exc">
+
+                    {% for object in incoming %}
+
+                    <article id="{{object.name|slugify}}" class="object excurtion">
+                        {% thumbnail object.photopostexcurtion_set.all.0.photo 540x340 crop as thumb %}
+                        <a href="/excurtion_detail/{{object.id}}/excurtion" id="{{object.id}}" >
+                            <img src="{{thumb.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
+                        </a>
+                        <div id="header-new-exc">
+                            <div class="botonera">
+                                {% for object in incoming %}
+                                <a href="#{{object.name|slugify}}" class="curved">{{forloop.counter}}</a>
+                                {% endfor %}
+                                <div class="clear"></div>
+                            </div>
+                            <h1> Próximas Excursiones </h1>
+                        </div>
+                        
+                    </article>
+
+                    {% endfor %}
+
+
+                    <div class="clear"></div>
+                </div>
+                                    <div id="news">    
                         <h1 id="logo_news"></h1>
                         {% for object in news %}
                         <article class="{% cycle 'odd' 'even' %}">
@@ -200,57 +234,9 @@
                         </article>
                         {% endfor %}
                     </div>	    
-                    <div id="twitter">
-                        <img class="logos" src ="/media/img/logos/twitter.png" />
-                        <a href="http://twitter.com/senderonorteta"> @senderonorteta</a>
-                        <ul class="tweets">
-                        {% for tweet in tweets %}
-                            <li class="cycle 'odd1' 'even1'">
-                                <h5> {{tweet.created_at}}</h5>
-                                <p>{{ tweet.text }}</p>
-
-                            </li>
-                        {% endfor %}
-                        </ul>    
-                    </div>
-                </div>
-                <div id="news_exc">
-
-                    {% for object in incoming %}
-
-                    <article id="{{object.name|slugify}}" class="object excurtion">
-                        {% thumbnail object.photopostexcurtion_set.all.0.photo 540x340 crop as thumb %}
-                        <a href="/excurtion_detail/{{object.id}}/excurtion" id="{{object.id}}" >
-                            <img src="{{thumb.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
-                        </a>
-                        <div id="header-new-exc">
-                            <div class="botonera">
-                                {% for object in incoming %}
-                                <a href="#{{object.name|slugify}}" class="curved">{{forloop.counter}}</a>
-                                {% endfor %}
-                                <div class="clear"></div>
-                            </div>
-                            <h1> Proximas Excursiones </h1>
-                        </div>
-                        
-                        <div class="description">
-                            <h3>{{object.name}}</h3>
-                            <p>{{object.description|truncatewords:20}}</p>
-                            <div class="secondary_data">
-                                <p><strong>Fecha de salida: </strong>{{object.date }}</p>
-                                <p><strong>Lugar: </strong>{{ object.place }} </p>
-                                <p><strong>Horario: </strong> {{ object.time }}</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    {% endfor %}
 
 
-                    <div class="clear"></div>
-                </div>
-                <div class="clear"></div>
-            </div>
+
             <div>
                    <div id="ref_gig">
                         <a href="/refugios" id="ref_inf"><img src="/media/img/refugios/refugio-inf.png" /></a>    
