@@ -63,7 +63,7 @@ header {
 #nav{
     clear:right;
     float:right;
-    margin: 4px 22px 0;
+    margin: 9px 47px 0;
     padding:0;
     overflow:hidden;
     list-style:none;
@@ -81,26 +81,22 @@ header {
     text-decoration: none;
     position: relative;
     font-family:"Avenir Next LT Pro", sans-serif;
-
 }
+
 #nav a:hover {
     background:#F29400;
 }
-
-
 
 #nav li:hover {
     background:#F29400;
 
 }
 
-
 #nav span {
     background: url('../img/flecha.png');
     border-right: 1px solid #FEFEFE;
-    width: 20px;
     height: 1em;
-    right: 1px;
+    margin: 3px 1px 0px 20px;
     position: absolute;
 }
 
@@ -228,10 +224,10 @@ footer p {
 #zonas {
     background: #FFF url(../img/mapa/fondomapa.jpg) repeat-x;
     background-position:center bottom;
-    width: 290px;
-    float:left;
-    margin:5px;
+    width: 300px;
+    margin:5px 0px 0px 0px;
 }
+
 #zonas h2 {
     color:#FFF;
     background:#F29400;
@@ -362,14 +358,12 @@ footer p {
 
 #news {
     background:white;
-    width:300px;
-    margin:5px;
+    height:300px;
 }
 
 h1#logo_news {
-    background:url(../img/novedades.jpg);
+    background:url(../img/novedades.jpg) repeat-y;
     height:64px;
-    margin:auto;
     width:auto;
 }
 
@@ -391,8 +385,8 @@ h1#logo_lastexc {
 #news_exc {
     color: #FFF;
     background:#262626;
-    width:630px;
-    float:right;
+    width:620px;
+    float:left;
     margin:5px;
 }
 
@@ -980,10 +974,6 @@ table {
     padding:7px 0px 0px 10px;
 }
 
-#news article {
-    height:115px;
-}
-
 #logo-nosotros {
     margin:auto
 }
@@ -1211,17 +1201,6 @@ table {
     margin:5px 0px 0px 0px;
 }
 
-#videos  {
-    width:300px;
-    float:left;
-    margin:5px;
-    position:absolute;
 
-}
-
-#videos iframe {
-    width:300px;
-
-}
 
 

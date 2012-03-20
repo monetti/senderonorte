@@ -108,11 +108,9 @@
             carrusel_last_exc();
 
         });
-        
-    
-
   </script>
-    <script type="text/javascript">
+
+  <script type="text/javascript">
 
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-25981536-1']);
@@ -178,7 +176,7 @@
         <div id="body" class="{% block body_class %}home{% endblock %}">
         {% block content %}
             <div id="main">
-
+                <div class="leftCol">
                 <div id="videos">
                 {% if list_videos %}
                     {% for l in list_videos %}
@@ -189,7 +187,43 @@
                     <p> No hay videos disponibles </p>
                 {% endif %}
                 </div>
-                <div id="news_exc">
+                
+                <div id="news">    
+                        <h1 id="logo_news"></h1>
+                        {% for object in news %}
+                        <article>
+                            <div class="leftCol">
+                                <a href="/excurtion_detail/{{object.id}}/new">
+                                    {% thumbnail object.image 100x100 crop as thumb %}
+                                    <img src="{{thumb.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
+                                </a>
+                            </div>
+                            <div class="rightCol">
+                                <h3>{{object.title|truncatewords:5}}</h3>
+                                <p>{{object.summary|truncatewords:9}}</p>
+                                <a href="/excurtion_detail/{{object.id}}/new"> [Ver mas] </a>
+                            </div>
+                            <div class="clear"></div>
+                        </article>
+                        {% endfor %}
+                    </div>	    
+
+    <div id="zonas">
+                        <h2>zonas</h2>
+                        <ul id="mapa">
+                            <li id="norte"><a href="/excurtions/tab-norte">Norte <span>Ampliar Region</span></a></li>
+                            <li id="cuyo"><a href="/excurtions/tab-cuyo">Cuyo <span>Ampliar Region</span></a></li>
+                            <li id="centro"><a href="/excurtions/tab-centro">Centro <span>Ampliar Region</span></a></li>
+                            <li id="litoral"><a href="#">Litoral <span>Ampliar Region</span></a></li>
+                            <li id="buenosaires"><a href="#">Buenos Aires <span>Ampliar Region</span></a></li>
+                            <li id="patagonia"><a href="/excurtions/tab-patagonia">Patagonia <span>Ampliar Region</span></a></li>                                                            
+                         </ul>
+                         <h3> Excursiones en el pais </h3> 
+                         <p> Haga click sobre las regiones para obtener informacion de las excursiones disponibles en cada una.</p>
+
+                    </div>
+            </div>
+<div id="news_exc">
 
                     {% for object in incoming %}
 
@@ -215,47 +249,13 @@
 
                     <div class="clear"></div>
                 </div>
-                                    <div id="news">    
-                        <h1 id="logo_news"></h1>
-                        {% for object in news %}
-                        <article class="{% cycle 'odd' 'even' %}">
-                            <div class="leftCol">
-                                <a href="/excurtion_detail/{{object.id}}/new">
-                                    {% thumbnail object.image 100x100 crop as thumb %}
-                                    <img src="{{thumb.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
-                                </a>
-                            </div>
-                            <div class="rightCol">
-                                <h3>{{object.title|truncatewords:5}}</h3>
-                                <p>{{object.summary|truncatewords:9}}</p>
-                                <a href="/excurtion_detail/{{object.id}}/new"> [Ver mas] </a>
-                            </div>
-                            <div class="clear"></div>
-                        </article>
-                        {% endfor %}
-                    </div>	    
-
-
 
             <div>
                    <div id="ref_gig">
                         <a href="/refugios" id="ref_inf"><img src="/media/img/refugios/refugio-inf.png" /></a>    
                         <a href="/refugios" id="ref_sup"><img src="/media/img/refugios/refugio-sup.png" /></a>
                     </div>
-                    <div id="zonas">
-                        <h2>zonas</h2>
-                        <ul id="mapa">
-                            <li id="norte"><a href="/excurtions/tab-norte">Norte <span>Ampliar Region</span></a></li>
-                            <li id="cuyo"><a href="/excurtions/tab-cuyo">Cuyo <span>Ampliar Region</span></a></li>
-                            <li id="centro"><a href="/excurtions/tab-centro">Centro <span>Ampliar Region</span></a></li>
-                            <li id="litoral"><a href="#">Litoral <span>Ampliar Region</span></a></li>
-                            <li id="buenosaires"><a href="#">Buenos Aires <span>Ampliar Region</span></a></li>
-                            <li id="patagonia"><a href="/excurtions/tab-patagonia">Patagonia <span>Ampliar Region</span></a></li>                                                            
-                         </ul>
-                         <h3> Excursiones en el pais </h3> 
-                         <p> Haga click sobre las regiones para obtener informacion de las excursiones disponibles en cada una.</p>
-
-                    </div>
+                
 
                     <div id="last_exc">
                     <h1 id="logo_lastexc"> Ultimas Excursiones </h1>
