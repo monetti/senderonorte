@@ -9,7 +9,7 @@ body {
     margin:auto;
     font: 12px Helvetica, sans-serif;
     width:960px;
-    background:#7F7F7F;
+    
     height:1200px;
 }
 
@@ -356,11 +356,8 @@ h1#logo_news {
 h1#logo_lastexc {
     background:url(/media/img/ultimas-excursiones.jpg) no-repeat;
     text-indent: -9999px;
-    float:right;
-    height:62px;
-    width:633px;
+        height:62px;
     margin:0px;
-    padding:1px 0px 1px 0px;
 }
 
 #news_exc h4 a {
@@ -372,7 +369,7 @@ h1#logo_lastexc {
     color: #FFF;
     background:#262626;
     height:500px;
-    margin-top:65px;
+    margin:65px 10px 0px 0px;
 }
 
 #news_exc p {
@@ -407,8 +404,13 @@ h1#logo_lastexc {
 
 #ref_gig {
     background-color:#344E5F;
-    margin-top:10px; 
+    margin:10px 10px 0px 0px; 
 }
+
+#ref_gig a img {
+    width:620px;
+}
+
 
 #ref_sup {
     display:none; 
@@ -1158,7 +1160,7 @@ table {
 #last_exc {
     background:#39465B;
     padding:2px;
-    margin-top:10px;
+    margin:10px 10px 0px 0px;
     height:263px;
     
 }
@@ -1208,3 +1210,8 @@ table {
     background:orange;
     position:absolute;
     font-size:22pt;
+}
+
+#wrapper_body {
+ background:#7F7F7F;   
+}
