@@ -1,17 +1,32 @@
 {% extends 'index.html' %}
 {% load thumbnail markup %}
+{% block javascript %}
+	    $(window).load(function() {
+	    //carrusel de fotos
+            var imgs = $("#logo-etravel img");
+            t = 0;
+            function carrusel_educativos() {
+                t = t % imgs.length;
+                imgs.not(imgs[t]).hide();
+                $(imgs[t]).show();
+                t += 1;
+                window.setTimeout(carrusel_educativos, 4000);
+            }
+            carrusel_educativos();
+	    });
+{% endblock %}
 {% block title %} Viajes Educativos {% endblock %}
 {% block body_class %}
 main-content
 {% endblock %}
 {% block content %}
-    <div id="logo-etravel" class="banners">
+    <div id="logo-etravel">
        <img src="/media/img/educativos/educativos01.jpg" /> 
        <img src="/media/img/educativos/educativos02.jpg" />
        <img src="/media/img/educativos/educativos03.jpg" />
     </div> 
-    <div id="etravel" class="content-tab">
-        <div class="thumbs-exc">
+    <div id="etravel">
+        <div id="col_1">
         {% for object in etravels %}
             <div class="article">
                 {% thumbnail object.photo 104x104 crop as thumb %}
@@ -36,7 +51,7 @@ main-content
             {% endif %}
         {% endfor %}
         </div>
-        <div class="desc-region">
+        <div id="col_2">
             <h2> Viajes Educativos </h2>
             <p> Bajo el lema "Educando en Ambientes Naturales" ofrecemos destinos acordes a las distintas necesidades manteniendo un estricto nivel de seguridad, orden y motivación para docentes y alumnos. </p>
             <p> Proponiendo el contacto con la naturaleza mediante la observación y actividades interpretativas, y con el objecto de concientizar en temáticas concernientes a problemas ambientales, flora, fauna y otros. Desarrollamos salidas incluyendo contenidos curriculares de distintos niveles de enseñanza. </p>

@@ -1,24 +1,38 @@
 
 {% extends 'index.html' %}
 {% block title %} Nosotros {% endblock %}
+{% block javascript %}
+	    $(window).load(function() {
+	    //carrusel de fotos
+            var imgs = $("#logo-nosotros img");
+            t = 0;
+            function carrusel_nosotros() {
+                t = t % imgs.length;
+                $('#logo-nosotros img').not(imgs[t]).hide();
+                $(imgs[t]).show();
+                t += 1;
+                window.setTimeout(carrusel_nosotros, 4000);
+            }
+            carrusel_nosotros();
+	    });
+{% endblock %}
 {% block body_class %}
 main-content
 {% endblock %}
 {% block content %}
-    <div id="logo-nosotros" class="banners">
+    <div id="logo-nosotros">
        <img src="/media/img/nosotros/nosotros01.jpg" /> 
        <img src="/media/img/nosotros/nosotros02.jpg" /> 
        <img src="/media/img/nosotros/nosotros03.jpg" /> 
     </div> 
-    <div id="nosotros" class="content-tab">
-        <div class="desc-region">
-            <h2> Nosotros </h2>
+    <div id="nosotros">
+	<h2> Nosotros </h2>
             <p>Somos una empresa de jóvenes profesionales dedicados al diseño, planificación y desarrollo de viajes en ambientes naturales.
 Nuestras actividades se desarrollan en diferentes regiones  del país y tienen por filosofía una relación cercana con la naturaleza.
 De manera permanente nuestro staff de guías recibe capacitación en técnicas de bajo impacto ambiental, primeros auxilios y rescates en zonas agrestes, orientación e interpretación ambiental.</p>
             <p>Nuestros guías están habilitados por la Administración de Parques Nacionales y se encuentran inscriptos en el Registro de Prestadores de Turismo Alternativo de la Provincia de Córdoba.</p>
-        </div>
-        <div id="userphotos">
+     </div>
+     <div id="userphotos">
             <ul class="list">
             {% for object in staff %}
             <li class="element userphoto">
@@ -35,9 +49,9 @@ De manera permanente nuestro staff de guías recibe capacitación en técnicas d
             </ul>
         </div>
         <div id="userlogos">
-        <ul class="logos_list">
+        <ul class="list">
             {% for object in logos %}
-            <li class='logo'>
+            <li class='element logo'>
                 <a href="{{object.url}}" id="{{object.id}}" >
                     <img src="{{object.photo.url}}" />
                 </a>

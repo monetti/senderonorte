@@ -43,7 +43,7 @@ hr {
 }
 
 h1, h2 {
-    font-family:'Avenir Next LT Pro', 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif;
     font-weight: normal;
     text-transform: uppercase;
     color: #FFF;
@@ -53,11 +53,6 @@ h1 {
     font-size: 30px;
 }
 
-h2 {
-    font-size: 24px;
-    color: #656567 !important;
-    border-bottom: 1px solid #EBEBEB;
-}
 header {
     position: relative;
     height:184px;
@@ -167,23 +162,24 @@ footer {
 
 footer ul {
     list-style:none;
-    overflow: hidden;
-    padding:0;
-    margin: 60px 0 0 188px;
+    position:absolute;
+    top:58px;
+    left:191px;
 }
+
 footer li {
     display:inline;
     padding:0 10px;
     border-right: 1px solid #333;
 }
+
 li.first {
     padding-left:0;
 }
+
 li.last {
   border-right: 0;
 }
-
-
 
 footer li a {
     text-decoration:none;
@@ -192,9 +188,10 @@ footer li a {
 }
 
 footer p {
-    margin:30px 0 0 288px;
+    position:absolute;
+    left:285px;
+    bottom:15px;
 }
-
 
 #caminante {
     position: absolute;
@@ -382,11 +379,11 @@ h1#logo_lastexc {
     font-size:14pt;
 }
 #news_exc img {
-    width:auto;
+    width:607px;
+    height:445px;
     border:0px;
     margin:10px 10px 0px 10px;
     padding:0px;
-    
 }
 
 #header-new-exc {
@@ -461,16 +458,6 @@ h3 {
     height:200px;
 }
 
-#logo-etravel {
-    margin:auto;
-}
-
-#logo-etravel img {
-    height:200px;
-    display:none;
-    width:950px;
-    height:200px;
-}
 
 #logo-ctravel {
     margin:auto;
@@ -664,7 +651,6 @@ h3 {
 }
 
 .article {
-    margin:0px;
     float:left
 }
 
@@ -680,20 +666,6 @@ h5 {
     text-transform:uppercase;
 }
 
-.desc-region {
-    float:left;
-    text-align:left;
-    width:30%;
-    margin:15px 0px 0px 0px;
-}
-
-.thumbs-exc {
-    float:left;   
-    text-align:left;
-    width:65%;
-    margin:50px 20px 0px 15px;
-}
-
 .thumbs-exc .article {
     margin:40px 0px 0px;
     width:50%;
@@ -702,8 +674,7 @@ h5 {
     float:left;
 }
 .excurtion-data {
-    float: left;
-    margin: 0 10px;
+    margin: 0 0 0 10px;
 }
 .logo-region {
     margin:auto;
@@ -889,15 +860,11 @@ table {
     margin:30px;
 }
 
-#etravel .desc-region {
-    margin:auto;
-}
-
-#cimblings .desc-region, #etravel .desc-region, #travels .desc-region {
+#cimblings .desc-region, #travels .desc-region {
     margin:70px 0px;
 }
 
-#cimblings, #etravel, #travels {
+#cimblings,#travels {
     padding:0px 0px 40px 0px;
 }
 
@@ -943,7 +910,6 @@ table {
     padding:0px;
 }
 
-
 #news .rightCol {
     width:60%;
     padding:7px 0px 0px 0px;
@@ -954,58 +920,77 @@ table {
     padding:7px 0px 0px 10px;
 }
 
-#logo-nosotros {
-    margin:auto
+#etravel #col_1 {
+  width:60%;
+  margin:30px 0px 0px 5px;
 }
 
-#logo-nosotros img {
+#etravel #col_2 {
+  width:35%;
+  margin:5px 29px 15px 15px;
+}
+
+#etravel h2 {
+  font-size:28pt;
+}
+
+#etravel p {
+  font-size:13pt;
+}
+
+#etravel .article {
+  margin:20px 0px 15px 100px;
+  
+}
+
+#etravel a img {
+  padding:10px;
+  
+}
+
+#logo-nosotros img,#logo-etravel img {
     display:none;
-    width:950px;
+    width:100%;
     height:200px;
+    margin:auto;
 }
-
 
 #nosotros {
-    height:525px;
-    padding:0px 0px 0px 50px;
+  width:940px;
+  margin:auto;
+    
 }
 
+#nosotros h2 {
+  font-size:28pt;
+  color:white !important; 
+  margin:25px 0px 10px 10px;
+  font-weight:bold;
+  
+}
+
+#nosotros p {
+  font-size:17px;
+  color:#3d3939 !important; 
+  margin:25px 25px 5px 25px;
+}
 .list {
     list-style:none;
-    margin:40px 0px 0px 110px;
+    margin:40px 0px 0px 120px;
 }
 
 .element {
     float:left;
-    margin:20px 25px 25px 0px;
-}
-
-.userphoto img {
-    width:100px;
-    height:100px;
-}
-
-.userlogo img {
-    width:30px;
-    height:30px;
-}
-
-#nosotros .desc-region {
-    margin:auto;
-    width:90%;
-}
-
-#nosotros .desc-region h2 {
-    padding:0px 0px 15px 0px;
-    margin:25px 0px 0px 0px;
+    width:200px;
 }
 
 #userphotos, #userlogos {
     text-align:center;
-    float:left;
-
+    width:100%;
+    height:100px;
+    margin-top:70px;
+    
 }
-
 
 .current {
     background:#DDD4BE;
@@ -1076,8 +1061,6 @@ table {
     padding:0px;
 }
 
-
-
 #refugios .rightCol {
     padding:0px;
 }
@@ -1114,19 +1097,9 @@ table {
     margin-left:8px;
 }
 
-.logos_list {
-    list-style:none;    
-    margin:0px 0px 0px 50px;
-}
-
 .logo {
     float:left;
-    text-align:center;
-}
-
-.logos_list img {
-    margin:25px ;
-    width:65px;
+    width:100px;  
 }
 
 #detail .leftCol {
@@ -1166,7 +1139,9 @@ table {
 }
 
 #rss {
-    float:right;
+    position:absolute;
+    right:3px;
+    top:111px;
     width:153px;
     color:#C6C7C8;
     font-size:12px;
@@ -1213,5 +1188,10 @@ table {
 }
 
 #wrapper_body {
- background:#7F7F7F;   
+    background:#7F7F7F;   
+}
+
+#rss a img {
+    padding:0px;
+  
 }

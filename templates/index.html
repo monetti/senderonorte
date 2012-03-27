@@ -90,11 +90,8 @@
                 window.setTimeout(carrusel_next_exc, 4000);
             }
             carrusel_next_exc();
-            
-            {% endblock %}            
-        });       
-        
-        $(window).load(function() {
+
+	    $(window).load(function() {
             //carrusel de fotos de Ultimas Excursiones
             i=0;
             last_exc = $("#last_exc article")
@@ -107,7 +104,12 @@
             }
             carrusel_last_exc();
 
-        });
+	    });
+            
+            {% endblock %}            
+        });       
+        
+        
   </script>
 
   <script type="text/javascript">
