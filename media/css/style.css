@@ -365,8 +365,8 @@ h1#logo_lastexc {
 #news_exc {
     color: #FFF;
     background:#262626;
-    height:500px;
-    margin:65px 10px 0px 0px;
+    height:570px;
+    margin:10px 10px 0px 0px;
 }
 
 #news_exc p {
@@ -380,24 +380,17 @@ h1#logo_lastexc {
 }
 #news_exc img {
     width:607px;
-    height:445px;
+    height:475px;
     border:0px;
-    margin:10px 10px 0px 10px;
+    margin:5px 10px 0px 10px;
     padding:0px;
 }
 
 #header-new-exc {
     text-decoration:none;
-    width:620px;
-    padding:0px 10px 0px 10px;
+    text-align:center;
+    margin:15px 0px 0px 0px;
 }
-
-#header-new-exc h1 {
-    width:80%;
-    border-bottom:1px solid #FFF;
-    padding-bottom:10px;
-}
-
 
 #ref_gig {
     background-color:#344E5F;
@@ -512,19 +505,9 @@ h3 {
     padding-top:20px;
 }
 
-.botonera {
-    color:black;
-    margin:10px 15px 0px 10px;
-    float:right;
-}
-
 .botonera a {
-    width:13px;
-    height:12px;
-    text-align:center;
-    font-size:7pt;
+    padding:2px 5px;   
     background-color: white;
-    padding:3px;
     text-decoration:none;
 
 }
@@ -793,6 +776,11 @@ form .leftCol {
 
 #feed p {
     font-size:8pt;
+}
+
+#main {
+  height:500px;
+  
 }
 
 #body.main-content {
@@ -1142,11 +1130,10 @@ table {
 }
 
 #title_next_exc {
-    padding:10px 10px 0px 10px;
-    margin-top:11px;
-    height:45px;
-    background:orange;
-    position:absolute;
+    
+    margin:0px 0px 0px 5px;
+    padding:5px;
+    
     font-size:22pt;
 }
 
@@ -1219,5 +1206,12 @@ table {
   position:absolute;
   top:45px;
   right:0px;
+  
+}
+
+#likebox {
+  background:#333;
+  width:300px;
+  margin:10px;
   
 }

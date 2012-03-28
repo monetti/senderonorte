@@ -176,6 +176,14 @@
         </header>
 
         {% block content %}
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		    js = d.createElement(s); js.id = id;
+		    js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1";
+		    fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
                 <div id="col_1">
                     <div id="videos">
                     {% if list_videos %}
@@ -207,25 +215,15 @@
                     </article>
                     {% endfor %}
                 </div>	    
-
-                <div id="zonas">
-                    <h2>zonas</h2>
-                    <ul id="mapa">
-                        <li id="norte"><a href="/excurtions/tab-norte">Norte <span>Ampliar Region</span></a></li>
-                        <li id="cuyo"><a href="/excurtions/tab-cuyo">Cuyo <span>Ampliar Region</span></a></li>
-                        <li id="centro"><a href="/excurtions/tab-centro">Centro <span>Ampliar Region</span></a></li>
-                        <li id="litoral"><a href="#">Litoral <span>Ampliar Region</span></a></li>
-                        <li id="buenosaires"><a href="#">Buenos Aires <span>Ampliar Region</span></a></li>
-                        <li id="patagonia"><a href="/excurtions/tab-patagonia">Patagonia <span>Ampliar Region</span></a></li>                                                            
-                    </ul>
-                    <h3> Excursiones en el pais </h3> 
-                     <p> Haga click sobre las regiones para obtener informacion de las excursiones disponibles en cada una.</p>
-                </div>
+		<div id="likebox">
+		<div class="fb-like-box" data-href="http://www.facebook.com/pages/Sendero-Norte-Expediciones/282089105172734" data-width="302" data-colorscheme="dark" data-show-faces="true" data-stream="true" data-header="false"></div>
+		</div>
+                
             </div>
     <div id="col_2">
-    <h1 id="title_next_exc"> Próximas Excursiones </h1>
+    
     <div id="news_exc">
-                                
+    <h1 id="title_next_exc"> Próximas Excursiones </h1>                            
                     {% for object in incoming %}
 
 
