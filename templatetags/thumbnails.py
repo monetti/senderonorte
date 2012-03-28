@@ -28,5 +28,6 @@ def thumbnail(file, size='104x104'):
 
     return miniature_url
 
+
 register.filter(thumbnail)
 

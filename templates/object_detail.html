@@ -1,11 +1,23 @@
 {% extends 'index.html' %}
-{% load thumbnail %}
+{% load thumbnail qr_tags %}
 {% block title %}Detalle{% endblock %}
 {% block javascript %}
     $('.slider').nivoSlider({
                 effect: 'fade',
                 controlNav:false
     });
+
+  
+    $('.link_qrcode').click(
+      function(){
+        var target = $(this).attr('href');
+	$(target).animate({
+               height: 'toggle'
+               }, 1000
+          );
+	return false;
+      }
+    )
     
 {% endblock %}
 {% block body_class %}
@@ -13,8 +25,7 @@ main-content
 {% endblock %}
 {% block content %}
 <div id="detail">
-    <article id="{{object.name|slugify}}" class="object_detail">
-    {% if type_object == "excurtion" %}
+   {% if type_object == "excurtion" %}
         <h1 class="name_excurtion">{{object.name}}</h1>
         <div class="slider leftCol">
             {% if object.photopostexcurtion_set.all %}
@@ -58,24 +69,37 @@ main-content
         
     {% endif %}
     {% if type_object == "ctravel" or type_object == "etravel" %}
-        <div>
-            {% thumbnail photo.photo 500x300 crop as thumb %}
-            <img src="{{thumb.url}}"/>
+        {% thumbnail object.photo 104x104 crop as thumb %}
+	    
+	<div id="col_1" class="detail_description">
             <h2>{{object.name}}</h2>
-            <h3> Duracion </h3> <p>{{object.duration}}</p>
-            <h3> Descripcion </h3> <p> {{ object.summary }}</p>            
-        </div>
-                
+            <p><strong>Duración:</strong> {{object.duration}}</p>
+            <p><strong>Descripción:</strong> {{ object.summary }}</p>            
+	</div>
+	<div id="col_2" class="detail_image">
+	    {% if thumb %}
+		<img src="{{thumb.url}}"/>
+	    {% else %}
+		<img src="/media/img/no-image.png"/>
+	    {% endif %}
+	</div>
+	<div class="clear"></div>	
     {% endif %}
     {% if type_object == "cimbling" %}
-        <div>
-            {% thumbnail photo.photo 500x300 crop as thumb %}
-            <img src="{{thumb.url}}"/>
-            <h2>{{object.cimbling_type}}</h2>
+          {% thumbnail photo.photo 500x300 crop as thumb %}
+	  <div id="col_1" class="detail_description">
+            <h2>{{object.cimbling_type}}</h2><a href="#qrcode" class="link_qrcode">ver qrcode</a>
             <p>{{object.summary}}</p>
-        </div>
+	    <div id="qrcode">{% qr_from_text object.summary "s" %}</div>
+	  </div>
+	  <div id="col_2" class="detail_image">
+	    {% if thumb %}
+		<img src="{{thumb.url}}"/>
+	    {% else %}
+		<img src="/media/img/no-image.png"/>
+	    {% endif %}
+	</div>
+	<div class="clear"></div>	
     {% endif %}
-
-    </article>
 </div>
 {% endblock %}

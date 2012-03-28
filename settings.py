@@ -129,6 +129,7 @@ INSTALLED_APPS = (
     'PIL',
     'activities',
     'south',
+    'qrcode',
  )
  
 try :
