@@ -60,7 +60,7 @@ header {
     display:block;
 }
 
-#nav{
+#nav {
     list-style:none;
     position:absolute;
     top:119px;
@@ -339,15 +339,16 @@ footer p {
 
 #news {
     background:white;
-    height:205px;
+    height:196px;
     width:300px;
     margin:0px 10px 0px 10px
 }
 
 h1#logo_news {
     background:url(../img/novedades.jpg) repeat-y;
-    height:64px;
+    height:59px;
     width:auto;
+    margin:10px 0px 0px 0px
 }
 
 h1#logo_lastexc {
@@ -398,7 +399,7 @@ h1#logo_lastexc {
 }
 
 #ref_gig a img {
-    width:620px;
+    width:618px;
 }
 
 
@@ -893,12 +894,13 @@ table {
 }
 
 #etravel .article, #ctravels .article,#cimblings .article, #tab-norte .article,#tab-cuyo .article,#tab-patagonia .article, #tab-centro .article {
-  margin:20px 0px 15px 100px;
+  text-align:center;
+  margin-bottom:10px;
   
 }
 
 #etravel a img,#ctravels a img, #cimblings a img,#tab-norte a img,#tab-cuyo a img,#tab-patagonia a img, #tab-centro a img {
-  padding:10px;
+  padding:0px 10px 0px 10px;
   
 }
 
@@ -1214,4 +1216,14 @@ table {
   width:300px;
   margin:10px;
   
+}
+
+#etravel img,#ctravels img, #cimblings img {
+  width:260px;
+  height:200px;
+  
+}
+
+.excurtion-data h5 {
+  width:260px;
 }

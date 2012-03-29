@@ -36,10 +36,7 @@ main-content
                         <a href="/excurtion_detail/{{object.id}}/etravel" ><img src="/media/img/no-image.png"/></a>
                      {% endif %} 
                 <div class="excurtion-data">
-                    <h5> Nombre </h5>
-                    <span> {{object.name|truncatewords:3}}</span>
-                    <h5> Duración </h5>
-                    <span>{{object.duration}}</span>
+                    <h5> {{object.name|upper}} </h5>
                 </div>
                 <div class="clear"></div>
             </div>
