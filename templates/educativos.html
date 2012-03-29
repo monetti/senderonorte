@@ -29,7 +29,7 @@ main-content
         <div id="col_1">
         {% for object in etravels %}
             <div class="article">
-                {% thumbnail object.photo 104x104 crop as thumb %}
+                {% thumbnail object.photo 260x200 crop as thumb %}
                      {% if thumb %}
                         <a href="/excurtion_detail/{{object.id}}/etravel" class="thumbnail"><img src="{{thumb.url}}"/></a>
                      {% else %}
