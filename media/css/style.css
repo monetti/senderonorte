@@ -886,7 +886,7 @@ table {
 
 #etravel #col_2,#ctravels #col_2,#cimblings #col_2,#tab-norte #col_2,#tab-cuyo #col_2,#tab-patagonia #col_2, #tab-centro #col_2 {
   width:35%;
-  margin:5px 29px 15px 15px;
+  margin:5px 29px 15px 0px;
 }
 
 #etravel h2,#ctravels h2, #cimblings h2,#tab-norte h2,#tab-cuyo h2,#tab-patagonia h2, #tab-centro h2 {
@@ -1214,7 +1214,7 @@ table {
   
 }
 
-#etravel img,#ctravels img, #cimblings img {
+#etravel img,#ctravels img, #cimblings img, #tab-norte img, #tab-centro img, #tab-patagonia img, #tab-cuyo img {
   width:260px;
   height:200px;
   
