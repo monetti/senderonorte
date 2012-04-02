@@ -399,18 +399,19 @@ h1#logo_lastexc {
     width:310px;
     height:160px;
     float:left;
+    font-size: 16pt;
+    text-align:center;
 }
+
 
 #ref_gig a img {
     width:300px;
     height:150px;
 }
 
-
-#ref_sup {
-    display:none; 
+#ref_gig h2 {
+  padding:10px;  
 }
-
 
 #news img {
     height:100px;
@@ -1105,21 +1106,27 @@ table {
 }
 
 
-#publicity_google {
+#ads {
     width:310px;
     height:160px;
     float:left;
-    background:white;
     margin:5px 0px 0px 0px;
 }
 
 #videos {
     width:300px;
     height:250px;
+    text-align:center;
+    background:#333;
+    margin:10px 0px 0px 10px;
 }
 
-#videos iframe {
-    margin:10px 10px 0px 10px;
+#videos p {
+    margin:10px 0px 0px 10px;
+    font-size:15pt;
+    color:white;
+    font-weight:bold;
+    line-height: 160pt;
 }
 
 #col_1 {

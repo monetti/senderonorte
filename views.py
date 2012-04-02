@@ -22,8 +22,7 @@ def index(request):
     object_list = Excurtion.objects.all()
     incoming = object_list.filter(date__gte=datetime.now())[:10]
     recent = object_list.filter(date__lt=datetime.now(), publish_last_exc=True)[:6]
-    news = New.objects.all()
-    news_news = news.order_by('created_date').reverse()[:1]
+    news_news = New.objects.all()[:1]
     list_videos = Video.objects.all()[:1]
     
     return simple.direct_to_template(
