@@ -1,31 +1,32 @@
 {% extends 'index.html' %}
-{% load thumbnail %}
+{% load thumbnail qr_tags %}
 {% block title %}Detalle de {{ object.name}} {% endblock %}
 {% block body_class %}
 main-content
 {% endblock %}
 {% block content %}
 <div id="detail">
-    <article id="{{object.name|slugify}}" >
-         <div>
-            <h1 class="name_excurtion">{{object.name}}</h1>
-            {% thumbnail object.photo 300x200 crop as thumb %}
-            <img src="{{thumb.url}}" style="float:left; margin:0px 0px 0px 10px;width:50%;"/>
-            <div style="float:right;margin:10px 0px 0px 0px;width:45%;">
-            <strong>Descripcion de la Actividad:</strong><p>{{object.description}}</p>
-            <strong>Duracion:</strong> <p>{{object.duration}} dias </p>
-            </div>
-
-            <div class="clear"></div>
-            <div style="float:right; margin:0px 20px 0px 0px;">
-            <a href="/excurtions/tab-{{object.region|lower}}">volver atras</a>
-                {% if next_excurtion %}
-                    <a href="{{next_excurtion.get_absolute_url}}">proxima excursion</a>                        
-                {% else %}
-                    <a href="/calendar">ir a calendario</a>                        
-                {% endif %}
-            </div>
-        </div>
-    </article>
+  <div id="col_2" class="detail_description excurtion_detail_desc">
+    <h2>{{object.name}}</h2>
+    <p> <strong>Descripción de la Actividad:</strong> {{object.description}}</p>
+    <p><strong>Duración:</strong> {{object.duration}} días </p>
+  </div>          
+  <div id="col_1" class="detail_image excurtion_detail_img">
+      {% if object.photopostexcurtion_set.all %}
+	  {% for photo in object.photopostexcurtion_set.all %}
+	      {% thumbnail photo.photo 500x300 crop as thumb %}
+		  <img src="{{thumb.url}}" alt="{{object.name}} - {{photo}}"/>
+	      {% endfor %}
+	  {% else %}
+	      <img src="/media/img/no-image.png" width="500px" height="300px" alt="{{object.name}}"/>
+      {% endif %}
+      <div id="qrcode">{% qr_from_text object.name "s" %}</div>
+  </div>
+   <div class="clear"></div>  
 </div>
 {% endblock %}
+        
+	    
+            
+        
+        

@@ -156,7 +156,7 @@ footer {
     height:160px;
     background:url("/media/img/footer2.png") no-repeat;
     position: relative;
-    padding: 10px 10px 0;
+    padding: 13px 0px 0px;
     bottom:0px;
 }
 
@@ -481,14 +481,15 @@ h3 {
 }
 .slider {
     height:320px;
-    width:550px;
+    width:510x;
     margin: 0 auto 1em;
-    overflow:hidden;
+    
 }
 .slider a{
     display:block;
-    width:100%;
+    
 }
+
 .curved {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -1060,26 +1061,6 @@ table {
     width:100px;  
 }
 
-#detail .leftCol {
-    width:42%;
-    margin:5px 0px 0px 30px;
-    padding:0px;
-   }
-
-#detail h1 {
-    margin:0px 20px 10px 20px;
-    color:black; important!
-}   
-
-#detail h3,#detail h5 {
-    margin:0px;
-    padding:0px;
-}  
-
-#detail h3 {
-    color:black;
-} 
-
 .name_excurtion {
     color:black;
 }
@@ -1183,28 +1164,29 @@ table {
 
 .detail_description p {
     font-size:13pt;
-    width:500px;  
 }
 
 .detail_image {
     width:100px;
 }
 
+.excurtion_detail_desc {
+    margin: 0px 35px 0px 35px !important;
+}
+
+.excurtion_detail_img {
+    margin:35px 0px 0px 20px !important;
+}
+
 #qrcode {
-  display:none;
-  float:right;
-  position:absolute;
-  top:60px;
-  right:0px;
-  border:1px solid;
-  border-color: #39393d;
   height:auto;
+  text-align:center;
+  width:500px;
+  margin-top:115px;
 }
 
 #qrcode img {
   margin:5px;
-  
-  
 }
 
 .link_qrcode {
@@ -1217,7 +1199,7 @@ table {
 #likebox {
   background:#333;
   width:300px;
-  margin:20px 10px 10px 10px;
+  margin:10px 10px 10px 10px;
   
 }
 
