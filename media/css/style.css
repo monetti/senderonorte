@@ -1139,35 +1139,38 @@ table {
 
 .detail_description h2 {
     font-size:28pt;
+    margin:15px 0px 0px 0px;
     
 }
 
 #detail #col_1 {
     width:40%;
     height:auto;
-    margin:10px 0px 0px 30px;
+    margin:0px 0px 0px 30px;
   
 }
 
 #detail #col_2 {
-    width:40%;
-    margin:10px;
+    width:50%;
+    margin:30px 15px 15px 15px;
     
 }
 
-#detail #col_2 img {
+/*#detail #col_2 img {
     width:350px;
     height:300px;
     margin:10px 10px 10px 0px;
     
-}
+}*/
 
 .detail_description p {
     font-size:13pt;
 }
 
 .detail_image {
-    width:100px;
+    width:450px;
+    height:400px;
+    margin:10px;
 }
 
 .excurtion_detail_desc {
@@ -1181,8 +1184,8 @@ table {
 #qrcode {
   height:auto;
   text-align:center;
-  width:500px;
-  margin-top:115px;
+  display:none;
+  
 }
 
 #qrcode img {
@@ -1190,9 +1193,10 @@ table {
 }
 
 .link_qrcode {
-  position:absolute;
-  top:45px;
-  right:0px;
+    margin:0px 0px 0px 392px;
+    text-decoration:none;
+    font-size:9pt;
+    color:black;
   
 }
 

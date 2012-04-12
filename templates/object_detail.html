@@ -7,6 +7,17 @@
                 controlNav:false
     });
 
+    $('.link_qrcode').click(
+	function(){
+	    var target = $(this).attr('href');
+	    $(target).animate(
+			{
+			    height: 'toggle'
+			}, 500
+		    );  
+		    return false;      
+		}
+	)
 {% endblock %}
 {% block body_class %}
 main-content
@@ -14,19 +25,24 @@ main-content
 {% block content %}
 <div id="detail">
    {% if type_object == "excurtion" %}
-        <div id="col_1" class="detail_image excurtion_detail_img">
+        <div id="col_2" class="excurtion_detail_img">
+    	    <a href="#qrcode" class="link_qrcode">ver qrcode</a>    
+    	    <div id="qrcode">{% qr_from_text object.name "s" %}</div>
             {% if object.photopostexcurtion_set.all %}
+        	
                 {% for photo in object.photopostexcurtion_set.all %}
-                    {% thumbnail photo.photo 500x300 crop as thumb %}
-                        <img src="{{thumb.url}}" alt="{{object.name}} - {{photo}}"/>
+            		{% thumbnail photo.photo 450x400 crop as thumb %}
+                        <img src="{{thumb.url}}" alt="{{object.name}} - {{photo}}" style="margin:10px;"/>
+                        {% empty %}
+                        <img src="/media/img/no-image.png" class="detail_image"/>
                     {% endfor %}
-                {% else %}
-                    {% thumbnail object.image 500x300 crop as thumb %}
-                        <img src="{{thumb.url}}" alt="{{object.name}} - {{photo}}"/>
+                
+    	    {% else %}
+                    <img src="/media/img/no-image.png" class="detail_image"/>
             {% endif %}
-	    <div id="qrcode">{% qr_from_text object.name "s" %}</div>
+	    
         </div>
-        <div id="col_2" class="detail_description excurtion_detail_desc">
+        <div id="col_1" class="detail_description excurtion_detail_desc">
 	    <h2>{{object.name}}</h2>
             <p>{{object.description}}</p>
             <p><strong>Duracion:</strong> {{object.duration}} </p>
@@ -39,6 +55,8 @@ main-content
     {% endif %}
     {% if type_object == "new" %}
         <div>
+    	    <a href="#qrcode" class="link_qrcode">ver qrcode</a>    
+            <div id="qrcode">{% qr_from_text object.summary "s" %}</div>
             {% thumbnail photo.photo 500x300 crop as thumb %}
             <img src="{{thumb.url}}" />
             <h2>{{object.title}}</h2>
@@ -47,46 +65,57 @@ main-content
      
     {% endif %}
     {% if type_object == "user" %}
-        <div>
-            {% thumbnail photo.photo 500x300 crop as thumb %}
-            <img src="{{thumb.url}}"/>
-            <h2>{{object.user.username}}</h2>
-            <p> Nombre </p> <p>{{object.user.first_name}}</p>
-            <p> Apellido </p> <p> {{ object.user.last_name }}</p>            
-            <p> Quién soy </p> <p> {{ object.description }}</p>
+        <div id="col_2">
+            <a href="#qrcode" class="link_qrcode">ver qrcode</a>    
+            <div id="qrcode">{% qr_from_text object.user.first_name "s" %}</div>
+            {% thumbnail object.photo 600x400 crop as thumb %}
+            {% if thumb %}
+        	<img src="{{thumb.url}}" />
+            {% else %}
+        	<img src="/media/img/no-image.png" class="detail_image"/>
+            {% endif%}
         </div>
-        
+        <div id="col_1" class="detail_description">    
+            
+            <h2>{{object.user.username}}</h2>
+            <p><strong> Nombre y Apellido: </strong> {{object.user.first_name}}  {{ object.user.last_name }}</p>
+            <p><strong> Quién Soy: </strong>{{ object.description }}</p>
+        </div>
+        <div class="clear"></div>
     {% endif %}
     {% if type_object == "ctravel" or type_object == "etravel" %}
-        {% thumbnail object.photo 104x104 crop as thumb %}
-	    
 	<div id="col_1" class="detail_description">
             <h2>{{object.name}}</h2>
             <p><strong>Duración:</strong> {{object.duration}}</p>
             <p><strong>Descripción:</strong> {{ object.summary }}</p>            
-	    <div id="qrcode">{% qr_from_text object.name "s" %}</div>
+	    
 	</div>
-	<div id="col_2" class="detail_image">
+	<div id="col_2" >
+	    <a href="#qrcode" class="link_qrcode">ver qrcode</a>    
+            <div id="qrcode">{% qr_from_text object.summary "s" %}</div>
+	    {% thumbnail object.photo 104x104 crop as thumb %}
 	    {% if thumb %}
 		<img src="{{thumb.url}}"/>
 	    {% else %}
-		<img src="/media/img/no-image.png"/>
+		<img src="/media/img/no-image.png" class="detail_image"/>
 	    {% endif %}
 	</div>
 	<div class="clear"></div>	
     {% endif %}
     {% if type_object == "cimbling" %}
-          {% thumbnail photo.photo 500x300 crop as thumb %}
+	  
 	  <div id="col_1" class="detail_description">
             <h2>{{object.cimbling_type}}</h2>
             <p>{{object.summary}}</p>
-	    <div id="qrcode">{% qr_from_text object.summary "s" %}</div>
 	  </div>
-	  <div id="col_2" class="detail_image">
+	  <div id="col_2" >
+	    <a href="#qrcode" class="link_qrcode">ver qrcode</a>    
+          <div id="qrcode">{% qr_from_text object.summary "s" %}</div>
+	    {% thumbnail photo.photo 450x400 crop as thumb %}
 	    {% if thumb %}
 		<img src="{{thumb.url}}"/>
 	    {% else %}
-		<img src="/media/img/no-image.png"/>
+		<img src="/media/img/no-image.png" class="detail_image"/>
 	    {% endif %}
 	</div>
 	<div class="clear"></div>	

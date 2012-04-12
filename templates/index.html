@@ -145,7 +145,7 @@
             </ul>
             <ul id="logosredes">
                 <li class="cajalogored">
-                    <a href="http://es-es.facebook.com/people/Sendero-Norte-Expediciones/100000508486427"><img class="logos" src="/media/img/logos/facebook.png" /></a>
+                    <a href="http://www.facebook.com/pages/Sendero-Norte-Expediciones/282089105172734"><img class="logos" src="/media/img/logos/facebook.png" /></a>
                 </li>
                 <li class="cajalogored">
                     <a href="http://www.youtube.com/user/SenderoNorteTurismo"><img class="logos" src ="/media/img/logos/YouTube.png" /></a>
@@ -195,12 +195,10 @@
                         <p> No hay videos disponibles </p>
                     {% endif %}
                 </div>
-                
-                
 		<div id="likebox">
-		<div class="fb-like-box" data-href="http://www.facebook.com/pages/Sendero-Norte-Expediciones/282089105172734" data-width="302" data-colorscheme="dark" data-show-faces="true" data-stream="false" data-header="false"></div>
+		    <div class="fb-like-box" data-href="http://www.facebook.com/pages/Sendero-Norte-Expediciones/282089105172734" data-width="302" data-colorscheme="dark" data-show-faces="true" data-stream="false" data-header="false"></div>
 		</div> 
-<div id="news">    
+		<div id="news">    
                     <h1 id="logo_news"></h1>
                     {% for object in news %}
                     <article>
@@ -219,23 +217,16 @@
                     </article>
                     {% endfor %}
                 </div>	    
-
-                
             </div>
     <div id="col_2">
-    
     <div id="news_exc">
-    
                     {% for object in incoming %}
-
-
                     <article id="{{object.name|slugify}}" class="object excurtion">
                         {% thumbnail object.photopostexcurtion_set.all.0.photo 540x340 crop as thumb %}
                         <a href="/excurtion_detail/{{object.id}}/excurtion" id="{{object.id}}" >
                             <img src="{{thumb.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
                         </a>
                     </article>
-
                     {% endfor %}
 			<h1 id="title_next_exc"> Próximas Excursiones </h1>                            
                         <div id="header-new-exc">
@@ -245,16 +236,9 @@
                                 {% endfor %}
                                 <div class="clear"></div>
                             </div>
-
                         </div>
-
-
-
                     <div class="clear"></div>
                 </div>
-
-
-            
                    <div id="ref_gig">
                         <!-- <a href="/refugios" id="ref_inf"><img src="/media/img/refugios/refugio-inf.png" /></a>    
                         <a href="/refugios" id="ref_sup"><img src="/media/img/refugios/refugio-sup.png" /></a> -->
@@ -276,39 +260,26 @@
                 
 
                     <div id="last_exc">
-                    <h1 id="logo_lastexc"> Ultimas Excursiones </h1>
+                	<h1 id="logo_lastexc"> Ultimas Excursiones </h1>
                             {% for object in recent_excurtions %}
-                            
-                            {% if forloop.counter0 == 0 or forloop.counter0 == 2 or forloop.counter0 == 4 %}
-                            <article>
-                            
-                            {% endif %}
-                            
-                            {% thumbnail object.photopostexcurtion_set.all.0.photo 300x170 crop as thumb %}
-                            <a href="/lastexcurtion_detail/{{object.id}}">
-                                <img src="{{thumb.url}}" alt="{{object.name}}" id="thumb-{{object.name|slugify}}"/>
-                            </a>
-
-                            
-                            {% if forloop.counter0 == 1 or forloop.counter0 == 3 or forloop.counter0 == 5 %}
-                            </article>
-                            
-                            {% endif %}
-
-                            
+                        	{% if forloop.counter0 == 0 or forloop.counter0 == 2 or forloop.counter0 == 4 %}
+                        	    <article>
+                        	{% endif %}
+                        	{% thumbnail object.photopostexcurtion_set.all.0.photo 300x170 crop as thumb %}
+                        	    <a href="/lastexcurtion_detail/{{object.id}}">
+                            		<img src="{{thumb.url}}" alt="{{object.name}}" id="thumb-{{object.name|slugify}}"/>
+                        	    </a>
+                        	    <p> {{object.name}} </p>
+                        	{% if forloop.counter0 == 1 or forloop.counter0 == 3 or forloop.counter0 == 5 %}
+                        	    </article>
+                        	{% endif %}
                             {% empty %}
                                  <p> Ultimas Excursiones </p>
-                            
-                            
                             {% endfor %}   
-                            
-                            
                     </div>
-
             </div>
             <div class="clear"></div>
             {% endblock %}
-        
         <!-- END OF BODY SECTION -->
         <footer>
             <div id="caminante"><img src="/media/img/caminante.png"></div>

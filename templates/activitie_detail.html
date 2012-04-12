@@ -1,26 +1,40 @@
 {% extends 'index.html' %}
 {% load thumbnail qr_tags %}
+{% block javascript %}
+    $('.link_qrcode').click(
+	function(){
+	    var target = $(this).attr('href');
+	    $(target).animate({
+	                   height: 'toggle'
+	                }, 500          
+	                );  
+	                return false;      
+	            }    
+	        );   
+{% endblock %}
 {% block title %}Detalle de {{ object.name}} {% endblock %}
 {% block body_class %}
 main-content
 {% endblock %}
 {% block content %}
 <div id="detail">
-  <div id="col_2" class="detail_description excurtion_detail_desc">
+  <div id="col_1" class="detail_description excurtion_detail_desc">
     <h2>{{object.name}}</h2>
     <p> <strong>Descripción de la Actividad:</strong> {{object.description}}</p>
     <p><strong>Duración:</strong> {{object.duration}} días </p>
   </div>          
-  <div id="col_1" class="detail_image excurtion_detail_img">
+  <div id="col_2" class="excurtion_detail_img">
+	<a href="#qrcode" class="link_qrcode">ver qrcode</a>
+	<div id="qrcode">{% qr_from_text object.name "s" %}</div>
       {% if object.photopostexcurtion_set.all %}
 	  {% for photo in object.photopostexcurtion_set.all %}
-	      {% thumbnail photo.photo 500x300 crop as thumb %}
+	      {% thumbnail photo.photo 450x400 crop as thumb %}
 		  <img src="{{thumb.url}}" alt="{{object.name}} - {{photo}}"/>
 	      {% endfor %}
 	  {% else %}
-	      <img src="/media/img/no-image.png" width="500px" height="300px" alt="{{object.name}}"/>
+	      <img src="/media/img/no-image.png" alt="{{object.name}}" class="detail_image" />
       {% endif %}
-      <div id="qrcode">{% qr_from_text object.name "s" %}</div>
+      
   </div>
    <div class="clear"></div>  
 </div>
