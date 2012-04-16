@@ -94,10 +94,10 @@
 	    $(window).load(function() {
             //carrusel de fotos de Ultimas Excursiones
             i=0;
-            last_exc = $("#last_exc article")
+            last_exc = $("#last_exc .group_photo")
             function carrusel_last_exc() {
                 i = i % last_exc.length;
-                $('#last_exc article').not(last_exc[i]).hide();
+                $('#last_exc .group_photo').not(last_exc[i]).hide();
                 $(last_exc[i]).show();
                 i += 1;
                 window.setTimeout(carrusel_last_exc, 6000);
@@ -240,41 +240,36 @@
                     <div class="clear"></div>
                 </div>
                    <div id="ref_gig">
-                        <!-- <a href="/refugios" id="ref_inf"><img src="/media/img/refugios/refugio-inf.png" /></a>    
-                        <a href="/refugios" id="ref_sup"><img src="/media/img/refugios/refugio-sup.png" /></a> -->
-			<h2> Proximamente Calendario </h2>
-                    </div>
-		    <div id="ads">
-		      <script type="text/javascript">
-		      <!-- google_ad_client = "ca-pub-5882938701475577";
-		      /* Turismo Alternativo */
-		      google_ad_slot = "6002199032";
-		      google_ad_width = 300;
-		      google_ad_height = 250;
-		      //-->
-		      </script>
-		      <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-		      </script>
-		    </div>
+                        <a href="/media/img/calendario.pdf" id="ref_inf">
+                            <img src="/media/img/calendario 2012.png" /></a>    
+                        
+			            
+                   </div>
+		
 <div class="clear"></div>
-                
-
                     <div id="last_exc">
-                	<h1 id="logo_lastexc"> Ultimas Excursiones </h1>
-                            {% for object in recent_excurtions %}
-                        	{% if forloop.counter0 == 0 or forloop.counter0 == 2 or forloop.counter0 == 4 %}
-                        	    <article>
-                        	{% endif %}
-                        	{% thumbnail object.photopostexcurtion_set.all.0.photo 300x170 crop as thumb %}
-                        	    <a href="/lastexcurtion_detail/{{object.id}}">
-                            		<img src="{{thumb.url}}" alt="{{object.name}}" id="thumb-{{object.name|slugify}}"/>
-                        	    </a>
-                        	    <p> {{object.name}} </p>
-                        	{% if forloop.counter0 == 1 or forloop.counter0 == 3 or forloop.counter0 == 5 %}
-                        	    </article>
-                        	{% endif %}
+                	    <h1 id="logo_lastexc"> Ultimas Excursiones </h1>
+                             {% for object in recent_excurtions %}
+                        	    {% if forloop.counter0 == 0 or forloop.counter0 == 2 or forloop.counter0 == 4 %}
+                        	        <div class="group_photo">
+                        	    {% endif %}
+                            
+                       	        <article>
+             
+                        	    {% thumbnail object.photopostexcurtion_set.all.0.photo 300x170 crop as thumb %}
+                    	        <a href="/lastexcurtion_detail/{{object.id}}">
+                        		    <img src="{{thumb.url}}" alt="{{object.name}}" id="thumb-{{object.name|slugify}}"/>
+                	            </a>
+            	                <p> {{object.name}} </p>
+             
+                                </article>
+
+                                {% if forloop.counter0 == 1 or forloop.counter0 == 3 or forloop.counter0 == 5 %}
+                                    <div class="clear"></div>
+                        	        </div>
+                        	    {% endif %}
                             {% empty %}
-                                 <p> Ultimas Excursiones </p>
+                                    <p> Ultimas Excursiones </p>
                             {% endfor %}   
                     </div>
             </div>

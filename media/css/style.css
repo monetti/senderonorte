@@ -395,18 +395,13 @@ h1#logo_lastexc {
 
 #ref_gig {
     background-color:#344E5F;
-    margin:5px 5px 5px 0px; 
-    width:310px;
+    margin:5px 10px 5px 0px; 
     height:160px;
-    float:left;
-    font-size: 16pt;
-    text-align:center;
 }
 
-
 #ref_gig a img {
-    width:300px;
-    height:150px;
+    width:617px;
+    height:152px;
 }
 
 #ref_gig h2 {
@@ -1161,7 +1156,8 @@ table {
     height:300px;
     margin:10px 10px 10px 0px;
     
-}*/
+}
+*/
 
 .detail_description p {
     font-size:13pt;
@@ -1215,4 +1211,16 @@ table {
 
 .excurtion-data h5 {
   width:260px;
+}
+
+.group_photo {
+    display:none;
+    width:48%;
+    padding:0px;
+    margin:0px;
+    float:left;
+}
+
+.group_photo article {
+    float:left;
 }
