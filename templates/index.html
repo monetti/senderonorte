@@ -79,6 +79,19 @@
             }
             carrusel_next_ref(); */
 
+            //carrusel de fotos de Ultimas Excursiones
+            j=0;
+            var last_exc = $(".group_photo")
+            function carrusel_last_exc() {
+                j = j % last_exc.length;
+                $('.group_photo').not(last_exc[j]).hide();
+                $(last_exc[j]).show();
+                j += 1;
+                window.setTimeout(carrusel_last_exc, 4000);
+            }
+            carrusel_last_exc();
+
+
             //carrusel de fotos de Proximas Excursiones
             var news_exc = $("#news_exc article");
             i = 0;
@@ -91,20 +104,9 @@
             }
             carrusel_next_exc();
 
-	    $(window).load(function() {
-            //carrusel de fotos de Ultimas Excursiones
-            i=0;
-            last_exc = $("#last_exc .group_photo")
-            function carrusel_last_exc() {
-                i = i % last_exc.length;
-                $('#last_exc .group_photo').not(last_exc[i]).hide();
-                $(last_exc[i]).show();
-                i += 1;
-                window.setTimeout(carrusel_last_exc, 6000);
-            }
-            carrusel_last_exc();
 
-	    });
+
+	   
             
             {% endblock %}            
         });       
@@ -256,11 +258,11 @@
                             
                        	        <article>
              
-                        	    {% thumbnail object.photopostexcurtion_set.all.0.photo 300x170 crop as thumb %}
+                        	    {% thumbnail object.photopostexcurtion_set.all.0.photo 305x170 crop as thumb %}
                     	        <a href="/lastexcurtion_detail/{{object.id}}">
                         		    <img src="{{thumb.url}}" alt="{{object.name}}" id="thumb-{{object.name|slugify}}"/>
                 	            </a>
-            	                <p> {{object.name}} </p>
+            	                <p class="textImg"> {{object.name}} </p>
              
                                 </article>
 
