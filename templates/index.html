@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load thumbnail %}
-<meta charset="utf-8">
+<meta charset="UTF-8" content="Sendero norte, excursiones y escaladas">
 <head>
     <link rel="shortcut icon" type="image/x-icon" href="/media/img/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="/media/css/style.css" media="screen" />
@@ -18,7 +18,7 @@
     <![endif]-->
     
   <title>{% block title %}Bienvenido a {% endblock %} Sendero Norte</title>
-  <meta name="description" content="Sendero norte, excursiones y escalada">
+  
   <link type="text/css" href="/media/css/jquery-ui-1.8.10.custom.css" rel="Stylesheet" />	
   <script type="text/javascript" src="/media/js/jquery.js"></script>
   <script type="text/javascript" src="/media/js/jquery-ui.js"></script>
@@ -181,6 +181,7 @@
         </header>
 
         {% block content %}
+
 		<div id="fb-root"></div>
 		<script>(function(d, s, id) {
 		  var js, fjs = d.getElementsByTagName(s)[0];
@@ -273,7 +274,7 @@
             {% endfor %}   
         </div>
     </div>
-</div>
+
     <div class="clear"></div>
 {% endblock %}
         <!-- END OF BODY SECTION -->
