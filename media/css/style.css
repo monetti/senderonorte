@@ -1066,8 +1066,7 @@ table {
 
 #last_exc {
     background:#39465B;
-    padding:2px;
-    margin:10px 0px 10px 0px;
+    margin:10px 10px 0px 0px;
     height:263px;
     
 }
@@ -1214,17 +1213,17 @@ table {
 }
 
 .group_photo {
-    display:none;
-    padding:0px;
+    display:block;
+    padding:2px;
     float:left;
 }
 
-.group_photo article {
+#last_exc .group_photo article {
     float:left;
-    padding:1px 1px 0px 1px;
+    width:50%;
 }
 
-.group_photo .textImg {
+#last_exc .group_photo .textImg {
     color:white;
     font-size:13pt;
     text-align:right;
