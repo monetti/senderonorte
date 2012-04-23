@@ -1,6 +1,12 @@
 {% extends 'index.html' %}
 {% load thumbnail qr_tags %}
 {% block title %}Detalle{% endblock %}
+{% block head %} 
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "ur-34c31580-2575-62f4-6623-43d9d28bca48"}); </script>
+{% endblock %}
+
 {% block javascript %}
     $('.slider').nivoSlider({
                 effect: 'fade',
@@ -26,7 +32,14 @@ main-content
 <div id="detail">
    {% if type_object == "excurtion" %}
         <div id="col_2" class="excurtion_detail_img">
-    	    <a href="#qrcode" class="link_qrcode">ver qrcode</a>    
+        <div id="sharing">   <span class='st_facebook' displayText='Facebook'></span>
+    <span class='st_twitter' displayText='Tweet'></span>
+<span class='st_email' displayText='Email'></span>
+<span class='st_fbrec' displayText='Facebook Recommend'></span>
+<span class='st_blogger' displayText='Blogger'></span>
+</div>
+	    <a href="#qrcode" class="link_qrcode">ver qrcode</a>    
+        <div class="clear"></div>
     	    <div id="qrcode">{% qr_from_text object.name "s" %}</div>
             {% if object.photopostexcurtion_set.all %}
         	
@@ -91,8 +104,14 @@ main-content
 	    
 	</div>
 	<div id="col_2" >
+        <div id="sharing">   <span class='st_facebook' displayText='Facebook'></span>
+    <span class='st_twitter' displayText='Tweet'></span>
+<span class='st_email' displayText='Email'></span>
+<span class='st_fbrec' displayText='Facebook Recommend'></span>
+<span class='st_blogger' displayText='Blogger'></span>
+</div>
 	    <a href="#qrcode" class="link_qrcode">ver qrcode</a>    
-            <div id="qrcode">{% qr_from_text object.summary "s" %}</div>
+        <div class="clear"></div>            <div id="qrcode">{% qr_from_text object.summary "s" %}</div>
 	    {% thumbnail object.photo 104x104 crop as thumb %}
 	    {% if thumb %}
 		<img src="{{thumb.url}}"/>
@@ -103,13 +122,20 @@ main-content
 	<div class="clear"></div>	
     {% endif %}
     {% if type_object == "cimbling" %}
-	  
+	
 	  <div id="col_1" class="detail_description">
             <h2>{{object.cimbling_type}}</h2>
             <p>{{object.summary}}</p>
 	  </div>
 	  <div id="col_2" >
+        <div id="sharing">   <span class='st_facebook' displayText='Facebook'></span>
+    <span class='st_twitter' displayText='Tweet'></span>
+<span class='st_email' displayText='Email'></span>
+<span class='st_fbrec' displayText='Facebook Recommend'></span>
+<span class='st_blogger' displayText='Blogger'></span>
+</div>
 	    <a href="#qrcode" class="link_qrcode">ver qrcode</a>    
+        <div class="clear"></div>
           <div id="qrcode">{% qr_from_text object.summary "s" %}</div>
 	    {% thumbnail photo.photo 450x400 crop as thumb %}
 	    {% if thumb %}

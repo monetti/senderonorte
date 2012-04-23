@@ -26,8 +26,7 @@ hr {
 }
 
 .logos {
-    height:40px;
-    width:40px;
+    width:30px;
 }
 
 .cajalogored {
@@ -38,7 +37,7 @@ hr {
 #logosredes {
     float:right;
     list-style:none;
-    margin:-5px 38px 0px 585px;
+    margin:-15px 38px 0px 585px;
 
 }
 
@@ -395,7 +394,7 @@ h1#logo_lastexc {
 
 #ref_gig {
     background-color:#344E5F;
-    margin:5px 10px 5px 0px; 
+    margin:10px 10px 5px 0px; 
     height:160px;
 }
 
@@ -1073,9 +1072,8 @@ table {
 
 #rss {
     position:absolute;
-    right:3px;
-    top:111px;
-    width:153px;
+    right:45px;
+    top:102px;
     color:#C6C7C8;
     font-size:12px;
 }
@@ -1188,10 +1186,12 @@ table {
 }
 
 .link_qrcode {
-    margin:0px 0px 0px 392px;
+    margin:12px 0px 0px 20px;
     text-decoration:none;
     font-size:9pt;
     color:black;
+    width:20%;
+    float:left;
   
 }
 
@@ -1226,11 +1226,15 @@ table {
 #last_exc .group_photo .textImg {
     color:white;
     font-size:13pt;
-    text-align:right;
-    width:99%;
+    text-align:center;
+    width:100%;
     font-variant:small-caps;
     margin:0px;
     padding:0px;
 }
 
-
+#sharing {
+    float:left;
+    width:70%;
+    margin:0px 0px 0px 10px;
+}

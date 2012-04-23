@@ -127,6 +127,9 @@
       })();
 
     </script>
+    {% block head %}
+        
+    {% endblock %}
 </head>
 <body>
     <div id="wrapper_body">
@@ -266,7 +269,7 @@
     	            </div>
         	    {% endif %}
             {% empty %}
-                <p> Ultimas Excursiones </p>
+                <p> Disculpe. No se encuentran datos disponibles por el momento. Intentelo más tarde </p>
             {% endfor %}   
         </div>
     </div>
@@ -291,7 +294,7 @@
                     <a href="#"> Condiciones de Contratacion</a>
                 </li>
             </ul>
-            <p><strong>Sendero Norte</strong> Copyright 2011 - Reservados todos los derechos <br /> Diseño: Usina Creativa | <a href="http://inventta.com.ar">Desarrollo: Inventta </a></p>
+            <p><strong>Sendero Norte</strong> Copyright 2011 - Reservados todos los derechos <br /> Diseño: Usina Creativa | <a href="">Desarrollo: apanruning </a></p>
         </footer>
         <!-- END OF FOOTER SECTION -->
     </div>
