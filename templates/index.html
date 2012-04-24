@@ -132,9 +132,21 @@
     {% endblock %}
 </head>
 <body>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'es',
+    multilanguagePage: true,
+    gaTrack: true,
+    gaId: 'UA 25981536-1 ',
+    floatPosition: google.translate.TranslateElement.FloatPosition.TOP_RIGHT
+  });
+}
+</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <div id="wrapper_body">
         <header>
             <h1 id="logo_sendero"><a href="/">Sendero Norte</a></h1>
+           
             <ul id="barra_superior">
                 <li class="menu_superior">
                    <a href="/">INICIO</a>
@@ -148,6 +160,7 @@
                 </li>
                 {% endif %}
             </ul>
+
             <ul id="logosredes">
                 <li class="cajalogored">
                     <a href="http://www.facebook.com/pages/Sendero-Norte-Expediciones/282089105172734"><img class="logos" src="/media/img/logos/facebook.png" /></a>

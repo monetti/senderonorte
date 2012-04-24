@@ -192,17 +192,6 @@ def contact_sendmail(request):
 def feed_next_excurtion():
     pass
     
-#def calendar(request):
-#    queryset = Excurtion.objects.all()
-#    return list_detail.object_list(
-#        request,
-#        queryset,
-#        template_name='calendar.html',
-#        extra_context = {
-#            'list_obj':Excurtion.objects.all(),
-#        },
-#    )
-
 def feed_detail(request,tag):
     a = Excurtion.objects.get(pk=int(tag))
     if a:

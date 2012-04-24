@@ -1116,7 +1116,8 @@ table {
 }
 
 #wrapper_body {
-    background:#7F7F7F;   
+    background:#7F7F7F;
+
 }
 
 #rss a img {
@@ -1237,4 +1238,8 @@ table {
     float:left;
     width:70%;
     margin:0px 0px 0px 10px;
+}
+
+.goog-te-ftab-float {
+    right:194px !important;
 }

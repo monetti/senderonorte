@@ -65,15 +65,16 @@ class NextExcurtionFeed(Feed):
     title = "Sendero Norte - Noticias"
     description = "Noticias de Sendero Norte Expediciones"
     link="http://www.senderonorte.com.ar/next-excurtions/feed"
+    domain="http://www.senderonorte.com.ar/"
         
     def items(self):
-        return Excurtion.objects.all().order_by('-date')[:2]
+        return Excurtion.objects.all().order_by('-date')
     
     def item_title(self, item):
         return item.name
     
     def item_link(self,item):
-        return "/next-excurtions/feed/detail/"+str(item.id)
+        return item.get_absolute_url()
 
     def item_description(self, item):
         return item.description
