@@ -15,6 +15,7 @@ from userprofile.models import UserProfile, Logo
 import time
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import get_object_or_404, render_to_response
+from forms import UploadFileForm
 
 from models import Video
 
@@ -223,13 +224,38 @@ def test(request):
 
 @login_required()
 def issues(request):
+
+    from contacts.models import Contact, ContactGroup
+
     grupos = ContactGroup.objects.all()
+
+    if request.method == "POST":
+        if 'file' in request.FILES:
+            import xlrd
+            
+            from django.conf import settings
+
+            file = request.FILES['file']
+            
+            wb = xlrd.open_workbook(file_contents=file.read())
+            sh = wb.sheet_by_index(0)
+            for rownum in range(1,sh.nrows):
+                row = sh.row_values(rownum)           
+                ctc = Contact()
+                ctc.name = row[0]
+                ctc.last_name = row[1]
+                ctc.email = row[2]
+                ctc.grupo = ContactGroup.objects.get(pk=row[3])
+                ctc.save()
+ 
+    form = UploadFileForm()
     
     return simple.direct_to_template(
         request,
         'issues.html',
         extra_context = {
             'grupos':grupos,
+            'formMass':form,
         }
     )
     
@@ -267,7 +293,12 @@ def send_mailing(request):
     html_part = loader.get_template('%s.html' %("boletin")).render(c)
 
     msg_mail = []
-    heading = '%s' %(':: Sendero Norte :: Boletin de Novedades')
+
+    if request.method == 'POST':
+        heading = request.POST['title_newsletter']
+    else:
+        heading = '%s' %(':: Sendero Norte :: Boletin de Novedades')
+    
     contacts = []    
     
     groups = ContactGroup.objects.all()

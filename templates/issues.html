@@ -1,21 +1,47 @@
 {% extends 'index.html' %}
-{% block title %} Mailing {% endblock %}
+{% block title %} Contactos {% endblock %}
+{% block javascript %} 
+    $('.mass').click(
+	function(){
+	    var target = $(this).attr('href');
+	    $(target).animate(
+			{
+			    height: 'toggle'
+			}, 500
+		    );  
+		    return false;      
+		}
+	){% endblock %}
 {% block body_class %}
 main-content
 {% endblock %}
 {% block content %}
 <p><a href="/admin/contacts/contact/add/"> agregar contacto </a></p>
+<a href="#form-mass-add" class="mass"> agregar lista de contacto </a>
+<div id="form-mass-add">
+
+<form enctype="multipart/form-data" method="post" action="/mailing/issues/">
+{% csrf_token %}
+{{ formMass }}
+<input type="submit" value="importar" />
+</form>
+
+</div>
+
 <p><a href="/mailing/preview"> vista previa del boletin de novedades </a><p>
+
+<form action="/mailing/send" method="POST">
+<label for="title_newsletter">Título del Boletín </label><input type="text" name="title_newsletter" />
 <fieldset>
     <legend>Elija Grupo/s </legend>
-<form action="/mailing/send" method="POST">
 {% csrf_token %}
 {% for obj in grupos %}
     <p> <input type="checkbox" value={{ obj.id }} name={{obj.name}} >{{obj.name}}</p>
 {% endfor %}
+</fieldset>
 <input type="submit" value="Enviar"/> 
 </form>
-</fieldset>
+
 
 {% endblock %}
 

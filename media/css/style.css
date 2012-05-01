@@ -9,7 +9,6 @@ body {
     margin:auto;
     font: 12px Helvetica, sans-serif;
     width:960px;
-    
     height:1200px;
 }
 
@@ -152,7 +151,7 @@ header {
 }
 
 footer {
-    height:160px;
+    
     background:url("/media/img/footer2.png") no-repeat;
     position: relative;
     padding: 13px 0px 0px;
@@ -162,8 +161,8 @@ footer {
 footer ul {
     list-style:none;
     position:absolute;
-    top:58px;
-    left:191px;
+    top:55px;
+    left:130px;
 }
 
 footer li {
@@ -183,19 +182,19 @@ li.last {
 footer li a {
     text-decoration:none;
     color:black;
-    font-size:14px;
+    font-size:18px;
 }
 
 footer p {
     position:absolute;
-    left:285px;
-    bottom:15px;
+    width:100%;
+    text-align:center;
+    bottom:5px;
 }
 
-#caminante {
-    position: absolute;
-    bottom:0;
-    left:0;
+.caminante {
+    margin:-4px;
+    padding:0px;
 }
 
 /* CAJA CON MAPA */
@@ -353,7 +352,7 @@ h1#logo_news {
 h1#logo_lastexc {
     background:url(/media/img/ultimas-excursiones.jpg) no-repeat;
     text-indent: -9999px;
-        height:62px;
+    height:62px;
     margin:0px;
 }
 
@@ -1175,11 +1174,16 @@ table {
     margin:35px 0px 0px 20px !important;
 }
 
-#qrcode {
+#qrcode,#form-mass-add {
   height:auto;
   text-align:center;
   display:none;
   
+}
+
+#form-mass-add {
+  height:100px;
+  background-color:white;
 }
 
 #qrcode img {

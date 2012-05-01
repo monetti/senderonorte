@@ -156,7 +156,7 @@ function googleTranslateElementInit() {
                 </li>
                 {% if user.is_authenticated and user.is_staff %}
                 <li class="menu_superior">
-                    <a href="/mailing/issues/">MAILING</a>
+                    <a href="/mailing/issues/">TAREAS</a>
                 </li>
                 {% endif %}
             </ul>
@@ -203,40 +203,40 @@ function googleTranslateElementInit() {
 		    js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1";
 		    fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
-                <div id="col_1">
-                    <div id="videos">
-                    {% if list_videos %}
-                        {% for l in list_videos %}
-                        <!-- link passed to embed code, this shows up as blank -->
-                        <iframe width="300px" height="250px" src="{{ l.link }}?rel=0" frameborder="0" allowfullscreen></iframe>
-                        {% endfor %}
-                    {% else %}
-                        <p> No hay videos disponibles </p>
-                    {% endif %}
-                </div>
-		<div id="likebox">
-		    <div class="fb-like-box" data-href="http://www.facebook.com/pages/Sendero-Norte-Expediciones/282089105172734" data-width="302" data-colorscheme="dark" data-show-faces="true" data-stream="false" data-header="false"></div>
-		</div> 
-		<div id="news">    
-                    <h1 id="logo_news"></h1>
-                    {% for object in news %}
-                    <article>
-                        <div class="leftCol">
-                            <a href="/excurtion_detail/{{object.id}}/new">
-                                {% thumbnail object.image 100x100 crop as thumb %}
-                                <img src="{{thumb.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
-                            </a>
-                        </div>
-                        <div class="rightCol">
-                            <h3>{{object.title|truncatewords:5}}</h3>
-                            <p>{{object.summary|truncatewords:9}}</p>
-                            <a href="/excurtion_detail/{{object.id}}/new"> [Ver mas] </a>
-                        </div>
-                        <div class="clear"></div>
-                    </article>
+        <div id="col_1">
+            <div id="videos">
+                {% if list_videos %}
+                    {% for l in list_videos %}
+                    <!-- link passed to embed code, this shows up as blank -->
+                    <iframe width="300px" height="250px" src="{{ l.link }}?rel=0" frameborder="0" allowfullscreen></iframe>
                     {% endfor %}
-                </div>	    
+                {% else %}
+                    <p> No hay videos disponibles </p>
+                {% endif %}
             </div>
+		    <div id="likebox">
+		        <div class="fb-like-box" data-href="http://www.facebook.com/pages/Sendero-Norte-Expediciones/282089105172734" data-width="302" data-colorscheme="dark" data-show-faces="true" data-stream="false" data-header="false"></div>
+		    </div> 
+		    <div id="news">    
+                <h1 id="logo_news"></h1>
+                {% for object in news %}
+                <article>
+                    <div class="leftCol">
+                        <a href="/excurtion_detail/{{object.id}}/new">
+                            {% thumbnail object.image 100x100 crop as thumb %}
+                            <img src="{{thumb.url}}" alt="{{object.name}}" id="foto-{{object.name|slugify}}" />
+                        </a>
+                    </div>
+                    <div class="rightCol">
+                        <h3>{{object.title|truncatewords:5}}</h3>
+                        <p>{{object.summary|truncatewords:9}}</p>
+                        <a href="/excurtion_detail/{{object.id}}/new"> [Ver mas] </a>
+                    </div>
+                    <div class="clear"></div>
+                </article>
+                {% endfor %}
+            </div>	    
+        </div>
     <div id="col_2">
         <div id="news_exc">
             {% for object in incoming %}
@@ -287,12 +287,12 @@ function googleTranslateElementInit() {
             {% endfor %}   
         </div>
     </div>
-
+    </div> <!-- cierra el col_1 -->
     <div class="clear"></div>
 {% endblock %}
         <!-- END OF BODY SECTION -->
         <footer>
-            <div id="caminante"><img src="/media/img/caminante.png" /></div>
+            <img class="caminante" src="/media/img/caminante.png" />
             <ul>
                 <li class="first" >
                     <a href="#"> Excursiones </a>
@@ -300,12 +300,12 @@ function googleTranslateElementInit() {
                 <li>
                 </li>
                 <li>
-                    <a href="#"> Recomendaciones para la salida</a>
+                    <a href="#"> Recomendaciones para la salida </a>
                 </li>
                 <li >
                 </li>
                 <li class="last">
-                    <a href="#"> Condiciones de Contratacion</a>
+                    <a href="#"> Condiciones de Contratación </a>
                 </li>
             </ul>
             <p><strong>Sendero Norte</strong> Copyright 2011 - Reservados todos los derechos <br /> Diseño: Usina Creativa | <a href="">Desarrollo: apanruning </a></p>
