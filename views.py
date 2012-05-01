@@ -316,7 +316,7 @@ def send_mailing(request):
 
     msg.attach_alternative(html_part, "text/html")
 
-    msg.send(False)
+    msg.send()
     
     return issues(request)
 
