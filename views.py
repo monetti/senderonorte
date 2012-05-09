@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.views.generic import simple, list_detail
+from django.http import Http404
 from excurtion.models import Excurtion
 from excurtion.models import PhotoPostExcurtion
 from news.models import New
@@ -69,29 +70,26 @@ def activitie_detail(request,id):
 
 def excurtion_detail(request, tag=None,type_object=None):
     obj = {}
-    if type_object == "excurtion":
-        obj = Excurtion.objects.get(pk=int(tag))
-    elif type_object == "new":
-        obj = New.objects.get(pk=int(tag))
-    elif type_object =="ctravel":
-        obj = CustomizedTravel.objects.get(pk=int(tag))   
-    elif type_object =="cimbling":     
-        obj = Cimbling.objects.get(pk=int(tag))
-    elif type_object =="etravel":
-        obj = EducationTravel.objects.get(pk=int(tag))   
-    elif type_object =="user":
-        obj = UserProfile.objects.get(pk=int(tag))
+    klass = {
+        'excurtion': Excurtion,
+        'new': New,
+        'ctravel': Customizedtravel,
+        'cimbling': Cimbling,
+        'etravel': EducationTravel,
+        'user': UserProfile,
+    }
+    if type_object is not None:
+        obj = get_object_or_404(klass[type_object], pk=int(tag))
+        return simple.direct_to_template(
+            request,
+            'object_detail.html',
+            extra_context = {
+                'object':obj,
+                'type_object':type_object,
+            }
+        )
     else:
-        obj = {}
-    
-    return simple.direct_to_template(
-        request,
-        'object_detail.html',
-        extra_context = {
-            'object':obj,
-            'type_object':type_object,
-        }
-    )
+        raise Http404
     
 def lastexcurtion_detail(request, id):
     obj = Excurtion.objects.get(pk=int(id))
