@@ -73,7 +73,7 @@ def excurtion_detail(request, tag=None,type_object=None):
     klass = {
         'excurtion': Excurtion,
         'new': New,
-        'ctravel': Customizedtravel,
+        'ctravel': CustomizedTravel,
         'cimbling': Cimbling,
         'etravel': EducationTravel,
         'user': UserProfile,
