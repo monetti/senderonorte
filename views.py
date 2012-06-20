@@ -237,6 +237,7 @@ def issues(request):
             
             wb = xlrd.open_workbook(file_contents=file.read())
             sh = wb.sheet_by_index(0)
+
             for rownum in range(1,sh.nrows):
                 row = sh.row_values(rownum)           
                 ctc = Contact()

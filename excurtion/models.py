@@ -34,6 +34,7 @@ class Excurtion(models.Model):
     intro_last_exc = models.TextField(_('Descripcion de la experiencia'),blank=True)
     publish_newsletter = models.BooleanField(_("Publicar en NewsLetter"), default=False,blank=True) 
     activitie = models.ForeignKey(Activitie)
+    attach = models.FileField("Programa", upload_to='docs/',blank=True,null=True)
 
     class Meta:
         ordering = ('date',)
@@ -78,4 +79,5 @@ class NextExcurtionFeed(Feed):
 
     def item_description(self, item):
         return item.description
-        
+
+    

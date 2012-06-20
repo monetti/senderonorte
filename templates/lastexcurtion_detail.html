@@ -4,37 +4,53 @@
 {% block javascript %}
     $('.slider').nivoSlider({
                 effect: 'fade',
-                controlNav:false
+                controlNav:false,
     });
     
+{% endblock %}
+{% block head %} 
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "ur-34c31580-2575-62f4-6623-43d9d28bca48"}); </script>
 {% endblock %}
 {% block body_class %}
 main-content
 {% endblock %}
 {% block content %}
 <div id="detail">
-    <article id="{{object.name|slugify}}">
-
-        <h1 class="name_excurtion">{{object.name}}</h1>
-        <div class="slider" style="float:left;width:40%;margin:0px 0px 0px 20px;">
+        <div id="col_2" class="excurtion_detail_img">
+        <div class="slider">
             {% if object.photopostexcurtion_set.all %}
+        	
                 {% for photo in object.photopostexcurtion_set.all %}
-                    {% thumbnail photo.photo 400x300 crop as thumb %}
+            		{% thumbnail photo.photo 540x340 crop as thumb %}
                         <img src="{{thumb.url}}" alt="{{object.name}} - {{photo}}"/>
+                        {% empty %}
+                        <img src="/media/img/no-image.png" class="detail_image"/>
                     {% endfor %}
-            {% else %}
-                {% thumbnail object.image 400x300 crop as thumb %}
-                <img src="{{thumb.url}}" alt="{{object.name}} - {{photo}}"/>
+                
+    	    {% else %}
+                    <img src="/media/img/no-image.png" class="detail_image"/>
             {% endif %}
+	    
         </div>
-        <div style="float:left;width:50%;margin:0px 0px 0px 30px;">
-            <strong> Descripción de la experiencia </strong>
+        <div id="sharing-last">   
+            <span class='st_facebook' displayText='Facebook'></span>
+            <span class='st_twitter' displayText='Tweet'></span>
+            <span class='st_email' displayText='Email'></span>
+            <span class='st_fbrec' displayText='Facebook Recommend'></span>
+            <span class='st_blogger' displayText='Blogger'></span>
+        </div>
+
+        </div>
+        <div id="col_1" class="detail_description excurtion_detail_desc">
+	    <h2>{{object.name}}</h2>
             <p>{{object.intro_last_exc}}</p>
-            <h5><strong>Duracion:</strong> {{object.duration}} </h5>
-            <h5><strong>Fecha:</strong> {{object.date}} </h5>
+            <p><strong>Duracion:</strong> {{object.duration}} </p>
+            <p><strong>Fecha:</strong> {{object.date}} </p>
+            
         </div>
         <div class="clear"></div>
 
-    </article>
 </div>
 {% endblock %}

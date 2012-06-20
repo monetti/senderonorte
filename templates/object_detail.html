@@ -45,7 +45,7 @@ main-content
             {% if object.photopostexcurtion_set.all %}
         	
                 {% for photo in object.photopostexcurtion_set.all %}
-            		{% thumbnail photo.photo 450x400 crop as thumb %}
+            		{% thumbnail photo.photo 540x340 crop as thumb %}
                         <img src="{{thumb.url}}" alt="{{object.name}} - {{photo}}" style="margin:10px;"/>
                         {% empty %}
                         <img src="/media/img/no-image.png" class="detail_image"/>
@@ -53,8 +53,10 @@ main-content
                 
     	    {% else %}
                     <img src="/media/img/no-image.png" class="detail_image"/>
-            {% endif %}
-	    
+        {% endif %}
+        {% if object.attach %}
+            <a id="programa" href="{{object.attach.url}}"> Programa en PDF </a>
+        {% endif %}	    
         </div>
         <div id="col_1" class="detail_description excurtion_detail_desc">
 	    <h2>{{object.name}}</h2>
@@ -105,20 +107,23 @@ main-content
 	    
 	</div>
 	<div id="col_2" >
-        <div id="sharing">   <span class='st_facebook' displayText='Facebook'></span>
-    <span class='st_twitter' displayText='Tweet'></span>
-<span class='st_email' displayText='Email'></span>
-<span class='st_fbrec' displayText='Facebook Recommend'></span>
-<span class='st_blogger' displayText='Blogger'></span>
-</div>
+        <div id="sharing">   
+            <span class='st_facebook' displayText='Facebook'></span>
+            <span class='st_twitter' displayText='Tweet'></span>
+            <span class='st_email' displayText='Email'></span>
+            <span class='st_fbrec' displayText='Facebook Recommend'></span>
+            <span class='st_blogger' displayText='Blogger'></span>
+        </div>
 	    <a href="#qrcode" class="link_qrcode">ver qrcode</a>    
-        <div class="clear"></div>            <div id="qrcode">{% qr_from_text object.summary "s" %}</div>
+        <div class="clear"> </div>            
+        <div id="qrcode">{% qr_from_text object.summary "s" %}</div>
 	    {% thumbnail object.photo 104x104 crop as thumb %}
 	    {% if thumb %}
 		<img src="{{thumb.url}}"/>
 	    {% else %}
 		<img src="/media/img/no-image.png" class="detail_image"/>
 	    {% endif %}
+    
 	</div>
 	<div class="clear"></div>	
     {% endif %}
@@ -131,9 +136,9 @@ main-content
 	  <div id="col_2" >
         <div id="sharing">   <span class='st_facebook' displayText='Facebook'></span>
     <span class='st_twitter' displayText='Tweet'></span>
-<span class='st_email' displayText='Email'></span>
-<span class='st_fbrec' displayText='Facebook Recommend'></span>
-<span class='st_blogger' displayText='Blogger'></span>
+    <span class='st_email' displayText='Email'></span>
+    <span class='st_fbrec' displayText='Facebook Recommend'></span>
+    <span class='st_blogger' displayText='Blogger'></span>
 </div>
 	    <a href="#qrcode" class="link_qrcode">ver qrcode</a>    
         <div class="clear"></div>
